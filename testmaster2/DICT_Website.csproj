@@ -111,11 +111,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\footer.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\style.css" />
+    <Content Include="Content\header.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForumPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -125,6 +127,10 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\facebook.png" />
+    <Content Include="Images\instagram.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="AddForumPost.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\citlogo.png" />
     <Content Include="Images\DictLogo.png" />
@@ -186,6 +192,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ForumPage.aspx.cs">
+      <DependentUpon>ForumPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForumPage.aspx.designer.cs">
+      <DependentUpon>ForumPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +223,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AddForumPost.aspx.cs">
+      <DependentUpon>AddForumPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddForumPost.aspx.designer.cs">
+      <DependentUpon>AddForumPost.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

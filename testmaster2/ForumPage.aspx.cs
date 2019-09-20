@@ -7,13 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace testmaster2
 {
-    public partial class About : Page
+    public partial class ForumPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-       
-
     }
 }

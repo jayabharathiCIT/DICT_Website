@@ -19,12 +19,13 @@
         {
             width: 100%;
             position:center;
-            text-align:center !important;
+            /*text-align:center !important;*/
             padding-left:100px;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="Content/footer.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="Content/style.css">
+   <link rel="stylesheet" type="text/css" href="Content/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
 </head>
 <body >
@@ -48,6 +49,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+       <%-- DICT Header  --%>
         <div class="navbar-light fixed-top topbox ">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <div class="topbox-logo-container" >
@@ -56,18 +58,18 @@
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>   
-		<asp:Label Text="***************** jaya/MACANA branch text**************" runat="server"></asp:Label>
+        </button>   
+     <%-- DICT Header  --%>
         <%-- Add DICT menu bar  --%>
            <div class="collapse navbar-collapse d-flex justify-content-center">
        <%-- <div class="navbar-fixed-top mx-auto"  >--%>
-     <div  style="float:left; position:center; text-align:center;padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
+     <div  style="float:left; position:center; padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
           <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List"   >
               <StaticMenuStyle CssClass="Menu"  />
               <StaticSelectedStyle Font-Bold="true" ForeColor="Black" Font-Underline="true"  />
                 <LevelMenuItemStyles>
                     <asp:MenuItemStyle HorizontalPadding="60px" VerticalPadding="20px"  BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="white"  BorderWidth="5px"  HorizontalPadding="35px" BackColor="#facf5a" Font-Bold="true" Font-Size="Large"      />
+                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="white"  BorderWidth="5px"  HorizontalPadding="35px" BackColor="#facf5a" Font-Bold="true" Font-Size="Large" />
                 </LevelMenuItemStyles>
                 <Items>
                     <asp:MenuItem Text="The DICT" Value="THE DICT"></asp:MenuItem>
@@ -84,8 +86,8 @@
             </asp:Menu>
         
      </div>
-      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:20px; "> <img src="Images/DictLogo.png" /></div>
-      <div style="float:left; text-align:center; padding-top:20px;" class="d-flex justify-content-center" >          
+      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:20px; "> <img  style="width:115px; height:70px;" src="Images/DictLogo.png" /></div>
+      <div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
          <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" >
              <StaticMenuStyle BackColor="black" />
                  <LevelMenuItemStyles>
@@ -112,35 +114,50 @@
             </div>
   </div>
         <%-- Add DICT menu bar  --%>
-
-<%--        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>--%>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
-				
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application<input id="Text1" title="hi footer" type="text" value="hi footer" /></p>
-            </footer>
+         
         </div>
+           <footer>
+                <div class="footer-info">
+                <h3>Contact Us</h3>
+                <ul>
+                  <li>
+                    <li>General Enquiries<br>
+                    GPO Box 826 Canberra<br>
+                    ACT 2601<br>
+                    +61 2 6207 3188</li>
+                  </li>
+                </ul>   
+            </div>          
+            <div class="footer-info">
+                <h3>Quick Links</h3>
+                <ul>
+                  <li>
+                    <li><a href="/about/">About</a></li><br />
+                    <li><a href="/courses/">Courses</a></li><br />
+                    <li><a href="/teaching_learning/">Teaching & Learning</a></li><br />
+                    <li><a href="/students/">Students</a></li><br />
+                    <li><a href="/DICT_news/">DICT News</a></li><br />
+                    <li><a href="/forum/">Forum</a></li><br />
+                  </li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <h3>Social Media</h3>
+                <ul>
+                    
+                        <li><a href="http://www.facebook.com.au/CITCanberra" class="fa-social"><img style=" height:40px; width:40px;" src="Images/facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://instagram.com/citcanberra/" class="fa-social"><img src="Images/instagram.png" style="height:40px; width:40px;" alt="Instagram"></a></li>
+                        <li><a href="http://www.twitter.com/@Canberra_CIT" class="fa-social"><img src="Images/twitter.png" style="height:40px; width:40px;" alt="Twitter"></a></li>                 
+                </ul>
+                <ul>
+                    <li> <a href="https://cit.edu.au/study/need_help" class="help-button" >Need help?</a></li>
+                </ul>
+             </div>              
+            </footer>
 
     </form>
 </body>

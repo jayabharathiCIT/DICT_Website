@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));
+    margin: 0px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #F9FEFF;
+    display: flex;
+    padding: 0px;
+    padding-left: 190px;
+}
+
+footer a {
+    color: white;
+}
+
+.footer-info {
+    display: inline-block;
+    width: 25%;
+    margin: 20px;
+    border: none;
+    vertical-align: top;
+    color: white;
+}
+
+ul {
+    padding: 0;
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+h3 {
+    margin: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 37px;
+    color: rgba(0, 229, 255, 0.97);
+}
+
+.help-button {
+    position: absolute;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 229, 255, 0.97);
+    border: solid;
+    border-width: 1px;
+    border-spacing: 10px;
+    padding:5px 10px 5px 12px;
+}
+
+.fa-social {
+    display: inline-block;
+    padding: 0px;
+    vertical-align: middle;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+li {
+    display: inline-block;
+}
+
+.fa facebook {
+    background: #3B5998;
+    color: white;
+}
