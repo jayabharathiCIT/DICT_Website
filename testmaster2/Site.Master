@@ -57,6 +57,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>   
+		<asp:Label Text="jaya branch text" runat="">></asp:Label>
         <%-- Add DICT menu bar  --%>
            <div class="collapse navbar-collapse d-flex justify-content-center">
        <%-- <div class="navbar-fixed-top mx-auto"  >--%>
