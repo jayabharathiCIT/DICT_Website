@@ -136,7 +136,8 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+				
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application<input id="Text1" title="hi footer" type="text" value="hi footer" /></p>
             </footer>
         </div>
 
