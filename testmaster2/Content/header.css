@@ -19,12 +19,13 @@
 }
 
 .topbox-logo-container {
-    width: 15%;
-    height: auto;
+    /*width: 15%;*/
     padding-left: 60px;
     transform: translateY(-10px);
     vertical-align:central;
     line-height:1.6rem;
+    height:80px;
+    width:80px;
     
 }
 
