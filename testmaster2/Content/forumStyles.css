@@ -5,6 +5,7 @@
     text-align: center;
     width: 700px;
     height: 700px;
+    margin-top:60px;
     background-image: url('../Images/background.png');
 }
 .divHeader {
@@ -12,12 +13,12 @@
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    height:100px;
-    padding-top:20px;
+    height:80px;
+    width:530px;
 }
 .imageLogo {
-    width:80px;
-    height:70px;
+    width:120px;
+    height:110px;
 }
 .pageTitle {
     padding-top: 10px;
@@ -29,21 +30,33 @@
     line-height: 28px;
     font-family: sans-serif;
     color: white;
+    text-align:center;
 }
 .plnOutline {
-    padding:20px;
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 700px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    background-image: url('../Images/background.png');
+}
+.plnInline {
+
+    padding: 20px;
     vertical-align: middle;
     text-align: center;
     width: 600px;
-    height: 600px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:50px;
-    margin-bottom:auto;
-    z-index:1;
-    
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: auto;
+    z-index: 1;
 }
-
 
 .textLables {
     width: 70px;
@@ -62,8 +75,8 @@
     height:500px;
     }
 
-.btnControls {
-    width: 145px;
+.btnCancelControls {
+    width: 140px;
     height: 40px;
     background-image: linear-gradient(to left bottom, #facf5a, #fad570, #fbdb85, #fbe099, #fbe6ad);
     border: 1px solid #000000;
@@ -73,6 +86,18 @@
     color: black;
     font-family:sans-serif;
     font-weight:bold;
+}
+.btnSubmitControls {
+    width: 165px;
+    height: 40px;
+    background-image: linear-gradient(to left bottom, #facf5a, #fad570, #fbdb85, #fbe099, #fbe6ad);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 22px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .txtControl {
