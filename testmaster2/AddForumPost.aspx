@@ -36,11 +36,11 @@
                         <asp:TableCell><asp:Label runat="server" Text="Category" ID="lblCategory" CssClass="textLables" ></asp:Label></asp:TableCell>
                         <asp:TableCell>
                             <asp:DropDownList ID="ddlCategory" runat="server" CssClass="txtControl" >
-                                <asp:ListItem Text="Programming"></asp:ListItem>
-                                <asp:ListItem Text="Designing"></asp:ListItem>
-                                <asp:ListItem Text="Networking"></asp:ListItem>
-                                <asp:ListItem Text="Security"></asp:ListItem>
-                                <asp:ListItem Text="Testing"></asp:ListItem>
+                                <asp:ListItem Value="1" Text="Programming"></asp:ListItem>
+                                <asp:ListItem Value="2" Text="Designing"></asp:ListItem>
+                                <asp:ListItem Value="3" Text="Networking"></asp:ListItem>
+                                <asp:ListItem Value="4" Text="Security"></asp:ListItem>
+                                <asp:ListItem  Value="5" Text="Testing"></asp:ListItem>
                             </asp:DropDownList>
                            </asp:TableCell>
                         

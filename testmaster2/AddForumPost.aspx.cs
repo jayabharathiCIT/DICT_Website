@@ -1,6 +1,7 @@
 ﻿
 /*Programmer :Jayabharathi
- * 
+ *Date:25-09-2019
+ *Purpose: Create new post ,Get all values from user and save to Mysql Datatable in correct format
  */
  using System;
 using System.Collections.Generic;
@@ -31,11 +32,18 @@ namespace testmaster2
                     sqlCon.Open();
                     MySqlCommand sqlCmd = new MySqlCommand("sp_AddPost", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-                    sqlCmd.Parameters.AddWithValue("P_Post_ID", "001");
-                    sqlCmd.Parameters.AddWithValue("P_Topic_Title", "Displaying multiple live clocks on a page.");
-                    sqlCmd.Parameters.AddWithValue("P_Description_Post", " hi all ,  i have the below java-script to display the current date in the given format at runtime using element id='liveclock'.but scrollable affects but it is not working for my HTML page. Let me know how to rectify this issue.....");
-                    sqlCmd.Parameters.AddWithValue("P_Category_ID", 2);
-                    sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
+                    // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("P_Post_ID", "001");
+                    sqlCmd.Parameters.AddWithValue("P_Topic_Title", txtTitle.Text);
+                   // sqlCmd.Parameters.AddWithValue("P_Topic_Title", "Displaying multiple live clocks on a page.");
+                    sqlCmd.Parameters.AddWithValue("P_Description_Post", textDescription.Text);
+                   // sqlCmd.Parameters.AddWithValue("P_Description_Post", " hi all , i have the below java-script to display the current date in the given format at runtime using element id='liveclock'.but scrollable affects but it is not working for my HTML page. Let me know how to rectify this issue.....");
+                    if (getCategoryValue() > 0)
+                    {
+                        sqlCmd.Parameters.AddWithValue("P_Category_ID", getCategoryValue());
+                    }
+                    string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    sqlCmd.Parameters.AddWithValue("P_Date_Posted", postCreatedDate);
+                    //sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
                     sqlCmd.Parameters.AddWithValue("P_Register_ID", "244332");
                     sqlCmd.ExecuteNonQuery();
                     lblSuccessMessage.Text = "Submitted Successfully";
@@ -47,9 +55,44 @@ namespace testmaster2
             }
         }
 
+        public int getCategoryValue()
+        {            
+            try
+            {
+               
+                if (ddlCategory.SelectedItem.Text == "Programming")
+                {
+                    return 1;
+                }
+                else if(ddlCategory.SelectedItem.Text == "Designing")
+                {
+                    return  2;
+                }
+                else if(ddlCategory.SelectedItem.Text == "Networking")
+                {
+                    return  3;
+                }
+                else if (ddlCategory.SelectedItem.Text == "Security")
+                {
+                    return  4;
+                }
+                else
+                {
+                    return  5;
+                }
+                
+
+            }
+            catch (Exception es)
+            {
+                lblSuccessMessage.Text = es.Message;
+                return 0;
+            }
+        }
+
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Default.aspx");
         }
     }
 }
