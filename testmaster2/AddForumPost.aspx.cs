@@ -20,7 +20,8 @@ namespace testmaster2
         string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=pass;";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // check user is authenticated .
+            
         }
 
         protected void btnCreatePost_Click(object sender, EventArgs e)

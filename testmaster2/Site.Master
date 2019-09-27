@@ -23,9 +23,8 @@
             padding-left:100px;
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="Content/footer.css" />
+    <link href="Content/masterStyle.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" type="text/css" href="Content/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
 </head>
 <body >
@@ -78,9 +77,6 @@
                         <asp:MenuItem Text="Apply" Value="Apply"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning">
-                        <asp:MenuItem Text="Project Based Learning" Value="Project Based Learning"></asp:MenuItem>
-                        <asp:MenuItem Text="Work Integrated Learning" Value="Work Integrated Learning"></asp:MenuItem>
-                        <asp:MenuItem Text="Flexible Learning" Value="Flexible Learning"></asp:MenuItem>
                     </asp:MenuItem>                                       
                 </Items>
             </asp:Menu>

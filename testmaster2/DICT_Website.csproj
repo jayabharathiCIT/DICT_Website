@@ -112,11 +112,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\footer.css" />
     <Content Include="Content\forumStyles.css" />
+    <Content Include="Content\masterStyle.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\header.css" />
     <Content Include="Default.aspx" />
+    <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ForumPage.aspx" />
@@ -195,6 +195,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditForumPost.aspx.cs">
+      <DependentUpon>EditForumPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditForumPost.aspx.designer.cs">
+      <DependentUpon>EditForumPost.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForumPage.aspx.cs">
       <DependentUpon>ForumPage.aspx</DependentUpon>
