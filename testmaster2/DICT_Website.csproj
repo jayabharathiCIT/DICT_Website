@@ -119,7 +119,7 @@
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="ForumPage.aspx" />
+    <Content Include="ForumHomePage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -130,9 +130,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\background.png" />
+    <Content Include="Images\Comment.png" />
     <Content Include="Images\DictFullLogo.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\instagram.png" />
+    <Content Include="Images\replyall.png" />
     <Content Include="Images\twitter.png" />
     <Content Include="AddForumPost.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -203,12 +205,12 @@
     <Compile Include="EditForumPost.aspx.designer.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ForumPage.aspx.cs">
-      <DependentUpon>ForumPage.aspx</DependentUpon>
+    <Compile Include="ForumHomePage.aspx.cs">
+      <DependentUpon>ForumHomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ForumPage.aspx.designer.cs">
-      <DependentUpon>ForumPage.aspx</DependentUpon>
+    <Compile Include="ForumHomePage.aspx.designer.cs">
+      <DependentUpon>ForumHomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

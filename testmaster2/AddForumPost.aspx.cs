@@ -28,27 +28,31 @@ namespace testmaster2
         {
             try
             {
-                using (MySqlConnection sqlCon = new MySqlConnection(connectionString))
-                {
-                    sqlCon.Open();
-                    MySqlCommand sqlCmd = new MySqlCommand("sp_AddPost", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("P_Post_ID", "001");
-                    sqlCmd.Parameters.AddWithValue("P_Topic_Title", txtTitle.Text);
-                   // sqlCmd.Parameters.AddWithValue("P_Topic_Title", "Displaying multiple live clocks on a page.");
-                    sqlCmd.Parameters.AddWithValue("P_Description_Post", textDescription.Text);
-                   // sqlCmd.Parameters.AddWithValue("P_Description_Post", " hi all , i have the below java-script to display the current date in the given format at runtime using element id='liveclock'.but scrollable affects but it is not working for my HTML page. Let me know how to rectify this issue.....");
-                    if (getCategoryValue() > 0)
+
+              //  if (txtTitle.Text != null)
+              //  {
+                    using (MySqlConnection sqlCon = new MySqlConnection(connectionString))
                     {
-                        sqlCmd.Parameters.AddWithValue("P_Category_ID", getCategoryValue());
+                        sqlCon.Open();
+                        MySqlCommand sqlCmd = new MySqlCommand("sp_AddPost", sqlCon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("P_Post_ID", "001");
+                        sqlCmd.Parameters.AddWithValue("P_Topic_Title", txtTitle.Text);
+                        // sqlCmd.Parameters.AddWithValue("P_Topic_Title", "Displaying multiple live clocks on a page.");
+                        sqlCmd.Parameters.AddWithValue("P_Description_Post", textDescription.Text);
+                        // sqlCmd.Parameters.AddWithValue("P_Description_Post", " hi all , i have the below java-script to display the current date in the given format at runtime using element id='liveclock'.but scrollable affects but it is not working for my HTML page. Let me know how to rectify this issue.....");
+                        if (getCategoryValue() > 0)
+                        {
+                            sqlCmd.Parameters.AddWithValue("P_Category_ID", getCategoryValue());
+                        }
+                        string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        sqlCmd.Parameters.AddWithValue("P_Date_Posted", postCreatedDate);
+                        //sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
+                        sqlCmd.Parameters.AddWithValue("P_Register_ID", "244332");
+                        sqlCmd.ExecuteNonQuery();
+                        lblSuccessMessage.Text = "Submitted Successfully";
                     }
-                    string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    sqlCmd.Parameters.AddWithValue("P_Date_Posted", postCreatedDate);
-                    //sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
-                    sqlCmd.Parameters.AddWithValue("P_Register_ID", "244332");
-                    sqlCmd.ExecuteNonQuery();
-                    lblSuccessMessage.Text = "Submitted Successfully";
-                }
+               // }
             }
             catch (Exception ex)
             {
