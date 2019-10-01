@@ -17,8 +17,6 @@
     width:530px;
 }
 .imageLogo {
-    width:120px;
-    height:110px;
 }
 .pageTitle {
     padding-top: 10px;
@@ -44,20 +42,7 @@
     z-index: 1;
     background-image: url('../Images/background.png');
 }
-.plnOutlineHorizontal {
-    padding: 20px;
-    vertical-align: middle;
-    text-align: center;
-    width: 950px;
-    height: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-    z-index: 1;
-    background-image: url('../Images/background.png');
-}
 .plnInline {
-
     padding: 20px;
     vertical-align: middle;
     text-align: center;
@@ -69,11 +54,24 @@
     margin-bottom: auto;
     z-index: 1;
 }
+.plnOutlineHorizontal {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 1080px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    background-image: url('../Images/background.png');
+}
+
 .plnInlineHorizontal {
     padding: 20px;
     vertical-align: middle;
     text-align: center;
-    width: 850px;
+    width: 950px;
     height: 650px;
     margin-left: auto;
     margin-right: auto;
@@ -118,7 +116,7 @@
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 18px;
     color: black;
     font-family: sans-serif;
     font-weight: bold;
@@ -144,4 +142,50 @@
     box-sizing: border-box;
     font-family: sans-serif;
     font-size:14px;
+}
+.divQuickLinks {
+    width: 160px;
+    height: 154px;
+    background-image: linear-gradient(to bottom, #e5e5e5, #e2e2e2, #dfdedf, #dddadb, #dad7d7);
+    border: 1px solid #333333;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    display: inline-table;
+    padding:25px;
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.divTopLinks {
+    width: 160px;
+    height: 154px;
+    background-image: linear-gradient(to bottom, #e5e5e5, #e2e2e2, #dfdedf, #dddadb, #dad7d7);
+    border: 1px solid #333333;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: inline-table;
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align:left;
+}
+
+.gridheader {
+    background-image: linear-gradient(to bottom, #e5e5e5, #e2e2e2, #dfdedf, #dddadb, #dad7d7);
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    height: 50px;
+}
+
+.btnSubmitControls {
+    width: 185px;
+    height: 40px;
+    background-image: linear-gradient(to left bottom, #facf5a, #fad570, #fbdb85, #fbe099, #fbe6ad);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
 }

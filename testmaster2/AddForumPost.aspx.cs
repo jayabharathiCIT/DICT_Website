@@ -11,13 +11,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Data;
-
+using System.Configuration;
 
 namespace testmaster2
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=pass;";
+       // string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=pass;";
+        string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
             // check user is authenticated .
@@ -29,9 +30,11 @@ namespace testmaster2
             try
             {
 
-              //  if (txtTitle.Text != null)
-              //  {
-                    using (MySqlConnection sqlCon = new MySqlConnection(connectionString))
+                //  if (txtTitle.Text != null)
+                //  {
+                
+
+                using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                     {
                         sqlCon.Open();
                         MySqlCommand sqlCmd = new MySqlCommand("sp_AddPost", sqlCon);
@@ -97,7 +100,7 @@ namespace testmaster2
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/ForumHomePage.aspx");
         }
     }
 }
