@@ -133,6 +133,9 @@
     <Content Include="Images\Comment.png" />
     <Content Include="Images\DictFullLogo.png" />
     <Content Include="Images\facebook.png" />
+    <Content Include="Images\sendReply.png" />
+    <Content Include="Images\ZoomIn.png" />
+    <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
     <Content Include="Images\logoBlue.png" />
     <Content Include="Images\replyall.png" />
