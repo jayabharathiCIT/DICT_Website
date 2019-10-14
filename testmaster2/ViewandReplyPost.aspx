@@ -20,9 +20,9 @@
                         <asp:TableRow>
                             <asp:TableCell Width="65px" > <asp:Image runat="server" ImageUrl="~/Images/Comment.png" /></asp:TableCell>
                             <asp:TableCell Width ="150px" >
-                   <asp:Label ID="lblPostTitle" runat="server" Text="Title of the Post : " Font-Bold="True" Font-Size="18px" ForeColor="Black"></asp:Label>                                                               
+                   <asp:Label ID="lblPostTitle" runat="server" Text="Title of the Post : " Font-Bold="True" Font-Size="16px" ForeColor="Black"></asp:Label>                                                               
                             </asp:TableCell>
-                            <asp:TableCell>  <asp:Label ID="lblPostTitleValue" runat="server" Text="" Font-Size="18px" ForeColor="White"></asp:Label></asp:TableCell>
+                            <asp:TableCell>  <asp:Label ID="lblPostTitleValue" runat="server" Text="" Font-Size="16px" ForeColor="White"></asp:Label></asp:TableCell>
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell Width="65px" >
@@ -30,7 +30,7 @@
                                 
                             </asp:TableCell>
                             <asp:TableCell  ColumnSpan="2" >
-                                <asp:Label ID="lblCreatedByValue" runat="server" Text="" Font-Size="18px" ForeColor="White"></asp:Label>
+                                <asp:Label ID="lblCreatedByValue" runat="server" Text="" Font-Size="16px" ForeColor="White"></asp:Label>
                             </asp:TableCell>                                                        
                         </asp:TableRow>
                         <asp:TableRow>
@@ -39,10 +39,11 @@
                                 <asp:Image ID="Image2" ImageUrl="~/Images/ZoomIn.png" runat="server" />                                
                             </asp:TableCell>
                             <asp:TableCell Width="140px" >
-                                <asp:Label ID="lblDescription" runat="server" Text="Description : " Font-Bold="True" Font-Size="18px" ForeColor="Black" ></asp:Label>
+                                <asp:Label ID="lblDescription" runat="server" Text="Description : " Font-Bold="True" Font-Size="16px" ForeColor="Black" ></asp:Label>
                             </asp:TableCell>
                             <asp:TableCell >
-                                <asp:Label ID="lblDescValue"   runat="server" Font-Size="18px" ForeColor="White" ></asp:Label>
+                                <asp:Label ID="lblDescValue"    runat="server"  Font-Size="18px" ForeColor="White" ></asp:Label>
+                                
                             </asp:TableCell>
                         </asp:TableRow>
 
@@ -50,12 +51,12 @@
                     
 
                     </div>
-                <div style=" float:left;height:350px; width:550px; border-color:white; border-width:thin; border-style:solid ">
+                <div style=" float:left;height:345px; width:550px; border-color:white; border-width:thin; border-style:solid ">
                      <asp:Table ID="tblReplyView"  Height="155px" CssClass="tableViewReplyPost" runat="server" CellSpacing="3"  HorizontalAlign="Center" >
                         <asp:TableRow>
                             <asp:TableCell Width="65px" > <asp:Image runat="server" ImageUrl="~/Images/replyall.png" /></asp:TableCell>      
                             <asp:TableCell ColumnSpan="2" >
-                                <asp:Label runat="server" ID="lblReplies" Font-Size="18px" ForeColor="White"  ></asp:Label>                         
+                                <asp:Label runat="server" ID="lblReplies" Font-Size="16px" ForeColor="White" ></asp:Label>                         
                             </asp:TableCell>
                         </asp:TableRow>
                          </asp:Table>
@@ -89,7 +90,8 @@
                            </asp:TableCell>
                        </asp:TableRow>
                     </asp:Table>
-                              
+                    
+                    <asp:Label ID="lblSuccessMessage"  runat="server" ForeColor="Black" Font-Size="14px"  ></asp:Label>         
                     </div>
 
                 </asp:Panel>

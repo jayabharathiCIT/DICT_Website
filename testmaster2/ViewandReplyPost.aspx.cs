@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,10 +14,13 @@ namespace DICT_Website
     public partial class ViewandReplyPost : System.Web.UI.Page
     {
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             string postID = Request.QueryString["PostID"];
             DataTable dt = new DataTable();
+            DataTable dtReply = new DataTable();
             if (postID != null)
             {
                 using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
@@ -64,24 +68,84 @@ namespace DICT_Website
                     }
 
 
-                    lblCreatedByValue.Text = "This Post is created by " + createdPerson + " on " + getDatePosted + " under" + categoryName + " category";
+                    lblCreatedByValue.Text = "This Post is created by " + createdPerson + " on " + getDatePosted + " under " + categoryName + " category";
+                    string str = dt.Rows[0]["Description_Post"].ToString();
+                    if (str.Length > 80)
+                    {
+                        str = str.Substring(0, 80);
+                    }
+                    lblDescValue.Text = str;
 
-                    lblDescValue.Text = dt.Rows[0]["Description_Post"].ToString();
-
+                    //fill previous replies in the form.
+                    //lblReplies.Text;
+                    //Pass the post ID to query Replies of the specific Post.
+                    string QueryReply = "SELECT * FROM `dict website`.` dt_reply` where Post_ID =" + postID + ";";
+                    MySqlCommand MyCommandGetReply = new MySqlCommand(QueryReply, sqlCon);                                        
+                    MySqlDataAdapter sqlDaReply = new MySqlDataAdapter();
+                    sqlDaReply.SelectCommand = MyCommandGetReply;
+                    sqlDaReply.Fill(dtReply);
+                    StringBuilder replyinfo = new StringBuilder();
+                    if(dtReply.Rows.Count == 0)
+                    {
+                        lblReplies.Text = "No Replies Yet";
+                    }
+                    foreach (DataRow dr in dtReply.Rows)
+                    {
+                        // Get Created by person name
+                        int studentRegisterID = Convert.ToInt32(dr["Register_ID"].ToString());
+                        DataTable dtReplyPerson = new DataTable();
+                        MySqlDataAdapter sqlReplyPerson = new MySqlDataAdapter("sp_FristNameByID", sqlCon);
+                        sqlReplyPerson.SelectCommand.CommandType = CommandType.StoredProcedure;
+                        sqlReplyPerson.SelectCommand.Parameters.AddWithValue("registerID", studentRegisterID);
+                        sqlReplyPerson.SelectCommand.CommandType = CommandType.StoredProcedure;
+                        sqlReplyPerson.Fill(dtReplyPerson);
+                        string replyPerson = dtReplyPerson.Rows[0][0].ToString();
+                        replyinfo.Append("Reply" + dr["Reply_ID"].ToString() + " : This reply is created by " + replyPerson + " on " + dr["Reply_Date"].ToString() + ". ");
+                        replyinfo.Append(dr["Rpy_Comment"].ToString());
+                        lblReplies.Text = replyinfo.ToString();                    
+                    }                   
                 }
             }
-
-
         }
 
         protected void btnReply_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string postID = Request.QueryString["PostID"];
+                if (postID != null)
+                {
+                    using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                    {
+                        sqlCon.Open();
 
+                        MySqlCommand sqlCmd = new MySqlCommand("sp_AddReply", sqlCon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("Reply_ID", "001");
+                        sqlCmd.Parameters.AddWithValue("R_Post_ID", Convert.ToInt32(postID));
+                        sqlCmd.Parameters.AddWithValue("R_Rply_Comment", txtComment.Text);
+                        string replyCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        sqlCmd.Parameters.AddWithValue("R_Reply_Date", replyCreatedDate);
+                        sqlCmd.Parameters.AddWithValue("R_Register_ID", "244332");
+                        sqlCmd.ExecuteNonQuery();
+                        lblSuccessMessage.Text = "This Reply is submitted Successfully";
+
+                        // add code to update post table no of replies .
+                        //calculate number of replies based on the reply table using post ID and fill the post ID each time you create a reply.
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblSuccessMessage.Text = ex.Message;
+            }
         }
+
+
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/ForumHomePage.aspx");
         }
     }
 }

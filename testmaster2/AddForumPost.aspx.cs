@@ -29,11 +29,6 @@ namespace testmaster2
         {
             try
             {
-
-                //  if (txtTitle.Text != null)
-                //  {
-                
-
                 using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                     {
                         sqlCon.Open();
@@ -55,7 +50,6 @@ namespace testmaster2
                         sqlCmd.ExecuteNonQuery();
                         lblSuccessMessage.Text = "Submitted Successfully";
                     }
-               // }
             }
             catch (Exception ex)
             {

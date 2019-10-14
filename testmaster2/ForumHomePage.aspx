@@ -1,7 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ForumHomePage.aspx.cs" Inherits="DICT_Website.ForumHomePage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" EnableEventValidation="false"  CodeBehind="ForumHomePage.aspx.cs" Inherits="DICT_Website.ForumHomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <link href="Content/forumStyles.css" rel="stylesheet" />
-      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal">
+
+      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
             <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
             <div id="divHeader" class="divHeader"> 
                 <table>
@@ -17,7 +18,7 @@
                 </div>
                 <div style="padding-top:30px ;">
                 <div style=" float:left;height:500px; width:700px; border-color:white; border-width:thin; border-style:solid ">
-                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="680px"  Height="480px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False" OnRowDataBound="OnRowDataBound">
+                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="680px"  Height="480px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False" OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" >
                         <Columns>
                             <asp:TemplateField HeaderText="Topic">
                                 <ItemTemplate>
@@ -48,8 +49,7 @@
                                 <ItemTemplate>         
                                     <asp:Image runat="server" Width="51px"  Height="50px" ImageUrl="~/Images/replyall.png" />
                                     <asp:Label ID="lblReply" Font-Bold="true" ForeColor="Black" runat="server" Text='<%# Bind("No_Replies") %>'></asp:Label>
-                                    <asp:Button ID="btnReply"  runat="server" Text="Reply"  CssClass="btnReply" />
-                                    
+                                    <asp:Button ID="btnReply"  runat="server" Text="Reply"  CssClass="btnReply" CommandName="Reply"   OnClick="btnReply_Click1"   Tooltip='<%# DataBinder.Eval(Container.DataItem, "Post_ID") %>'  CommandArgument='<%#Eval("Post_ID")%>' />                                    
                                 </ItemTemplate>
                             </asp:TemplateField>                                                       
                                                         

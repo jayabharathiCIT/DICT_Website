@@ -120,10 +120,13 @@ namespace DICT_Website
 
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
+            
+
             DataTable dtbl = new DataTable();
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 GridViewRow grv = (GridViewRow)e.Row;
+                
 
                 Label lblgrvCategory = (Label)grv.FindControl("lblCategory");
                 if (lblgrvCategory.Text == "1")
@@ -164,7 +167,9 @@ namespace DICT_Website
 
         private void btnReply_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
+            
+            Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + lnkTop3.ToolTip);
         }
 
         protected void btnCreatePost_Click(object sender, EventArgs e)
@@ -218,6 +223,32 @@ namespace DICT_Website
         protected void lnkTop3_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + lnkTop3.ToolTip);
+        }
+
+        protected void gv_ForumDetails_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            
+            if (e.CommandName == "Reply")
+            {
+
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                //Determine the RowIndex of the Row whose Button was clicked.
+                // string rowIndex = e.CommandArgument.ToString();
+                Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + rowIndex.ToString());
+            }
+        }
+
+        protected void btnReply_Click1(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            if(btn.CommandName == "Reply")
+            {
+                string getPostIDArg = btn.CommandArgument.ToString();
+                Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + getPostIDArg);
+            }
+
+
+           
         }
     }
 }
