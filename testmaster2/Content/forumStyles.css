@@ -79,6 +79,31 @@
     margin-bottom: auto;
     z-index: 1;
 }
+.plnOuterLogin {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 600px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    background-image: url('../Images/background.png');
+}
+
+.plnInnerLogin {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: auto;
+    z-index: 1;
+}
 .textLables {
     width: 70px;
     height: 15px;
@@ -108,6 +133,12 @@
     height:500px;
     }
 
+.tablelogin {
+    vertical-align: middle;
+    text-align: left;
+    width: 400px;
+    height: 200px;
+}
 .tableViewReplyPost {
     vertical-align: middle;
     text-align: left;
@@ -139,6 +170,7 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+
 .btnSubmitControls {
     width: 165px;
     height: 40px;
