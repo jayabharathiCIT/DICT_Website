@@ -26,23 +26,26 @@ namespace DICT_Website
                 using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                 {
                     sqlCon.Open();
-                    MySqlCommand sqlCmd = new MySqlCommand("dt_dict_persons", sqlCon);
+                    MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-
                     
-                    sqlCmd.Parameters.AddWithValue("Register_ID", txtID.Text);
-                    sqlCmd.Parameters.AddWithValue("First_Name", txtFirstname.Text);
-                    sqlCmd.Parameters.AddWithValue("Last_Name", txtLastname.Text);
+
+                    sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                    sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
+                    sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
 
                     if (checkPassword() ==1)
                     {
-                        sqlCmd.Parameters.AddWithValue("Password", checkPassword());
+                        sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
                     }
 
-                    sqlCmd.Parameters.AddWithValue("Date_of_Birth", txtDOB.Text);
-                    sqlCmd.Parameters.AddWithValue("Email", txtEmail.Text);
-                    string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    sqlCmd.Parameters.AddWithValue("Date_Change_Password", postCreatedDate);
+                    string txtDate = tbDate.Text;
+                  DateTime DTdob = Convert.ToDateTime(txtDate);
+                 string getDob = DTdob.ToString("dd-MM-yy");
+                 sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
+                    sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
+                   // string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    //sqlCmd.Parameters.AddWithValue("Date_Change_Password", postCreatedDate);
                     
                     sqlCmd.ExecuteNonQuery();
                     lblSuccessMessage.Text = "Submitted Successfully";
@@ -82,9 +85,15 @@ namespace DICT_Website
             }
         }
 
+       
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/HomePage.aspx");
+        }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
