@@ -115,6 +115,17 @@
     color: white
 }
 
+.textLables1 {
+    width: 20px;
+    height: 8px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 15px;
+    font-family: sans-serif;
+    color: white
+}
+
 .textLablesSmall {
     width: 150px;
     height: 15px;
@@ -143,6 +154,13 @@
     vertical-align: middle;
     text-align: left;
     width:545px;
+}
+
+.tableRegister {
+    vertical-align: middle;
+    text-align: left;
+    width: 500px;
+    height: 800px;
 }
 
 .btnCancelControls {

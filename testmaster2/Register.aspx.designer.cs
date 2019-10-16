@@ -166,13 +166,13 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.Label lblDOB;
         
         /// <summary>
-        /// txtDOB control.
+        /// tbDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDOB;
+        protected global::System.Web.UI.WebControls.TextBox tbDate;
         
         /// <summary>
         /// lblEmail control.
