@@ -136,7 +136,7 @@
 .tablelogin {
     vertical-align: middle;
     text-align: left;
-    width: 400px;
+    width: 450px;
     height: 200px;
 }
 .tableViewReplyPost {
@@ -249,4 +249,30 @@
     color: black;
     font-family: sans-serif;
     font-weight: bold;
+}
+.topLoginCorner {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ddllogin {
+    border: 2px solid #7d6754;
+    border-radius: 5px;
+    padding: 3px;
+    -webkit-appearance: none;
+    background-image: url('../Images/down.png');
+    background-position: 88px;
+    background-repeat: no-repeat;
+    text-indent: 0.01px; /*In Firefox*/
+    text-overflow: ''; /*In Firefox*/
+}
+
+.ddllogin1 {
+    color: darkblue;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    background: url('../Images/down.png');
+    background-position: right;
+    background-repeat: no-repeat;
 }

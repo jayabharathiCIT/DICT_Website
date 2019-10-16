@@ -1,9 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" EnableEventValidation="false"  CodeBehind="ForumHomePage.aspx.cs" Inherits="DICT_Website.ForumHomePage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <link href="Content/forumStyles.css" rel="stylesheet" />
-
+    
       <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
+         
             <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+                 <div class="nav navbar-nav navbar-right">
+              <table  style="width:300px;" >
+                  <tr>
+                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#FACF5A" runat="server" Text="Label"></asp:Label></td>                                          
+                  </tr>      
+                  <tr>
+                      <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                           <asp:ListItem Value="1">Change Password</asp:ListItem>
+
+                  <asp:ListItem Value="2">Delete Account</asp:ListItem>
+
+                  <asp:ListItem Value="3" >LogOut</asp:ListItem>
+                    </asp:DropDownList> 
+                          </td>
+                  </tr>
+              </table>                                                              
+                </div>
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>

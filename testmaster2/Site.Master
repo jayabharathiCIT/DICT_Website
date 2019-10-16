@@ -102,8 +102,8 @@
                         <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Forum" Value="Forum">
-                        <asp:MenuItem Text="Register" Value="Register"></asp:MenuItem>
-                        <asp:MenuItem Text="Login" Value="Login"></asp:MenuItem>
+                        <asp:MenuItem Text="Register" NavigateUrl="~/Register.aspx" Value="Register"></asp:MenuItem>
+                        <asp:MenuItem Text="Login" NavigateUrl="~/Login.aspx" Value="Login"></asp:MenuItem>
                     </asp:MenuItem>
                 </Items>
             </asp:Menu>            

@@ -129,10 +129,13 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Images\background.png" />
     <Content Include="Images\Comment.png" />
+    <Content Include="Images\courses.jpg" />
     <Content Include="Images\DictFullLogo.png" />
     <Content Include="Images\facebook.png" />
+    <Content Include="Images\down.png" />
     <Content Include="Images\sendReply.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />

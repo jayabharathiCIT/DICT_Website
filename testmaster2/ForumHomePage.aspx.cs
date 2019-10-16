@@ -16,7 +16,21 @@ namespace DICT_Website
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            // Check authorised user 
+           
+            if (Session["RegID"] == null)
+                Response.Redirect("~/Login.aspx");
+            else
+            {
+                String userid = Convert.ToString((int)Session["RegID"]);
+                String username = Session["Username"].ToString();
+                //String userrole = Session["Role"].ToString();
+                lbluserInfo.Text = "Welcome , " + username +" ";
+            }
             
+
+            //Show gridview details
             dt = new DataTable();
             using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
             {                
@@ -249,6 +263,28 @@ namespace DICT_Website
 
 
            
+        }
+
+        protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(ddlLogin.SelectedItem.Value == "1")
+            {
+                //ChangePassword
+            }
+            if(ddlLogin.SelectedItem.Value == "2" )
+            {
+                //DeleteAccount
+            }
+            if(ddlLogin.SelectedItem.Value == "3")
+            {
+                //Logout
+                //clear session variables
+                Session.Clear();
+                Session.Remove("RegID");
+                Session.Remove("Username");               
+                //redirect to login page
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }
