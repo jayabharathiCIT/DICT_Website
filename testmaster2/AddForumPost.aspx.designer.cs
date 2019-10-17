@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace testmaster2 {
-    
-    
-    public partial class WebForm1 {
-        
+namespace testmaster2
+{
+
+
+    public partial class WebForm1
+    {
+
         /// <summary>
         /// Panel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
-        
+
         /// <summary>
         /// Panel2 control.
         /// </summary>
@@ -29,7 +31,25 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel2;
-        
+
+        /// <summary>
+        /// lbluserInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbluserInfo;
+
+        /// <summary>
+        /// ddlLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlLogin;
+
         /// <summary>
         /// lblPageTitle control.
         /// </summary>
@@ -38,7 +58,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPageTitle;
-        
+
         /// <summary>
         /// tblAddPost control.
         /// </summary>
@@ -47,7 +67,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tblAddPost;
-        
+
         /// <summary>
         /// lblPostTitle control.
         /// </summary>
@@ -56,7 +76,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPostTitle;
-        
+
         /// <summary>
         /// txtTitle control.
         /// </summary>
@@ -65,7 +85,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
-        
+
         /// <summary>
         /// lblCategory control.
         /// </summary>
@@ -74,7 +94,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCategory;
-        
+
         /// <summary>
         /// ddlCategory control.
         /// </summary>
@@ -83,7 +103,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
-        
+
         /// <summary>
         /// lblDescription control.
         /// </summary>
@@ -92,7 +112,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDescription;
-        
+
         /// <summary>
         /// textDescription control.
         /// </summary>
@@ -101,7 +121,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textDescription;
-        
+
         /// <summary>
         /// btnCreatePost control.
         /// </summary>
@@ -110,7 +130,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreatePost;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -119,7 +139,7 @@ namespace testmaster2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
-        
+
         /// <summary>
         /// lblSuccessMessage control.
         /// </summary>

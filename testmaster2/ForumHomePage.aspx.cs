@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+//Programmer :Jayabharathi
+//Date: 02-10-2019
+//Purpose: View all posts of theforum. Show top links, Quick search on page.
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,8 +24,7 @@ namespace DICT_Website
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            // Check authorised user 
-           
+            // Start Check authorised user            
             if (Session["RegID"] == null)
                 Response.Redirect("~/Login.aspx");
             else
@@ -28,7 +34,7 @@ namespace DICT_Website
                 //String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username +" ";
             }
-            
+            // End Check authorised user 
 
             //Show gridview details
             dt = new DataTable();
@@ -285,6 +291,15 @@ namespace DICT_Website
                 //redirect to login page
                 Response.Redirect("~/Login.aspx");
             }
+        }
+
+        protected void gv_ForumDetails_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gv_ForumDetails.PageIndex = e.NewPageIndex;
+            //fill grid view
+            gv_ForumDetails.DataSource = dt;
+            gv_ForumDetails.DataBind();
+            getRecentPost();
         }
     }
 }

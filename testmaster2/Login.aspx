@@ -58,6 +58,12 @@
                             <asp:Label ID="lblSuccessMessage" runat="server" Font-Size="14px" ForeColor="Red" Text=""></asp:Label></asp:TableCell>
                     </asp:TableRow>
                     </asp:Table>
+                
                 </asp:Panel>
             </asp:Panel>
+    <asp:Panel runat="server">
+        <div style="height:178px;" >
+
+        </div>
+    </asp:Panel>
 </asp:Content>

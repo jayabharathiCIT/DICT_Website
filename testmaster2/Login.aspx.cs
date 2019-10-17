@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+// Programmer :Jayabharathi
+// Date: 14-10-2019
+// Purpose: login into the forum .Provide correct username and password to login .then redirects to forum home page.
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

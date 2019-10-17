@@ -10,6 +10,25 @@
          <%--<div  class="divPageContent"    >--%>
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOutline">
             <asp:Panel ID="Panel2" CssClass="plnInline" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+                 <%-- Added login dropdown --%>
+                 <div class="nav navbar-nav navbar-right">
+              <table  style="width:200px;" >
+                  <tr>
+                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#FACF5A" runat="server" Text="Label"></asp:Label></td>                                          
+                  </tr>      
+                  <tr>
+                      <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                           <asp:ListItem Value="1">Change Password</asp:ListItem>
+
+                  <asp:ListItem Value="2">Delete Account</asp:ListItem>
+
+                  <asp:ListItem Value="3" >LogOut</asp:ListItem>
+                    </asp:DropDownList> 
+                          </td>
+                  </tr>
+              </table>                                                              
+                </div>
+                 <%-- Added login dropdown --%>
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>

@@ -1,9 +1,11 @@
-﻿
-/*Programmer :Jayabharathi
- *Date:25-09-2019
- *Purpose: Create new post ,Get all values from user and save to Mysql Datatable in correct format
- */
- using System;
+﻿//*******************************************************************
+// Programmer :Jayabharathi
+//Date:25-09-2019
+//Purpose: Create new post ,Get all values from user and save to Mysql Datatable in correct format
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//*******************************************************************
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,34 +24,56 @@ namespace testmaster2
         protected void Page_Load(object sender, EventArgs e)
         {
             // check user is authenticated .
-            
+            // Start Check authorised user            
+            if (Session["RegID"] == null)
+                Response.Redirect("~/Login.aspx");
+            else
+            {
+                String userid = Convert.ToString((int)Session["RegID"]);
+                String username = Session["Username"].ToString();
+                //String userrole = Session["Role"].ToString();
+                lbluserInfo.Text = "Welcome , " + username + " ";
+            }
+            // End Check authorised user 
+
         }
 
         protected void btnCreatePost_Click(object sender, EventArgs e)
         {
+
+           
             try
             {
                 using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                {
+                    sqlCon.Open();
+                    MySqlCommand sqlCmd = new MySqlCommand("sp_AddPost", sqlCon);
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("P_Post_ID", "001");
+                    sqlCmd.Parameters.AddWithValue("P_Topic_Title", txtTitle.Text);
+                    // sqlCmd.Parameters.AddWithValue("P_Topic_Title", "Displaying multiple live clocks on a page.");
+                    sqlCmd.Parameters.AddWithValue("P_Description_Post", textDescription.Text);
+                    // sqlCmd.Parameters.AddWithValue("P_Description_Post", " hi all , i have the below java-script to display the current date in the given format at runtime using element id='liveclock'.but scrollable affects but it is not working for my HTML page. Let me know how to rectify this issue.....");
+                    if (getCategoryValue() > 0)
                     {
-                        sqlCon.Open();
-                        MySqlCommand sqlCmd = new MySqlCommand("sp_AddPost", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
-                        // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("P_Post_ID", "001");
-                        sqlCmd.Parameters.AddWithValue("P_Topic_Title", txtTitle.Text);
-                        // sqlCmd.Parameters.AddWithValue("P_Topic_Title", "Displaying multiple live clocks on a page.");
-                        sqlCmd.Parameters.AddWithValue("P_Description_Post", textDescription.Text);
-                        // sqlCmd.Parameters.AddWithValue("P_Description_Post", " hi all , i have the below java-script to display the current date in the given format at runtime using element id='liveclock'.but scrollable affects but it is not working for my HTML page. Let me know how to rectify this issue.....");
-                        if (getCategoryValue() > 0)
-                        {
-                            sqlCmd.Parameters.AddWithValue("P_Category_ID", getCategoryValue());
-                        }
-                        string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        sqlCmd.Parameters.AddWithValue("P_Date_Posted", postCreatedDate);
-                        //sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
-                        sqlCmd.Parameters.AddWithValue("P_Register_ID", "244332");
-                        sqlCmd.ExecuteNonQuery();
-                        lblSuccessMessage.Text = "Submitted Successfully";
+                        sqlCmd.Parameters.AddWithValue("P_Category_ID", getCategoryValue());
                     }
+                    string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    sqlCmd.Parameters.AddWithValue("P_Date_Posted", postCreatedDate);
+                    //sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
+                    sqlCmd.Parameters.AddWithValue("P_Register_ID", "244332");
+                    sqlCmd.ExecuteNonQuery();
+                    lblSuccessMessage.Text = "Submitted Successfully";
+                    string message = "Post is Created Successfully.Now Redirecting to Forum Home Page";
+                    string url = "ForumHomePage.aspx";
+                    string script = "window.onload = function(){ alert('";
+                    script += message;
+                    script += "');";
+                    script += "window.location = '";
+                    script += url;
+                    script += "'; }";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+                }
             }
             catch (Exception ex)
             {
@@ -95,6 +119,29 @@ namespace testmaster2
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/ForumHomePage.aspx");
+        }
+
+
+        protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlLogin.SelectedItem.Value == "1")
+            {
+                //ChangePassword
+            }
+            if (ddlLogin.SelectedItem.Value == "2")
+            {
+                //DeleteAccount
+            }
+            if (ddlLogin.SelectedItem.Value == "3")
+            {
+                //Logout
+                //clear session variables
+                Session.Clear();
+                Session.Remove("RegID");
+                Session.Remove("Username");
+                //redirect to login page
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }

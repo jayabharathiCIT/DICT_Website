@@ -5,8 +5,9 @@
       <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
          
             <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+                <%-- Added login dropdown --%>
                  <div class="nav navbar-nav navbar-right">
-              <table  style="width:300px;" >
+              <table  style="width:200px;" >
                   <tr>
                       <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#FACF5A" runat="server" Text="Label"></asp:Label></td>                                          
                   </tr>      
@@ -22,6 +23,7 @@
                   </tr>
               </table>                                                              
                 </div>
+                 <%-- Added login dropdown --%>
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>
@@ -36,8 +38,13 @@
                 </div>
                 <div style="padding-top:30px ;">
                 <div style=" float:left;height:500px; width:700px; border-color:white; border-width:thin; border-style:solid ">
-                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="680px"  Height="480px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False" OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" >
+                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
+                        BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
+                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="3"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
+                        <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
+                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
                         <Columns>
+                            
                             <asp:TemplateField HeaderText="Topic">
                                 <ItemTemplate>
                                     <asp:Image runat="server" Width="51px"  Height="50px" ImageUrl="~/Images/Comment.png" />        
@@ -118,7 +125,7 @@
                         <div id="divTopPost" class="divTopLinks" >
                             <asp:Table ID="tblTopPost" runat="server" GridLines="Horizontal" BorderColor="Black" Width="130px" Font-Bold="True" Font-Size="12px" BorderStyle="Ridge">
                                 <asp:TableHeaderRow VerticalAlign="Middle" HorizontalAlign="Center">
-                                    <asp:TableHeaderCell>Top Posts</asp:TableHeaderCell>
+                                    <asp:TableHeaderCell Font-Size="16px" >Top Posts</asp:TableHeaderCell>
                                 </asp:TableHeaderRow>
                                 <asp:TableRow  > 
                                     <asp:TableCell>

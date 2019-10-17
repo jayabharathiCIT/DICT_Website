@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+// Programmer :Jayabharathi
+// Date: 04-10-2019
+// Purpose: See description  all posts and reply to the posts.
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,7 +24,19 @@ namespace DICT_Website
         
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+            // Start Check authorised user            
+            if (Session["RegID"] == null)
+                Response.Redirect("~/Login.aspx");
+            else
+            {
+                String userid = Convert.ToString((int)Session["RegID"]);
+                String username = Session["Username"].ToString();
+                //String userrole = Session["Role"].ToString();
+                lbluserInfo.Text = "Welcome , " + username + " ";
+            }
+            // End Check authorised user 
+
             string postID = Request.QueryString["PostID"];
             DataTable dt = new DataTable();
             DataTable dtReply = new DataTable();
@@ -118,7 +137,7 @@ namespace DICT_Website
                     using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                     {
                         sqlCon.Open();
-
+                        // update the reply in reply table
                         MySqlCommand sqlCmd = new MySqlCommand("sp_AddReply", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
                         // not need applyed as auto increment sqlCmd.Parameters.AddWithValue("Reply_ID", "001");
@@ -126,12 +145,27 @@ namespace DICT_Website
                         sqlCmd.Parameters.AddWithValue("R_Rply_Comment", txtComment.Text);
                         string replyCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                         sqlCmd.Parameters.AddWithValue("R_Reply_Date", replyCreatedDate);
-                        sqlCmd.Parameters.AddWithValue("R_Register_ID", "244332");
+                        int Register_ID = (int)Session["RegID"];
+                        sqlCmd.Parameters.AddWithValue("R_Register_ID", Register_ID);
                         sqlCmd.ExecuteNonQuery();
                         lblSuccessMessage.Text = "This Reply is submitted Successfully";
 
                         // add code to update post table no of replies .
                         //calculate number of replies based on the reply table using post ID and fill the post ID each time you create a reply.
+                        MySqlCommand sqlCmd2 = new MySqlCommand("sp_CountReplies", sqlCon);
+                        sqlCmd2.CommandType = CommandType.StoredProcedure;
+                        sqlCmd2.Parameters.AddWithValue("R_Post_ID", Convert.ToInt32(postID));
+                        sqlCmd2.ExecuteNonQuery();
+
+                        string message = "Thank you for the Reply.Now Redirecting to Forum Home Page";
+                        string url = "ForumHomePage.aspx";
+                        string script = "window.onload = function(){ alert('";
+                        script += message;
+                        script += "');";
+                        script += "window.location = '";
+                        script += url;
+                        script += "'; }";
+                        ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
                     }
                 }
             }
@@ -146,6 +180,28 @@ namespace DICT_Website
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/ForumHomePage.aspx");
+        }
+
+        protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlLogin.SelectedItem.Value == "1")
+            {
+                //ChangePassword
+            }
+            if (ddlLogin.SelectedItem.Value == "2")
+            {
+                //DeleteAccount
+            }
+            if (ddlLogin.SelectedItem.Value == "3")
+            {
+                //Logout
+                //clear session variables
+                Session.Clear();
+                Session.Remove("RegID");
+                Session.Remove("Username");
+                //redirect to login page
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }
