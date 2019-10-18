@@ -74,12 +74,6 @@
                     <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password"></asp:TextBox> </asp:TableCell>
             </asp:TableRow>
 
-           <%-- <asp:TableRow Width="250" >
-                <asp:TableCell > <asp:Label runat="server" ID="Label1" Text="" CssClass="textLables1"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:Label runat="server" ID="Label2" Text="*Password should be alphanumeric and  character between 6 to 10." CssClass="textLablesSmall"></asp:Label></asp:TableCell>
-            </asp:TableRow>--%>
             
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblConfirmPassword" Text="Confirm Password*" CssClass="textLables"></asp:Label></asp:TableCell>
