@@ -82,7 +82,7 @@
             </asp:Menu>
         
      </div>
-      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:20px; "> <img  style="width:115px; height:70px;" src="Images/DictLogo.png" /></div>
+      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:20px; "><a href="homepage.aspx"><img   style="width:115px; height:70px;" src="Images/DictLogo.png" /></a> </div>
       <div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
          <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" >
              <StaticMenuStyle BackColor="black" />
@@ -113,7 +113,7 @@
   </div>
         <%-- Add DICT menu bar  --%>
         <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <asp:ContentPlaceHolder ID="MainContent"  runat="server">
             </asp:ContentPlaceHolder>
             <hr />
          
