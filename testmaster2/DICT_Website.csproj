@@ -129,7 +129,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="HtmlPage1.html" />
     <Content Include="Images\background.png" />
     <Content Include="Images\Comment.png" />
     <Content Include="Images\courses.jpg" />

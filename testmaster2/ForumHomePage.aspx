@@ -40,7 +40,7 @@
                 <div style=" float:left;height:500px; width:700px; border-color:white; border-width:thin; border-style:solid ">
                     <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
                         BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
-                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="3"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
+                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
                         <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
                         <Columns>
