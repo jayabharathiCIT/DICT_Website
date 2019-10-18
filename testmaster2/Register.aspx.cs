@@ -23,32 +23,36 @@ namespace DICT_Website
         {
             try
             {
-                using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
-                {
-                    sqlCon.Open();
-                    MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;
-                    
-
-                    sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-                    sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
-                    sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
-
-                    if (checkPassword() ==1)
+                int password = checkPassword();
+                if (password == 1)
+                {                   
+                    using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                     {
-                        sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
-                    }
+                        sqlCon.Open();
+                        MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
+                        sqlCmd.CommandType = CommandType.StoredProcedure;
 
-                    string txtDate = tbDate.Text;
-                  DateTime DTdob = Convert.ToDateTime(txtDate);
-                 string getDob = DTdob.ToString("dd-MM-yy");
-                 sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
-                    sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
-                   // string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    //sqlCmd.Parameters.AddWithValue("Date_Change_Password", postCreatedDate);
-                    
-                    sqlCmd.ExecuteNonQuery();
-                    lblSuccessMessage.Text = "Submitted Successfully";
+                        sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                        sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
+                        sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
+                        
+
+                        string txtDate = tbDate.Text;
+                        DateTime DTdob = Convert.ToDateTime(txtDate);
+                        string getDob = DTdob.ToString("dd-MM-yy");
+                        sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
+                        sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
+                        string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+                        sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
+                        sqlCmd.ExecuteNonQuery();
+                        lblSuccessMessage.Text = "Submitted Successfully";
+                    }
+                }
+                else
+                {
+                    //error to user.
+                    lblError.Text = "The password and confirmation password do not match.";
                 }
                 // }
             }
@@ -56,34 +60,36 @@ namespace DICT_Website
             {
                 lblSuccessMessage.Text = ex.Message;
             }
+
+            //txtID.Text = "";
+            //txtFirstname.Text = "";
+            //txtLastname.Text = "";
+            //tbDate.Text = "";
+            //txtEmail.Text = "";
+            
         }
 
         public int checkPassword()
         {
             try
             {
-
-                if (txtPassword.Text == txtConfirmPassword.Text)
+                int pass = Convert.ToInt32(this.txtPassword1.Text);
+                int confirmpass = Convert.ToInt32(this.txtConfirmPassword.Text);
+                if( pass == confirmpass)
                 {
                     return 1;
                 }
-                else if (txtPassword.Text != txtConfirmPassword.Text)
-                {
-                    return 2;
-                }
                 else
                 {
-                    return 3;
+                    return 0;
                 }
-
-
             }
             catch (Exception es)
             {
                 lblSuccessMessage.Text = es.Message;
                 return 0;
             }
-        }
+    }
 
        
         protected void btnCancel_Click(object sender, EventArgs e)
