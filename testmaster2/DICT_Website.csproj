@@ -45,7 +45,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=8.0.17.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -115,6 +117,7 @@
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\TeachingStyle.css" />
     <Content Include="Default.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
@@ -136,6 +139,9 @@
     <Content Include="Images\DictFullLogo.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\down.png" />
+    <Content Include="Images\IconFlexibleLearning.png" />
+    <Content Include="Images\IconWorkCooperative.png" />
+    <Content Include="Images\IconWorkIntegrated.jpg" />
     <Content Include="Images\sendReply.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
@@ -178,6 +184,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Teaching_LearningPage.aspx" />
     <Content Include="ViewandReplyPost.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -253,6 +260,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_LearningPage.aspx.cs">
+      <DependentUpon>Teaching_LearningPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teaching_LearningPage.aspx.designer.cs">
+      <DependentUpon>Teaching_LearningPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewandReplyPost.aspx.cs">
       <DependentUpon>ViewandReplyPost.aspx</DependentUpon>
