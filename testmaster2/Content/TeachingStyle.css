@@ -24,25 +24,22 @@
 }
 
 
-.ParagraphContent {
-    background-color: #206f9f;
-    color: white;
+.divContent {
+    background: linear-gradient(90deg, #FACF5C 92.89%, #E0E0E0 98.96%);
+    color: black;
+    font-size: 20px;
+    height: 40px;
     font-style: normal;
     font-weight: normal;
-    font-size: 45px;
-    line-height: 55px;
-    display: flex;
+    font-size: 20px;
+    text-align: center;
     align-items: center;
-    text-align:justify;
-    border-radius: 15px;
-    margin: 0 auto;
-    padding: 20px;
+    vertical-align: central;
 }
 
 .Icons {
     height: 100px;
     width: 100px;
     border-radius: 15px;
-    background-color: whitesmoke;
-
+    background-color: white;
 }
