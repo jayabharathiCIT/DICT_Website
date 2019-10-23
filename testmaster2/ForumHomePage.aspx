@@ -71,7 +71,8 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Reply">
-                                <ItemTemplate>         
+                                <ItemTemplate> 
+                                     <asp:Button ID="btnEdit"  runat="server" Text="Edit"  CssClass="btnReply" CommandName="Edit"   OnClick="btnEdit_Click"   Tooltip='<%# DataBinder.Eval(Container.DataItem, "Post_ID") %>'  CommandArgument='<%#Eval("Post_ID")%>' Visible='<%# HasEditPermission((int)Eval("Register_ID")) %>'   />                                    
                                     <asp:Image runat="server" Width="51px"  Height="50px" ImageUrl="~/Images/replyall.png" />
                                     <asp:Label ID="lblReply" Font-Bold="true" ForeColor="Black" runat="server" Text='<%# Bind("No_Replies") %>'></asp:Label>
                                     <asp:Button ID="btnReply"  runat="server" Text="Reply"  CssClass="btnReply" CommandName="Reply"   OnClick="btnReply_Click1"   Tooltip='<%# DataBinder.Eval(Container.DataItem, "Post_ID") %>'  CommandArgument='<%#Eval("Post_ID")%>' />                                    

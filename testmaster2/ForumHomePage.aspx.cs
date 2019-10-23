@@ -183,7 +183,23 @@ namespace DICT_Website
                 
             }
         }
-
+        protected Boolean HasEditPermission(int RegisterID)
+        {
+            bool showEDIT = false;
+            if (Session["RegID"] == null)
+            {
+                showEDIT = false;
+            }
+            else
+            {
+                int loginUserID = (int)Session["RegID"];
+                if (RegisterID == loginUserID)
+                {
+                    showEDIT = true;
+                }
+            }
+            return showEDIT;            
+        }
 
         private void btnReply_Click(object sender, EventArgs e)
         {
@@ -256,6 +272,13 @@ namespace DICT_Website
                 // string rowIndex = e.CommandArgument.ToString();
                 Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + rowIndex.ToString());
             }
+            if(e.CommandName == "Edit")
+            {
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                //Determine the RowIndex of the Row whose Button was clicked.
+                // string rowIndex = e.CommandArgument.ToString();
+                Response.Redirect("~/EditForumPost.aspx" + "?PostID=" + rowIndex.ToString());
+            }
         }
 
         protected void btnReply_Click1(object sender, EventArgs e)
@@ -300,6 +323,11 @@ namespace DICT_Website
             gv_ForumDetails.DataSource = dt;
             gv_ForumDetails.DataBind();
             getRecentPost();
+        }
+
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
