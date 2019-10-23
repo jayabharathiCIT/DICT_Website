@@ -67,6 +67,15 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtID;
         
         /// <summary>
+        /// Range1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator Range1;
+        
+        /// <summary>
         /// lblErrorID control.
         /// </summary>
         /// <remarks>
@@ -94,13 +103,13 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtFirstname;
         
         /// <summary>
-        /// lblErrorFirstName control.
+        /// lblErrorFirstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorFirstName;
+        protected global::System.Web.UI.WebControls.Label lblErrorFirstname;
         
         /// <summary>
         /// lblLastname control.
@@ -121,13 +130,13 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtLastname;
         
         /// <summary>
-        /// lblErrorLastName control.
+        /// lblErrorLastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorLastName;
+        protected global::System.Web.UI.WebControls.Label lblErrorLastname;
         
         /// <summary>
         /// lblPassword control.
@@ -157,6 +166,15 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtPassword1;
         
         /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        
+        /// <summary>
         /// lblErrorPassword control.
         /// </summary>
         /// <remarks>
@@ -184,13 +202,22 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
         
         /// <summary>
-        /// lblErrorConfirm control.
+        /// RangeValidator2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblErrorConfirm;
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
+        
+        /// <summary>
+        /// lblErrorConfirmPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorConfirmPassword;
         
         /// <summary>
         /// lblDOB control.
@@ -211,13 +238,13 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox tbDate;
         
         /// <summary>
-        /// Label1 control.
+        /// lblErrorDOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblErrorDOB;
         
         /// <summary>
         /// lblEmail control.
