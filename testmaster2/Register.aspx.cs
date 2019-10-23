@@ -23,50 +23,74 @@ namespace DICT_Website
         {
             try
             {
+                int ID = checkID();
                 int password = checkPassword();
-                if (password == 1)
-                {                   
-                    using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                if (ID == 1)
+                {
+                    if (password == 1)
                     {
-                        sqlCon.Open();
-                        MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
+                        using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                        {
+                            sqlCon.Open();
+                            MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
 
-                        sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-                        sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
-                        sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
-                        
+                            sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                            sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
+                            sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
 
-                        string txtDate = tbDate.Text;
-                        DateTime DTdob = Convert.ToDateTime(txtDate);
-                        string getDob = DTdob.ToString("dd-MM-yy");
-                        sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
-                        sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
-                        string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
-                        sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
-                        sqlCmd.ExecuteNonQuery();
-                        lblSuccessMessage.Text = "Submitted Successfully";
+
+                            string txtDate = tbDate.Text;
+                            DateTime DTdob = Convert.ToDateTime(txtDate);
+                            string getDob = DTdob.ToString("dd-MM-yy");
+                            sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
+                            sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
+                            string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+                            sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
+                            sqlCmd.ExecuteNonQuery();
+                            lblSuccessMessage.Text = "Submitted Successfully";
+                        }
                     }
+                    else
+                    {
+                        //error to user.
+                        lblErrorConfirm.Text = "The password and confirmation password do not match.";
+                    }
+                    // }
                 }
                 else
                 {
                     //error to user.
-                    lblError.Text = "The password and confirmation password do not match.";
+                    lblErrorID.Text = "Your ID Can not be blank.";
                 }
                 // }
             }
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = ex.Message;
-            }
+            } 
+        }
 
-            //txtID.Text = "";
-            //txtFirstname.Text = "";
-            //txtLastname.Text = "";
-            //tbDate.Text = "";
-            //txtEmail.Text = "";
-            
+        public int checkID()
+        {
+            try
+            {
+               // int id = Convert.ToInt32(this.txtID.Text);
+                if (txtID.Text != null && txtFirstname.Text != null && txtLastname.Text != null && txtPassword1.Text != null && txtConfirmPassword.Text != null && tbDate.Text != null && txtEmail.Text != null)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            catch (Exception es)
+            {
+                lblSuccessMessage.Text = es.Message;
+                return 0;
+            }
         }
 
         public int checkPassword()

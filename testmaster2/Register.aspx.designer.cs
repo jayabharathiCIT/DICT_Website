@@ -67,6 +67,15 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtID;
         
         /// <summary>
+        /// lblErrorID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorID;
+        
+        /// <summary>
         /// lblFirstname control.
         /// </summary>
         /// <remarks>
@@ -85,6 +94,15 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtFirstname;
         
         /// <summary>
+        /// lblErrorFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorFirstName;
+        
+        /// <summary>
         /// lblLastname control.
         /// </summary>
         /// <remarks>
@@ -101,6 +119,15 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtLastname;
+        
+        /// <summary>
+        /// lblErrorLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorLastName;
         
         /// <summary>
         /// lblPassword control.
@@ -130,6 +157,15 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtPassword1;
         
         /// <summary>
+        /// lblErrorPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorPassword;
+        
+        /// <summary>
         /// lblConfirmPassword control.
         /// </summary>
         /// <remarks>
@@ -148,13 +184,13 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox txtConfirmPassword;
         
         /// <summary>
-        /// lblError control.
+        /// lblErrorConfirm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblError;
+        protected global::System.Web.UI.WebControls.Label lblErrorConfirm;
         
         /// <summary>
         /// lblDOB control.
@@ -175,6 +211,15 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.TextBox tbDate;
         
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -191,6 +236,15 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// lblErrorEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorEmail;
         
         /// <summary>
         /// btnCreatePost control.
