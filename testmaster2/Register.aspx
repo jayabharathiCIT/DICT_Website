@@ -96,7 +96,7 @@
                      <asp:RangeValidator id="RangeValidator1" ControlToValidate="txtPassword1" Font-Size="Small" Font-Bold="true" ForeColor="Red" MinimumValue="1" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Password must be number." runat="server"> </asp:RangeValidator><br/>
                     <asp:Label ID="lblErrorPassword" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
-            </asp:TableRow>
+            </asp:TableRow>  
                 
             
             <asp:TableRow Width="250" >
