@@ -97,7 +97,7 @@
                     <asp:Label ID="lblErrorPassword" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
-
+                
             
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblConfirmPassword" Text="Confirm Password*" CssClass="textLables"></asp:Label></asp:TableCell>
