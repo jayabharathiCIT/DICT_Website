@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -33,15 +34,15 @@ namespace DICT_Website
                 {
                     sqlCon.Open();
                     MySqlCommand sqlCmd = new MySqlCommand("sp_CheckAuthUser", sqlCon);
-                    sqlCmd.CommandType = CommandType.StoredProcedure;                    
-                    sqlCmd.Parameters.AddWithValue("F_Register_ID", txtUserName.Text);                    
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    sqlCmd.Parameters.AddWithValue("F_Register_ID", txtUserName.Text);
                     sqlCmd.Parameters.AddWithValue("F_Password", txtPassword.Text);
                     // sqlCmd.ExecuteNonQuery();
                     string output = sqlCmd.ExecuteScalar().ToString();
                     if (output == "1")
                     {
                         lblSuccessMessage.Text = "Login Successed";
-                        
+
                         DataTable dtbl = new DataTable();
                         MySqlDataAdapter sqlPerson = new MySqlDataAdapter("sp_FristNameByID", sqlCon);
                         sqlPerson.SelectCommand.CommandType = CommandType.StoredProcedure;

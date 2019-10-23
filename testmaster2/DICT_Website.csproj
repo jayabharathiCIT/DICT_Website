@@ -155,6 +155,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\background.png" />
+    <Content Include="Images\CITRtoLogo.png" />
     <Content Include="Images\Comment.png" />
     <Content Include="Images\courses.jpg" />
     <Content Include="Images\DictFullLogo.png" />
