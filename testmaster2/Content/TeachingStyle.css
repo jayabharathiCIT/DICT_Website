@@ -23,23 +23,26 @@
     vertical-align: central;
 }
 
-
 .divContent {
-    background: linear-gradient(90deg, #FACF5C 92.89%, #E0E0E0 98.96%);
-    color: black;
+    background-color: #206f9f;
+    color: white;
     font-size: 20px;
-    height: 40px;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    text-align: center;
+    display: flex;
     align-items: center;
+    text-align: justify;
+    line-height: 40px;
     vertical-align: central;
+    border-radius: 15px;
+    padding: 20px;
 }
+
 
 .Icons {
     height: 100px;
     width: 100px;
     border-radius: 15px;
     background-color: white;
+    align-items: center;
 }

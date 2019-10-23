@@ -14,7 +14,7 @@
                                         
                                         </td>
                                         <td style="width:700px;height:auto; ">
-                                            <a href="Teaching_LearningPage#WIL"><p Class= "divSubHeader" >WORK INTEGRATED LEARNING</p></a>
+                                            <a href="Teaching_LearningPage#WIL"><p Class="divSubHeader" >WORK INTEGRATED LEARNING</p></a>
                                         </td>
                                         <td style="width:700px;height:auto; ">
                                             <a href="Teaching_LearningPage#FL"><p Class= "divSubHeader">FLEXIBLE  LEARNING</p></a>
@@ -30,17 +30,17 @@
                 <a href="http://itdp.com.au/"><h1 style="color:black">Project Based Learning </h1></a>
                 <br><br/> 
                 
-                <div Class= "divContent">   
+                <div class = "divContent">   
                 <table>
                         <tr>
                             <td>
-                              <p> Project Based Learning is a teaching method in which students gain knowledge and skills by working for an extended period 
+                              <p > Project Based Learning is a teaching method in which students gain knowledge and skills by working for an extended period 
                                   of time to investigate and respond to an authentic, engaging, and complex question, problem, or challenge </p>
                             </td>
                                 </tr>
                     <tr>
-                     <td>
-                       <a href="http://itdp.com.au/" ><img class="Icons" src="Images/IconWorkCooperative.png" alt="WorkCooperative"></a>
+                     <td style=" text-align: center;">
+                       <a  href="http://itdp.com.au/" ><img class="Icons" src="Images/IconWorkCooperative.png" alt="WorkCooperative" title="Project Based Learning"></a>
                     </td>
                     </tr>
                         </table>
@@ -48,7 +48,7 @@
 
             </div>
 
-             <div id="WIL ">
+             <div id="WIL">
              <br><br/><a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement"><h1 style="color:black"> Work Integrated Learning </h1></a><br><br/>
 
                      <div class ="divContent">
@@ -65,8 +65,8 @@
                                </td>
                            </tr>
                            <tr>
-                               <td>
-                                    <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" ><img class="Icons" src="Images/IconWorkIntegrated.jpg" alt="WorkIntegrated"></a>
+                               <td style=" text-align: center;">
+                                   <a  href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" ><img class="Icons" src="Images/IconWorkIntegrated.jpg" alt="WorkIntegrated" title="Work Placement"></a>
                                </td>
                            </tr>
                           </table>
@@ -76,7 +76,7 @@
 
            
                  
-               <div id="FL ">
+               <div id="FL">
                       <br><br/>  <a href="https://cit.edu.au/study/flexible_learning"><h1 style="color:black"> Flexible Learning </h1></a><br><br/>
                         <div class ="divContent">
                              <br />
@@ -89,8 +89,8 @@
                                    </td>
                                 </tr>
                                 <tr>
-                                     <td>
-                                         <a href="https://cit.edu.au/study/flexible_learning" ><img class="Icons" src="Images/IconFlexibleLearning.png" alt="FlexibleLearning"></a>
+                                     <td style=" text-align: center;">
+                                         <a  href="https://cit.edu.au/study/flexible_learning" ><img class="Icons" src="Images/IconFlexibleLearning.png" alt="FlexibleLearning" title="Flexible Learning"></a>
                                      </td>
                             </tr>
                                 </table>
