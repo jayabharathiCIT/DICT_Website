@@ -1,0 +1,133 @@
+﻿/*All*/
+body{
+    font-family: 'Roboto';
+ 
+}
+
+
+
+#Content1 {
+    background-color: rebeccapurple;
+}
+
+/*top container*/
+
+
+.top-box {
+    
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(187.19deg, #FF7F7F 0%, #DDCD13 101.17%);
+}
+
+.header{
+    padding-left: 35px;
+     transform: translateY(50px);
+     font-size: 8rem;
+     color: white;
+}
+
+/*content container*/
+.form-container{
+    text-align: center;
+    transform: translateY(150px);
+}
+
+.content-box {
+    height: 1000px;
+    background-color: lightcyan;
+    font-size: 2rem;
+}
+
+.header2 {
+   text-align: center;
+    transform: translateY(50px);
+    font-size: 4rem;
+    color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input{
+    max-width: 600px;
+}
+
+textarea {
+    max-width: 600px;
+}
+
+.button1 {
+    transform: translateX(900px);
+    background: linear-gradient(180deg, #FBD826 5.21%, rgba(251, 216, 38, 0.3) 100%);
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+}
+.btn {
+    transform: translateX(800px);
+    background: linear-gradient(180deg, #FBD826 5.21%, rgba(251, 216, 38, 0.3) 100%);
+    margin: 25px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+.date {
+    transform: translateX(123px);
+    font-size: 2rem;
+    padding: 12px 12px 12px 0;
+}

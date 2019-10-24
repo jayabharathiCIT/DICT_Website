@@ -34,7 +34,7 @@
                     </tr>
                 </table>
                 </div>
-                <div style=" float:left;height:200px; width:550px; border-color:white; border-width:thin; border-style:solid ">
+                <div style=" float:left;height:170px; width:550px; border-color:white; border-width:thin; border-style:solid ">
                     <asp:Table ID="tblPostTitleDec"  CssClass="tableViewReplyPost" runat="server" CellSpacing="3"  HorizontalAlign="Center" >
                         <asp:TableRow>
                             <asp:TableCell Width="65px" > <asp:Image runat="server" ImageUrl="~/Images/Comment.png" /></asp:TableCell>
@@ -45,8 +45,7 @@
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell Width="65px" >
-                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/User.png" />
-                                
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/User.png" />                                
                             </asp:TableCell>
                             <asp:TableCell  ColumnSpan="2" >
                                 <asp:Label ID="lblCreatedByValue" runat="server" Text="" Font-Size="16px" ForeColor="White"></asp:Label>

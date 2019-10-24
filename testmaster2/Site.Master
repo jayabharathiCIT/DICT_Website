@@ -52,7 +52,7 @@
         <div class="navbar-light fixed-top topbox ">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <div class="topbox-logo-container" >
-                <img src="Images/citlogo.png" alt="logo" class="topbox-logo">
+                <img src="Images/CITRtoLogo.png"  style="width:135px;height:89px;" alt="logo" >
             </div>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -139,7 +139,7 @@
                     <li><a href="/teaching_learning/">Teaching & Learning</a></li><br />
                     <li><a href="/students/">Students</a></li><br />
                     <li><a href="/DICT_news/">DICT News</a></li><br />
-                    <li><a href="/forum/">Forum</a></li><br />
+                    <li><a href="ForumHomePage.aspx">Forum</a></li><br />
                   </li>
                 </ul>
             </div>
