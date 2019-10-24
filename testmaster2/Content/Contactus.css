@@ -1,0 +1,22 @@
+﻿body {
+    font-family: 'Roboto';
+}
+.top-box {
+   ;
+    height: 150px;
+    width:110%;
+    background: #233142;
+
+    
+}
+.header {
+    padding-left: 35px;
+    transform: translateY(60px);
+    font-size: 5rem;
+    color: #FACF5A;
+}
+.header2 {
+    color: rgba(255, 89, 89, 0.99);
+    font-size: 3rem;
+    
+}
