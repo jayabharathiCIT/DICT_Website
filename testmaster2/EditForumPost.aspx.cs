@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+// Programmer :Jayabharathi
+// Date: 24-10-2019
+// Purpose: Edit the post .Show edit page only to user who created it. Show and Hide edit button on forum page.
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
