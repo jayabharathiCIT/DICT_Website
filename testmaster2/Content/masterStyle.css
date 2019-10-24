@@ -23,9 +23,14 @@
     transform: translateY(-10px);
     vertical-align: central;
     line-height: 1.6rem;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
 }
+.topbox-logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
 
 body {
     margin: 0;

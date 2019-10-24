@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Configuration;
@@ -12,7 +7,7 @@ namespace DICT_Website
 {
     public partial class Register : System.Web.UI.Page
     {
-        // string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=pass;";
+        // string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=1234;";
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,27 +19,31 @@ namespace DICT_Website
             try
             {
                 int password = checkPassword();
+    
                 if (password == 1)
-                {                   
+                {
+                    int validResult = CheckAllRegisterValidation();
+                    if (validResult == 1 && password == 1)
+                    
                     using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                     {
                         sqlCon.Open();
                         MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
 
-                        sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-                        sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
-                        sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
-                        
+                            sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                            sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
+                            sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
+                            sqlCmd.Parameters.AddWithValue("P_Password", txtPassword1.Text);
 
-                        string txtDate = tbDate.Text;
-                        DateTime DTdob = Convert.ToDateTime(txtDate);
-                        string getDob = DTdob.ToString("dd-MM-yy");
-                        sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
-                        sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
+                            string txtDate = tbDate.Text;
+                            DateTime DTdob = Convert.ToDateTime(txtDate);
+                            string getDob = DTdob.ToString("dd-MM-yy");
+                            sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
+                            sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
+              
                         string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                         sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
-                        sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
                         sqlCmd.ExecuteNonQuery();
                         lblSuccessMessage.Text = "Submitted Successfully";
                     }
@@ -52,21 +51,14 @@ namespace DICT_Website
                 else
                 {
                     //error to user.
-                    lblError.Text = "The password and confirmation password do not match.";
+                    lblErrorConfirmPassword.Text = "The password and confirmation password do not match.";
                 }
-                // }
             }
+         
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = ex.Message;
             }
-
-            //txtID.Text = "";
-            //txtFirstname.Text = "";
-            //txtLastname.Text = "";
-            //tbDate.Text = "";
-            //txtEmail.Text = "";
-            
         }
 
         public int checkPassword()
@@ -91,7 +83,51 @@ namespace DICT_Website
             }
     }
 
-       
+        public int CheckAllRegisterValidation()
+        {
+            if (txtID.Text.Length == 0)
+            {
+                lblErrorID.Text = "*** Your ID can not be blank ***";
+                return 0;
+            }
+            else if (txtFirstname.Text.Length == 0)
+            {
+
+                lblErrorFirstname.Text = "*** First name can not be blank ***";
+                return 0;
+            }
+            else if (txtLastname.Text.Length == 0)
+            {
+                lblErrorLastname.Text = "*** Last name can not be blank ***";
+                return 0;
+            }
+            if (txtPassword1.Text.Length == 0)
+            {
+                lblErrorPassword.Text = "*** Password can not be blank ***";
+                return 0;
+            }
+            else if (txtConfirmPassword.Text.Length == 0)
+            {
+                lblErrorConfirmPassword.Text = "*** Confirm password can not be blank ***";
+                return 0;
+            }
+            else if (tbDate.Text.Length == 0)
+            {
+                lblErrorDOB.Text = "*** You must select your date of birth ***";
+                return 0;
+            }
+            if (txtEmail.Text.Length == 0)
+            {
+                lblErrorEmail.Text = "*** Email can not be blank ***";
+                return 0;
+            }
+            else
+            {
+                return 1;
+            }
+
+
+        }
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/HomePage.aspx");

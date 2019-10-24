@@ -30,6 +30,7 @@ namespace testmaster2
             else
             {
                 String userid = Convert.ToString((int)Session["RegID"]);
+                
                 String username = Session["Username"].ToString();
                 //String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username + " ";
@@ -40,8 +41,8 @@ namespace testmaster2
 
         protected void btnCreatePost_Click(object sender, EventArgs e)
         {
+            
 
-           
             try
             {
                 using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
@@ -61,7 +62,8 @@ namespace testmaster2
                     string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     sqlCmd.Parameters.AddWithValue("P_Date_Posted", postCreatedDate);
                     //sqlCmd.Parameters.AddWithValue("P_Date_Posted", "2019-09-25 02:55:05");
-                    sqlCmd.Parameters.AddWithValue("P_Register_ID", "244332");
+                    int getUserID = (int)Session["RegID"];
+                    sqlCmd.Parameters.AddWithValue("P_Register_ID", getUserID);
                     sqlCmd.ExecuteNonQuery();
                     lblSuccessMessage.Text = "Submitted Successfully";
                     string message = "Post is Created Successfully.Now Redirecting to Forum Home Page";

@@ -19,49 +19,34 @@
             <asp:TableRow Width="150" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblLogin" Text="Username" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtUserName" CssClass="txtControl" runat="server"></asp:TextBox> </asp:TableCell>
+                    <asp:TextBox ID="txtUserName" autofocus="true"  CssClass="txtControl" runat="server"></asp:TextBox> </asp:TableCell>
                
             </asp:TableRow>
                     <asp:TableRow>
                          <asp:TableCell ColumnSpan="2">
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"   
-                    ControlToValidate="txtUserName" ErrorMessage="Please Enter Your Username"   
-                    ForeColor="Red"></asp:RequiredFieldValidator> 
-                </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
+                             <asp:RequiredFieldValidator ID="rfvuser" runat="server"  Display="Dynamic" ErrorMessage="Please enter UserName" EnableClientScript="true"
+                            ForeColor="Red" ControlToValidate="txtUserName" />
+                             <asp:RegularExpressionValidator ID="revPhone" runat="server" Display="Dynamic" ControlToValidate="txtUserName" ForeColor="Red"   EnableClientScript="true"
+                            ValidationExpression="^\d+$" ErrorMessage="Please enter Numbers only!"  />                          
+                </asp:TableCell></asp:TableRow><asp:TableRow>
                         <asp:TableCell>
-                            <asp:Label ID="lblPassword" runat="server" CssClass="textLables" Text="Password"></asp:Label></asp:TableCell>
-                        <asp:TableCell>
-                            <asp:TextBox ID="txtPassword" CssClass="txtControl" runat="server"></asp:TextBox></asp:TableCell>                        
-                    </asp:TableRow>
-                    <asp:TableRow>
+                            <asp:Label ID="lblPassword" runat="server" CssClass="textLables" Text="Password"></asp:Label></asp:TableCell><asp:TableCell>
+                            <asp:TextBox ID="txtPassword" TextMode="Password" CssClass="txtControl" runat="server"></asp:TextBox></asp:TableCell></asp:TableRow><asp:TableRow>
                         <asp:TableCell ColumnSpan="2">
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"   
-                            ControlToValidate="txtPassword" ErrorMessage="Please Enter Your password"   
-                            ForeColor="Red"></asp:RequiredFieldValidator>  
-                        </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow HorizontalAlign="Center">
+                            <asp:RequiredFieldValidator ID="rfvPass" runat="server"  Display="Dynamic" ErrorMessage="Please enter Password" EnableClientScript="true"
+                            ForeColor="Red" ControlToValidate="txtPassword" />
+                             <asp:RegularExpressionValidator  ID="RequiredFieldValidator1" runat="server"  
+                            ControlToValidate="txtPassword" ErrorMessage="Please enter Numbers Only"   ValidationExpression="^\d+$"   Display="Dynamic"
+                            ForeColor="Red"></asp:RegularExpressionValidator >  
+                        </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell   ColumnSpan="2">
                         <asp:Button id="btnLogin" runat="server" CssClass="btnReply" Text="Login" OnClick="btnLogin_Click" /> 
-                            </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow HorizontalAlign="Center"   >
+                            </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center"   >
                         <asp:TableCell ColumnSpan="2"  >
                             <asp:LinkButton ID="lnkForgotPassword" ForeColor="Black"  Font-Underline="true"  Font-Size="14px" runat="server">Forgot Password</asp:LinkButton>
-                        </asp:TableCell>
-                        
-                    </asp:TableRow>
-                    <asp:TableRow HorizontalAlign="Center" >
+                        </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center" >
                         <asp:TableCell ColumnSpan="2" >
-                            <asp:Label ID="lblSuccessMessage" runat="server" Font-Size="14px" ForeColor="Red" Text=""></asp:Label></asp:TableCell>
-                    </asp:TableRow>
-                    </asp:Table>
-                
-                </asp:Panel>
-            </asp:Panel>
-    <asp:Panel runat="server">
+                            <asp:Label ID="lblSuccessMessage" runat="server" Font-Size="14px" ForeColor="Red" Text=""></asp:Label></asp:TableCell></asp:TableRow></asp:Table></asp:Panel></asp:Panel><asp:Panel runat="server">
         <div style="height:178px;" >
 
         </div>
