@@ -1,0 +1,521 @@
+﻿
+body {
+    font-family: 'Roboto';
+}
+
+
+/*top image*/
+.top-image-container {
+    width: 100%;
+    max-width: none;
+    max-height: 400px;
+    overflow: hidden;
+    text-align: center;
+    overflow: hidden;
+    background-image: linear-gradient(to right, red, yellow);
+}
+
+.topimage {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    filter: opacity(.7);
+}
+
+
+/*top text*/
+
+.top-text-container {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(0, 159, 165);
+}
+
+.textbox1 {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.7rem;
+    transform: translateY(100px);
+    line-height: 1.8;
+    color: white;
+    font-family: 'Roboto';
+    background-color: rgba(0, 108, 112, 0.637);
+    padding: 20px;
+    border-radius: 15px;
+    font-style: italic;
+}
+
+.top-header {
+    position: absolute;
+    left: 43%;
+    font-family: 'Roboto';
+    color: white;
+    transform: translateY(20px);
+    font-size: 3rem;
+}
+
+/*Search*/
+/*Kind of fucked, FIX WITH TRANSITION OR ANIMATION OPACITY ON SEARCH-BOX*/
+
+.courses-search-container {
+    width: 100%;
+    height: 300px;
+    background-color: rgb(36, 36, 36);
+}
+
+.search-header {
+    position: absolute;
+    transform: translateY(30px);
+    left: 45%;
+    font-family: 'roboto';
+    color: white;
+}
+
+.search-box-container {
+    transform: translateY(200px);
+}
+
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 156, 247);
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+    .search-box:hover > .search-txt {
+        width: 260px;
+        padding: 0 6px;
+    }
+
+    .search-box:hover > .search-btn {
+        background: white;
+    }
+
+.search-btn {
+    color: rgb(36, 36, 36);
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(0, 156, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    transform: translateY(-15px);
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
+
+/* Courses Main */
+
+.courses-main-container {
+    width: 100%;
+    height: 800px;
+    background-color: rgb(255, 255, 255);
+}
+
+.courses-header {
+    position: absolute;
+    font-size: 3rem;
+    transform: translateY(30px);
+    left: 44%;
+    font-family: 'roboto';
+    color: rgb(34, 34, 34);
+}
+
+/* Position this differently */
+.units-find {
+    position: absolute;
+    transform: translateY(200px);
+    left: 45%;
+    font-family: 'roboto';
+    color: rgb(34, 34, 34);
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+    .units-find:hover {
+        color: rgb(0, 156, 247);
+    }
+
+
+.cyber-header {
+    position: absolute;
+    transform: translateY(300px);
+    left: 44%;
+    font-family: 'roboto';
+    color: #CB3939;
+}
+
+.cyber-break {
+    height: 30px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    border-color: #CB3939;
+    transform: translateY(400px);
+    width: 90%;
+}
+
+.cyber-container {
+    width: 100%;
+    height: 500px;
+    transform: translateY(350px);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+}
+
+.cyber-box1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(131.69deg, #CB3939 7.96%, #FF8282 100%);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    text-align: center;
+}
+
+    .cyber-box1 i {
+        font-size: 18rem;
+        transform: translateY(45px);
+        color: white;
+    }
+
+.cyber-text {
+    transform: translateY(65px);
+    color: white;
+    font-family: 'roboto';
+    font-size: 2.2rem;
+}
+
+.cyber-box1:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: all ease-in-out;
+}
+
+.cyber-link-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    transform: translateY(200px);
+}
+
+.cyber-link {
+    font-family: 'roboto';
+    color: #CB3939;
+    font-size: 1.5rem;
+}
+
+    .cyber-link:hover {
+        color: rgba(7, 148, 173, 0.712)
+    }
+
+/* NETWORKING */
+
+.network-header {
+    position: absolute;
+    transform: translateY(975px);
+    left: 45%;
+    font-family: 'roboto';
+    color: #1E77A9;
+}
+
+.network-break {
+    height: 30px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    border-color: #1E77A9;
+    transform: translateY(1050px);
+    width: 90%;
+}
+
+.network-container {
+    width: 100%;
+    height: 500px;
+    transform: translateY(400px);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+}
+
+
+
+.course-box-2 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(131.69deg, #1E77A9 7.96%, #82C3FF 100%);
+    background: linear-gradient(131.69deg, rgb(21, 43, 168) 7.96%, rgb(28, 81, 255) 100%);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    text-align: center;
+}
+
+    .course-box-2 i {
+        font-size: 18rem;
+        transform: translateY(45px);
+        color: white;
+    }
+
+    .course-box-2:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        transition: all ease-in-out;
+    }
+
+.network-link-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    transform: translateY(250px);
+}
+
+.net-link {
+    font-family: 'roboto';
+    color: #1E77A9;
+    font-size: 1.5rem;
+}
+
+    .net-link:hover {
+        color: rgba(7, 148, 173, 0.712)
+    }
+
+/* INFORMATION TECHNOLOGY */
+
+.it-header {
+    position: absolute;
+    transform: translateY(1650px);
+    left: 42%;
+    font-family: 'roboto';
+    color: #EAB222;
+}
+
+.it-break {
+    height: 30px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    border-color: #EAB222;
+    transform: translateY(1700px);
+    width: 90%;
+}
+
+.it-container {
+    width: 100%;
+    height: 500px;
+    transform: translateY(500px);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+}
+
+.course-box-3 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(131.69deg, #EAB222 7.96%, #FEDE86 100%);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    text-align: center;
+}
+
+    .course-box-3 i {
+        font-size: 18rem;
+        transform: translateY(45px);
+        color: white;
+    }
+
+    .course-box-3:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        transition: all ease-in-out;
+    }
+
+.it-link-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    transform: translateY(350px);
+}
+
+.it-link {
+    font-family: 'roboto';
+    color: #EAB222;
+    font-size: 1.5rem;
+}
+
+    .it-link:hover {
+        color: rgba(7, 148, 173, 0.712)
+    }
+
+/* PROGRAMMING */
+
+.prg-header {
+    position: absolute;
+    transform: translateY(2350px);
+    left: 45%;
+    font-family: 'roboto';
+    color: #008C1F;
+}
+
+.prg-break {
+    height: 30px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    border-color: #008C1F;
+    transform: translateY(2350px);
+    width: 90%;
+}
+
+
+.prg-container {
+    width: 100%;
+    height: 500px;
+    transform: translateY(600px);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+}
+
+.course-box-4 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(131.69deg, #008C1F 7.96%, #79FD96 100%);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    text-align: center;
+}
+
+    .course-box-4 i {
+        font-size: 18rem;
+        transform: translateY(45px);
+        color: white;
+    }
+
+    .course-box-4:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        transition: all ease-in-out;
+    }
+
+.prg-link-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    transform: translateY(450px);
+}
+
+.prg-link {
+    font-family: 'roboto';
+    color: #008C1F;
+    font-size: 1.5rem;
+}
+
+    .prg-link:hover {
+        color: rgba(7, 148, 173, 0.712)
+    }
+
+/* GAMES DEV */
+
+.games-header {
+    position: absolute;
+    transform: translateY(3025px);
+    left: 42%;
+    font-family: 'roboto';
+    color: #8C0087;
+}
+
+.games-break {
+    height: 30px;
+    border-style: solid;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    border-color: #8C0087;
+    transform: translateY(2950px);
+    width: 90%;
+}
+
+.games-container {
+    width: 100%;
+    height: 500px;
+    transform: translateY(600px);
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+}
+
+.course-box-5 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(131.69deg, #8C0087 7.96%, #FF9CFB 100%);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    text-align: center;
+}
+
+    .course-box-5 i {
+        font-size: 18rem;
+        transform: translateY(45px);
+        color: white;
+    }
+
+    .course-box-5:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        transition: all ease-in-out;
+    }
+
+
+.games-link-container {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-items: center;
+    transform: translateY(450px);
+}
+
+
+
+.games-link {
+    font-family: 'roboto';
+    color: #8C0087;
+    font-size: 1.5rem;
+}
+
+    .games-link:hover {
+        color: rgba(7, 148, 173, 0.712)
+    }
+
+/*FOOTER*/
+
+footer {
+    transform: translateY(2800px);
+}
