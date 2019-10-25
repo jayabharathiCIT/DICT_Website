@@ -22,7 +22,7 @@ namespace testmaster2
 
             if(string.IsNullOrEmpty(txtemail.Text))
             {
-                MessageBox.Show("Enter email address");
+               // MessageBox.Show("Enter email address");
                 return;
             }
             try
@@ -54,7 +54,7 @@ namespace testmaster2
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+               // MessageBox.Show(ex.ToString());
             }
         }
     }

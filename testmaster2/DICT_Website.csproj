@@ -53,10 +53,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -121,7 +121,9 @@
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\News.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Content\About.css" />
+    <Content Include="Content\Course-Detail.css" />
+    <Content Include="Course-Detail.aspx" />
     <Content Include="homepage.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
@@ -137,11 +139,14 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Images\background.png" />
+    <Content Include="Images\books.png" />
     <Content Include="Images\Comment.png" />
     <Content Include="Images\courses.jpg" />
     <Content Include="Images\DictFullLogo.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\down.png" />
+    <Content Include="Images\map.png" />
+    <Content Include="Images\sample.png" />
     <Content Include="Images\sendReply.png" />
     <Content Include="Images\test1.jpg" />
     <Content Include="Images\test2.jpg" />
@@ -216,6 +221,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course-Detail.aspx.cs">
+      <DependentUpon>Course-Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course-Detail.aspx.designer.cs">
+      <DependentUpon>Course-Detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>

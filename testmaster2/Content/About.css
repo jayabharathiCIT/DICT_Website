@@ -1,0 +1,90 @@
+﻿/* All pages */
+
+
+body {
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    margin: 0;
+    color: white;
+    font-family: 'Roboto';
+    display: block;
+}
+
+
+/* TOP IMAGE  */
+.container-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transform: translateX(-40px);
+}
+
+    .container-image img {
+        max-width: 900px;
+        max-height: 900px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+/* CONTENT SECTION */
+
+.content-container {
+    height: 900px;
+    display: block;
+}
+
+.header {
+    text-align: center;
+}
+
+.header2 {
+    text-align: center;
+}
+
+.header3 {
+    text-align: center;
+}
+
+.text-container {
+    background-color: #3D848E;
+    margin-left: auto;
+    margin-right: auto;
+    width: 750px;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+}
+
+.text-container2 {
+    background-color: #3D848E;
+    text-align: center;
+    width: 750px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.text-container3 {
+    float: right;
+    margin: 10px;
+}
+
+.text-container4 {
+    float: none;
+    margin: 10px;
+}
+
+/* MAP IMAGE */
+
+.map-image {
+    transform: translateX(130px);
+    max-width: 900px;
+    max-height: 900px;
+    margin: 0 auto;
+    justify-content: center;
+}
