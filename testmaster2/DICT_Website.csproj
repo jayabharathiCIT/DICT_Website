@@ -46,17 +46,17 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.18\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -109,27 +109,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="ChangePassword.aspx" />
-    <Content Include="AddNews.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Contactus.css" />
     <Content Include="Content\forumStyles.css" />
-    <Content Include="Content\homepage.css" />
     <Content Include="Content\masterStyle.css" />
-    <Content Include="Content\News.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Content\About.css" />
-    <Content Include="Content\Course-Detail.css" />
-    <Content Include="Course-Detail.aspx" />
-    <Content Include="homepage.aspx" />
+    <Content Include="Content\StudentStyle.css" />
+    <Content Include="Content\TeachingStyle.css" />
+    <Content Include="CurrentStudentPage.aspx" />
+    <Content Include="Default.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ForumHomePage.aspx" />
+    <Content Include="FutureStudentsPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -139,19 +135,34 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="Images\accommodationIcon.jpg" />
+    <Content Include="Images\ApprenticeIcon.png" />
+    <Content Include="Images\AskusIcon.png" />
     <Content Include="Images\background.png" />
-    <Content Include="Images\books.png" />
+    <Content Include="Images\CITSAIcon.png" />
     <Content Include="Images\Comment.png" />
+    <Content Include="Images\CourseIcon.png" />
     <Content Include="Images\courses.jpg" />
+    <Content Include="Images\CSIcon.jpg" />
     <Content Include="Images\DictFullLogo.png" />
+    <Content Include="Images\Elearning.png" />
+    <Content Include="Images\EmploymentIcon.png" />
+    <Content Include="Images\EnrollingIcon.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\down.png" />
-    <Content Include="Images\map.png" />
-    <Content Include="Images\sample.png" />
+    <Content Include="Images\FeeIcon.png" />
+    <Content Include="Images\GraduationIcon.png" />
+    <Content Include="Images\IconFlexibleLearning.png" />
+    <Content Include="Images\IconWorkCooperative.png" />
+    <Content Include="Images\IconWorkIntegrated.jpg" />
+    <Content Include="Images\infoIcon.png" />
+    <Content Include="Images\InternetAccesIcon.png" />
+    <Content Include="Images\Library Icon.png" />
+    <Content Include="Images\SelfServiceIcon.jpg" />
+    <Content Include="Images\SemesterDatesIcon.png" />
     <Content Include="Images\sendReply.png" />
-    <Content Include="Images\test1.jpg" />
-    <Content Include="Images\test2.jpg" />
-    <Content Include="Images\test3.jpg" />
+    <Content Include="Images\StudentFormsIcon.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
@@ -193,6 +204,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Teaching_LearningPage.aspx" />
     <Content Include="ViewandReplyPost.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -200,13 +212,6 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNews.aspx.cs">
-      <DependentUpon>AddNews.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AddNews.aspx.designer.cs">
-      <DependentUpon>AddNews.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -216,13 +221,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="ChangePassword.aspx.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ChangePassword.aspx.designer.cs">
-      <DependentUpon>ChangePassword.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,19 +228,19 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Course-Detail.aspx.cs">
-      <DependentUpon>Course-Detail.aspx</DependentUpon>
+    <Compile Include="CurrentStudentPage.aspx.cs">
+      <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Course-Detail.aspx.designer.cs">
-      <DependentUpon>Course-Detail.aspx</DependentUpon>
+    <Compile Include="CurrentStudentPage.aspx.designer.cs">
+      <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="homepage.aspx.cs">
-      <DependentUpon>homepage.aspx</DependentUpon>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="homepage.aspx.designer.cs">
-      <DependentUpon>homepage.aspx</DependentUpon>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditForumPost.aspx.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
@@ -257,6 +255,13 @@
     </Compile>
     <Compile Include="ForumHomePage.aspx.designer.cs">
       <DependentUpon>ForumHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FutureStudentsPage.aspx.cs">
+      <DependentUpon>FutureStudentsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FutureStudentsPage.aspx.designer.cs">
+      <DependentUpon>FutureStudentsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -289,6 +294,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Teaching_LearningPage.aspx.cs">
+      <DependentUpon>Teaching_LearningPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teaching_LearningPage.aspx.designer.cs">
+      <DependentUpon>Teaching_LearningPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewandReplyPost.aspx.cs">
       <DependentUpon>ViewandReplyPost.aspx</DependentUpon>
