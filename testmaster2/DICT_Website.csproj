@@ -117,12 +117,15 @@
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\StudentStyle.css" />
     <Content Include="Content\TeachingStyle.css" />
+    <Content Include="CurrentStudentPage.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ForumHomePage.aspx" />
+    <Content Include="FutureStudentsPage.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -133,16 +136,33 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HtmlPage1.html" />
+    <Content Include="Images\accommodationIcon.jpg" />
+    <Content Include="Images\ApprenticeIcon.png" />
+    <Content Include="Images\AskusIcon.png" />
     <Content Include="Images\background.png" />
+    <Content Include="Images\CITSAIcon.png" />
     <Content Include="Images\Comment.png" />
+    <Content Include="Images\CourseIcon.png" />
     <Content Include="Images\courses.jpg" />
+    <Content Include="Images\CSIcon.jpg" />
     <Content Include="Images\DictFullLogo.png" />
+    <Content Include="Images\Elearning.png" />
+    <Content Include="Images\EmploymentIcon.png" />
+    <Content Include="Images\EnrollingIcon.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\down.png" />
+    <Content Include="Images\FeeIcon.png" />
+    <Content Include="Images\GraduationIcon.png" />
     <Content Include="Images\IconFlexibleLearning.png" />
     <Content Include="Images\IconWorkCooperative.png" />
     <Content Include="Images\IconWorkIntegrated.jpg" />
+    <Content Include="Images\infoIcon.png" />
+    <Content Include="Images\InternetAccesIcon.png" />
+    <Content Include="Images\Library Icon.png" />
+    <Content Include="Images\SelfServiceIcon.jpg" />
+    <Content Include="Images\SemesterDatesIcon.png" />
     <Content Include="Images\sendReply.png" />
+    <Content Include="Images\StudentFormsIcon.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
@@ -208,6 +228,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CurrentStudentPage.aspx.cs">
+      <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CurrentStudentPage.aspx.designer.cs">
+      <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +255,13 @@
     </Compile>
     <Compile Include="ForumHomePage.aspx.designer.cs">
       <DependentUpon>ForumHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FutureStudentsPage.aspx.cs">
+      <DependentUpon>FutureStudentsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FutureStudentsPage.aspx.designer.cs">
+      <DependentUpon>FutureStudentsPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
