@@ -21,6 +21,7 @@
             position:center;
             /*text-align:center !important;*/
             padding-left:100px;
+            font-family:sans-serif;
         }
     </style>
     <link href="Content/masterStyle.css" rel="stylesheet" />
@@ -63,7 +64,7 @@
            <div class="collapse navbar-collapse d-flex justify-content-center">
        <%-- <div class="navbar-fixed-top mx-auto"  >--%>
      <div  style="float:left; position:center; padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
-          <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List"   >
+          <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
               <StaticMenuStyle CssClass="Menu"  />
               <StaticSelectedStyle Font-Bold="true" ForeColor="Black" Font-Underline="true"  />
                 <LevelMenuItemStyles>
@@ -71,12 +72,12 @@
                     <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="white"  BorderWidth="5px"  HorizontalPadding="35px" BackColor="#facf5a" Font-Bold="true" Font-Size="Large" />
                 </LevelMenuItemStyles>
                 <Items>
-                    <asp:MenuItem Text="The DICT" Value="THE DICT"></asp:MenuItem>
+                    <asp:MenuItem Text="The DICT" Value="THE DICT" NavigateUrl="~/About.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Our Courses" Value="Our Courses">
-                        <asp:MenuItem Text="Courses and Units" Value="Courses and Units"></asp:MenuItem>
-                        <asp:MenuItem Text="Apply" Value="Apply"></asp:MenuItem>
+                        <asp:MenuItem Text="Courses and Units" Value="Courses and Units" NavigateUrl="Course-Detail" ></asp:MenuItem>
+                        <asp:MenuItem Text="Apply" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
                     </asp:MenuItem>
-                    <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning">
+                    <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning" NavigateUrl="~/Teaching_LearningPage.aspx" >
                     </asp:MenuItem>                                       
                 </Items>
             </asp:Menu>
@@ -84,7 +85,7 @@
      </div>
       <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:20px; "><a href="homepage.aspx"><img   style="width:115px; height:70px;" src="Images/DictLogo.png" /></a> </div>
       <div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
-         <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" >
+         <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true" Font-Names="sans-serif;"  RenderingMode="List" >
              <StaticMenuStyle BackColor="black" />
                  <LevelMenuItemStyles>
                     <asp:MenuItemStyle HorizontalPadding="50px" VerticalPadding="20px"  BackColor="White" Font-Bold="true" Font-Size="Large" />
@@ -92,13 +93,13 @@
                 </LevelMenuItemStyles>
                 <Items>                    
                     <asp:MenuItem Text="Student" Value="Student">
-                        <asp:MenuItem Text="Current Student" Value="Current Student"></asp:MenuItem>
-                        <asp:MenuItem Text="Future Student" Value="Future Student"></asp:MenuItem>
-                        <asp:MenuItem Text="Student Support" Value="Student Support"></asp:MenuItem>
+                        <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
                         <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
-                        <asp:MenuItem Text="News" Value="News"></asp:MenuItem>
+                        <asp:MenuItem Text="News" Value="News" ></asp:MenuItem>
                         <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Forum" Value="Forum">
@@ -120,7 +121,8 @@
         </div>
            <footer>
                 <div class="footer-info">
-                <h3>Contact Us</h3>
+                    <asp:HyperLink ID="hypLinkContact" CssClass="h3" NavigateUrl="~/Contact.aspx" runat="server">Contact Us</asp:HyperLink>
+                <%--<h3>Contact Us</h3>--%>
                 <ul>
                   <li>
                     <li>General Enquiries<br>

@@ -98,7 +98,7 @@ namespace DICT_Website
                     //fill previous replies in the form.
                     //lblReplies.Text;
                     //Pass the post ID to query Replies of the specific Post.
-                    string QueryReply = "SELECT * FROM `dict website`.` dt_reply` where Post_ID =" + postID + ";";
+                    string QueryReply = "SELECT * FROM `dict website`.`dt_reply` where Post_ID =" + postID + ";";
                     MySqlCommand MyCommandGetReply = new MySqlCommand(QueryReply, sqlCon);                                        
                     MySqlDataAdapter sqlDaReply = new MySqlDataAdapter();
                     sqlDaReply.SelectCommand = MyCommandGetReply;

@@ -2,8 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <link href="Content/forumStyles.css" rel="stylesheet" />
     
-      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
-         
+      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >         
             <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
                 <%-- Added login dropdown --%>
                  <div class="nav navbar-nav navbar-right">

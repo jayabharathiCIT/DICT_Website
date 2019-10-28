@@ -26,7 +26,8 @@
 
             <div class="text-container2">
                 <div class="sample-image">
-                    <asp: runat="server" CssClass="Image" ImageURL="~/Images/Sample.png"/>
+                    <asp:Image
+                    runat="server" CssClass="Image" ImageURL="~/Images/Sample.png"/>
                 </div>
                 
                 <div class="text-container3">

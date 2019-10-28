@@ -6,6 +6,7 @@
     width: auto;
     padding-left: 180px;
     text-align: center;
+    font-family: sans-serif !important;
 }
 
 .topbox-title {
@@ -15,6 +16,7 @@
     transform: translateY(50px);
     text-align: center;
     line-height: 1.6rem;
+    font-family: sans-serif !important;
 }
 
 .topbox-logo-container {

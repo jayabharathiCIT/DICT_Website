@@ -54,11 +54,25 @@
     margin-bottom: auto;
     z-index: 1;
 }
-.plnOutlineHorizontal {
+
+.plnInlineViewPost {
     padding: 20px;
     vertical-align: middle;
     text-align: center;
-    width: 1080px;
+    width: 600px;
+    height: 670px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: auto;
+    z-index: 1;
+}
+
+.plnOutlineViewPost {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 700px;
     height: 750px;
     margin-left: auto;
     margin-right: auto;
@@ -79,6 +93,20 @@
     margin-bottom: auto;
     z-index: 1;
 }
+
+.plnOutlineHorizontal {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    width: 1080px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    background-image: url('../Images/background.png');
+}
+
 .plnOuterLogin {
     padding: 20px;
     vertical-align: middle;

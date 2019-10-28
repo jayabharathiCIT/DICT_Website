@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ViewandReplyPost.aspx.cs" Inherits="DICT_Website.ViewandReplyPost" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/forumStyles.css" rel="stylesheet" />
-     <asp:Panel ID="Panel1" runat="server" CssClass="plnOutline">
-            <asp:Panel ID="Panel2" CssClass="plnInline" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server" Font-Bold="True">
+     <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineViewPost">
+            <asp:Panel ID="Panel2" CssClass="plnInlineViewPost" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server" Font-Bold="True">
                 <%-- Added login dropdown --%>
                  <div class="nav navbar-nav navbar-right">
               <table  style="width:200px;" >
@@ -34,7 +34,7 @@
                     </tr>
                 </table>
                 </div>
-                <div style=" float:left;height:170px; width:550px; border-color:white; border-width:thin; border-style:solid ">
+                <div style=" float:left;height:190px; width:550px; border-color:white; border-width:thin; border-style:solid ">
                     <asp:Table ID="tblPostTitleDec"  CssClass="tableViewReplyPost" runat="server" CellSpacing="3"  HorizontalAlign="Center" >
                         <asp:TableRow>
                             <asp:TableCell Width="65px" > <asp:Image runat="server" ImageUrl="~/Images/Comment.png" /></asp:TableCell>
@@ -60,7 +60,7 @@
                                 <asp:Label ID="lblDescription" runat="server" Text="Description : " Font-Bold="True" Font-Size="16px" ForeColor="Black" ></asp:Label>
                             </asp:TableCell>
                             <asp:TableCell >
-                                <asp:Label ID="lblDescValue"    runat="server"  Font-Size="18px" ForeColor="White" ></asp:Label>
+                                <asp:Label ID="lblDescValue"    runat="server"  Font-Size="16px" ForeColor="White" ></asp:Label>
                                 
                             </asp:TableCell>
                         </asp:TableRow>
@@ -69,7 +69,7 @@
                     
 
                     </div>
-                <div style=" float:left;height:345px; width:550px; border-color:white; border-width:thin; border-style:solid ">
+                <div style=" float:left;height:350px; width:550px; border-color:white; border-width:thin; border-style:solid ">
                      <asp:Table ID="tblReplyView"  Height="155px" CssClass="tableViewReplyPost" runat="server" CellSpacing="3"  HorizontalAlign="Center" >
                         <asp:TableRow>
                             <asp:TableCell Width="65px" > <asp:Image runat="server" ImageUrl="~/Images/replyall.png" /></asp:TableCell>      

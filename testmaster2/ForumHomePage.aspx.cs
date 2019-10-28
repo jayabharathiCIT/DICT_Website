@@ -201,12 +201,6 @@ namespace DICT_Website
             return showEDIT;            
         }
 
-        private void btnReply_Click(object sender, EventArgs e)
-        {
-
-            
-            Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + lnkTop3.ToolTip);
-        }
 
         protected void btnCreatePost_Click(object sender, EventArgs e)
         {
@@ -288,10 +282,7 @@ namespace DICT_Website
             {
                 string getPostIDArg = btn.CommandArgument.ToString();
                 Response.Redirect("~/ViewandReplyPost.aspx" + "?PostID=" + getPostIDArg);
-            }
-
-
-           
+            }           
         }
 
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
@@ -321,13 +312,17 @@ namespace DICT_Website
             gv_ForumDetails.PageIndex = e.NewPageIndex;
             //fill grid view
             gv_ForumDetails.DataSource = dt;
-            gv_ForumDetails.DataBind();
-            getRecentPost();
+            gv_ForumDetails.DataBind();            
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-
+            Button btn = (Button)sender;
+            if (btn.CommandName == "Edit")
+            {
+                string getPostIDArg = btn.CommandArgument.ToString();
+                Response.Redirect("~/EditForumPost.aspx" + "?PostID=" + getPostIDArg);
+            }
         }
     }
 }
