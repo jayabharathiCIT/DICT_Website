@@ -1,21 +1,106 @@
 ﻿body {
     font-family: 'sans-serif';
 }
+
 .top-box {
     height: 150px;
-    width:110%;
+    width: 110%;
     background: #233142;
-
-    
 }
+
 .header {
     padding-left: 35px;
     transform: translateY(60px);
     font-size: 5rem;
     color: #FACF5A;
 }
+
 .header2 {
     color: rgba(255, 89, 89, 0.99);
     font-size: 3rem;
-    
+}
+
+/*label {
+    position: absolute;
+    width: 392px;
+    height: 46px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.21);
+    box-sizing: border-box;
+}
+
+.placeholder {
+    position: absolute;
+    width: 177px;
+    height: 21px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.47);
+}
+.main {
+    position: absolute;
+    width: 178px;
+    height: 42px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #FACF5A;
+}*/
+
+.contactus-header {
+    position: relative;
+    margin-top: 2px;
+    width: 100%;
+    height: 70px;
+    background: #233142;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contactus-label {
+    font: Roboto normal bold;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    vertical-align: central;
+    color: #FACF5A;
+}
+
+.btn-cit {
+    position: absolute;
+    width: 82px;
+    height: 37px;
+    background: rgba(255, 89, 89, 0.99);
+}
+
+.contactus-form {
+    padding-top: 40px;
+}
+
+.c-form {
+    color: rgba(255, 89, 89, 0.99);
+    font-size: 2.25rem;
+    padding: 20px 20px 20px 0px;
+}
+
+input[type=text] {
+    line-height: 50px !important;
+}
+
+.form-control {
+    line-height: 50px !important;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.connect {
+    padding: 2em;
 }

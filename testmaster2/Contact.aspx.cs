@@ -20,9 +20,9 @@ namespace testmaster2
         protected void btnSend_Click(object sender, EventArgs e)
         {
 
-            if(string.IsNullOrEmpty(txtemail.Text))
+            if (string.IsNullOrEmpty(txtemail.Text))
             {
-               // MessageBox.Show("Enter email address");
+                //MessageBox.Show("Enter email address");
                 return;
             }
             try
@@ -33,6 +33,33 @@ namespace testmaster2
                 var toAddress = new MailAddress("dcitcanberra@gmail.com");
 
                 string subject = "Client Service - Contact DCIT";
+                string htmlBody = @"
+                <html lang=""en"">
+                    <head>    
+                        <meta content=""text/html; charset=utf-8"" http-equiv=""Content-Type"">
+                        <title>
+                            This email was sent from DICT Contact Service
+                        </title>
+                        <style type=""text/css"">
+                            HTML{background-color: #e8e8e8;}                           
+                        </style>
+                    </head>
+                    <body>
+                        <div><b>This email was sent from DICT Contact Service</b></div>
+                       <div>Name : {c_name}</div>
+                       <div>Email : {c_email}</div>
+                       <div>Phone No. : {c_phoneNo}</div>
+                       <div>Subject: {c_subject}</div>
+                       <div>Mesage: {c_message}</div>
+                    </body>
+                </html>
+                ";
+
+                htmlBody = htmlBody.Replace("{c_name}", txtName.Text)
+                                    .Replace("{c_email}", txtemail.Text)
+                                    .Replace("{c_phoneNo}", txtPhone.Text)
+                                    .Replace("{c_subject}", TextBox1.Text)
+                                    .Replace("{c_message}", txtMessage.Text);
                 string body = "Contacted By:" + txtName.Text + ", " + txtemail.Text + ", " + txtMessage.Text;
 
                 System.Net.Mail.SmtpClient smtp = new System.Net.Mail.SmtpClient
@@ -41,20 +68,20 @@ namespace testmaster2
                     Port = 587,
                     EnableSsl = true,
                     DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
+                    UseDefaultCredentials = true,
                     Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
                 };
 
-                using (var message = new MailMessage(fromAddress, toAddress)
+                using (var message = new MailMessage(fromAddress.Address, toAddress.Address, subject, htmlBody)
                 {
-                    Subject = subject,
-                    Body = body
+                    IsBodyHtml = true,
                 })
                     smtp.Send(message);
             }
-            catch (Exception ex)
+            catch (Exception ep)
             {
-               // MessageBox.Show(ex.ToString());
+                Console.WriteLine("failed to send email with the following error:");
+                Console.WriteLine(ep.Message);
             }
         }
     }
