@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CurrentStudentPage.aspx.cs" Inherits="DICT_Website.CurrentStudentPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-     <link href="Content/StudentStyle.css" rel="stylesheet" />
+   
+    <link href="Content/StudentStyle.css" rel="stylesheet" />
 
     <div  id= "divContainer">
           <div   class="divHeader" >
@@ -21,7 +22,7 @@
 
                                     </tr>
                                   </table>
-                               </div>
+                               </div> 
            </div >
         <br ><br >
 

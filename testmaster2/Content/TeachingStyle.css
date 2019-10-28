@@ -24,8 +24,8 @@
 }
 
 .divContent {
-    background-color: #206f9f;
-    color: white;
+    background: rgba(8, 95, 99, 0.88);
+    color: whitesmoke;
     font-size: medium;
     font-style: normal;
     font-weight: normal;
