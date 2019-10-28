@@ -29,7 +29,7 @@
                 <table>
                         <tr>
                                 <td>
-                               <a href="http://itdp.com.au/"><h1 style="color:black ; text-align:center">Project Based Learning </h1></a>
+                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:black ; text-align:center;" >Project Based Learning </h1></a>
                                 </td>
                                     </tr>  
                     
@@ -47,7 +47,8 @@
                                 </tr>
                     <tr>
                      <td style=" text-align: center;">
-                       <a  href="http://itdp.com.au/" ><img class="Icons" src="Images/IconWorkCooperative.png" alt="WorkCooperative" title="Project Based Learning"></a>
+                       <a  href="http://itdp.com.au/" target="_blank"  ><img class="Icons" src="Images/IconWorkCooperative.png" alt="WorkCooperative" title="Project Based Learning"></a>
+                       <p style="font-style:italic;">Knows Our Current Projects</p>
                     </td>
                     </tr>
                         </table>
@@ -64,7 +65,7 @@
                        <table>
                             <tr>
                                 <td>
-                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement"><h1 style="color:black  ; text-align:center"> Work Integrated Learning </h1></a>
+                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:black  ; text-align:center"> Work Integrated Learning </h1></a>
                                 </td>
                                     </tr>
                                 <tr>
@@ -79,7 +80,8 @@
                            </tr>
                            <tr>
                                <td style=" text-align: center;">
-                                   <a  href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" ><img class="Icons" src="Images/IconWorkIntegrated.jpg" alt="WorkIntegrated" title="Work Placement"></a>
+                                   <a  href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank"  ><img class="Icons" src="Images/IconWorkIntegrated.jpg" alt="WorkIntegrated" title="Work Placement"></a>
+                               <p style="font-style:italic;">Work Placement</p>
                                </td>
                            </tr>
                           </table>
@@ -98,7 +100,7 @@
                            <table>
                                 <tr>
                                 <td>
-                                 <a href="https://cit.edu.au/study/flexible_learning"><h1 style="color:black ; text-align:center"> Flexible Learning </h1></a>
+                                 <a href="https://cit.edu.au/study/flexible_learning" target="_blank" ><h1 style="color:black ; text-align:center"> Flexible Learning </h1></a>
                                 </td>
                                     </tr>
                                
@@ -112,8 +114,9 @@
                                 </tr>
                                 <tr>
                                      <td style=" text-align: center;">
-                                         <a  href="https://cit.edu.au/study/flexible_learning" ><img class="Icons" src="Images/IconFlexibleLearning.png" alt="FlexibleLearning" title="Flexible Learning"></a>
-                                     </td>
+                                         <a  href="https://cit.edu.au/study/flexible_learning" target="_blank"  ><img class="Icons" src="Images/IconFlexibleLearning.png" alt="FlexibleLearning" title="Flexible Learning"></a>
+                                        <p style="font-style:italic;">Learn more about Flexible Learning</p>
+                                         </td>
                             </tr>
                                 </table>
                          </div>
