@@ -63,7 +63,7 @@
                 </asp:TableCell>
             </asp:TableRow>  
                 
-            <asp:TableRow Width="250" >
+            <asp:TableRow Width="250" > 
                 <asp:TableCell > <asp:Label runat="server" ID="lblNewPassword" Text="New Password*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtNewPassword" CssClass="txtControlRegister" runat="server" TextMode="Password" MinimumValue="6" MaxLength="10"></asp:TextBox><br/> 
