@@ -39,7 +39,7 @@ namespace DICT_Website
                     sqlCmd.Parameters.AddWithValue("F_Password", txtPassword.Text);
                     // sqlCmd.ExecuteNonQuery();
                     string output = sqlCmd.ExecuteScalar().ToString();
-                    if (output == "1")
+                    if (output == "1")// if the user is autheticate user , redirect to forum page.
                     {
                         lblSuccessMessage.Text = "Login Successed";
 
@@ -50,10 +50,18 @@ namespace DICT_Website
                         sqlPerson.SelectCommand.CommandType = CommandType.StoredProcedure;
                         sqlPerson.Fill(dtbl);
                         string firstName = dtbl.Rows[0][0].ToString();
+                        string personRole = dtbl.Rows[0][1].ToString();
                         Session["RegID"] = Convert.ToInt32(txtUserName.Text);
                         Session["Username"] = firstName;
-                        //Session["Role"] = reader["Role"].ToString();
-                        Response.Redirect("~/ForumHomePage.aspx");
+                        Session["Role"] = personRole;// role can be student or admin.
+                        if(personRole== "Student") // if the user is student and redirect to student forum page
+                        {
+                            Response.Redirect("~/ForumHomePage.aspx");
+                        }
+                        else if (personRole == "Admin")// if the user is admin and redirect to admin forum page
+                        {
+                            Response.Redirect("~/AdminForumPage.aspx");
+                        }                        
                     }
                     else
                     {

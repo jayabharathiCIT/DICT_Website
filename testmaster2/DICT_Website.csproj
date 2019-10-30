@@ -110,7 +110,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="AddNews.aspx" />
-    <Content Include="Add_News.aspx" />
     <Content Include="AdminForumPage.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
@@ -235,13 +234,6 @@
     </Compile>
     <Compile Include="AddNews.aspx.designer.cs">
       <DependentUpon>AddNews.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Add_News.aspx.cs">
-      <DependentUpon>Add_News.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Add_News.aspx.designer.cs">
-      <DependentUpon>Add_News.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminForumPage.aspx.cs">
       <DependentUpon>AdminForumPage.aspx</DependentUpon>
