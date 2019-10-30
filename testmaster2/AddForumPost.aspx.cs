@@ -65,6 +65,7 @@ namespace testmaster2
                     int getUserID = (int)Session["RegID"];
                     sqlCmd.Parameters.AddWithValue("P_Register_ID", getUserID);
                     sqlCmd.ExecuteNonQuery();
+                    refreshReplyCounts();
                     lblSuccessMessage.Text = "Submitted Successfully";
                     string message = "Post is Created Successfully.Now Redirecting to Forum Home Page";
                     string url = "ForumHomePage.aspx";
@@ -80,6 +81,28 @@ namespace testmaster2
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = ex.Message;
+            }
+        }
+
+        public void refreshReplyCounts()
+        {
+            DataTable dt = new DataTable();
+            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+            {
+                sqlCon.Open();
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter("sp_PostViewAll", sqlCon);
+                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDa.Fill(dt);
+                foreach (DataRow dtRow in dt.Rows)
+                {
+                    int postID = Convert.ToInt32(dtRow["Post_ID"].ToString());
+                    // add code to update post table no of replies .
+                    //calculate number of replies based on the reply table using post ID and fill the post ID each time you create a reply.
+                    MySqlCommand sqlCmd2 = new MySqlCommand("sp_CountReplies", sqlCon);
+                    sqlCmd2.CommandType = CommandType.StoredProcedure;
+                    sqlCmd2.Parameters.AddWithValue("R_Post_ID", postID);
+                    sqlCmd2.ExecuteNonQuery();
+                }
             }
         }
 
