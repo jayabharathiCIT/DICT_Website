@@ -1,13 +1,17 @@
 ﻿#divContainer {
-    background: linear-gradient(180deg, rgba(8, 173, 243, 0.43) 32.29%, rgba(0, 0, 0, 0) 100%);
-   
+    background: linear-gradient(180deg, rgba(8, 95, 99, 0.88) 32.29%, rgba(0, 0, 0, 0) 100%);
 }
 
 #divHeader {
     color: white;
-    font-size: 45px;
-    font-weight: bold ;
+    font-family: sans-serif;
+    font-size: 35px;
+    height: 55px;
+    font-weight: bold;
     background: #233142;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 0px;
 }
 
 .divSubHeader {
@@ -15,17 +19,50 @@
     color: black;
     font-size: 20px;
     height: 40px;
-    font-style: normal;
+    font-family: sans-serif;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
     align-items: center;
     vertical-align: central;
+    margin: 0px;
+    padding-top: 5px;
 }
 
-.divContent {
-    background: rgba(8, 95, 99, 0.88);
-    color: whitesmoke;
+.divContentPBL {
+    background: #085e63;
+    /*color: whitesmoke;*/
+    color: black;
+    font-size: medium;
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    line-height: 40px;
+    vertical-align: central;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.divContentWIL {
+    background: rgba(8, 173, 243, 0.43);
+    color: black;
+    font-size: medium;
+    font-style: normal;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    line-height: 40px;
+    vertical-align: central;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.divContentFL {
+   
+    color: black;
     font-size: medium;
     font-style: normal;
     font-weight: normal;

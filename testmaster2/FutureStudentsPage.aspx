@@ -4,16 +4,16 @@
 
     <div  id= "divContainer">
           <div   class="divHeader" >
-              <p id= "divHeader" >  FUTURE STUDENTS</p>
+              <h1 id= "divHeader" > Future Students </h1>
                             <div>
                                 <table>
                                     <tr >
                                         <td style="width:720px; height:auto">
-                                            <a href="https://cit.edu.au/study/applying_and_enrolling"><p Class= "divSubHeader" >HOW TO APPLY/ENROL</p></a>
+                                            <a href="https://cit.edu.au/study/applying_and_enrolling"><p Class= "divSubHeader" >How to Apply /Enrol</p></a>
                                         
                                         </td>
                                         <td style="width:720px;height:auto; ">
-                                            <a href="https://international.cit.edu.au/home"><p Class= "divSubHeader">INTERNATIONAL STUDENTS</p></a>
+                                            <a href="https://international.cit.edu.au/home" target="_blank"><p Class= "divSubHeader">International Students</p></a>
                                         </td>
 
                                     </tr>
@@ -79,7 +79,7 @@
                 </div>
                 </div>
 
-                <div id="Important_Information">
+                <div id="Important_InformationFS">
                    <br />
                     <table>
                         <tr>  
@@ -87,7 +87,7 @@
                       <td class="InformationBox">
 
                          <div id="Study Information">
-                         <br><br/><h1 style="color:black"> STUDY INFORMATION </h1><br/>
+                         <br/><h1 style="color:black ;font-size: 20px;"> Study Information </h1><br/>
                              <a href="https://cit.edu.au/study/cit_support/are_you_study_ready" target="_blank" class="InformationBoxFS">Are You Study Ready?</a><br />
                              <a href="https://cit.edu.au/study/schools" target="_blank" class="InformationBoxFS">CIT for Schools</a><br />
                              <a href="https://cit.edu.au/study/applying_and_enrolling/pathways" target="_blank" class="InformationBoxFS">Pathways</a><br />
@@ -100,7 +100,7 @@
 
                             <td  class="InformationBox">
                           <div id="Services" >
-                         <br><br/><h1 style="color:black"> SERVICES </h1><br/>
+                         <br/><h1 style="color:black ;font-size: 20px;"> Services </h1><br/>
                            <a href="CurrentStudentPage" target="_blank" class="InformationBoxFS">Current Student</a><br />
                              <a href="https://cit.edu.au/services/cit_travel" target="_blank" class="InformationBoxFS">CIT Travel</a><br />
                              <a href="https://cit.edu.au/services/apprentice_kitchen_cafe_and_shop" target="_blank" class="InformationBoxFS">CIT Apprentice Kitchen Cafe and Shop</a><br />
