@@ -83,6 +83,7 @@
                         <SortedDescendingHeaderStyle BackColor="Transparent" />
                         
                     </asp:GridView>
+                    <asp:Label ID="lblSucessMessage" runat="server" Text=""></asp:Label>
                 </div>                    
                     </div>
                 </asp:Panel>

@@ -44,7 +44,7 @@
                         <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
                         <Columns>
                             
-                            <asp:TemplateField HeaderText="Topic">
+                            <asp:TemplateField HeaderText="Topic"   >
                                 <ItemTemplate>
                                     <asp:Image runat="server" Width="51px"  Height="50px" ImageUrl="~/Images/Comment.png" />        
                                     <asp:HyperLink ID="hyLnk_Topic" runat="server" ForeColor="Black" Text='<%# Bind("Topic_Title") %>' NavigateUrl='<%# Eval("Post_ID", "~/ViewandReplyPost.aspx?PostID={0}") %>'  Font-Underline="true" ></asp:HyperLink>

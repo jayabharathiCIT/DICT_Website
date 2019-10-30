@@ -31,7 +31,7 @@ namespace DICT_Website
             {
                 String userid = Convert.ToString((int)Session["RegID"]);
                 String username = Session["Username"].ToString();
-                //String userrole = Session["Role"].ToString();
+                String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username +" ";
             }
             // End Check authorised user 

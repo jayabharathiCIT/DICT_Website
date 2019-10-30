@@ -1,0 +1,107 @@
+﻿body {
+    font-family: 'Roboto';
+    margin: 0;
+    height: 100%;
+}
+
+
+/* top container */
+.top-box {
+    background: linear-gradient(to right, #16222a, #3a6073);
+    height: 150px;
+    padding: 25px;
+    color: white;
+}
+
+.top-head {
+    transform: translateY(25px);
+    font-size: 5rem;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    transform: translateX(-350px);
+    text-decoration: underline;
+    padding-top: 15px;
+}
+
+.content {
+    text-align: center;
+    width: 100%;
+    height: 550px;
+    background-color: lightblue;
+}
+
+.col-25 {
+    padding: 25px;
+}
+
+label {
+    transform: translateX(50px);
+}
+
+.lbl {
+    font-size: 2rem;
+    position: absolute;
+}
+
+.txt {
+    font-size: 1.5rem;
+}
+
+#title {
+    max-width: 500px;
+    width: 500px;
+}
+
+textarea {
+    max-width: 800px;
+}
+
+#description {
+    width: 500px;
+    height: 300px;
+}
+
+.text-area {
+    width: 500px;
+    height: 300px;
+    text-align: center;
+}
+
+.row {
+    text-align: center;
+}
+
+/* Button */
+#submit {
+    background-color: #4CAF50; /* Green */
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#cancel {
+    background-color: #4CAF50; /* Green */
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 25px;
+}
+
+.row {
+    transform: translate(575px);
+    padding-top: 25px;
+}
