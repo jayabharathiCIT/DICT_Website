@@ -5,26 +5,25 @@
 
     <div  id= "divContainer">
           <div   class="divHeader" >
-              <p id= "divHeader" > CURRENT STUDENTS</p>
+              <h1 id= "divHeader" > Current Students</h1>
                             <div>
                                 <table>
                                     <tr >
                                         <td style="width:480px;height:auto; ">
-                                            <a href="#CallService" ><p Class= "divSubHeader" >SERVICES</p></a>
+                                            <a href="#CallService" ><p Class= "divSubHeader" >Services</p></a>
                                         </td>
                                         <td style="width:480px;height:auto; ">
-                                            <a href="#CallImportant_Information" ><p Class= "divSubHeader">IMPORTANT INFORMATION</p></a>
+                                            <a href="#CallImportant_Information" ><p Class= "divSubHeader">Important Information</p></a>
                                        
                                         </td>
                                          <td style="width:480px;height:auto; ">
-                                            <a href="https://international.cit.edu.au/home"  ><p Class= "divSubHeader">INTERNATIONAL STUDENTS</p></a>
+                                            <a href="https://international.cit.edu.au/home" target="_blank"  ><p Class= "divSubHeader">International Students</p></a>
                                         </td>
 
                                     </tr>
                                   </table>
                                </div> 
            </div >
-        <br ><br >
 
             <div id= "QuickAccess">
                  <br><br/> 
@@ -54,11 +53,11 @@
             </div>
 
          <div id="CallService"></div>
-        <br> <br> <br> <br><br>
+     
 
   
-             <div id="Service" >
-             <br><br/><h1 style="color:black "> Services </h1><br/><br />
+             <div id="Service"   >
+             <br><br/><h1 id="Service_Header" > Services </h1><br/><br />
 
                      <div  id="CIT Support services" class ="divContent" >
                             <br />
@@ -168,9 +167,11 @@
 
 
         <div id="CallImportant_Information"></div>
-        <br>   <a href="#divContainer" style="color:dimgrey ; font-size:small; text-align:center" ><p > Go to top </p></a><br> <br> <br><br>
-            <div id="Important_Information">
-             <br><br/><h1 style="color:black "> Important Information </h1><br/><br />
+
+        <a href="#divContainer" style="color:dimgrey ; font-size:small; text-align:center" ><p > Go to top </p></a> 
+       
+        <div >
+             <br><br/><h1 id="Important_Information"> Important Information </h1><br/><br />
 
                      <div  id="Graduation" class ="divContent">
                             <br />

@@ -45,9 +45,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 8.0\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
-    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -111,10 +110,12 @@
     <Content Include="About.aspx" />
     <Content Include="AddNews.aspx" />
     <Content Include="AdminForumPage.aspx" />
+    <Content Include="AnnCreate.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
     <Content Include="Content\Add_news.css" />
+    <Content Include="Content\AnnStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="AdminForumPage.aspx.designer.cs">
       <DependentUpon>AdminForumPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnCreate.aspx.cs">
+      <DependentUpon>AnnCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnCreate.aspx.designer.cs">
+      <DependentUpon>AnnCreate.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

@@ -1,12 +1,18 @@
 ﻿#divContainer {
     background: linear-gradient(0deg, rgba(8, 173, 243, 0.43), rgba(8, 173, 243, 0.43));
+    font-family: sans-serif;
 }
 
 #divHeader {
     color: white;
-    font-size: 45px;
+    font-family: sans-serif;
+    font-size: 35px;
+    height: 55px;
     font-weight: bold;
     background: #233142;
+    padding-left: 10px;
+    padding-top:10px;
+    margin: 0px;
 }
 
 .divSubHeader {
@@ -14,37 +20,77 @@
     color: black;
     font-size: 20px;
     height: 40px;
-    font-style: normal;
+    font-family: sans-serif;
     font-weight: normal;
     font-size: 20px;
     text-align: center;
     align-items: center;
     vertical-align: central;
+    margin:0px;
+    padding-top:5px;
 }
 
 #QuickAccess {
     background: rgba(8, 95, 99, 0.88);
+    font-family: sans-serif;
+    padding-left: 10px;
+    margin: 0px;
 }
 
 #QuickAccessFS {
     background: white;
+    font-family: sans-serif;
 }
 
 
-#Service{
+#Service {
+    color: black;
     background: rgba(73, 190, 183, 0.88);
+    font-family: sans-serif;
+    margin: 0px;
 }
+
+#Service_Header {
+    color: black;
+    font-family: sans-serif;
+    padding-left: 10px;
+    margin: 0px;
+}
+
+#Important_Information {
+    color: black;
+    font-family: sans-serif;
+    padding-left: 10px;
+    margin: 0px;
+    
+}
+
+#Important_InformationFS {
+    color: black;
+    font-family: sans-serif;
+    padding-left: 10px;
+    margin: 0px;
+    background: rgba(8, 95, 99, 0.88);
+}
+
+
 
 .InformationBox {
-    background: #ffff73;
+    background: #fadd5c;
     width: 500px;
     text-align: center;
+    font-family: sans-serif;
+    border-radius: 15px;
 }
 
 .InformationBoxFS {
-    font-size:small;
-    color:darkslategrey;
+    font-size: small;
+    color: darkslategrey;
+    font-family: sans-serif;
+    padding-left: 10px;
+    margin: 0px;
 }
+
 
 
 
@@ -54,15 +100,14 @@
     text-align: center;
     align-items: center;
     vertical-align: central;
+    font-family: sans-serif;
 }
 
 .divContent {
- 
     height: 125px;
     background: rgba(255, 255, 255, 0.87);
-    display:flex;
-
-
+    display: flex;
+    font-family: sans-serif;
 }
 
 
@@ -70,16 +115,17 @@
     height: 120px;
     width: 120px;
     border-radius: 15px;
-    border-color:black;
+    border-color: black;
     background-color: white;
     align-items: center;
     box-sizing: border-box;
     border-radius: 25px;
-    
+    font-family: sans-serif;
 }
 .QuickAccessIcons {
     height: 120px;
     width: 120px;
-    border-width:initial;
+    border-width: initial;
     border-color: black;
- }
+    font-family: sans-serif;
+}

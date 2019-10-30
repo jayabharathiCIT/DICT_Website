@@ -5,15 +5,15 @@
 
     <div  id= "divContainer">
           <div   class="divHeader" >
-              <p id= "divHeader" > ICT Teaching & learning</p>
+              <h1 id= "divHeader" > ICT Teaching & learning</h1>
                             <div>
                                 <table>
                                     <tr >
                                         <td style="width:700px;height:auto; ">
-                                            <a href="Teaching_LearningPage#WIL"><p Class="divSubHeader" >WORK INTEGRATED LEARNING</p></a>
+                                            <a href="Teaching_LearningPage#WIL"><p Class="divSubHeader" >Work Integrated Learning</p></a>
                                         </td>
                                         <td style="width:700px;height:auto; ">
-                                            <a href="Teaching_LearningPage#FL"><p Class= "divSubHeader">FLEXIBLE  LEARNING</p></a>
+                                            <a href="Teaching_LearningPage#FL"><p Class= "divSubHeader">Flexible Learning</p></a>
                                        
                                         </td>
                                     </tr>
@@ -25,7 +25,7 @@
 
             <div id="PBL">
                             
-                <div class = "divContent">   
+                <div class = "divContentPBL">   
                 <table>
                         <tr>
                                 <td>
@@ -57,11 +57,9 @@
 
 
         <div ></div>
-                    <br /><br /><br />
+   
              <div id="WIL">
-             
-
-                     <div class ="divContent">
+                      <div class ="divContentWIL">
                        <table>
                             <tr>
                                 <td>
@@ -95,7 +93,7 @@
                     
                <div id="FL">
                       
-                        <div class ="divContent">
+                        <div class ="divContentFL">
                              <br />
                            <table>
                                 <tr>
