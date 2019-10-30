@@ -1,122 +1,127 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using MySql.Data.MySqlClient;
-using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Configuration;
+using System.Data;
+
 
 namespace DICT_Website
 {
     public partial class ChangePassword : System.Web.UI.Page
     {
 
-        // string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=pass;";
+        // string connectionString = @"Server=localhost;Database=dict website;Uid=root;Pwd=1234;";
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-            protected void btnChangePassword_Click(object sender, EventArgs e)
+        protected void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            int validResult = CheckAllRegisterValidation();
+            if (validResult == 1)
             {
                 try
                 {
-                    int ID = checkID();
-                    int password = checkPassword();
-                    if (ID == 1)
+                    lblErrorConfirmPassword.Text = "";
+                    using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                     {
-                        if (password == 1)
+                        sqlCon.Open();
+
+                        MySqlDataAdapter sqlCmd = new MySqlDataAdapter("sp_CheckPassword", sqlCon);
+                        sqlCmd.SelectCommand.CommandType = CommandType.StoredProcedure;
+                        sqlCmd.SelectCommand.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                        sqlCmd.SelectCommand.Parameters.AddWithValue("P_Password", txtPassword1.Text);
+                        //string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        //sqlCmd.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+                        //sqlCmd.SelectCommand.ExecuteNonQuery();
+                        DataTable dtbl = new DataTable();
+                        sqlCmd.Fill(dtbl);
+
+                        string username = dtbl.Rows[0][0].ToString();
+                        string OLdpassword = dtbl.Rows[0][1].ToString();
+
+                        if (OLdpassword == txtPassword1.Text)
                         {
-                            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                            if (txtNewPassword.Text == txtConfirmPassword.Text)
                             {
-                                sqlCon.Open();
-                                MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
-                                sqlCmd.CommandType = CommandType.StoredProcedure;
+                                DataTable dtblCon = new DataTable();
+                                MySqlDataAdapter sqlPass = new MySqlDataAdapter("sp_PasswordChange", sqlCon);
+                                sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
+                                sqlPass.SelectCommand.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                                sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
+                                sqlPass.SelectCommand.Parameters.AddWithValue("P_Password", txtNewPassword.Text);
+                                sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
+                                string postCreatedDate1 = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                                sqlPass.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate1);
 
-                                sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-
-                                string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                                sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
-                                sqlCmd.Parameters.AddWithValue("P_Password", checkPassword());
-                                sqlCmd.ExecuteNonQuery();
-                                lblSuccessMessage.Text = "Submitted Successfully";
+                                sqlPass.SelectCommand.ExecuteNonQuery();
+                                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('successfully change the password!!');window.location='ChangePassword.aspx';", true);
+                                lblSuccessMessage.Text = "successfully change the password!";
+                            }
+                            else
+                            {
+                                lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
+                                lblErrorConfirmPassword.Text = "Password miss match";
                             }
                         }
                         else
                         {
-                            //error to user.
-                            lblErrorConfirm.Text = "The password and confirmation password do not match.";
+                            lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
+                            lblErrorPassword.Text = "Current password is incorrect";
                         }
-                        // }
                     }
-                    else
-                    {
-                        //error to user.
-                        lblErrorID.Text = "Your ID Can not be blank.";
-                    }
-                    // }
+
                 }
+
                 catch (Exception ex)
                 {
                     lblSuccessMessage.Text = ex.Message;
                 }
             }
 
-            public int checkID()
+        }
+
+
+        public int CheckAllRegisterValidation()
+        {
+            if (txtID.Text.Length == 0)
             {
-                try
-                {
-                    // int id = Convert.ToInt32(this.txtID.Text);
-                    if (txtID.Text != null && txtPassword1.Text != null && txtConfirmPassword.Text != null && txtNewPassword.Text != null)
-                    {
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                catch (Exception es)
-                {
-                    lblSuccessMessage.Text = es.Message;
-                    return 0;
-                }
+                lblErrorID.Text = "*** Your ID can not be blank ***";
+                return 0;
             }
 
-            public int checkPassword()
+            else if (txtPassword1.Text.Length == 0)
             {
-                try
-                {
-                    int pass = Convert.ToInt32(this.txtPassword1.Text);
-                    int newpass = Convert.ToInt32(this.txtNewPassword.Text);
-                    int confirmpass = Convert.ToInt32(this.txtConfirmPassword.Text);
-                    if (newpass == confirmpass)
-                    {
-                        return 1;
-                    }
-                    else
-                    {
-                        return 0;
-                    }
-                }
-                catch (Exception es)
-                {
-                    lblSuccessMessage.Text = es.Message;
-                    return 0;
-                }
+                lblErrorPassword.Text = "*** Password can not be blank ***";
+                return 0;
             }
 
-
-            protected void btnCancel_Click(object sender, EventArgs e)
+            else if (txtNewPassword.Text.Length == 0)
             {
-                Response.Redirect("~/HomePage.aspx");
+                lblErrorNewPassword.Text = "*** New password can not be blank ***";
+                return 0;
+            }
+            else if (txtConfirmPassword.Text.Length == 0)
+            {
+                lblErrorConfirmPassword.Text = "*** Confirm password can not be blank ***";
+                return 0;
             }
 
-            protected void submit_Click(object sender, EventArgs e)
+            else
             {
-
+                return 1;
             }
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/HomePage.aspx");
+        }
+
+        protected void submit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+}
