@@ -2,6 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <style type='text/css'>
         
+    .auto-style1 {
+        width: 2300px;
+        height: 1456px;
+    }
+        
     </style>
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -9,20 +14,12 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+
 <script>
-  $( function() {
-    $("#datepicker").datepicker();
-      //document.getElementById('#TextBox1').datepicker();
-      //$('#TextBox1').datepicker({
-      //    dateFormat: 'dd/mm/yy'
-      //});
-      $('#MainContent_tbDate').datepicker({
-         dateFormat: 'dd-mm-yy'
-      });
-  });
-    //$(document).ready(function () {
-    //    $('#tbDate').datepicker({
-    //        dateFormat: 'dd/mm/yy'
+    //$(function () {
+    //    $("#datepicker").datepicker();
+    //    $('#MainContent_tbDate').datepicker({
+    //        dateFormat: 'dd-mm-yy'
     //    });
     //});
 </script>
@@ -74,7 +71,7 @@
            <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblFirstname" Text="First Name*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtFirstname" CssClass="txtControlRegister" runat="server"></asp:TextBox><br/>
+                    <asp:TextBox ID="txtFirstname" CssClass="txtControlRegister" runat="server" ></asp:TextBox><br/>
                     <asp:Label ID="lblErrorFirstname" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
@@ -88,12 +85,12 @@
             </asp:TableRow>
 
             <asp:TableRow Width="250" >
-                <asp:TableCell > <asp:Label runat="server" ID="lblPassword" Text="Password*" CssClass="textLables" MaxLength="10"></asp:Label><br />
+                <asp:TableCell > <asp:Label runat="server" ID="lblPassword" Text="Password*" CssClass="textLables" ></asp:Label><br />
                     <asp:Label ID="lblInfo" runat="server" Text="**Password should be alphanumeric and  character between 6 to 10." CssClass="textLablesInfo"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password"></asp:TextBox><br/>
-                     <asp:RangeValidator id="RangeValidator1" ControlToValidate="txtPassword1" Font-Size="Small" Font-Bold="true" ForeColor="Red" MinimumValue="1" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Password must be number." runat="server"> </asp:RangeValidator><br/>
+                    <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password" min="6" max="10"></asp:TextBox><br/>
+                     <asp:RangeValidator id="RangeValidator1" ControlToValidate="txtPassword1" Font-Size="Small" Font-Bold="true" ForeColor="Red"  MinimumValue="6" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Password must be number." runat="server"> </asp:RangeValidator><br/>
                     <asp:Label ID="lblErrorPassword" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>  
@@ -102,24 +99,21 @@
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblConfirmPassword" Text="Confirm Password*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtConfirmPassword" CssClass="txtControlRegister" runat="server" TextMode="Password" MaxLength="10"></asp:TextBox><br/>
-                     <asp:RangeValidator id="RangeValidator2" ControlToValidate="txtConfirmPassword" Font-Size="Small" Font-Bold="true" ForeColor="Red" MinimumValue="1" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Confirm Password must be number." runat="server"> </asp:RangeValidator><br/>
+                    <asp:TextBox ID="txtConfirmPassword" CssClass="txtControlRegister" runat="server" TextMode="Password"  min="6" max="10" ></asp:TextBox><br/>
+                     <asp:RangeValidator id="RangeValidator2" ControlToValidate="txtConfirmPassword" Font-Size="Small" Font-Bold="true" ForeColor="Red"  MinimumValue="6" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Confirm Password must be number." runat="server"> </asp:RangeValidator><br/>
                     <asp:Label ID="lblErrorConfirmPassword" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
             </asp:TableRow>
-
-               <%--http://1000hz.github.io/bootstrap-validator/?underwear=on--%>
+       
     
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblDOB" Text="Date of Birth*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
-                     <asp:TextBox ID="tbDate" runat="server" placeholder="Select a Date" CssClass="txtControlRegister"></asp:TextBox><br/>
-           <%--   <asp:TextBox ID="TextBox1" CssClass="textLables" ClientIDMode="Static" runat="server"></asp:TextBox>
-                    <p><input type="text" id="datepicker"></p>
-               --%>
+                     <asp:TextBox ID="tbDate" TextMode="date" runat="server" placeholder="Select a Date" CssClass="txtControlRegister"></asp:TextBox><br/>
                     <asp:Label ID="lblErrorDOB" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                     </asp:TableCell>
             </asp:TableRow>  
+
              
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblEmail" Text="Email*" CssClass="textLables" TextMode="Email"></asp:Label></asp:TableCell>
@@ -141,3 +135,4 @@
 </asp:Panel>
    <%-- </div>--%>
 </asp:Content>
+  

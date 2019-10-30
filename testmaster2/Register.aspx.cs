@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Configuration;
+using System.Web.UI.WebControls;
 
 namespace DICT_Website
 {
@@ -19,34 +20,35 @@ namespace DICT_Website
             try
             {
                 int password = checkPassword();
-    
+
                 if (password == 1)
                 {
                     int validResult = CheckAllRegisterValidation();
                     if (validResult == 1 && password == 1)
-                    
-                    using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
-                    {
-                        sqlCon.Open();
-                        MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
-                        sqlCmd.CommandType = CommandType.StoredProcedure;
+
+                        using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                        {
+                            sqlCon.Open();
+                            MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
+                            sqlCmd.CommandType = CommandType.StoredProcedure;
 
                             sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
                             sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
                             sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
                             sqlCmd.Parameters.AddWithValue("P_Password", txtPassword1.Text);
 
-                            string txtDate = tbDate.Text;
-                            DateTime DTdob = Convert.ToDateTime(txtDate);
-                            string getDob = DTdob.ToString("dd-MM-yy");
-                            sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", getDob);
+                            //string txtDate = tbDate.Text;
+                            //DateTime DTdob = Convert.ToDateTime(txtDate);
+                            //string getDob = DTdob.ToString("dd-MM-yy");
+                            sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", tbDate.Text);
                             sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
-              
-                        string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
-                        sqlCmd.ExecuteNonQuery();
-                        lblSuccessMessage.Text = "Submitted Successfully";
-                    }
+
+                            string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+                            sqlCmd.ExecuteNonQuery();
+                            ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Registered Successfully!');window.location='Login.aspx';", true);
+                            //lblSuccessMessage.Text = "Submitted Successfully";
+                        }
                 }
                 else
                 {
@@ -54,7 +56,7 @@ namespace DICT_Website
                     lblErrorConfirmPassword.Text = "The password and confirmation password do not match.";
                 }
             }
-         
+
             catch (Exception ex)
             {
                 lblSuccessMessage.Text = ex.Message;
@@ -67,7 +69,7 @@ namespace DICT_Website
             {
                 int pass = Convert.ToInt32(this.txtPassword1.Text);
                 int confirmpass = Convert.ToInt32(this.txtConfirmPassword.Text);
-                if( pass == confirmpass)
+                if (pass == confirmpass)
                 {
                     return 1;
                 }
@@ -81,7 +83,7 @@ namespace DICT_Website
                 lblSuccessMessage.Text = es.Message;
                 return 0;
             }
-    }
+        }
 
         public int CheckAllRegisterValidation()
         {
