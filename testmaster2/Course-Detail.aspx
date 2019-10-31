@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Course-Detail.aspx.cs" Inherits="DICT_Website.Course_Detail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="course-detail.aspx.cs" Inherits="DICT_Website.Course_Detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <head>
@@ -18,7 +18,7 @@
                     <h1>Diploma of Information Technology ICT50118</h1>
             </div>
             <div class="apply-container">
-                <a href="#"><button type="button" class="apply-btn">Apply Now</button></a>
+                <a href="apply.aspx"><button type="button" class="apply-btn">Apply Now</button></a>
             </div>
         </div>
 
@@ -180,10 +180,324 @@ If you are entering this program as a Trainee/Apprentice under the Australian Ap
       </div>
     </div>
   </div>
-</div>
+
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+       ICTNWK514  Model preferred system solutions</a>
+      </h4>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   	INFT168</p>
+          <p><strong>Cost:</strong>   			Standard $128.00</p>
+           <p><strong>Description:</strong>   TThis unit describes the skills and knowledge required to fit a physical model into the design phase of the methodology. It applies to individuals working as system designers who are required to model proposed solutions.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
 
 
-    
+        <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+       ICTNWK513  Manage system security</a>
+      </h4>
+    </div>
+    <div id="collapse7" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT212</p>
+          <p><strong>Cost:</strong>   			Standard $110.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to implement and manage security on an operational system. It applies to individuals working in middle management in technical advice, guidance and leadership roles such as security managers and security analysts responsible for implementing and managing the organisations security management system.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">
+       ICTNWK527  Manage an enterprise virtual computing environment</a>
+      </h4>
+    </div>
+    <div id="collapse8" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT750</p>
+          <p><strong>Cost:</strong>   			Standard $148.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to manage virtualisation technologies, with the goal of providing a more sustainable information and communications technology (ICT) environment. It applies to individuals with excellent communication skills responsible for managing virtualisation technologies.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+
+
+        <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">
+        ICTNWK525  Configure an enterprise virtual computing environment</a>
+      </h4>
+    </div>
+    <div id="collapse9" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   	INFT748</p>
+          <p><strong>Cost:</strong>   			Standard $148.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to develop and implement virtualisation technologies, with the goal of providing a more sustainable information and communications technology (ICT) environment. It applies to individuals working as senior networking staff responsible for increasing the sustainability of an organisation, by using virtualisation technologies.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+        ICTPRG503  Debug and monitor applications</a>
+      </h4>
+    </div>
+    <div id="collapse10" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT790</p>
+          <p><strong>Cost:</strong>   			Standard $88.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to debug and monitor a software application. It applies to individuals who work as developers, testers and support engineers, using logging and tracing techniques to identify software problems and to monitor systems. No licensing, legislative or certification requirements apply to this unit at the time of publication.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+
+        <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+       ICTSAS522  Manage the testing process</a>
+      </h4>
+    </div>
+    <div id="collapse11" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT1038</p>
+          <p><strong>Cost:</strong>   				Standard $44.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to effectively manage and administer the end-to-end testing process, including test definition, execution and reporting.It applies to experienced individuals who work autonomously in performing or organising others to undertake testing of systems and applications.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+      ICTSAS517  Use network tools</a>
+      </h4>
+    </div>
+    <div id="collapse12" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   			INFT814</p>
+          <p><strong>Cost:</strong>   					Standard $110.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to use tools to assist in managing a network effectively. It applies to individuals who apply technical and specialised knowledge to monitor security and resolve issues for the network.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+      ICTICT514  Identify and manage the implementation of current industry specific technologies</a>
+      </h4>
+    </div>
+    <div id="collapse13" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   			INFT711</p>
+          <p><strong>Cost:</strong>   				Standard $132.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to demonstrate and constantly review work processes that ensure that the quality of the business process is maintained for the implementation of specific industry technologies at an identified industry standard. It applies to individuals engaged in ongoing review and research in order to identify, manage and evaluate the implementation of industry technologies or techniques to improve aspects of the organisation's activities. Work functions in the occupational areas where this unit may be used are subject to regulatory requirements. Refer to the ICT Implementation Guide Companion Volume or the relevant regulator for details of licensing, legislative or certification requirements.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+       ICTWEB501  Build a dynamic website</a>
+      </h4>
+    </div>
+    <div id="collapse14" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   			INFT332</p>
+          <p><strong>Cost:</strong>   					Standard $132.00</p>
+           <p><strong>Description:</strong>   	This unit describes the skills and knowledge required to analyse and design websites to meet technical requirements. It applies to individuals working as web developers who are responsible for the analysis, design, implementation, and testing of websites.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">
+       ICTDBS504  Integrate database with a website</a>
+      </h4>
+    </div>
+    <div id="collapse15" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   			INFT325</p>
+          <p><strong>Cost:</strong>   					Standard $55.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to ensure the database is integrated with a website. It applies to individuals employed as web developers who are responsible for creating data-driven web applications.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">
+      ICTSAD505  Develop technical requirements for business solutions</a>
+      </h4>
+    </div>
+    <div id="collapse16" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT512</p>
+          <p><strong>Cost:</strong>   					Standard $66.00</p>
+           <p><strong>Description:</strong>   	This unit describes the outcomes, skills and knowledge required to develop technical and related requirements that will enable business solutions to be implemented in an organisation. It applies to individuals who are responsible for performing complex technical analysis to complete a range of tasks and provide solutions to complex problems.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">
+       ICTNWK535  Install an enterprise virtual computing environment</a>
+      </h4>
+    </div>
+    <div id="collapse17" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT984</p>
+          <p><strong>Cost:</strong>   				Standard $148.00</p>
+           <p><strong>Description:</strong>   	This unit describes the skills and knowledge required to develop and implement, virtualisation technologies to provide a more efficient and reliable information and communications technology (ICT) environment. It applies to senior networking staff responsible for increasing the sustainability of an enterprise.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse18">
+     ICTSAD501  Model data objects</a>
+      </h4>
+    </div>
+    <div id="collapse18" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT441</p>
+          <p><strong>Cost:</strong>   				Standard $112.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to understand business operations, identify entities and data, diagrammatically represent their relationships, and prepare a data model. It applies individuals who have a broad range of analytical, technical and communication skills and who work within broad but established parameters.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse19">
+      ICTSAD502  Model data processes</a>
+      </h4>
+    </div>
+    <div id="collapse19" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT442</p>
+          <p><strong>Cost:</strong>   					Standard $112.00</p>
+           <p><strong>Description:</strong>   This unit describes the skills and knowledge required to gather process data and business information in order to model data processes within an organisation. It applies to individuals who can apply a broad range of technical knowledge and skills within the context of a complex project.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse20">
+      ICTWEB503  Create web-based programs</a>
+      </h4>
+    </div>
+    <div id="collapse20" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   		INFT830</p>
+          <p><strong>Cost:</strong>   				Standard $132.00</p>
+           <p><strong>Description:</strong>   	This unit describes the skills and knowledge required to develop web applications. It applies to individuals who work as web developers and have well-honed technical skills to take responsibility for implementing code required to create web applications.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+            <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse21">
+       ICTWEB505  Develop complex web page layouts</a>
+      </h4>
+    </div>
+    <div id="collapse21" class="panel-collapse collapse">
+      <div class="panel-body">
+           <p><strong>CIT Code:</strong>   			INFT831</p>
+          <p><strong>Cost:</strong>   					Standard $88.00</p>
+           <p><strong>Description:</strong>   	This unit describes the skills and knowledge required to design and create a web page layout, to suit a range of devices and a variety of browsers, to industry standards. It applies to individuals who work as web designers and web developers, have a highly developed understanding of design principles and apply technical skills proficiently, according to unique specifications.</p>  
+            <p><strong>Prerequesites:</strong>   Nil</p>
+          <p><strong>Teacher Name:</strong>   Nil</p>
+          <p><strong>Teacher Email:</strong>   Nil</p>
+      </div>
+    </div>
+  </div>
+
+    <hr />
+ <h2>More Information</h2>
+         <hr />
+    <p>
+        For more information about this course please contact CIT Student Services on (02) 6207 3188 or email infoline@cit.edu.au
+    </p>
+
 
 
 
