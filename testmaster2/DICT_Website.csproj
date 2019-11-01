@@ -111,6 +111,7 @@
     <Content Include="AddNews.aspx" />
     <Content Include="AdminForumPage.aspx" />
     <Content Include="AnnCreate.aspx" />
+    <Content Include="AnnHomepage.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
@@ -249,6 +250,13 @@
     </Compile>
     <Compile Include="AnnCreate.aspx.designer.cs">
       <DependentUpon>AnnCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnHomepage.aspx.cs">
+      <DependentUpon>AnnHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnHomepage.aspx.designer.cs">
+      <DependentUpon>AnnHomepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
