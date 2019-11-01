@@ -1,43 +1,65 @@
 ﻿body {
-    font-family: 'Roboto';
+    font-family: Roboto, sans-serif;
     margin: 0;
     height: 100%;
+    width:100%;
+   
+
 }
 
 
 /* top container */
 .top-box {
     background: linear-gradient(to right, #16222a, #3a6073);
-    height: 150px;
-    padding: 25px;
+    height: 100px;
+    padding: 10px 0 10px 20px;
     color: white;
+    
+ 
 }
 
 .top-head {
     transform: translateY(25px);
     font-size: 5rem;
+ 
+    
 }
 
-h1 {
+h1.top-box {
     font-size: 5rem;
+    padding:10px;
+    
 }
 
 h2 {
     font-size: 3rem;
     transform: translateX(-350px);
     text-decoration: underline;
-    padding-top: 15px;
+    padding-top: 25px;
+    padding-bottom:15px;
 }
 
 .content {
     text-align: center;
     width: 100%;
-    height: 550px;
+    height: 100%;
     background-color: lightblue;
+    
+}
+
+container2{
+    height: 800px;
 }
 
 .col-25 {
     padding: 25px;
+}
+
+.col-75{
+    padding: 25px;
+    width:100%;
+    height: 100%;
+
 }
 
 label {
@@ -45,41 +67,57 @@ label {
 }
 
 .lbl {
+    width: 380px;
     font-size: 2rem;
     position: absolute;
+    height: 100px;
+}
+
+.lbl2 {
+    width: 310px;
+    font-size: 2rem;
+    position: absolute;
+    height: 100px;
 }
 
 .txt {
     font-size: 1.5rem;
 }
 
-#title {
+
+/*text box for title*/
+.txtTitle {
     max-width: 500px;
     width: 500px;
+    font-size: 1.5rem;
 }
 
-textarea {
-    max-width: 800px;
-}
 
-#description {
+/* Text Box for description*/
+.txtDesc {
+    max-width: 500px;
     width: 500px;
-    height: 300px;
+    height: 200px;
+    text-align: left;
+    font-size: 1.5rem;
 }
 
-.text-area {
-    width: 500px;
-    height: 300px;
-    text-align: center;
+.tbox {
+    width: 100%;
+    
 }
 
-.row {
-    text-align: center;
+
+
+
+
+button{
+    padding:25px;
+    max-width: 500px;
 }
 
-/* Button */
-#submit {
-    background-color: #4CAF50; /* Green */
+ .btnSubmit {
+    background-color: #4CAF50; 
     border-radius: 25px;
     border: none;
     color: white;
@@ -87,9 +125,11 @@ textarea {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-}
+    }
 
-#cancel {
+    
+
+.btnCancel {
     background-color: #4CAF50; /* Green */
     border-radius: 25px;
     border: none;
@@ -99,9 +139,20 @@ textarea {
     text-decoration: none;
     font-size: 16px;
     margin-right: 25px;
-}
+ }
+
 
 .row {
-    transform: translate(575px);
-    padding-top: 25px;
+    transform: translate(600px);
+    padding: 50px;
+    max-width: 450px;
 }
+
+
+
+
+
+
+ 
+
+

@@ -5,7 +5,10 @@
    <%-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> --%> 
 
     <div class="top-box"> 
-    <h1 class="top-head">Announcements</h1>  
+
+    <h1 class="top-head">
+        Announcements
+    </h1>  
     </div>
 
  
@@ -15,21 +18,24 @@
   
     <div class="col-25">
         <div class="lbl">
-            <label for="title">Title</label> 
+            <label for="title">Title :</label> 
         </div>
         <div class="txt">
-            <asp:TextBox  ID="txtTitle" runat="server"></asp:TextBox>
+            <asp:TextBox CssClass="txtTitle" ID="txtTitle" placeholder="Enter Title here..." runat="server"></asp:TextBox>
           <%--<input type="text" id="Title" name="Title" placeholder="The title of the Announcement..."> --%>  
         </div>   
     </div>
     </div>
     <div class="container2">
     <div class="col-75">     
-     <div class="lbl">
-         <label for="description">Description</label>
+     <div class="lbl2">
+         <label for="description">Description :</label>
      </div>
-     <div class="text-area">
-         <asp:TextBox ID="txtDesc" runat="server"></asp:TextBox>
+     <div class="textDesc">
+         <div class="tbox">
+                <asp:TextBox CssClass="txtDesc" ID="txtDesc" TextMode="MultiLine" placeholder= "Enter Description here..." runat="server"></asp:TextBox>         
+         </div>
+         
        <%-- <textarea id="description" name="description" placeholder="Write here...">
         </textarea> --%> 
      </div>       
@@ -37,18 +43,17 @@
     
     <div class="row">
 
+         <asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label>
+        
+        <div class="button"> 
+            
+                <asp:Button ID="btnCancel" CssClass="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
+                <asp:Button ID="btnSubmit" CssClass="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+            
+         </div>
         
 
-        <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
-
-       <%--
-           <input id="cancel" type="reset" value="Cancel">
-
-           OnClick="btnSubmit_Click"
-           
-           <input id="submit" type="submit" value="Submit">
-       --%>
+       
     </div>
     </div>
  </div>
