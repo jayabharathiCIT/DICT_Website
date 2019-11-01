@@ -66,7 +66,7 @@
                     <asp:Label ID="lblDescription" runat="server" Text="Description" CssClass="textLables"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="textDescription" TextMode="MultiLine" CssClass="txtControl" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textDescription" TextMode="MultiLine" CssClass="txtMultitxtControl" runat="server"></asp:TextBox>
                 </asp:TableCell>
                
             </asp:TableRow>
@@ -74,7 +74,13 @@
                         <asp:TableCell>
                             <asp:Button ID="btnUpdatePost" runat="server" Text="Update Post" CssClass="btnSubmitControls"  OnClick="btnUpdatePost_Click" /></asp:TableCell>
                         <asp:TableCell>
-                            <asp:Button ID="btnRemove" runat="server" Text="Remove" CssClass="btnSubmitControls"  OnClick="btnRemove_Click" /></asp:TableCell>
+                            <asp:Button ID="btnRemove" runat="server" Text="Remove" CssClass="btnSubmitControls"  OnClick="btnRemove_Click" />
+                            
+                        </asp:TableCell>
+                        <asp:TableCell>
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" OnClick="btnCancel_Click" />
+                        </asp:TableCell>
+                        
                     </asp:TableRow>
         </asp:Table>
                 <asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label>     

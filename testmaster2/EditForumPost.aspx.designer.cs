@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class EditForumPost {
-        
+namespace DICT_Website
+{
+
+
+    public partial class EditForumPost
+    {
+
         /// <summary>
         /// Panel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
-        
+
         /// <summary>
         /// Panel2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel2;
-        
+
         /// <summary>
         /// lbluserInfo control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbluserInfo;
-        
+
         /// <summary>
         /// ddlLogin control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLogin;
-        
+
         /// <summary>
         /// lblPageTitle control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPageTitle;
-        
+
         /// <summary>
         /// tblAddPost control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tblAddPost;
-        
+
         /// <summary>
         /// lblPostTitle control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPostTitle;
-        
+
         /// <summary>
         /// txtTitle control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitle;
-        
+
         /// <summary>
         /// lblCategory control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCategory;
-        
+
         /// <summary>
         /// ddlCategory control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
-        
+
         /// <summary>
         /// lblDescription control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDescription;
-        
+
         /// <summary>
         /// textDescription control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox textDescription;
-        
+
         /// <summary>
         /// btnUpdatePost control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnUpdatePost;
-        
+
         /// <summary>
         /// btnRemove control.
         /// </summary>
@@ -137,7 +139,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRemove;
-        
+
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancel;
+
         /// <summary>
         /// lblSuccessMessage control.
         /// </summary>

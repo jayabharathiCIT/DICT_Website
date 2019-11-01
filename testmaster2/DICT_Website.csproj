@@ -109,6 +109,7 @@
     <Content Include="About.aspx" />
     <Content Include="AddNews.aspx" />
     <Content Include="AdminForumPage.aspx" />
+    <Content Include="AdminProfilePage.aspx" />
     <Content Include="AnnCreate.aspx" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
@@ -248,6 +249,13 @@
     </Compile>
     <Compile Include="AdminForumPage.aspx.designer.cs">
       <DependentUpon>AdminForumPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProfilePage.aspx.cs">
+      <DependentUpon>AdminProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProfilePage.aspx.designer.cs">
+      <DependentUpon>AdminProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnnCreate.aspx.cs">
       <DependentUpon>AnnCreate.aspx</DependentUpon>

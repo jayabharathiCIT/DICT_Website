@@ -33,6 +33,11 @@ namespace DICT_Website
                 String username = Session["Username"].ToString();
                 String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username +" ";
+                bool isAdminUser = verifyAdminUser(userid);
+                if (!isAdminUser)
+                {
+                    ddlLogin.Items[1].Enabled = false;                    
+                }
             }
             // End Check authorised user 
 
@@ -287,9 +292,16 @@ namespace DICT_Website
 
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(ddlLogin.SelectedItem.Value == "1")
+            DropDownList ddlLogin = (DropDownList)sender;
+            if (ddlLogin.SelectedItem.Value == "4")
             {
                 //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
+            if (ddlLogin.SelectedItem.Value == "1")
+            {
+                //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
             }
             if(ddlLogin.SelectedItem.Value == "2" )
             {
@@ -323,6 +335,30 @@ namespace DICT_Website
                 string getPostIDArg = btn.CommandArgument.ToString();
                 Response.Redirect("~/EditForumPost.aspx" + "?PostID=" + getPostIDArg);
             }
+        }
+        protected Boolean verifyAdminUser(string AdminRegID)
+        {
+            bool isAdmin = false;
+            DataTable dtAdmin = new DataTable();
+            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+            {
+                sqlCon.Open();
+                int adminRegID = Convert.ToInt32(AdminRegID);
+                string Query = "SELECT* FROM `dict website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
+                MySqlCommand MyCommand = new MySqlCommand(Query, sqlCon);
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter();
+                sqlDa.SelectCommand = MyCommand;
+                sqlDa.Fill(dtAdmin);
+                if (dtAdmin.Rows.Count > 0)
+                {
+                    isAdmin = true;
+                }
+                else
+                {
+                    isAdmin = false;
+                }
+            }
+            return isAdmin;
         }
     }
 }

@@ -35,9 +35,9 @@ namespace DICT_Website
                 bool isAdminUser = verifyAdminUser(userid);
                 if(!isAdminUser)
                 {
+                    ddlLogin.Items[1].Enabled = false;
                     Response.Redirect("~/ForumHomePage.aspx");
                 }
-
                 }
             // End Check authorised user 
 
@@ -58,13 +58,20 @@ namespace DICT_Website
         }
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ddlLogin.SelectedItem.Value == "4")
+            {
+                //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
             if (ddlLogin.SelectedItem.Value == "1")
             {
                 //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {

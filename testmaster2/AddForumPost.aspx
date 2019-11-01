@@ -69,7 +69,7 @@
                     <asp:Label ID="lblDescription" runat="server" Text="Description" CssClass="textLables"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="textDescription" TextMode="MultiLine" CssClass="txtControl" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textDescription" TextMode="MultiLine" CssClass="txtMultitxtControl" runat="server"></asp:TextBox>
                 </asp:TableCell>
                
             </asp:TableRow>

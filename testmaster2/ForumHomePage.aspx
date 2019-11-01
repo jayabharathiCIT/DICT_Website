@@ -12,6 +12,8 @@
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                          <asp:ListItem Value ="0" >Select One</asp:ListItem>
+                           <asp:ListItem Value ="4" >Admin Profile</asp:ListItem>
                            <asp:ListItem Value="1">Change Password</asp:ListItem>
 
                   <asp:ListItem Value="2">Delete Account</asp:ListItem>
