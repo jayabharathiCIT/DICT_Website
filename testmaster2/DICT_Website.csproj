@@ -161,6 +161,7 @@
     <Content Include="Images\CSIcon.jpg" />
     <Content Include="Images\delete.png" />
     <Content Include="Images\DictFullLogo.png" />
+    <Content Include="Images\DICTlogoNew.png" />
     <Content Include="Images\Elearning.png" />
     <Content Include="Images\EmploymentIcon.png" />
     <Content Include="Images\EnrollingIcon.png" />
