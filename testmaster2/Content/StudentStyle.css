@@ -1,4 +1,9 @@
-﻿#divContainer {
+﻿body {
+    font-family: 'Roboto';
+}
+
+
+#divContainer {
     background: linear-gradient(0deg, rgba(8, 173, 243, 0.43), rgba(8, 173, 243, 0.43));
     font-family: sans-serif;
 }
@@ -7,11 +12,11 @@
     color: white;
     font-family: sans-serif;
     font-size: 35px;
-    height: 55px;
+    height: 100px;
     font-weight: bold;
     background: #233142;
     padding-left: 10px;
-    padding-top:10px;
+    padding-top: 10px;
     margin: 0px;
 }
 
@@ -122,6 +127,12 @@
     border-radius: 25px;
     font-family: sans-serif;
 }
+
+    .Icons img {
+        max-height: 100px;
+        max-width: 50px;
+    }
+
 .QuickAccessIcons {
     height: 120px;
     width: 120px;
