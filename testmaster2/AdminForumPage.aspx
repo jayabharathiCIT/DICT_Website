@@ -13,7 +13,10 @@
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
-                           <asp:ListItem Value="1">Change Password</asp:ListItem>
+                              <asp:ListItem Value ="0" >Select One</asp:ListItem>                       
+                          <asp:ListItem Value ="4" >Admin Profile</asp:ListItem>
+                           
+                          <asp:ListItem Value="1">Change Password</asp:ListItem>
 
                   <asp:ListItem Value="2">Delete Account</asp:ListItem>
 
@@ -28,9 +31,9 @@
                 <table>
                     <tr>
                         <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/logoBlue.png" Height="98px"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
                         </td>
-                        <td style="width:350px;height:auto; ">
+                        <td style="width:200px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Admin Forum Page"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
@@ -83,6 +86,7 @@
                         <SortedDescendingHeaderStyle BackColor="Transparent" />
                         
                     </asp:GridView>
+                    <asp:Label ID="lblSucessMessage" runat="server" Text=""></asp:Label>
                 </div>                    
                     </div>
                 </asp:Panel>

@@ -62,6 +62,7 @@
      <%-- DICT Header  --%>
         <%-- Add DICT menu bar  --%>
            <div class="collapse navbar-collapse d-flex justify-content-center">
+
        <%-- <div class="navbar-fixed-top mx-auto"  >--%>
      <div  style="float:left; position:center; padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
           <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
@@ -83,7 +84,7 @@
             </asp:Menu>
         
      </div>
-      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:20px; "><a href="homepage.aspx"><img   style="width:115px; height:70px;" src="Images/DictLogo.png" /></a> </div>
+      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:25px; "><a href="homepage.aspx"><img   style="width:110px; height:70px;" src="Images/DictLogoNew.png" /></a> </div>
       <div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
          <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true" Font-Names="sans-serif;"  RenderingMode="List" >
              <StaticMenuStyle BackColor="black" />

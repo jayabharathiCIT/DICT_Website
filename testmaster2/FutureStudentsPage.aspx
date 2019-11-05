@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="FutureStudentsPage.aspx.cs" Inherits="DICT_Website.FutureStudentsPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/StudentStyle.css" rel="stylesheet" />
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <div  id= "divContainer">
           <div   class="divHeader" >

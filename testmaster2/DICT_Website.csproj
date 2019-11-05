@@ -45,8 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Web, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -110,6 +109,7 @@
     <Content Include="About.aspx" />
     <Content Include="AddNews.aspx" />
     <Content Include="AdminForumPage.aspx" />
+    <Content Include="AdminProfilePage.aspx" />
     <Content Include="AnnCreate.aspx" />
     <Content Include="AnnHomepage.aspx" />
     <Content Include="ChangePassword.aspx" />
@@ -122,15 +122,17 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Contactus.css" />
-    <Content Include="Content\Course-Detail.css" />
+    <Content Include="Content\course-detail.css" />
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\homepage.css" />
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\News.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StudentStyle.css" />
+    <Content Include="Content\apply.css" />
+    <Content Include="Content\courses.css" />
     <Content Include="Content\TeachingStyle.css" />
-    <Content Include="Course-Detail.aspx" />
+    <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
@@ -155,11 +157,12 @@
     <Content Include="Images\CITRtoLogo.png" />
     <Content Include="Images\CITSAIcon.png" />
     <Content Include="Images\Comment.png" />
+    <Content Include="Images\course1.jpg" />
     <Content Include="Images\CourseIcon.png" />
-    <Content Include="Images\courses.jpg" />
     <Content Include="Images\CSIcon.jpg" />
     <Content Include="Images\delete.png" />
     <Content Include="Images\DictFullLogo.png" />
+    <Content Include="Images\DICTlogoNew.png" />
     <Content Include="Images\Elearning.png" />
     <Content Include="Images\EmploymentIcon.png" />
     <Content Include="Images\EnrollingIcon.png" />
@@ -179,8 +182,7 @@
     <Content Include="Images\sendReply.png" />
     <Content Include="Images\StudentFormsIcon.png" />
     <Content Include="Images\test1.jpg" />
-    <Content Include="Images\test2.jpg" />
-    <Content Include="Images\test3.jpg" />
+    <Content Include="Images\test3.JPG" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
@@ -188,6 +190,13 @@
     <Content Include="Images\replyall.png" />
     <Content Include="Images\twitter.png" />
     <Content Include="AddForumPost.aspx" />
+    <Content Include="apply.aspx" />
+    <Content Include="courses.aspx" />
+    <Content Include="cyber.aspx" />
+    <Content Include="games.aspx" />
+    <Content Include="net.aspx" />
+    <Content Include="RemoveStudent.aspx" />
+    <Content Include="soft.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\citlogo.png" />
     <Content Include="Images\DictLogo.png" />
@@ -244,6 +253,13 @@
     <Compile Include="AdminForumPage.aspx.designer.cs">
       <DependentUpon>AdminForumPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminProfilePage.aspx.cs">
+      <DependentUpon>AdminProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProfilePage.aspx.designer.cs">
+      <DependentUpon>AdminProfilePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AnnCreate.aspx.cs">
       <DependentUpon>AnnCreate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,12 +297,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Course-Detail.aspx.cs">
-      <DependentUpon>Course-Detail.aspx</DependentUpon>
+    <Compile Include="course-detail.aspx.cs">
+      <DependentUpon>course-detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Course-Detail.aspx.designer.cs">
-      <DependentUpon>Course-Detail.aspx</DependentUpon>
+    <Compile Include="course-detail.aspx.designer.cs">
+      <DependentUpon>course-detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="CurrentStudentPage.aspx.cs">
       <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
@@ -341,6 +357,13 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RemoveStudent.aspx.cs">
+      <DependentUpon>RemoveStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveStudent.aspx.designer.cs">
+      <DependentUpon>RemoveStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -382,6 +405,48 @@
     </Compile>
     <Compile Include="AddForumPost.aspx.designer.cs">
       <DependentUpon>AddForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="apply.aspx.cs">
+      <DependentUpon>apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="apply.aspx.designer.cs">
+      <DependentUpon>apply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="courses.aspx.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="courses.aspx.designer.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cyber.aspx.cs">
+      <DependentUpon>cyber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cyber.aspx.designer.cs">
+      <DependentUpon>cyber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="games.aspx.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="games.aspx.designer.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="net.aspx.cs">
+      <DependentUpon>net.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="net.aspx.designer.cs">
+      <DependentUpon>net.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="soft.aspx.cs">
+      <DependentUpon>soft.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="soft.aspx.designer.cs">
+      <DependentUpon>soft.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

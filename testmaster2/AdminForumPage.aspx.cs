@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+// Programmer :Jayabharathi
+// Date: 28-10-2019
+// Purpose: Admin user login and view all the forums, delete the forum.
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -23,35 +30,48 @@ namespace DICT_Website
             {
                 String userid = Convert.ToString((int)Session["RegID"]);
                 String username = Session["Username"].ToString();
-                //String userrole = Session["Role"].ToString();
+                String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username + " ";
-            }
+                bool isAdminUser = verifyAdminUser(userid);
+                if(!isAdminUser)
+                {
+                    ddlLogin.Items[1].Enabled = false;
+                    Response.Redirect("~/ForumHomePage.aspx");
+                }
+                }
             // End Check authorised user 
 
             //Show gridview details
-            dt = new DataTable();
-            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
-            {
-                sqlCon.Open();
-                MySqlDataAdapter sqlDa = new MySqlDataAdapter("sp_PostViewAll", sqlCon);
-                sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlDa.Fill(dt);
-
-            }
-
-            //fill grid view
-            gv_ForumDetails.DataSource = dt;
-            gv_ForumDetails.DataBind();
+            
+                dt = new DataTable();
+                using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                {
+                    sqlCon.Open();
+                    MySqlDataAdapter sqlDa = new MySqlDataAdapter("sp_PostViewAll", sqlCon);
+                    sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    sqlDa.Fill(dt);
+                }
+                //fill grid view
+                gv_ForumDetails.DataSource = dt;
+                gv_ForumDetails.DataBind();
+            
         }
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ddlLogin.SelectedItem.Value == "4")
+            {
+                //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
             if (ddlLogin.SelectedItem.Value == "1")
             {
                 //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {
@@ -131,14 +151,14 @@ namespace DICT_Website
         {
             using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
             {
-                //sqlCon.Open();
-                //string Query = "DELETE FROM `dict website`.dt_posts where Post_ID =" + postID + ";";
-                //MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
-                //MyCommandtoGetPostByID.ExecuteNonQuery();
-                //int result = MyCommandtoGetPostByID.ExecuteNonQuery();
-                ////result holds number of rows affected 
-                //if (result > 0)
-                //{
+                sqlCon.Open();
+                string Query = "DELETE FROM `dict website`.dt_posts where Post_ID =" + postID + ";";
+                MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
+                MyCommandtoGetPostByID.ExecuteNonQuery();
+                int result = MyCommandtoGetPostByID.ExecuteNonQuery();
+                //result holds number of rows affected 
+                if (result > 0)
+                {
                     string message = "Delete successful!";
                     string url = "AdminForumPage.aspx";
                     string script = "window.onload = function(){ alert('";
@@ -147,15 +167,39 @@ namespace DICT_Website
                     script += "window.location = '";
                     script += url;
                     script += "'; }";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);                    
-                //}
-                //else
-                //{
-                //    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
-                //}
+                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+                }
+                else
+                {
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
+                }
 
             }
+        }
 
+        protected Boolean verifyAdminUser(string AdminRegID)
+        {
+            bool isAdmin = false;
+            DataTable dtAdmin = new DataTable();
+            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+            {
+                sqlCon.Open();
+                int adminRegID = Convert.ToInt32(AdminRegID);
+                string Query = "SELECT* FROM `dict website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
+                MySqlCommand MyCommand = new MySqlCommand(Query, sqlCon);
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter();
+                sqlDa.SelectCommand = MyCommand;
+                sqlDa.Fill(dtAdmin);
+                if (dtAdmin.Rows.Count > 0)
+                {
+                    isAdmin = true;
+                }
+                else
+                {
+                    isAdmin = false;
+                }               
+            }
+            return isAdmin;
         }
     }
 }

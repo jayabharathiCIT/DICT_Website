@@ -1,4 +1,10 @@
-﻿#divContainer {
+﻿body {
+    font-family: 'Roboto';
+}
+
+
+
+#divContainer {
     background: linear-gradient(180deg, rgba(8, 95, 99, 0.88) 32.29%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -6,19 +12,22 @@
     color: white;
     font-family: sans-serif;
     font-size: 35px;
-    height: 55px;
+    height: 100px;
     font-weight: bold;
-    background: #233142;
-    padding-left: 10px;
-    padding-top: 10px;
+    /*background: #233142;*/
+    background: -webkit-linear-gradient(to right, #141e30, #243b55); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-left: 15px;
+    padding-top: 80px;
     margin: 0px;
+    font-size: 4rem;
 }
 
 .divSubHeader {
     background: linear-gradient(90deg, #FACF5C 92.89%, #E0E0E0 98.96%);
     color: black;
     font-size: 20px;
-    height: 40px;
+    height: 80px;
     font-family: sans-serif;
     font-weight: normal;
     font-size: 20px;
@@ -26,13 +35,16 @@
     align-items: center;
     vertical-align: central;
     margin: 0px;
-    padding-top: 5px;
+    padding-top: 25px;
 }
+
+    .divSubHeader:hover {
+        color: deepskyblue;
+    }
 
 .divContentPBL {
     background: #085e63;
-    /*color: whitesmoke;*/
-    color: black;
+    color: white;
     font-size: medium;
     font-style: normal;
     font-weight: normal;
@@ -47,7 +59,7 @@
 
 .divContentWIL {
     background: rgba(8, 173, 243, 0.43);
-    color: black;
+    color: white;
     font-size: medium;
     font-style: normal;
     font-weight: normal;
@@ -61,7 +73,6 @@
 }
 
 .divContentFL {
-   
     color: black;
     font-size: medium;
     font-style: normal;
