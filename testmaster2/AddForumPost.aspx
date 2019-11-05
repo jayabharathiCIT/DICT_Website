@@ -33,10 +33,10 @@
                 <table>
                     <tr>
                         <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
                         </td>
                         <td style="width:350px;height:auto; ">
-                           <asp:Label ID="lblPageTitle" runat="server" Text="Create New Post"  CssClass="pageTitle" ></asp:Label>
+                           <asp:Label ID="lblPageTitle" runat="server" Text="Create New Post"  CssClass="pageTitle" ></asp:Label>                            
                         </td>
                     </tr>
                 </table>
@@ -48,40 +48,39 @@
             <asp:TableRow Width="150" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblPostTitle" Text="Title" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtTitle" CssClass="txtControl" runat="server"></asp:TextBox> </asp:TableCell>
-
-            </asp:TableRow>
+                    <asp:TextBox ID="txtTitle" CssClass="txtControl" runat="server"></asp:TextBox> 
+                    
+                </asp:TableCell></asp:TableRow>
                     <asp:TableRow>
-                        <asp:TableCell><asp:Label runat="server" Text="Category" ID="lblCategory" CssClass="textLables" ></asp:Label></asp:TableCell>
                         <asp:TableCell>
-                            <asp:DropDownList ID="ddlCategory" runat="server" CssClass="txtControl" >
+                        </asp:TableCell>
+                        <asp:TableCell>
+                            <asp:RequiredFieldValidator ID="rfvuser" runat="server"  Display="Dynamic" ErrorMessage="Please enter Post Topic" EnableClientScript="true"
+                            ForeColor="Red" ControlToValidate="txtTitle" />
+                        </asp:TableCell></asp:TableRow><asp:TableRow>
+                        <asp:TableCell><asp:Label runat="server" Text="Category" ID="lblCategory" CssClass="textLables" ></asp:Label></asp:TableCell><asp:TableCell>
+                            <asp:DropDownList ID="ddlCategory" runat="server" CssClass="txtControl" ValidationGroup="g1"  >
                                 <asp:ListItem Value="1" Text="Programming"></asp:ListItem>
                                 <asp:ListItem Value="2" Text="Designing"></asp:ListItem>
                                 <asp:ListItem Value="3" Text="Networking"></asp:ListItem>
                                 <asp:ListItem Value="4" Text="Security"></asp:ListItem>
                                 <asp:ListItem  Value="5" Text="Testing"></asp:ListItem>
-                            </asp:DropDownList>
-                           </asp:TableCell>
-                        
-                    </asp:TableRow>
-            <asp:TableRow>
+                            </asp:DropDownList>                           
+                           </asp:TableCell></asp:TableRow><asp:TableRow>
                 <asp:TableCell>
                     <asp:Label ID="lblDescription" runat="server" Text="Description" CssClass="textLables"></asp:Label>
-                </asp:TableCell>
-                <asp:TableCell>
-                    <asp:TextBox ID="textDescription" TextMode="MultiLine" CssClass="txtMultitxtControl" runat="server"></asp:TextBox>
-                </asp:TableCell>
-               
-            </asp:TableRow>
-                    <asp:TableRow HorizontalAlign="Center">
+                </asp:TableCell><asp:TableCell>
+                    <asp:TextBox ID="textDescription" TextMode="MultiLine" CssClass="txtMultitxtControl" runat="server"></asp:TextBox>                    
+                </asp:TableCell></asp:TableRow><asp:TableRow>
+                        <asp:TableCell>
+                        </asp:TableCell><asp:TableCell>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"  Display="Dynamic" ErrorMessage="Please enter Description" EnableClientScript="true"
+                            ForeColor="Red" ControlToValidate="textDescription" />
+                        </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell>
                             <asp:Button ID="btnCreatePost" runat="server" Text="Create Post" CssClass="btnSubmitControls" OnClick="btnCreatePost_Click" /></asp:TableCell>
                         <asp:TableCell>
-                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" OnClick="btnCancel_Click" /></asp:TableCell>
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CausesValidation="false" CssClass="btnCancelControls" OnClick="btnCancel_Click" /></asp:TableCell>
                     </asp:TableRow>
         </asp:Table>
-                <asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label>     
-    </asp:Panel>
-</asp:Panel>
-   <%-- </div>--%>
-</asp:Content>
+                <asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label></asp:Panel></asp:Panel><%-- </div>--%></asp:Content>

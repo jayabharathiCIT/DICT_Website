@@ -194,6 +194,7 @@
     <Content Include="cyber.aspx" />
     <Content Include="games.aspx" />
     <Content Include="net.aspx" />
+    <Content Include="RemoveStudent.aspx" />
     <Content Include="soft.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\citlogo.png" />
@@ -347,6 +348,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveStudent.aspx.cs">
+      <DependentUpon>RemoveStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveStudent.aspx.designer.cs">
+      <DependentUpon>RemoveStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

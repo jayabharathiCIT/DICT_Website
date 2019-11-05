@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class Login {
-        
+namespace DICT_Website
+{
+
+
+    public partial class Login
+    {
+
         /// <summary>
         /// Panel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
-        
+
         /// <summary>
         /// Panel2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel2;
-        
+
         /// <summary>
         /// lblPageTitle control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPageTitle;
-        
+
         /// <summary>
         /// tbllogin control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tbllogin;
-        
+
         /// <summary>
         /// lblLogin control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblLogin;
-        
+
         /// <summary>
         /// txtUserName control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUserName;
-        
+
         /// <summary>
         /// rfvuser control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvuser;
-        
+
         /// <summary>
         /// revPhone control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPhone;
-        
+
         /// <summary>
         /// lblPassword control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPassword;
-        
+
         /// <summary>
         /// txtPassword control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
+
         /// <summary>
         /// rfvPass control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPass;
-        
+
         /// <summary>
         /// RequiredFieldValidator1 control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RequiredFieldValidator1;
-        
+
         /// <summary>
         /// btnLogin control.
         /// </summary>
@@ -128,7 +130,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-        
+
+        /// <summary>
+        /// btnCancel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCancel;
+
         /// <summary>
         /// lnkForgotPassword control.
         /// </summary>
@@ -137,7 +148,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkForgotPassword;
-        
+
         /// <summary>
         /// lblSuccessMessage control.
         /// </summary>

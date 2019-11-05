@@ -46,9 +46,9 @@
                 <table>
                     <tr>
                         <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
                         </td>
-                        <td style="width:350px;height:auto; ">
+                        <td style="width:200px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Register"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>

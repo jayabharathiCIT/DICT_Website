@@ -29,9 +29,9 @@
                 <table>
                     <tr>
                         <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/logoBlue.png" Height="98px"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
                         </td>
-                        <td style="width:350px;height:auto; ">
+                        <td style="width:200px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Forum Page"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>

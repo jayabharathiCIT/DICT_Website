@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AdminForumPage.aspx.cs" EnableEventValidation="false" Inherits="DICT_Website.AdminForumPage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="RemoveStudent.aspx.cs" Inherits="DICT_Website.RemoveStudent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="Content/forumStyles.css" rel="stylesheet" />
-    
-      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
+         <link href="Content/forumStyles.css" rel="stylesheet" />
+     <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
          
             <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
                 <%-- Added login dropdown --%>
@@ -34,45 +33,42 @@
                              <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
                         </td>
                         <td style="width:200px;height:auto; ">
-                           <asp:Label ID="lblPageTitle" runat="server" Text="Admin Forum Page"  CssClass="pageTitle" ></asp:Label>
+                           <asp:Label ID="lblPageTitle" runat="server" Text="Remove A Student - Admin Action"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
                 </div>
                 <div style="padding-top:30px ;">
                 <div style="height:500px;text-align: center;  align-content:center;  width:800px; border-color:white; border-width:thin; border-style:solid ">
-                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
-                        BorderWidth="1px" Width="800px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
-                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
-                        <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"    Position="Bottom"  PageButtonCount="4"  />
+                   <asp:GridView ID="gv_StudentDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
+                        BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
+                         AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_StudentDetails_PageIndexChanging"  > 
+                        <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
                         <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
                         <Columns>
                             
-                            <asp:TemplateField HeaderText="Topic">
-                                <ItemTemplate>                                          
-                                    <asp:HyperLink ID="hyLnk_Topic" runat="server" ForeColor="Black" Text='<%# Bind("Topic_Title") %>' NavigateUrl='<%# Eval("Post_ID", "~/ViewandReplyPost.aspx?PostID={0}") %>'  Font-Underline="true" ></asp:HyperLink>                                    
-                                    <br>
-                                    </br>
-                                    <asp:Label ID="lblDescription" runat="server" Text='<%# Bind("Description_Post") %>'></asp:Label>
+                            <asp:TemplateField HeaderText="Student Name"   >
+                                <ItemTemplate>                                                                               
+                                    <asp:Label ID="lblStudentName" runat="server" Text='<%# Bind("First_Name") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Category">                                
-                                <ItemTemplate>                                                                       
-                                    <asp:Label ID="lblCategory" runat="server" Text='<%# Bind("Category_ID") %>'></asp:Label>                                                                       
+                            <asp:TemplateField HeaderText="Last Name"   >
+                                <ItemTemplate>                                                                               
+                                    <asp:Label ID="lblLastName" runat="server" Text='<%# Bind("Last_Name") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Replies">
-                                <ItemTemplate>                                                                          
-                                    <asp:Label ID="lblReply" Font-Bold="true" ForeColor="Black" runat="server" Text='<%# Bind("No_Replies") %>'></asp:Label>                                  
-                                </ItemTemplate>
-                            </asp:TemplateField>        
-                            <asp:TemplateField HeaderText="Delete" >
-                                <ItemTemplate>
-                                    <asp:ImageButton ID="imgbtnDelete" runat="server" Width="50px" Height="40px"  ImageUrl="~/Images/delete.png" OnClick="imgbtnDelete_Click" CommandName="Delete" CommandArgument='<%#Eval("Post_ID")%>' />
-                               <%-- <asp:Button ID="btnReply"  runat="server" Text="Reply"  CssClass="btnReply" CommandName="Reply"   OnClick="btnReply_Click1"   Tooltip='<%# DataBinder.Eval(Container.DataItem, "Post_ID") %>'  CommandArgument='<%#Eval("Post_ID")%>' />  --%>
+                            <asp:TemplateField HeaderText="Register ID">                                
+                                <ItemTemplate>                                    
+                                    <asp:Label ID="lblCreatedBy" runat="server" Text='<%# Bind("Register_ID") %>'></asp:Label>
+                                    <br>                                
                                 </ItemTemplate>
                             </asp:TemplateField>
-                                                        
+                            <asp:TemplateField HeaderText="Actions">
+                                <ItemTemplate> 
+                                     <asp:Button ID="btnRemove"  runat="server" Text="Remove Student"  CssClass="btnSubmitControls" CommandName="Remove"    OnClick="btnRemove_Click"  Tooltip='<%# DataBinder.Eval(Container.DataItem, "Register_ID") %>'  CommandArgument='<%#Eval("Register_ID")%>'   />                                                                       
+                                    <asp:Button ID="btnChangePassword"  runat="server" Text="Change Passsword"  CssClass="btnSubmitControls" CommandName="Password"    OnClick="btnChangePassword_Click" Tooltip='<%# DataBinder.Eval(Container.DataItem, "Register_ID") %>'  CommandArgument='<%#Eval("Register_ID")%>' />                                    
+                                </ItemTemplate>
+                            </asp:TemplateField>                                                                                                              
                         </Columns>
                         <FooterStyle BackColor="Transparent"  ForeColor="White" />
                         <HeaderStyle  CssClass="gridheader"  />
@@ -86,10 +82,7 @@
                         <SortedDescendingHeaderStyle BackColor="Transparent" />
                         
                     </asp:GridView>
-                    <asp:Label ID="lblSucessMessage" runat="server" Text=""></asp:Label>
-                </div>                    
-                    </div>
+                    </div></div>
                 </asp:Panel>
-
-          </asp:Panel>
+         </asp:Panel>
 </asp:Content>

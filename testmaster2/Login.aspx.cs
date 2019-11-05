@@ -25,6 +25,10 @@ namespace DICT_Website
 		{
 
 		}
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/HomePage.aspx");
+        }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {

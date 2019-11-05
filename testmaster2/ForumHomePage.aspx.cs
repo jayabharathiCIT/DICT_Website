@@ -58,6 +58,35 @@ namespace DICT_Website
             getRecentPost();
         }
 
+
+        protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlLogin.SelectedItem.Value == "4")
+            {
+                //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
+            if (ddlLogin.SelectedItem.Value == "1")
+            {
+                //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
+            }
+            if (ddlLogin.SelectedItem.Value == "2")
+            {
+                //DeleteAccount
+
+            }
+            if (ddlLogin.SelectedItem.Value == "3")
+            {
+                //Logout
+                //clear session variables
+                Session.Clear();
+                Session.Remove("RegID");
+                Session.Remove("Username");
+                //redirect to login page
+                Response.Redirect("~/Login.aspx");
+            }
+        }
         public void getRecentPost()
         {
             DataView dv = new DataView(dt);
@@ -290,35 +319,7 @@ namespace DICT_Website
             }           
         }
 
-        protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DropDownList ddlLogin = (DropDownList)sender;
-            if (ddlLogin.SelectedItem.Value == "4")
-            {
-                //ChangePassword
-                Response.Redirect("~/AdminProfilePage.aspx");
-            }
-            if (ddlLogin.SelectedItem.Value == "1")
-            {
-                //ChangePassword
-                Response.Redirect("~/ChangePassword.aspx");
-            }
-            if(ddlLogin.SelectedItem.Value == "2" )
-            {
-                //DeleteAccount
-            }
-            if(ddlLogin.SelectedItem.Value == "3")
-            {
-                //Logout
-                //clear session variables
-                Session.Clear();
-                Session.Remove("RegID");
-                Session.Remove("Username");               
-                //redirect to login page
-                Response.Redirect("~/Login.aspx");
-            }
-        }
-
+     
         protected void gv_ForumDetails_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gv_ForumDetails.PageIndex = e.NewPageIndex;
