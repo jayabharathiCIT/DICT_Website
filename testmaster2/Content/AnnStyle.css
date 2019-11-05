@@ -2,10 +2,9 @@
     font-family: Roboto, sans-serif;
     margin: 0;
     height: 100%;
-    width:100%;
-   
-
+    width:100%;  
 }
+
 
 
 /* top container 
@@ -15,22 +14,17 @@
     background: linear-gradient(to bottom, #233142, #49BEB7);
     height: 100px;
     padding: 10px 0 10px 20px;
-    color: white;
-    
- 
+    color: white;   
 }
 
 .top-head {
     transform: translateY(25px);
-    font-size: 5rem;
- 
-    
+    font-size: 5rem; 
 }
 
 h1.top-box {
     font-size: 5rem;
-    padding:10px;
-    
+    padding:10px;    
 }
 
 h2 {
@@ -45,8 +39,7 @@ h2 {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: #49BEB7;
-    
+    background-color: #49BEB7;   
 }
 
 container2{
@@ -61,7 +54,6 @@ container2{
     padding: 25px;
     width:100%;
     height: 100%;
-
 }
 
 label {
@@ -112,8 +104,7 @@ label {
 }
 
 .tbox {
-    width: 100%;
-    
+    width: 100%;  
 }
 
 
