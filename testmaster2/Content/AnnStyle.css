@@ -8,9 +8,11 @@
 }
 
 
-/* top container */
+/* top container 
+    background: linear-gradient(to right, #16222a, #233142);
+*/
 .top-box {
-    background: linear-gradient(to right, #16222a, #3a6073);
+    background: linear-gradient(to bottom, #233142, #49BEB7);
     height: 100px;
     padding: 10px 0 10px 20px;
     color: white;
@@ -43,7 +45,7 @@ h2 {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: lightblue;
+    background-color: #49BEB7;
     
 }
 
@@ -90,6 +92,9 @@ label {
     max-width: 500px;
     width: 500px;
     font-size: 1.5rem;
+    border-radius: 15px;
+    padding-left: 10px;
+    border-width:2px;
 }
 
 
@@ -100,6 +105,10 @@ label {
     height: 200px;
     text-align: left;
     font-size: 1.5rem;
+    border-radius: 10px;
+    padding: 5px 5px 5px 10px;
+    border-width: 2px;
+
 }
 
 .tbox {
@@ -116,43 +125,50 @@ button{
     max-width: 500px;
 }
 
- .btnSubmit {
-    background-color: #4CAF50; 
+.btnSubmit {
+    background-color: #FACF5A;
     border-radius: 25px;
     border: none;
-    color: white;
+    color: black;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    }
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 
-    
+.btnSubmit:hover{
+    background-color:#FF5959;
+    color:white;
+}
+
+
+
 
 .btnCancel {
-    background-color: #4CAF50; /* Green */
+    background-color: #FACF5A;
     border-radius: 25px;
     border: none;
-    color: white;
+    color: black;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
     margin-right: 25px;
- }
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 
+.btnCancel:hover {
+    background-color: #FF5959;
+    color: white;
+}
 
 .row {
     transform: translate(600px);
     padding: 50px;
     max-width: 450px;
 }
-
-
-
-
-
-
- 
-
-
