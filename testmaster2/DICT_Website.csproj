@@ -48,8 +48,8 @@
     <Reference Include="MySql.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
@@ -121,6 +121,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Contactus.css" />
     <Content Include="Content\Course-Detail.css" />
+    <Content Include="Content\ChangePasswordStyles.css" />
+    <Content Include="Content\ForgetPasswordStyles.css" />
+    <Content Include="Content\RegisterStyles.css" />
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\homepage.css" />
     <Content Include="Content\masterStyle.css" />
@@ -133,6 +136,7 @@
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="ForumHomePage.aspx" />
     <Content Include="FutureStudentsPage.aspx" />
     <Content Include="Global.asax" />
@@ -292,6 +296,13 @@
     </Compile>
     <Compile Include="EditForumPost.aspx.designer.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForumHomePage.aspx.cs">
       <DependentUpon>ForumHomePage.aspx</DependentUpon>

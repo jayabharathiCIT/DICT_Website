@@ -23,7 +23,7 @@
 </script>
 
   
-    <link href="Content/forumStyles.css" rel="stylesheet" />
+    <link href="Content/ChangePasswordStyles.css" rel="stylesheet" />
    <%-- <div  style="vertical-align:middle; text-align:center; width:800px; height:900px; background-image:url(Images/background.png) " >--%>
          <%--<div  class="divPageContent"    >--%>
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOutline">
@@ -43,9 +43,9 @@
         
                
         
-          <asp:Table Height ="550" ID="tblAddPost" runat="server" CssClass="tableRegister" HorizontalAlign="center" >
+          <asp:Table Height ="450" ID="tblAddPost" runat="server" CssClass="tableRegister" HorizontalAlign="center" >
             
-            <asp:TableRow Width="250" >
+            <asp:TableRow Width="150" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblID" Text="Your ID*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtID" CssClass="txtControlRegister" runat="server" ></asp:TextBox><br/>
@@ -53,9 +53,9 @@
                 </asp:TableCell>
             </asp:TableRow>
 
-            <asp:TableRow Width="250" >
+            <asp:TableRow Width="150" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblPassword" Text="Password*" CssClass="textLables" MinimumValue="6" MaxLength="10"></asp:Label><br />
-                    <asp:Label ID="lblInfo" runat="server" Text="**Password should be alphanumeric and  character between 6 to 10." CssClass="textLablesInfo"></asp:Label>
+                    <asp:Label ID="lblInfo" runat="server" Text="**Password should be numeric between 6 to 10." CssClass="textLablesInfo"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password"></asp:TextBox><br/>   
@@ -63,7 +63,7 @@
                 </asp:TableCell>
             </asp:TableRow>  
                 
-            <asp:TableRow Width="250" > 
+            <asp:TableRow Width="150" > 
                 <asp:TableCell > <asp:Label runat="server" ID="lblNewPassword" Text="New Password*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtNewPassword" CssClass="txtControlRegister" runat="server" TextMode="Password" MinimumValue="6" MaxLength="10"></asp:TextBox><br/> 
@@ -71,7 +71,7 @@
                 </asp:TableCell>
             </asp:TableRow>
             
-            <asp:TableRow Width="250" >
+            <asp:TableRow Width="150" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblConfirmPassword" Text="Confirm Password*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtConfirmPassword" CssClass="txtControlRegister" runat="server" TextMode="Password" MinimumValue="6" MaxLength="10"></asp:TextBox><br/>
