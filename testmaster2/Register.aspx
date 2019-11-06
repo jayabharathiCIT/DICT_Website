@@ -37,19 +37,19 @@
         }
 </script>
      
-    <link href="Content/forumStyles.css" rel="stylesheet" />
+    <link href="Content/RegisterStyles.css" rel="stylesheet" />
    <%-- <div  style="vertical-align:middle; text-align:center; width:800px; height:900px; background-image:url(Images/background.png) " >--%>
          <%--<div  class="divPageContent"    >--%>
-        <asp:Panel ID="Panel1" runat="server" CssClass="plnOutline">
-            <asp:Panel ID="Panel2" CssClass="plnInline" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+        <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineRegister">
+            <asp:Panel ID="Panel2" CssClass="plnInlineRegister" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>
-                        <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
+                        <td style="width:150px; height:auto">
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
                         </td>
-                        <td style="width:200px;height:auto; ">
-                           <asp:Label ID="lblPageTitle" runat="server" Text="Register"  CssClass="pageTitle" ></asp:Label>
+                        <td style="width:350px;height:auto; ">
+                           <asp:Label ID="lblPageTitle" runat="server" Text="Register Account"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -86,7 +86,7 @@
 
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblPassword" Text="Password*" CssClass="textLables" ></asp:Label><br />
-                    <asp:Label ID="lblInfo" runat="server" Text="**Password should be alphanumeric and  character between 6 to 10." CssClass="textLablesInfo"></asp:Label>
+                    <asp:Label ID="lblInfo" runat="server" Text="**Password should be numeric between 6 to 10." CssClass="textLablesInfo"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
                     <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password" min="6" max="10"></asp:TextBox><br/>

@@ -45,6 +45,9 @@ namespace DICT_Website
 
                             string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+
+                            string StatusForgetPassword = "No";
+                            sqlCmd.Parameters.AddWithValue("P_Forgetpassword", StatusForgetPassword);
                             sqlCmd.ExecuteNonQuery();
                             ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Registered Successfully!');window.location='Login.aspx';", true);
                             //lblSuccessMessage.Text = "Submitted Successfully";
