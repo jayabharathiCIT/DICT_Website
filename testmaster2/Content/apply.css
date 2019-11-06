@@ -1,0 +1,48 @@
+﻿body {
+    font-family: Roboto;
+}
+
+
+.top-box {
+    height: 250px;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+    transform: translateY(80px);
+}
+
+.content-box {
+    height: 950px;
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 25px;
+}
+
+.content-table {
+    width: 100%;
+    font-size: 1.4rem;
+    background-color: lightblue;
+    padding: 25px;
+}
+
+td {
+    padding-right: 25px;
+    padding: 25px;
+}
+
+    td:hover {
+    }
+
+th {
+    padding-right: 25px;
+    padding: 25px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

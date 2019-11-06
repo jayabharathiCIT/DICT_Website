@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <link href="Content/TeachingStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <div  id= "divContainer">
           <div   class="divHeader" >
@@ -29,7 +30,7 @@
                 <table>
                         <tr>
                                 <td>
-                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:black ; text-align:center;" >Project Based Learning </h1></a>
+                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:white ; text-align:center;" >Project Based Learning </h1></a>
                                 </td>
                                     </tr>  
                     
@@ -63,7 +64,7 @@
                        <table>
                             <tr>
                                 <td>
-                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:black  ; text-align:center"> Work Integrated Learning </h1></a>
+                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:white  ; text-align:center"> Work Integrated Learning </h1></a>
                                 </td>
                                     </tr>
                                 <tr>

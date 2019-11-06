@@ -1,12 +1,57 @@
 ﻿
+/* All pages */
 h1 {
-    font-size: 3.5rem;
+    font-size: 1rem;
 }
 
 p {
     padding-left: 10px;
 }
 
+/* CYBER */
+.course-topbox-2 {
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    background: linear-gradient(131.69deg, #CB3939 7.96%, #FF8282 100%);
+}
+
+
+.course-head-2 {
+    position: absolute;
+    color: white;
+    padding: 50px;
+    transform: translateY(25px);
+}
+
+.cyber-header {
+    font-size: 14px;
+}
+
+
+/* SOFTWARE */
+.course-topbox-3 {
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    background: linear-gradient(131.69deg, #008C1F 7.96%, #79FD96 100%);
+}
+
+/* GAMES */
+.course-topbox-4 {
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    background: linear-gradient(131.69deg, #8C0087 7.96%, #FF9CFB 100%);
+}
+
+/* NET */
+.course-topbox-5 {
+    height: 200px;
+    max-height: 200px;
+    width: 100%;
+    background: linear-gradient(131.69deg, #1E77A9 7.96%, #82C3FF 100%);
+}
 
 /* Top box */
 .course-topbox {
@@ -49,7 +94,7 @@ p {
 /* Course content */
 
 .course-content {
-    height: 5000px;
+    height: 3800px;
     padding: 50px;
     line-height: 1.8;
     color: rgb(0, 15, 80);
@@ -68,10 +113,3 @@ p {
     .course-table td {
         padding: 15px;
     }
-
-
-
-/* FOOTER */
-footer {
-    transform: translateY(500px);
-}

@@ -24,7 +24,6 @@ namespace DICT_Website
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
             MySqlConnection conn = new MySqlConnection(connStr);
 
             using (MySqlCommand insert = new MySqlCommand("INSERT INTO dt_announcement_id (Register_ID, Ann_Title, Ann_Body, Posted_On) VALUES(@Register, @Title, @Body, @Posted)", conn))
@@ -35,6 +34,16 @@ namespace DICT_Website
                 string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 insert.Parameters.AddWithValue("@Posted", postCreatedDate);
 
+                lblSuccessMessage.Text = "Submitted Successfully";
+                string message = "Post is Created Successfully.Now Redirecting to Forum Home Page";
+                string url = "ForumHomePage.aspx";
+                string script = "window.onload = function(){ alert('";
+                script += message;
+                script += "');";
+                script += "window.location = '";
+                script += url;
+                script += "'; }";
+                ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
 
                 conn.Open();
                 insert.ExecuteNonQuery();
@@ -42,8 +51,11 @@ namespace DICT_Website
 
             }
 
-           
+        }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ForumHomePage.aspx");
         }
 
     }

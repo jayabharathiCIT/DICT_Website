@@ -17,6 +17,7 @@
     width:530px;
 }
 .imageLogo {
+    height: 80px;
 }
 .pageTitle {
     padding-top: 10px;
@@ -133,14 +134,15 @@
     z-index: 1;
 }
 .textLables {
-    width: 70px;
+    width: 80px;
     height: 15px;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
     font-family: sans-serif;
-    color: white
+    color: white; 
+    
 }
 
 .textLables1 {
@@ -239,15 +241,26 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+.txtMultitxtControl {
+    width: 250px;
+    height: 80px;
+    background: #E5E5E5;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: white;
+}
 
 .txtControl {
-    width: 220px;
+    width: 250px;
     height: 40px;
     background: #E5E5E5;
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     font-family: sans-serif;
     font-size:14px;
+    background-color:white;
 }
 
 .txtControlRegister {
