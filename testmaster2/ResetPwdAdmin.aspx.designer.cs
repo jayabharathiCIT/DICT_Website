@@ -10,7 +10,7 @@
 namespace DICT_Website {
     
     
-    public partial class AdminForumPage {
+    public partial class ResetPwdAdmin {
         
         /// <summary>
         /// Panel1 control.
@@ -58,30 +58,12 @@ namespace DICT_Website {
         protected global::System.Web.UI.WebControls.Label lblPageTitle;
         
         /// <summary>
-        /// gv_ForumDetails control.
+        /// gv_StudentDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_ForumDetails;
-        
-        /// <summary>
-        /// lblSucessMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSucessMessage;
-        
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.GridView gv_StudentDetails;
     }
 }

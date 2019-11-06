@@ -40,9 +40,9 @@
                 </table>
                 </div>
                 <div style="padding-top:30px ;">
-                <div style="height:500px;text-align: center;  align-content:center;  width:800px; border-color:white; border-width:thin; border-style:solid ">
+                <div style="height:450px;text-align: center; float:left; align-content:center;  width:800px; border-color:white; border-width:thin; border-style:solid ">
                     <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
-                        BorderWidth="1px" Width="800px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
+                        BorderWidth="1px" Width="800px"  Height="480px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
                         OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"    Position="Bottom"  PageButtonCount="4"  />
                         <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
@@ -86,8 +86,19 @@
                         <SortedDescendingHeaderStyle BackColor="Transparent" />
                         
                     </asp:GridView>
+                                         
                     <asp:Label ID="lblSucessMessage" runat="server" Text=""></asp:Label>
-                </div>                    
+                    
+                </div>                        
+                    </div>
+                    <div style="bottom:0; float:left; width:100%; right:0; color:transparent; height:30px;" dir="auto">
+                        <table>
+                            <tr>
+                                <td style="width:700px" ></td>
+                                <td style="text-align: right" > <asp:Button ID="btnCancel" runat="server"  Text="Cancel" CssClass="btnReply"  CausesValidation="false" OnClick="btnCancel_Click" /></td>
+                            </tr>
+                        </table>
+                       
                     </div>
                 </asp:Panel>
 

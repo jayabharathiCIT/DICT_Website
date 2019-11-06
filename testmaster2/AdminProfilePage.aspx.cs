@@ -1,4 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+//Programmer :Jayabharathi
+//Date: 29-10-2019
+//Purpose: Admin user special actions . 
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -110,6 +117,11 @@ namespace DICT_Website
         protected void btnEvent_Click(object sender, EventArgs e)
         {
            // Response.Redirect("");
+        }
+
+        protected void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ResetPwdAdmin.aspx");
         }
     }
 }
