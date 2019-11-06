@@ -131,3 +131,6 @@ input, select, textarea {
     font-size: 1em !important;
     color: #000 !important;
 }
+.required{
+    color: red !important
+}

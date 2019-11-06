@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Contact Us" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="testmaster2.Contact" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <link href="Content/contactus.css" rel="stylesheet" />
+    <link href="Content/Contactus.css" rel="stylesheet" />
 
     <%----------------- Heading --------------------------------%>
 
@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="container contactus-form">
+    <div class="container">
         <div class="col-lg-6">
             <div class="row mt-1">
                 <h3 class="c-form">Contact Form</h3>
@@ -127,13 +127,13 @@
 
             <div>
                 <div class="row">
-                    <div class="col-lg-2 connect"><i class="fab fa-twitter fa-3x"></i></div>
-                    <div class="col-lg-2 connect"><i class="fab fa-facebook-f fa-3x"></i></div>
-                    <div class="col-lg-2 connect"><i class="fab fa-instagram fa-3x"></i></div>
+                    <div class="col-lg-2 connect"><a href="http://www.twitter.com/@Canberra_CIT"><i class="fab fa-twitter fa-3x"></i></a></div>
+                    <div class="col-lg-2 connect" ><a href="http://www.facebook.com.au/CITCanberra"><i class="fab fa-facebook-f fa-3x"></i></a></div>
+                    <div class="col-lg-2 connect"><a href="https://instagram.com/citcanberra/"><i class="fab fa-instagram fa-3x"></i></a></div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-2 connect"><i class="fab fa-youtube fa-3x"></i></div>
-                    <div class="col-lg-2 connect"><i class="fab fa-linkedin-in fa-3x"></i></div>
+                    <div class="col-lg-2 connect"><a href="https://www.youtube.com/channel/UC9r80Tqaa6RiPb9la-TrTyw"><i class="fab fa-youtube fa-3x"></i></a></div>
+                    <div class="col-lg-2 connect"><a href="https://au.linkedin.com/school/canberra-institute-of-technology/"><i class="fab fa-linkedin-in fa-3x"></i></a></div>
                 </div>
             </div>
         </div>

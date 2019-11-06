@@ -1,54 +1,63 @@
 ﻿/*All*/
 body{
-    font-family: 'Roboto';
+    font-family: sans-serif;
  
 }
 
 
 
-#Content1 {
-    background-color: rebeccapurple;
-}
-
 /*top container*/
 
-
+/*---------------------News heading-------------------------------------*/
 .top-box {
     
-    height: 200px;
+    height: 110px;
     width: 100%;
     background: linear-gradient(187.19deg, #FF7F7F 0%, #DDCD13 101.17%);
 }
 
 .header{
     padding-left: 35px;
-     transform: translateY(50px);
-     font-size: 8rem;
+     transform: translateY(25px);
+     font-size: 5rem;
      color: white;
 }
 
-/*content container*/
+/*--------------------------------------content container-------------------------------*/
 .form-container{
     text-align: center;
     transform: translateY(150px);
 }
 
 .content-box {
-    height: 1000px;
-    background-color: lightcyan;
-    font-size: 2rem;
+    background-image: url('../Images/background.png');
+   
+    background-size:contain;
+    min-height: 900px;
 }
-
+/*=====================================Add news===================================*/
 .header2 {
-   text-align: center;
+    text-align: center;
     transform: translateY(50px);
     font-size: 4rem;
-    color: black;
+    color: white;
 }
 
 * {
     box-sizing: border-box;
 }
+
+.bakgrnd {
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    z-index: 1;
+    background-image: url('../Images/background.png');
+}
+
 
 input[type=text], select, textarea {
     width: 100%;
@@ -57,10 +66,20 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
 }
-
+.form-control {
+    font-size: 1em !important;
+    color: #000 !important;
+}
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
 }
 
 input[type=submit] {
@@ -83,17 +102,6 @@ input[type=submit] {
     padding: 20px;
 }
 
-.col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
 
 /* Clear floats after the columns */
 .row:after {
@@ -130,4 +138,123 @@ textarea {
     transform: translateX(123px);
     font-size: 2rem;
     padding: 12px 12px 12px 0;
+}
+/*===========================================News=========================================*/
+
+.news-title {
+    font-size: 12px;
+    width: 180px;
+}
+
+.news-date {
+    font-size: 12px;
+    padding: 0 !important;
+}
+
+.item-header {
+    font-family:sans-serif
+    font-size: 1rem;
+    color:white;
+    padding: 20px;
+    font-weight: 700;
+    
+    margin-right: 10px;
+    margin-top: 10px;
+    
+   
+}
+input, select, textarea {
+    float: left;
+    height: 50px !important;
+}
+
+.form-control {
+    font-size: 1em !important;
+    color: #000 !important;
+}
+
+.required {
+    color: red !important
+}
+
+.item-container {
+    width: 120px;
+    background-color: #419098
+}
+.display {
+    background-color: transparent;
+    height:170px;
+    width: 220px;
+    padding-left: 50px;
+}
+.news-title {
+    color: white;
+    text-align:left;
+    font-size:11px;
+}
+.news-date
+{
+ color: white;
+ font-size:15px;
+}
+
+.img-hover figure img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.img-hover figure:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.title-link{
+    color:#fff !important;
+}
+
+/*===========================================News Result========================================*/
+.img {
+    height:300px;
+    width: 500px;
+    padding-left: 50px;
+    
+ }
+.date{
+    font-family:sans-serif;
+    font-size: 10px !important;
+    color: white !important;
+}
+
+.newsresult-title{
+    font-size: 30px;
+    font-weight:bold;
+    padding: 50px 0 0 50px;
+    color:antiquewhite;
+}
+
+.newsresult-content {
+    font-size: 15px;
+    padding: 50px;
+    text-align: justify;
+    line-height: 2;
+    color:antiquewhite;
+}
+.newsresult-source {
+    color: antiquewhite;
+    transform: translateX(225px);
+    font-size:10px;
+}
+.news-submit {
+       color:white !important;
+       font-size:15px;
+       font-weight:bolder;
+      
+
+}
+.news-cancel {
+    color: white !important;
+    font-size: 15px;
+    font-weight: bolder;
 }
