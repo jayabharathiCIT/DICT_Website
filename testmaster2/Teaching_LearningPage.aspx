@@ -2,18 +2,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     
     <link href="Content/TeachingStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <div  id= "divContainer">
           <div   class="divHeader" >
-              <p id= "divHeader" > ICT Teaching & learning</p>
+              <h1 id= "divHeader" > ICT Teaching & learning</h1>
                             <div>
                                 <table>
                                     <tr >
                                         <td style="width:700px;height:auto; ">
-                                            <a href="Teaching_LearningPage#WIL"><p Class="divSubHeader" >WORK INTEGRATED LEARNING</p></a>
+                                            <a href="Teaching_LearningPage#WIL"><p Class="divSubHeader" >Work Integrated Learning</p></a>
                                         </td>
                                         <td style="width:700px;height:auto; ">
-                                            <a href="Teaching_LearningPage#FL"><p Class= "divSubHeader">FLEXIBLE  LEARNING</p></a>
+                                            <a href="Teaching_LearningPage#FL"><p Class= "divSubHeader">Flexible Learning</p></a>
                                        
                                         </td>
                                     </tr>
@@ -25,11 +26,11 @@
 
             <div id="PBL">
                             
-                <div class = "divContent">   
+                <div class = "divContentPBL">   
                 <table>
                         <tr>
                                 <td>
-                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:black ; text-align:center;" >Project Based Learning </h1></a>
+                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:white ; text-align:center;" >Project Based Learning </h1></a>
                                 </td>
                                     </tr>  
                     
@@ -57,15 +58,13 @@
 
 
         <div ></div>
-                    <br /><br /><br />
+   
              <div id="WIL">
-             
-
-                     <div class ="divContent">
+                      <div class ="divContentWIL">
                        <table>
                             <tr>
                                 <td>
-                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:black  ; text-align:center"> Work Integrated Learning </h1></a>
+                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:white  ; text-align:center"> Work Integrated Learning </h1></a>
                                 </td>
                                     </tr>
                                 <tr>
@@ -95,7 +94,7 @@
                     
                <div id="FL">
                       
-                        <div class ="divContent">
+                        <div class ="divContentFL">
                              <br />
                            <table>
                                 <tr>

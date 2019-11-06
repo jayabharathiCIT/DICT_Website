@@ -45,10 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ComponentModel" />
+    <Reference Include="MySql.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
@@ -117,25 +114,87 @@
     <Content Include="AddEvent.aspx" />
     <Content Include="AddNews.aspx" />
     <Content Include="AdminForumPage.aspx" />
+    <Content Include="AdminProfilePage.aspx" />
+    <Content Include="AnnCreate.aspx" />
+    <Content Include="AnnHomepage.aspx" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\AspNet.ScriptManager.bootstrap.dll" />
+    <Content Include="bin\AspNet.ScriptManager.jQuery.dll" />
+    <Content Include="bin\DICT_Website.dll" />
+    <Content Include="bin\DICT_Website.pdb" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.dll" />
+    <Content Include="bin\Microsoft.AspNet.FriendlyUrls.xml" />
+    <Content Include="bin\Microsoft.AspNet.Web.Optimization.WebForms.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.ScriptManager.MSAjax.dll" />
+    <Content Include="bin\Microsoft.ScriptManager.WebForms.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
     <Content Include="Content\Add_news.css" />
+    <Content Include="Content\AnnStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Contactus.css" />
-    <Content Include="Content\Course-Detail.css" />
     <Content Include="Content\Events.css" />
+    <Content Include="Content\course-detail.css" />
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\homepage.css" />
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\News.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StudentStyle.css" />
+    <Content Include="Content\apply.css" />
+    <Content Include="Content\courses.css" />
     <Content Include="Content\TeachingStyle.css" />
-    <Content Include="Course-Detail.aspx" />
+    <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
     <Content Include="EditNews.aspx" />
     <Content Include="EditForumPost.aspx" />
@@ -161,11 +220,12 @@
     <Content Include="Images\CITRtoLogo.png" />
     <Content Include="Images\CITSAIcon.png" />
     <Content Include="Images\Comment.png" />
+    <Content Include="Images\course1.jpg" />
     <Content Include="Images\CourseIcon.png" />
-    <Content Include="Images\courses.jpg" />
     <Content Include="Images\CSIcon.jpg" />
     <Content Include="Images\delete.png" />
     <Content Include="Images\DictFullLogo.png" />
+    <Content Include="Images\DICTlogoNew.png" />
     <Content Include="Images\Elearning.png" />
     <Content Include="Images\EmploymentIcon.png" />
     <Content Include="Images\EnrollingIcon.png" />
@@ -185,8 +245,7 @@
     <Content Include="Images\sendReply.png" />
     <Content Include="Images\StudentFormsIcon.png" />
     <Content Include="Images\test1.jpg" />
-    <Content Include="Images\test2.jpg" />
-    <Content Include="Images\test3.jpg" />
+    <Content Include="Images\test3.JPG" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
@@ -194,6 +253,25 @@
     <Content Include="Images\replyall.png" />
     <Content Include="Images\twitter.png" />
     <Content Include="AddForumPost.aspx" />
+    <Content Include="apply.aspx" />
+    <Content Include="courses.aspx" />
+    <Content Include="cyber.aspx" />
+    <Content Include="games.aspx" />
+    <Content Include="net.aspx" />
+    <Content Include="RemoveStudent.aspx" />
+    <Content Include="ResetPwdAdmin.aspx" />
+    <Content Include="soft.aspx" />
+    <Content Include="bin\DICT_Website.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\citlogo.png" />
     <Content Include="Images\DictLogo.png" />
@@ -259,6 +337,27 @@
     <Compile Include="AdminForumPage.aspx.designer.cs">
       <DependentUpon>AdminForumPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminProfilePage.aspx.cs">
+      <DependentUpon>AdminProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProfilePage.aspx.designer.cs">
+      <DependentUpon>AdminProfilePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnCreate.aspx.cs">
+      <DependentUpon>AnnCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnCreate.aspx.designer.cs">
+      <DependentUpon>AnnCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnHomepage.aspx.cs">
+      <DependentUpon>AnnHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnHomepage.aspx.designer.cs">
+      <DependentUpon>AnnHomepage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -282,12 +381,12 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Course-Detail.aspx.cs">
-      <DependentUpon>Course-Detail.aspx</DependentUpon>
+    <Compile Include="course-detail.aspx.cs">
+      <DependentUpon>course-detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Course-Detail.aspx.designer.cs">
-      <DependentUpon>Course-Detail.aspx</DependentUpon>
+    <Compile Include="course-detail.aspx.designer.cs">
+      <DependentUpon>course-detail.aspx</DependentUpon>
     </Compile>
     <Compile Include="CurrentStudentPage.aspx.cs">
       <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
@@ -363,6 +462,20 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RemoveStudent.aspx.cs">
+      <DependentUpon>RemoveStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RemoveStudent.aspx.designer.cs">
+      <DependentUpon>RemoveStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPwdAdmin.aspx.cs">
+      <DependentUpon>ResetPwdAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResetPwdAdmin.aspx.designer.cs">
+      <DependentUpon>ResetPwdAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -404,6 +517,48 @@
     </Compile>
     <Compile Include="AddForumPost.aspx.designer.cs">
       <DependentUpon>AddForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="apply.aspx.cs">
+      <DependentUpon>apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="apply.aspx.designer.cs">
+      <DependentUpon>apply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="courses.aspx.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="courses.aspx.designer.cs">
+      <DependentUpon>courses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cyber.aspx.cs">
+      <DependentUpon>cyber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cyber.aspx.designer.cs">
+      <DependentUpon>cyber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="games.aspx.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="games.aspx.designer.cs">
+      <DependentUpon>games.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="net.aspx.cs">
+      <DependentUpon>net.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="net.aspx.designer.cs">
+      <DependentUpon>net.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="soft.aspx.cs">
+      <DependentUpon>soft.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="soft.aspx.designer.cs">
+      <DependentUpon>soft.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

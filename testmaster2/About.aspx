@@ -1,13 +1,12 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="testmaster2.About" %>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-		  <title>About DICT</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <h2><%: Title %>.</h2>
+     <link rel="stylesheet" type="text/css" href="content/about.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-  </head>
-    <body>
+  
         <div class="container-image">
-          <img src="books.png" alt="Books">
+          <img src="Images/books.png" alt="Books">
         </div>
 
         <div class="content-container">
@@ -26,8 +25,7 @@
 
             <div class="text-container2">
                 <div class="sample-image">
-                    <asp:Image
-                    runat="server" CssClass="Image" ImageURL="~/Images/Sample.png"/>
+                    <img src=Images/sample.png alt="Sample">
                 </div>
                 
                 <div class="text-container3">
@@ -36,8 +34,6 @@
                       <br>
                       Whatever your career goal, CIT has a study option to put you on the right path to build the future you want.<br>
                     </p>
-                </div>
-                <div class="text-container4">
                     <p>
                       CIT’s nationally-recognised courses offer practical experience, not just theory, meaning you end up with real industry skills.<br>
                       <br>
@@ -56,8 +52,7 @@
               <h1 class="header3">Campus Map</h1>
 
               <div class="map-image">
-                <img src="map.png" alt="Map">
+                <img src="Images/map.png" alt="Map">
               </div>
         </div>
-</body>    
 </asp:Content>

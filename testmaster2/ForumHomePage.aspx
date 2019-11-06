@@ -12,6 +12,8 @@
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                          <asp:ListItem Value ="0" >Select One</asp:ListItem>
+                           <asp:ListItem Value ="4" >Admin Profile</asp:ListItem>
                            <asp:ListItem Value="1">Change Password</asp:ListItem>
 
                   <asp:ListItem Value="2">Delete Account</asp:ListItem>
@@ -27,9 +29,9 @@
                 <table>
                     <tr>
                         <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/logoBlue.png" Height="98px"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
                         </td>
-                        <td style="width:350px;height:auto; ">
+                        <td style="width:200px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Forum Page"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
@@ -41,10 +43,10 @@
                         BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
                         OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
-                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
+                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Solid"   />
                         <Columns>
                             
-                            <asp:TemplateField HeaderText="Topic">
+                            <asp:TemplateField HeaderText="Topic"   >
                                 <ItemTemplate>
                                     <asp:Image runat="server" Width="51px"  Height="50px" ImageUrl="~/Images/Comment.png" />        
                                     <asp:HyperLink ID="hyLnk_Topic" runat="server" ForeColor="Black" Text='<%# Bind("Topic_Title") %>' NavigateUrl='<%# Eval("Post_ID", "~/ViewandReplyPost.aspx?PostID={0}") %>'  Font-Underline="true" ></asp:HyperLink>

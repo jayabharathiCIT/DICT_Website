@@ -157,9 +157,46 @@ namespace DICT_Website
 
         protected void btnRemove_Click(object sender, EventArgs e)
         {
+            postID = Request.QueryString["PostID"];
+            int getpostID = Convert.ToInt32(postID);
+                // Response.Redirect("~/EditForumPost.aspx" + "?PostID=" + getPostIDArg);
+                deletePost(getpostID);            
 
         }
+        protected void deletePost(int postID)
+        {
+            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+            {
+                sqlCon.Open();
+                string Query = "DELETE FROM `dict website`.dt_posts where Post_ID =" + postID + ";";
+                MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
+                MyCommandtoGetPostByID.ExecuteNonQuery();
+                int result = MyCommandtoGetPostByID.ExecuteNonQuery();
+                //result holds number of rows affected 
+                if (result > 0)
+                {
+                    string message = "Delete successful!";
+                    string url = "ForumHomePage.aspx";
+                    string script = "window.onload = function(){ alert('";
+                    script += message;
+                    script += "');";
+                    script += "window.location = '";
+                    script += url;
+                    script += "'; }";
+                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+                }
+                else
+                {
+                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
+                }
 
+            }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/ForumHomePage.aspx");
+        }
 
         public int getCategoryValue()
         {

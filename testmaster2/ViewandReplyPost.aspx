@@ -26,9 +26,9 @@
                 <table>
                     <tr>
                         <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
                         </td>
-                        <td style="width:350px;height:auto; ">
+                        <td style="width:200px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Post View and Reply"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
@@ -98,13 +98,19 @@
                                  <asp:TextBox ID="txtComment" TextMode="MultiLine" CssClass="txtControl" runat="server"></asp:TextBox>
                             </asp:TableCell>
                         </asp:TableRow>
-                     
+                      <asp:TableRow>
+                        <asp:TableCell>
+                        </asp:TableCell>
+                        <asp:TableCell>
+                            <asp:RequiredFieldValidator ID="rfvuser" runat="server"  Display="Dynamic" ErrorMessage="Please enter Reply" EnableClientScript="true"
+                            ForeColor="Red" ControlToValidate="txtComment" />
+                        </asp:TableCell></asp:TableRow>
                        <asp:TableRow>
                            <asp:TableCell >
                                <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass="btnCancelControls"  OnClick="btnReply_Click" />                               
                            </asp:TableCell>
                            <asp:TableCell>
-                               <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" OnClick="btnCancel_Click" />
+                               <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" CausesValidation="false" OnClick="btnCancel_Click" />
                            </asp:TableCell>
                        </asp:TableRow>
                     </asp:Table>

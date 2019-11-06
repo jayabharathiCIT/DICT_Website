@@ -7,7 +7,7 @@
                 <table>
                     <tr>
                         <td style="width:120px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
                         </td>
                         <td style="width:300px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Login"  CssClass="pageTitle" ></asp:Label>
@@ -41,7 +41,9 @@
                         </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell   ColumnSpan="2">
                         <asp:Button id="btnLogin" runat="server" CssClass="btnReply" Text="Login" OnClick="btnLogin_Click" /> 
-                            </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center"   >
+                              <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnReply" CausesValidation="false" OnClick="btnCancel_Click" />
+                            </asp:TableCell>
+                              </asp:TableRow><asp:TableRow HorizontalAlign="Center"   >
                         <asp:TableCell ColumnSpan="2"  >
                             <asp:LinkButton ID="lnkForgotPassword" ForeColor="Black"  Font-Underline="true"  Font-Size="14px" runat="server">Forgot Password</asp:LinkButton>
                         </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center" >
