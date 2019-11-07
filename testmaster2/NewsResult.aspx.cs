@@ -16,12 +16,17 @@ namespace DICT_Website
     {
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {            
+           
+
+
             if (!IsPostBack)
             {
                 string id = Request.Params["NewsId"];
                 GetNews(id);
             }
+
+
 
         }
         public void GetNews(String newsid)
@@ -31,7 +36,6 @@ namespace DICT_Website
             try
             {
                 conn.Open();
-
                 string sql = "SELECT * FROM dt_news WHERE News_Id = " + newsid;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dtnews);
@@ -69,7 +73,32 @@ namespace DICT_Website
 
         }
 
-        protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
+        protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+                Button Edit = e.Item.FindControl("btnEdit") as Button;
+                Button Delete = e.Item.FindControl("btnDelete") as Button;
+                // Start Check authorised user            
+                if (Session["RegID"] == null)
+                {
+                        Edit.Visible = false;
+                        Delete.Visible = false;
+                }
+                else
+                {
+                    String userid = Convert.ToString((int)Session["RegID"]);
+                    String username = Session["Username"].ToString();
+                    String userrole = Session["Role"].ToString();
+                if (userrole == "Admin")
+                {
+                    Edit.Visible = true;
+                    Delete.Visible = true;
+                }
+
+            }
+
+        }
+                protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             var newsid = int.Parse(e.CommandArgument.ToString());
             if (e.CommandName.Equals("DeleteNews"))

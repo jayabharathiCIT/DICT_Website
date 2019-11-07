@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/Contactus.css" rel="stylesheet" />
-
+    <div class="contactsBackground" >
     <%----------------- Heading --------------------------------%>
 
     <div class="contactus-header">
@@ -140,7 +140,7 @@
     </div>
 
 
-
+        </div>
 
 
 

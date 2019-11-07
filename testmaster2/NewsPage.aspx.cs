@@ -48,9 +48,9 @@ namespace DICT_Website
                 lst_dtnews = dtnews.Tables[0].AsEnumerable().OrderBy(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
                 nw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 1 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
                 cs_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 2 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-                sw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 3 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-                sap_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 4 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-                game_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 5 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
+              //  sw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 3 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
+              //  sap_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 4 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
+              //  game_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 5 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
                 
                 dlLatestNews.DataSource = lst_dtnews;
                 dlLatestNews.DataBind();
@@ -58,13 +58,13 @@ namespace DICT_Website
                 dlNetworkNews.DataBind();
 
                 dlCyberNews.DataSource = cs_dtnews;
-                dlCyberNews.DataBind();
-                dlSoftwareNews.DataSource = sw_dtnews;
-                dlSoftwareNews.DataBind();
-                dlSystemsNews.DataSource = sap_dtnews;
-                dlSystemsNews.DataBind();
-                dlGamesNews.DataSource = game_dtnews;
-                dlGamesNews.DataBind();
+               dlCyberNews.DataBind();
+              // dlSoftwareNews.DataSource = sw_dtnews;
+              // dlSoftwareNews.DataBind();
+              // dlSystemsNews.DataSource = sap_dtnews;
+              //   dlSystemsNews.DataBind();
+              //   dlGamesNews.DataSource = game_dtnews;
+              //   dlGamesNews.DataBind();
 
 
             }
@@ -115,6 +115,36 @@ namespace DICT_Website
             }
 
 
+        }
+
+        protected void btnMoreNetwork_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoreNews.aspx");
+        }
+
+        protected void btnCyberNews_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoreNews.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoreNews.aspx");
+        }
+
+        protected void btnMoreSoftware_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoreNews.aspx");
+        }
+
+        protected void btnSystemAnalysis_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoreNews.aspx");
+        }
+
+        protected void btnMoreGame_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/MoreNews.aspx");
         }
     }
 

@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class Edit_News {
-        
+namespace DICT_Website
+{
+
+
+    public partial class Edit_News
+    {
+
         /// <summary>
         /// newsHiddenId control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField newsHiddenId;
-        
+
         /// <summary>
         /// newsTitle control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox newsTitle;
-        
+
         /// <summary>
         /// newsDate control.
         /// </summary>
@@ -38,7 +40,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox newsDate;
-        
+
+        /// <summary>
+        /// Image1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image1;
+
         /// <summary>
         /// newsImageFile control.
         /// </summary>
@@ -47,7 +58,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload newsImageFile;
-        
+
         /// <summary>
         /// ddlnewsCategory control.
         /// </summary>
@@ -56,7 +67,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlnewsCategory;
-        
+
         /// <summary>
         /// newsSource control.
         /// </summary>
@@ -65,7 +76,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox newsSource;
-        
+
         /// <summary>
         /// newsContent control.
         /// </summary>
@@ -74,7 +85,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox newsContent;
-        
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
@@ -83,7 +94,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>

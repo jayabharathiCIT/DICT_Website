@@ -9,7 +9,7 @@
 
     </div>
     <div class="content-box">
-        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound" >
             <ItemTemplate>
                 <div class="container-fluid">
                     <div class="row">
@@ -29,7 +29,7 @@
                         <asp:Label ID="Source" Text='<%# Eval("Source") %>' CssClass="newsresult-source" runat="server"></asp:Label>
                     </div>
 
-                    <asp:TableRow HorizontalAlign="Center">
+                    <asp:TableRow runat="server"  HorizontalAlign="Center">
                         <asp:TableCell>
                             <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btnSubmitControls" OnClick="btnEdit_Click" CommandArgument='<%# Eval("News_Id") %>' CommandName="EditNews" />
                         </asp:TableCell>

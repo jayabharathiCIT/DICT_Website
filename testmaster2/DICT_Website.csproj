@@ -257,6 +257,7 @@
     <Content Include="courses.aspx" />
     <Content Include="cyber.aspx" />
     <Content Include="games.aspx" />
+    <Content Include="MoreNews.aspx" />
     <Content Include="net.aspx" />
     <Content Include="RemoveStudent.aspx" />
     <Content Include="ResetPwdAdmin.aspx" />
@@ -439,6 +440,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoreNews.aspx.cs">
+      <DependentUpon>MoreNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoreNews.aspx.designer.cs">
+      <DependentUpon>MoreNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewsPage.aspx.cs">
       <DependentUpon>NewsPage.aspx</DependentUpon>

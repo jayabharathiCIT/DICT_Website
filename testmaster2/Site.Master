@@ -100,7 +100,7 @@
                         <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
-                        <asp:MenuItem Text="News" Value="News" ></asp:MenuItem>
+                        <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Forum" Value="Forum">

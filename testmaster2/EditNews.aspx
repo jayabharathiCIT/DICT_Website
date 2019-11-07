@@ -38,6 +38,7 @@
                     <label for="fname">Add Image</label>
                 </div>
                 <div class="col-9">
+                    <asp:Image ID="Image1" runat="server" />
                     <asp:FileUpload ID="newsImageFile" runat="server" />
                 </div>
             </div>
