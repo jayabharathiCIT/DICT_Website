@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class NewsPage {
-        
+namespace DICT_Website
+{
+
+
+    public partial class NewsPage
+    {
+
         /// <summary>
         /// dlLatestNews control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlLatestNews;
-        
+
         /// <summary>
         /// dlNetworkNews control.
         /// </summary>
@@ -29,7 +31,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlNetworkNews;
-        
+
+        /// <summary>
+        /// btnMoreNetwork control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMoreNetwork;
+
         /// <summary>
         /// dlCyberNews control.
         /// </summary>
@@ -38,7 +49,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlCyberNews;
-        
+
+        /// <summary>
+        /// btnCyberNews control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCyberNews;
+
         /// <summary>
         /// dlSoftwareNews control.
         /// </summary>
@@ -47,7 +67,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlSoftwareNews;
-        
+
+        /// <summary>
+        /// btnMoreSoftware control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMoreSoftware;
+
         /// <summary>
         /// dlSystemsNews control.
         /// </summary>
@@ -56,7 +85,16 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlSystemsNews;
-        
+
+        /// <summary>
+        /// btnSystemAnalysis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSystemAnalysis;
+
         /// <summary>
         /// dlGamesNews control.
         /// </summary>
@@ -65,5 +103,14 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList dlGamesNews;
+
+        /// <summary>
+        /// btnMoreGame control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMoreGame;
     }
 }
