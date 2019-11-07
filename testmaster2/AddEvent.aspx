@@ -1,22 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddNews.aspx.cs" Inherits="DICT_Website.AddNews" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddEvent.aspx.cs" Inherits="DICT_Website.AddEvent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-    <link href="Content/News.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="Content/Events.css" rel="stylesheet" />
     <div class="top-box">
         <%-------------------------------------------------- Main heading --%>
-        <h1 class="header">News</h1>
+        <h1 class="header">Events</h1>
     </div>
     <%-------------------------------------------------- Sub heading --%>
     <div class="content-box">
-        <h1 class="header2">Add News</h1>
+        <h1 class="header2">Add Event</h1>
         <%--------------------------------------------------Creating Form  --%>
         <div class="form-container">
             <%-------------------------------------------------- Title --%>
             <div class="row">
                 <div class="col-3">
-                    <label for="fname">News title</label>
+                    <label for="fname">Event title</label>
                 </div>
                 <div class="col-9">
                     <asp:TextBox CssClass="form-control" ID="txtTitle" runat="server" placeholder="Title(required)"></asp:TextBox>
@@ -33,25 +30,26 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Date is required" ControlToValidate="txtDate"></asp:RequiredFieldValidator>
                 </div>
             </div>
-            <%-------------------------------------------------- Source--%>
+            <%-------------------------------------------------- Location--%>
 
             <div class="row">
                 <div class="col-3">
-                    <label for="fname">Source</label>
+                    <label for="fname">Location</label>
                 </div>
                 <div class="col-9">
                     <asp:TextBox CssClass="form-control" ID="txtSource" runat="server" placeholder="Source(required)"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Source is required" ControlToValidate="txtSource"></asp:RequiredFieldValidator>
                 </div>
             </div>
-            <%-------------------------------------------------- Category --%>
-            <div class="row">
+            
+            </div>
+         <div class="row">
                 <div class="col-3">
-                    <label for="fname">Category</label>
+                    <label for="fname">Start time</label>
                 </div>
                 <div class="col-9">
-                    <asp:DropDownList ID="ddlCategory" runat="server" placeholder="You must select a acategory" AppendDataBoundItems="true"></asp:DropDownList>
-                    <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="You must select a category" ControlToValidate="ddlCategory"></asp:RequiredFieldValidator>-->
+                    <asp:TextBox CssClass="form-control" TextMode="time" ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Date is required" ControlToValidate="txtDate"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <%-------------------------------------------------- Add image --%>
@@ -77,16 +75,16 @@
             <%-------------------------------------------------- Submit --%>
             
                <div>
-                    <asp:Button Cssclass="news-submit"  ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                    <%--<asp:Button Cssclass="news-submit"  ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>--%>
                    </div>    
           
                    <div>
-                      <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false"  runat="server" Text="Cancel"  OnClick="btnCancel_Click" />
+                      <%--<asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false"  runat="server" Text="Cancel"  OnClick="btnCancel_Click" />--%>
                 </div>
 
                                   
          
         </div>
-    </div>
+   
 
 </asp:Content>

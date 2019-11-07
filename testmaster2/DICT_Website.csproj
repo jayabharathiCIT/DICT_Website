@@ -48,9 +48,13 @@
     <Reference Include="MySql.Data" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -107,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="AddEvent.aspx" />
     <Content Include="AddNews.aspx" />
     <Content Include="AdminForumPage.aspx" />
     <Content Include="AdminProfilePage.aspx" />
@@ -178,6 +183,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Contactus.css" />
+    <Content Include="Content\Events.css" />
     <Content Include="Content\course-detail.css" />
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\homepage.css" />
@@ -190,6 +196,7 @@
     <Content Include="Content\TeachingStyle.css" />
     <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
+    <Content Include="EditNews.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -269,6 +276,8 @@
     <Content Include="Images\citlogo.png" />
     <Content Include="Images\DictLogo.png" />
     <Content Include="Login.aspx" />
+    <Content Include="NewsPage.aspx" />
+    <Content Include="NewsResult.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -307,6 +316,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEvent.aspx.cs">
+      <DependentUpon>AddEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEvent.aspx.designer.cs">
+      <DependentUpon>AddEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddNews.aspx.cs">
       <DependentUpon>AddNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -379,6 +395,13 @@
     <Compile Include="CurrentStudentPage.aspx.designer.cs">
       <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditNews.aspx.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditNews.aspx.designer.cs">
+      <DependentUpon>EditNews.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditForumPost.aspx.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -416,6 +439,20 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsPage.aspx.cs">
+      <DependentUpon>NewsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsPage.aspx.designer.cs">
+      <DependentUpon>NewsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsResult.aspx.cs">
+      <DependentUpon>NewsResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsResult.aspx.designer.cs">
+      <DependentUpon>NewsResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
