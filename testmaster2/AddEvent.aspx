@@ -8,6 +8,7 @@
     <%-------------------------------------------------- Sub heading --%>
     <div class="content-box">
         <h1 class="header2">Add Event</h1>
+        </div>
         <%--------------------------------------------------Creating Form  --%>
         <div class="form-container">
             <%-------------------------------------------------- Title --%>
@@ -42,7 +43,7 @@
                 </div>
             </div>
             
-            </div>
+            
          <div class="row">
                 <div class="col-3">
                     <label for="fname">Start time</label>
@@ -82,9 +83,10 @@
                       <%--<asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false"  runat="server" Text="Cancel"  OnClick="btnCancel_Click" />--%>
                 </div>
 
-                                  
+                </div>    
+        
          
-        </div>
+        
    
 
 </asp:Content>
