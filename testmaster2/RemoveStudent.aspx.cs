@@ -1,4 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿//*******************************************************************
+//Programmer :Jayabharathi
+//Date: 06-11-2019
+//Purpose: Admin user can remove Students record. 
+// Software:   Microsoft Visual Studio 2019 Community Edition
+// Platform:   Microsoft Windows 
+//******************************************************************* 
+
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;

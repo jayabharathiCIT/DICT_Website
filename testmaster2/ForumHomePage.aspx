@@ -43,7 +43,7 @@
                         BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
                         OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
-                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
+                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Solid"   />
                         <Columns>
                             
                             <asp:TemplateField HeaderText="Topic"   >

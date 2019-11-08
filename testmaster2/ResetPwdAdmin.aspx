@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="RemoveStudent.aspx.cs" Inherits="DICT_Website.RemoveStudent" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ResetPwdAdmin.aspx.cs" EnableEventValidation="false" Inherits="DICT_Website.ResetPwdAdmin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-         <link href="Content/forumStyles.css" rel="stylesheet" />
+        <link href="Content/forumStyles.css" rel="stylesheet" />
      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
          
             <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
@@ -40,7 +40,7 @@
                 </div>
                 <div style="padding-top:30px ;">
                 <div style="height:500px;text-align: center;  align-content:center;  width:800px; border-color:white; border-width:thin; border-style:solid ">
-                   <asp:GridView ID="gv_StudentDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
+                     <asp:GridView ID="gv_StudentDetails" runat="server" BackColor="Transparent" BorderColor="#CCCCCC" BorderStyle="None"  GridLines="Both"
                         BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
                          AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_StudentDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
@@ -63,9 +63,15 @@
                                     <br>                                
                                 </ItemTemplate>
                             </asp:TemplateField>
+                             <asp:TemplateField HeaderText="Email ID">                                
+                                <ItemTemplate>                                    
+                                    <asp:Label ID="lblEmail" runat="server" Text='<%# Bind("Email") %>'></asp:Label>
+                                    <br>                                
+                                </ItemTemplate>
+                            </asp:TemplateField>
                             <asp:TemplateField HeaderText="Actions">
                                 <ItemTemplate> 
-                                     <asp:Button ID="btnRemove"  runat="server" Text="Remove Student"  CssClass="btnSubmitControls" CommandName="Remove"    OnClick="btnRemove_Click"  Tooltip='<%# DataBinder.Eval(Container.DataItem, "Register_ID") %>'  CommandArgument='<%#Eval("Register_ID")%>'   />                                                                                                         
+                                     <asp:Button ID="btnReset"  runat="server" Text="Reset Password"  CssClass="btnSubmitControls" CommandName="Reset"    OnClick="btnReset_Click"  Tooltip='<%# DataBinder.Eval(Container.DataItem, "Register_ID") %>'  CommandArgument='<%#Eval("Register_ID")%>'   />                                                                                                         
                                 </ItemTemplate>
                             </asp:TemplateField>                                                                                                              
                         </Columns>
@@ -81,7 +87,9 @@
                         <SortedDescendingHeaderStyle BackColor="Transparent" />
                         
                     </asp:GridView>
-                    </div></div>
+                    </div>
+                    </div>
                 </asp:Panel>
-         </asp:Panel>
+                    </asp:Panel>
+                   
 </asp:Content>

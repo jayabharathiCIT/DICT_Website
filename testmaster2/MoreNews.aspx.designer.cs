@@ -7,81 +7,65 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class AdminForumPage {
-        
+namespace DICT_Website
+{
+
+
+    public partial class MoreNews
+    {
+
         /// <summary>
-        /// Panel1 control.
+        /// Table1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
-        
+        protected global::System.Web.UI.WebControls.Table Table1;
+
         /// <summary>
-        /// Panel2 control.
+        /// gv_Networking control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
-        
+        protected global::System.Web.UI.WebControls.GridView gv_Networking;
+
         /// <summary>
-        /// lbluserInfo control.
+        /// gv_CyberSec control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbluserInfo;
-        
+        protected global::System.Web.UI.WebControls.GridView gv_CyberSec;
+
         /// <summary>
-        /// ddlLogin control.
+        /// gvSoft control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLogin;
-        
+        protected global::System.Web.UI.WebControls.GridView gvSoft;
+
         /// <summary>
-        /// lblPageTitle control.
+        /// gvSystem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPageTitle;
-        
+        protected global::System.Web.UI.WebControls.GridView gvSystem;
+
         /// <summary>
-        /// gv_ForumDetails control.
+        /// gvGames control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_ForumDetails;
-        
-        /// <summary>
-        /// lblSucessMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSucessMessage;
-        
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.GridView gvGames;
     }
 }

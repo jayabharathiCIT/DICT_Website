@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website
-{
-
-
-    public partial class AdminProfilePage
-    {
-
+namespace DICT_Website {
+    
+    
+    public partial class AdminProfilePage {
+        
         /// <summary>
         /// Panel1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
-
+        
         /// <summary>
         /// Panel2 control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel2;
-
+        
         /// <summary>
         /// lbluserInfo control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbluserInfo;
-
+        
         /// <summary>
         /// ddlLogin control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLogin;
-
+        
         /// <summary>
         /// lblPageTitle control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPageTitle;
-
+        
         /// <summary>
         /// tblAdminActions control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Table tblAdminActions;
-
+        
         /// <summary>
         /// lblStudentForum control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblStudentForum;
-
+        
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// btnRemovePost control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRemovePost;
-
+        
         /// <summary>
         /// lblRemoveStudent control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblRemoveStudent;
-
+        
         /// <summary>
         /// btnRemoveStudent control.
         /// </summary>
@@ -112,7 +110,25 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnRemoveStudent;
-
+        
+        /// <summary>
+        /// lblResetPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResetPassword;
+        
+        /// <summary>
+        /// btnResetPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnResetPassword;
+        
         /// <summary>
         /// lblAddAnnouncement control.
         /// </summary>
@@ -121,7 +137,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAddAnnouncement;
-
+        
         /// <summary>
         /// btnAddAnnu control.
         /// </summary>
@@ -130,7 +146,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddAnnu;
-
+        
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -139,7 +155,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
         /// <summary>
         /// btnAddNews control.
         /// </summary>
@@ -148,7 +164,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddNews;
-
+        
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -157,7 +173,7 @@ namespace DICT_Website
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-
+        
         /// <summary>
         /// btnEvent control.
         /// </summary>

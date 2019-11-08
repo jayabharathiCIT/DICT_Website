@@ -7,135 +7,110 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class AddNews {
-        
+namespace DICT_Website
+{
+
+
+    public partial class NewsPage
+    {
+
         /// <summary>
-        /// txtTitle control.
+        /// dlLatestNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
-        
+        protected global::System.Web.UI.WebControls.DataList dlLatestNews;
+
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// dlNetworkNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
+        protected global::System.Web.UI.WebControls.DataList dlNetworkNews;
+
         /// <summary>
-        /// txtDate control.
+        /// btnMoreNetwork control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDate;
-        
+        protected global::System.Web.UI.WebControls.Button btnMoreNetwork;
+
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// dlCyberNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-        
+        protected global::System.Web.UI.WebControls.DataList dlCyberNews;
+
         /// <summary>
-        /// txtSource control.
+        /// btnCyberNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSource;
-        
+        protected global::System.Web.UI.WebControls.Button btnCyberNews;
+
         /// <summary>
-        /// RequiredFieldValidator2 control.
+        /// dlSoftwareNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
-        
+        protected global::System.Web.UI.WebControls.DataList dlSoftwareNews;
+
         /// <summary>
-        /// ddlCategory control.
+        /// btnMoreSoftware control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCategory;
-        
+        protected global::System.Web.UI.WebControls.Button btnMoreSoftware;
+
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// dlSystemsNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
-        
+        protected global::System.Web.UI.WebControls.DataList dlSystemsNews;
+
         /// <summary>
-        /// NewsFileUpload control.
+        /// btnSystemAnalysis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload NewsFileUpload;
-        
+        protected global::System.Web.UI.WebControls.Button btnSystemAnalysis;
+
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// dlGamesNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
+        protected global::System.Web.UI.WebControls.DataList dlGamesNews;
+
         /// <summary>
-        /// txtContent control.
+        /// btnMoreGame control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContent;
-        
-        /// <summary>
-        /// RequiredFieldValidator6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-        
-        /// <summary>
-        /// btnSubmit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
-        /// <summary>
-        /// btnCancel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.Button btnMoreGame;
     }
 }

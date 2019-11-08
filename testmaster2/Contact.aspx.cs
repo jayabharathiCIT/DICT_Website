@@ -30,7 +30,7 @@ namespace testmaster2
 
                 var fromAddress = new MailAddress("dcitcanberra@gmail.com");
                 var fromPassword = "dcitcanberra01";
-                var toAddress = new MailAddress("dcitcanberra@gmail.com");
+                var toAddress = new MailAddress("bharathi.kutti@gmail.com");
 
                 string subject = "Client Service - Contact DCIT";
                 string htmlBody = @"

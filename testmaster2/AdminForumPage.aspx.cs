@@ -146,6 +146,10 @@ namespace DICT_Website
                 deletePost(getpostID);
             }           
         }
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminProfilePage.aspx");
+        }
 
         protected void deletePost(int postID)
         {

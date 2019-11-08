@@ -25,7 +25,7 @@
                   </tr>
               </table>                                                              
                 </div>
-                 <%-- Added login dropdown --%>
+                 <%-- Added login dropdown --%> 
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>
@@ -33,7 +33,7 @@
                              <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
                         </td>
                         <td style="width:200px;height:auto; ">
-                           <asp:Label ID="lblPageTitle" runat="server" Text="Admin Forum Page"  CssClass="pageTitle" ></asp:Label>
+                           <asp:Label ID="lblPageTitle" runat="server" Text="Admin Profile Page"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -71,6 +71,15 @@
                             </asp:TableCell>
                             <asp:TableCell>
                                  <asp:Button ID="btnRemoveStudent" runat="server" Text="Remove A Student" CssClass="btnSubmitControls"  OnClick="btnRemoveStudent_Click" />
+                            </asp:TableCell>
+                        </asp:TableRow>
+                         <asp:TableRow>
+                            <asp:TableCell>3.</asp:TableCell>
+                            <asp:TableCell>
+                                <asp:Label ID="lblResetPassword" runat="server" Text="Reset Pasword of students."></asp:Label>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                 <asp:Button ID="btnResetPassword" runat="server" Text="ResetPassword" CssClass="btnSubmitControls"  OnClick="btnResetPassword_Click" />
                             </asp:TableCell>
                         </asp:TableRow>
                          <asp:TableRow>
