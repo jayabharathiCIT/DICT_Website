@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server"   >
     
-	 <style type='text/css'>
+     <style type='text/css'>
         
     </style>
     <link href="Content/forumStyles.css" rel="stylesheet" />
