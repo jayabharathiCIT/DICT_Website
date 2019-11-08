@@ -78,16 +78,16 @@
             <%-------------------------------------------------- Submit --%>
             
                <div>
-                    <asp:Button Cssclass="news-submit"  ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                    <asp:Button Cssclass="news-submit"  ID="btnSubmit" runat="server"  Width="125px" Text="Submit" OnClick="btnSubmit_Click" />
                    </div>    
           
-                   <div>
-                      <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false"  runat="server" Text="Cancel"  OnClick="btnCancel_Click" />
+                   <div class="divider"/>
+                      <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false" Width="125px" runat="server" Text="Cancel"  OnClick="btnCancel_Click" />
                 </div>
 
                                   
          
         </div>
-    </div>
+   
 
 </asp:Content>
