@@ -134,9 +134,11 @@
     <Content Include="Content\TeachingStyle.css" />
     <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
+    <Content Include="DeleteAccount.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="ForumHomePage.aspx" />
     <Content Include="FutureStudentsPage.aspx" />
     <Content Include="Global.asax" />
@@ -311,12 +313,26 @@
     <Compile Include="CurrentStudentPage.aspx.designer.cs">
       <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditForumPost.aspx.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EditForumPost.aspx.designer.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForumHomePage.aspx.cs">
       <DependentUpon>ForumHomePage.aspx</DependentUpon>

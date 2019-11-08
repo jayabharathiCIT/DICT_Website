@@ -74,7 +74,7 @@ namespace DICT_Website
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
-
+                Response.Redirect("~/DeleteAccount.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {
