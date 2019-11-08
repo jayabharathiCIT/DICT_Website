@@ -56,17 +56,22 @@ namespace DICT_Website
                                 sqlPass.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate1);
 
                                 sqlPass.SelectCommand.ExecuteNonQuery();
-                                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('successfully change the password!!');window.location='ChangePassword.aspx';", true);
+
+                                Response.Write("<script>alert('successfully change the password!!'); ");
+                                Response.Write("window.location='ForumHomePage.aspx'</script>");
+                                //ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('successfully change the password!!');window.location='DICT_Website.ForumHomePage.aspx';", true);
                                 lblSuccessMessage.Text = "successfully change the password!";
                             }
                             else
                             {
+                                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password miss match!!')", true);
                                 lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
                                 lblErrorConfirmPassword.Text = "Password miss match";
                             }
                         }
                         else
                         {
+                            ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Current password is incorrect!!')", true);
                             lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
                             lblErrorPassword.Text = "Current password is incorrect";
                         }
@@ -87,24 +92,28 @@ namespace DICT_Website
         {
             if (txtID.Text.Length == 0)
             {
-                lblErrorID.Text = "*** Your ID can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Your ID can not be blank !!')", true);
+                //lblErrorID.Text = "*** Your ID can not be blank ***";
                 return 0;
             }
 
             else if (txtPassword1.Text.Length == 0)
             {
-                lblErrorPassword.Text = "*** Password can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password can not be blank !!')", true);
+               // lblErrorPassword.Text = "*** Password can not be blank ***";
                 return 0;
             }
 
             else if (txtNewPassword.Text.Length == 0)
             {
-                lblErrorNewPassword.Text = "*** New password can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('New password can not be blank !!')", true);
+                //lblErrorNewPassword.Text = "*** New password can not be blank ***";
                 return 0;
             }
             else if (txtConfirmPassword.Text.Length == 0)
             {
-                lblErrorConfirmPassword.Text = "*** Confirm password can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Confirm password can not be blank!!')", true);
+                //lblErrorConfirmPassword.Text = "*** Confirm password can not be blank ***";
                 return 0;
             }
 
@@ -116,12 +125,12 @@ namespace DICT_Website
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/HomePage.aspx");
+            Response.Redirect("~/ForumHomePage.aspx");
         }
 
         protected void submit_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/ForumHomePage.aspx");
         }
     }
 }
