@@ -9,12 +9,12 @@
    <%-- <div  style="vertical-align:middle; text-align:center; width:800px; height:900px; background-image:url(Images/background.png) " >--%>
          <%--<div  class="divPageContent"    >--%>
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOutline">
-            <asp:Panel ID="Panel2" CssClass="plnInline" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+            <asp:Panel ID="Panel2" CssClass="plnInline" BorderStyle="Solid"  BorderColor="Black" BorderWidth="2px" runat="server">
                  <%-- Added login dropdown --%>
                  <div class="nav navbar-nav navbar-right">
               <table  style="width:200px;" >
                   <tr>
-                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#FACF5A" runat="server" Text="Label"></asp:Label></td>                                          
+                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#007bff" runat="server" Text="Label"></asp:Label></td>                                          
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
@@ -32,16 +32,16 @@
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>
-                        <td style="width:130px; height:auto">
+                  <%--      <td style="width:130px; height:auto">
                              <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
-                        </td>
-                        <td style="width:350px;height:auto; ">
+                        </td>--%>
+                        <td style= height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Create New Post"  CssClass="pageTitle" ></asp:Label>                            
                         </td>
                     </tr>
                 </table>
                 </div>
-                <asp:Table ID="tblAddPost" runat="server" CssClass="tableAddPost" HorizontalAlign="Center" >
+                <asp:Table ID="tblAddPost" runat="server" CssClass="tableAddPost"  HorizontalAlign="Center" >
             
 
             

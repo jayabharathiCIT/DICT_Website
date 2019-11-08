@@ -73,7 +73,8 @@
                     <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="white"  BorderWidth="5px"  HorizontalPadding="35px" BackColor="#facf5a" Font-Bold="true" Font-Size="Large" />
                 </LevelMenuItemStyles>
                 <Items>
-                    <asp:MenuItem Text="The DICT" Value="THE DICT" NavigateUrl="~/About.aspx" ></asp:MenuItem>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
+                    <asp:MenuItem Text="About DICT" Value="THE DICT" NavigateUrl="~/About.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Our Courses" Value="Our Courses">
                         <asp:MenuItem Text="Courses and Units" Value="Courses and Units" NavigateUrl="Course-Detail" ></asp:MenuItem>
                         <asp:MenuItem Text="Apply" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
@@ -84,7 +85,7 @@
             </asp:Menu>
         
      </div>
-      <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:25px; "><a href="homepage.aspx"><img   style="width:110px; height:70px;" src="Images/DictLogoNew.png" /></a> </div>
+     <%-- <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:25px; "><a href="homepage.aspx"><img   style="width:110px; height:70px;" src="Images/DictLogoNew.png" /></a> </div>--%>
       <div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
          <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true" Font-Names="sans-serif;"  RenderingMode="List" >
              <StaticMenuStyle BackColor="black" />
@@ -121,9 +122,8 @@
          
         </div>
            <footer>
-                <div class="footer-info">
-                    <asp:HyperLink ID="hypLinkContact" CssClass="h3" NavigateUrl="~/Contact.aspx" runat="server">Contact Us</asp:HyperLink>
-                <%--<h3>Contact Us</h3>--%>
+                <div class="footer-info">                  
+               <a href="Contact.aspx" ><h3>Contact Us</h3></a> 
                 <ul>
                   <li>
                     <li>General Enquiries<br>
@@ -133,30 +133,32 @@
                   </li>
                 </ul>   
             </div>          
-            <div class="footer-info">
-                <h3>Quick Links</h3>
+            <div class="footer-info">           
                 <ul>
-                  <li>
+                    <li><a href="https://cit.edu.au/study/need_help" > <h3> Need help? </h3></a></li>
+                  <%--<li>
                     <li><a href="/about/">About</a></li><br />
                     <li><a href="/courses/">Courses</a></li><br />
                     <li><a href="/teaching_learning/">Teaching & Learning</a></li><br />
                     <li><a href="/students/">Students</a></li><br />
                     <li><a href="/DICT_news/">DICT News</a></li><br />
                     <li><a href="ForumHomePage.aspx">Forum</a></li><br />
-                  </li>
+                  </li>--%>
                 </ul>
             </div>
+                <div class="footer-info">
+                    <ul>
+                    <li>
+               <a href="About.aspx"> <h3>About us </h3></a>
+                <ul>
+                    </ul></div>
             <div class="footer-info">
                 <h3>Social Media</h3>
-                <ul>
-                    
+                <ul>                    
                         <li><a href="http://www.facebook.com.au/CITCanberra" class="fa-social"><img style=" height:40px; width:40px;" src="Images/facebook.png" alt="Facebook"></a></li>
                         <li><a href="https://instagram.com/citcanberra/" class="fa-social"><img src="Images/instagram.png" style="height:40px; width:40px;" alt="Instagram"></a></li>
                         <li><a href="http://www.twitter.com/@Canberra_CIT" class="fa-social"><img src="Images/twitter.png" style="height:40px; width:40px;" alt="Twitter"></a></li>                 
-                </ul>
-                <ul>
-                    <li> <a href="https://cit.edu.au/study/need_help" class="help-button" >Need help?</a></li>
-                </ul>
+                </ul>                
              </div>              
             </footer>
 

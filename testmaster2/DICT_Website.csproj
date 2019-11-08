@@ -182,13 +182,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ChangePasswordStyles.css" />
     <Content Include="Content\Contactus.css" />
     <Content Include="Content\Events.css" />
     <Content Include="Content\course-detail.css" />
+    <Content Include="Content\ForgetPasswordStyles.css" />
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\homepage.css" />
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\News.css" />
+    <Content Include="Content\RegisterStyles.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StudentStyle.css" />
     <Content Include="Content\apply.css" />
@@ -200,6 +203,7 @@
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="ForumHomePage.aspx" />
     <Content Include="FutureStudentsPage.aspx" />
     <Content Include="Global.asax" />
@@ -246,6 +250,7 @@
     <Content Include="Images\StudentFormsIcon.png" />
     <Content Include="Images\test1.jpg" />
     <Content Include="Images\test3.JPG" />
+    <Content Include="Images\transLogo.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
@@ -409,6 +414,13 @@
     </Compile>
     <Compile Include="EditForumPost.aspx.designer.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForumHomePage.aspx.cs">
       <DependentUpon>ForumHomePage.aspx</DependentUpon>
