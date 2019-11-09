@@ -4,12 +4,12 @@
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOuterLogin">
             <asp:Panel ID="Panel2" CssClass="plnInnerLogin" BorderStyle="Solid"  BorderColor="black" BorderWidth="2px" runat="server">
             <div id="divHeader" class="divHeader"> 
-                <table>
+                <table align="Center">
                     <tr>
-                        <td style="width:120px; height:auto">
+                      <%--  <td style="width:120px; height:auto">
                              <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/transLogo.png"/>
-                        </td>
-                        <td style="width:300px;height:auto; ">
+                        </td>--%>
+                        <td style="height:auto; text-align:center; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Login"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>

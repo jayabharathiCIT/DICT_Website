@@ -1,6 +1,6 @@
 ﻿body {
     /* background-color: rgb(0, 172, 163); */
-    font-family: 'sans-serif';
+    font-family: 'sans-serif' !important;
 }
 
 /* FIGURE OUT HOW TO INCRASE CONTAINER SIZE */

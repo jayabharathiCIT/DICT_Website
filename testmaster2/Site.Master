@@ -50,7 +50,7 @@
             </Scripts>
         </asp:ScriptManager>
        <%-- DICT Header  --%>
-        <div class="navbar-light fixed-top topbox ">
+        <div class="navbar-light fixed-top topbox">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <%--<div class="topbox-logo-container" >--%>
                 <img src="Images/CITRtoLogo.png"  style="  float:left;  width:135px;height:75px;" alt="logo" >
@@ -76,7 +76,7 @@
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
                     <asp:MenuItem Text="About DICT" Value="THE DICT" NavigateUrl="~/About.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Our Courses" Value="Our Courses">
-                        <asp:MenuItem Text="Courses and Units" Value="Courses and Units" NavigateUrl="Course-Detail" ></asp:MenuItem>
+                        <asp:MenuItem Text="Courses and Units" Value="Courses and Units" NavigateUrl="~/courses.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Apply" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning" NavigateUrl="~/Teaching_LearningPage.aspx" >

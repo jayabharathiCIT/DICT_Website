@@ -5,7 +5,7 @@
     text-align: center;
     width: 700px;
     height: 700px;
-    margin-top:60px;
+    margin-top:50px;
     /*background-image: url('../Images/background.png');*/
 }
 .divHeader {
@@ -127,7 +127,7 @@
 }
 
 .plnInnerLogin {
-    padding: 20px;
+    /*padding: 20px;*/
     vertical-align: middle;
     text-align: center;
     width: 500px;
@@ -197,6 +197,7 @@
     width: 450px;
     height: 200px;
     color:black;
+    margin-top:15px;
 }
 .tableViewReplyPost {
     vertical-align: middle;
