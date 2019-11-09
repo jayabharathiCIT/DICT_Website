@@ -52,9 +52,9 @@
        <%-- DICT Header  --%>
         <div class="navbar-light fixed-top topbox ">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
-            <div class="topbox-logo-container" >
-                <img src="Images/CITRtoLogo.png"  style="width:135px;height:89px;" alt="logo" >
-            </div>
+            <%--<div class="topbox-logo-container" >--%>
+                <img src="Images/CITRtoLogo.png"  style="  float:left;  width:135px;height:75px;" alt="logo" >
+           <%--</div>--%>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -80,13 +80,29 @@
                         <asp:MenuItem Text="Apply" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning" NavigateUrl="~/Teaching_LearningPage.aspx" >
-                    </asp:MenuItem>                                       
+                    </asp:MenuItem>      
+                     <asp:MenuItem Text="Student" Value="Student">
+                        <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
+                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="DICT News" Value="DICT News">
+                        <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Forum" Value="Forum">
+                        <asp:MenuItem Text="Register" NavigateUrl="~/Register.aspx" Value="Register"></asp:MenuItem>
+                        <asp:MenuItem Text="Login" NavigateUrl="~/Login.aspx" Value="Login"></asp:MenuItem>
+                        <asp:MenuItem Text="Add Post" NavigateUrl="~/AddForumPost.aspx" Value="AddPost"></asp:MenuItem>
+                        <asp:MenuItem  Text="View All Post" NavigateUrl="~/ForumHomePage.aspx" Value="ViewPost"></asp:MenuItem>
+                    </asp:MenuItem>
                 </Items>
             </asp:Menu>
         
      </div>
      <%-- <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:25px; "><a href="homepage.aspx"><img   style="width:110px; height:70px;" src="Images/DictLogoNew.png" /></a> </div>--%>
-      <div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
+      <%--<div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
          <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true" Font-Names="sans-serif;"  RenderingMode="List" >
              <StaticMenuStyle BackColor="black" />
                  <LevelMenuItemStyles>
@@ -112,7 +128,7 @@
                     </asp:MenuItem>
                 </Items>
             </asp:Menu>            
-            </div>
+            </div>--%>
   </div>
         <%-- Add DICT menu bar  --%>
         <div class="container body-content">
