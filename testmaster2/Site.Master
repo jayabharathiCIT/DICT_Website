@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="testmaster2.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="testmaster2.SiteMaster"  %>
 
 <!DOCTYPE html>
 
@@ -22,6 +22,13 @@
             /*text-align:center !important;*/
             padding-left:100px;
             font-family:sans-serif;
+        }
+         .menuItemSelected
+        {
+            /*color:#000000;
+            font-weight:bold;*/
+             border-color:blue;
+            
         }
     </style>
     <link href="Content/masterStyle.css" rel="stylesheet" />
@@ -53,7 +60,7 @@
         <div class="navbar-light fixed-top topbox">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <%--<div class="topbox-logo-container" >--%>
-                <img src="Images/CIT_logo_stacked_white_RTO.png"  style="  float:left;  width:135px;height:75px;" alt="logo" >
+                <img src="Images/CIT_logo_stacked_white_RTO.png"  style=" float:left;  width:135px;height:75px;" alt="logo" >
            <%--</div>--%>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,12 +72,13 @@
 
        <%-- <div class="navbar-fixed-top mx-auto"  >--%>
      <div  style="float:left; position:center; padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
-          <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
+          <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal" ViewStateMode="Enabled"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
               <StaticMenuStyle CssClass="Menu"  />
-              <StaticSelectedStyle Font-Bold="true" ForeColor="Black" Font-Underline="true"  />
+              <StaticHoverStyle CssClass="navbarItemSelected" BackColor="DarkGray" />                  
+              <StaticSelectedStyle Font-Bold="true" ForeColor="Black"  BackColor="Gray" Font-Underline="true"  />
                 <LevelMenuItemStyles>
-                    <asp:MenuItemStyle HorizontalPadding="60px" VerticalPadding="20px"  BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="white"  BorderWidth="5px"  HorizontalPadding="35px" BackColor="#facf5a" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle HorizontalPadding="50px" VerticalPadding="15px" BackColor="White" Font-Bold="true" BorderColor="DarkGray" BorderWidth="1px"  Font-Size="Large" />
+                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="DarkGray"  BorderWidth="1px" VerticalPadding="8px"  HorizontalPadding="35px" BackColor="White"  Font-Bold="true" Font-Size="Large" />
                 </LevelMenuItemStyles>
                 <Items>
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
@@ -85,7 +93,7 @@
                         <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
-                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
+                        <asp:MenuItem Text="Announcement" Value="Announcement" NavigateUrl="~/AnnHomepage.aspx" ></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
                         <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
@@ -140,14 +148,11 @@
            <footer>
                 <div class="footer-info">                  
                <a href="Contact.aspx" ><h3>Contact Us</h3></a> 
-               <%-- <ul>
+                <ul>
                   <li>
-                    <li>General Enquiries<br>
-                    GPO Box 826 Canberra<br>
-                    ACT 2601<br>
-                    +61 2 6207 3188</li>
+                      <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                   </li>
-                </ul> --%>  
+                </ul>   
             </div>          
             <div class="footer-info">           
                 <ul>
