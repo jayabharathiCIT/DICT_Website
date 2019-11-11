@@ -15,6 +15,7 @@
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                          <asp:ListItem Value ="0" >Select One</asp:ListItem>
                            <asp:ListItem Value="1">Change Password</asp:ListItem>
 
                   <asp:ListItem Value="2">Delete Account</asp:ListItem>
@@ -74,11 +75,13 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"  Display="Dynamic" ErrorMessage="Please enter Description" EnableClientScript="true"
                             ForeColor="Red" ControlToValidate="textDescription" />
                         </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center">
-                        <asp:TableCell>
-                            <asp:Button ID="btnUpdatePost" runat="server" Text="Update Post" CssClass="btnReply"  OnClick="btnUpdatePost_Click" /></asp:TableCell>
-                        <asp:TableCell>
-                            <asp:Button ID="btnRemove" runat="server" Text="Remove" CausesValidation="false" CssClass="btnCancelControls"  OnClick="btnRemove_Click" />
+                        <asp:TableCell ColumnSpan="2" >
+                            <asp:Button ID="btnUpdatePost" runat="server" Text="Update Post" CssClass="btnCancelControls"  OnClick="btnUpdatePost_Click" />
+                             <asp:Button ID="btnRemove" runat="server" Text="Remove" CausesValidation="false" CssClass="btnCancelControls"  OnClick="btnRemove_Click" />
+                              <asp:Button ID="btnCancel" runat="server" Text="Cancel" CausesValidation="false" CssClass="btnCancelControls" OnClick="btnCancel_Click" /></asp:TableCell>
+                       <%-- <asp:TableCell>
+                           
                             
                         </asp:TableCell><asp:TableCell>
-                            <asp:Button ID="btnCancel" runat="server" Text="Cancel" CausesValidation="false" CssClass="btnCancelControls" OnClick="btnCancel_Click" />
-                        </asp:TableCell></asp:TableRow></asp:Table><asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label></asp:Panel></asp:Panel></asp:Content>
+                          
+                        </asp:TableCell>--%></asp:TableRow></asp:Table><asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label></asp:Panel></asp:Panel></asp:Content>

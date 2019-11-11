@@ -11,6 +11,7 @@
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                          <asp:ListItem Value ="0" >Select One</asp:ListItem>
                            <asp:ListItem Value="1">Change Password</asp:ListItem>
 
                   <asp:ListItem Value="2">Delete Account</asp:ListItem>
@@ -103,8 +104,7 @@
                             <asp:RequiredFieldValidator ID="rfvuser" runat="server"  Display="Dynamic" ErrorMessage="Please enter Reply" EnableClientScript="true"
                             ForeColor="Red" ControlToValidate="txtComment" />
                         </asp:TableCell></asp:TableRow><asp:TableRow>
-                           <asp:TableCell >
-                               <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass="btnReply"  OnClick="btnReply_Click" />                               
-                           </asp:TableCell><asp:TableCell>
+                           <asp:TableCell ColumnSpan="2" >
+                               <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass="btnReply"  OnClick="btnReply_Click" />   
                                <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnReply" CausesValidation="false" OnClick="btnCancel_Click" />
                            </asp:TableCell></asp:TableRow></asp:Table><asp:Label ID="lblSuccessMessage"  runat="server" ForeColor="Black" Font-Size="14px"  ></asp:Label></div></asp:Panel></asp:Panel></asp:Content>

@@ -44,7 +44,7 @@
                               <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnReply" CausesValidation="false" OnClick="btnCancel_Click" />
                             </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center"   >
                         <asp:TableCell ColumnSpan="2"  >
-                            <a href ="ForgetPassword.aspx">Forgot Password</a>
+                            <a style="font-size:12px" href ="ForgetPassword.aspx">Forgot Password</a>
                         </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell ColumnSpan="2" >
                             <asp:Label ID="lblSuccessMessage" runat="server" Font-Size="14px" ForeColor="Red" Text=""></asp:Label></asp:TableCell></asp:TableRow></asp:Table></asp:Panel></asp:Panel><asp:Panel runat="server">

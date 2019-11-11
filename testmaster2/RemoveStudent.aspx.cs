@@ -70,7 +70,11 @@ namespace DICT_Website
             gv_StudentDetails.DataSource = dtAdmin;
             gv_StudentDetails.DataBind();
         }
-      
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminProfilePage.aspx");
+        }
+
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
             DropDownList ddlLogin = (DropDownList)sender;
@@ -87,6 +91,7 @@ namespace DICT_Website
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+                Response.Redirect("~/DeleteAccount.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {
@@ -133,6 +138,7 @@ namespace DICT_Website
                 int getRegID = Convert.ToInt32(btn.CommandArgument);                
                 deleteStudent(getRegID);
             }
+
         }
         protected void deleteStudent(int RegID)
         {             

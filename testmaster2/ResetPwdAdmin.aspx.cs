@@ -67,6 +67,7 @@ namespace DICT_Website
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+                Response.Redirect("~/DeleteAccount.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {
@@ -123,8 +124,14 @@ namespace DICT_Website
                 Email = words[1].ToString();
                 SendEmailToStudent(Name, Email, password.ToString());
                 UpdatePasswordSql(getRegIDArg, password.ToString());
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Success.Your Passsword is sent in your email.Please check your email.!!')", true);
+                Response.Redirect("~/AdminProfilePage.aspx");
             }        
            
+        }
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminProfilePage.aspx");
         }
 
         protected void SendEmailToStudent(string Name, string EmailID, string password)

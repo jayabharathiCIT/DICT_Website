@@ -9,7 +9,7 @@
                  <div class="nav navbar-nav navbar-right">
               <table  style="width:200px;" >
                   <tr>
-                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="Blue"  runat="server" Text="Label"></asp:Label></td>                                          
+                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#007bff"  runat="server" Text="Label"></asp:Label></td>                                          
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
@@ -30,26 +30,24 @@
             <div id="divHeader" class="divHeader"> 
                 <table align="Center">
                     <tr>
-                        <%--<td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
-                        </td>--%>
                         <td style="height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Admin Forum Page"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
                 </div>
-                <div style="height:450px;text-align: center; float:left; align-content:center;  width:800px; border-color:white; border-width:thin; border-style:solid ">
-                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="Black" BorderStyle="None"  GridLines="Both"
-                        BorderWidth="1px" Width="800px"  Height="480px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
-                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
+                <div style="padding-top:30px ;">
+                <div style="height:450px;text-align: center; float:left; align-content:center;  width:100%; border-color:black; border-width:thin; border-style:solid ">
+                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderStyle="None"  GridLines="Both" ForeColor="Black"
+                        BorderWidth="1px" Width="100%"  Height="480px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
+                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="3"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"    Position="Bottom"  PageButtonCount="4"  />
-                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="Dotted"   />
+                        <PagerStyle  Font-Size="15px" Font-Bold="true" BorderStyle="None"  />
                         <Columns>
                             
                             <asp:TemplateField HeaderText="Topic">
                                 <ItemTemplate>                                          
-                                    <asp:HyperLink ID="hyLnk_Topic" runat="server" ForeColor="Black" Text='<%# Bind("Topic_Title") %>' NavigateUrl='<%# Eval("Post_ID", "~/ViewandReplyPost.aspx?PostID={0}") %>'  Font-Underline="true" ></asp:HyperLink>                                    
+                                    <asp:HyperLink ID="hyLnk_Topic" runat="server" ForeColor="#007bff" Text='<%# Bind("Topic_Title") %>' NavigateUrl='<%# Eval("Post_ID", "~/ViewandReplyPost.aspx?PostID={0}") %>'  Font-Underline="true" ></asp:HyperLink>                                    
                                     <br>
                                     </br>
                                     <asp:Label ID="lblDescription" ForeColor="Black" runat="server" Text='<%# Bind("Description_Post") %>'></asp:Label>
@@ -57,7 +55,7 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Category">                                
                                 <ItemTemplate>                                                                       
-                                    <asp:Label ID="lblCategory" ForeColor="Black" runat="server" Text='<%# Bind("Category_ID") %>'></asp:Label>                                                                       
+                                    <asp:Label ID="lblCategory" ForeColor="Black"  runat="server" Text='<%# Bind("Category_ID") %>'></asp:Label>                                                                       
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Replies">
@@ -89,15 +87,16 @@
                     <asp:Label ID="lblSucessMessage" runat="server" Text=""></asp:Label>
                     
                 </div>                        
-                    </div>
-                    <div style="bottom:0; float:left; width:100%; right:0; color:transparent; height:30px;" dir="auto">
+                
+                    <div style="bottom:0; float:right; width:100%; right:0; color:transparent; height:30px;" dir="auto">
                         <table>
                             <tr>
-                                <td style="width:700px" ></td>
-                                <td style="text-align: right" > <asp:Button ID="btnCancel" runat="server"  Text="Cancel" CssClass="btnReply"  CausesValidation="false" OnClick="btnCancel_Click" /></td>
+                      
+                                <td style="text-align: right; width:100%" > <asp:Button ID="btnCancel" runat="server"  Text="Cancel" CssClass="btnReply"  CausesValidation="false" OnClick="btnCancel_Click" /></td>
                             </tr>
                         </table>
                        
+                    </div>
                     </div>
                 </asp:Panel>
 
