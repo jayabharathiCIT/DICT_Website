@@ -35,8 +35,8 @@ namespace DICT_Website
                 insert.Parameters.AddWithValue("@Posted", postCreatedDate);
 
                 lblSuccessMessage.Text = "Submitted Successfully";
-                string message = "Post is Created Successfully.Now Redirecting to Forum Home Page";
-                string url = "ForumHomePage.aspx";
+                string message = "Post is Created Successfully.Now Redirecting to Announcement Home Page";
+                string url = "AnnHomepage.aspx";
                 string script = "window.onload = function(){ alert('";
                 script += message;
                 script += "');";
@@ -55,7 +55,7 @@ namespace DICT_Website
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/ForumHomePage.aspx");
+            Response.Redirect("~/AnnHomepage.aspx");
         }
 
     }
