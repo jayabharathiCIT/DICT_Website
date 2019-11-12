@@ -25,7 +25,7 @@ namespace testmaster2
             MenuItem ViewPostItem = new MenuItem();
             MenuItem registerItem = new MenuItem();
             MenuItem loginItem = new MenuItem();
-            MenuItem forumMenu = DICTMenuBar2.Items[2];
+            MenuItem forumMenu = DICTMenuBar1.Items[6];
             //find menus and show and hide based on the user login .
             foreach (MenuItem menuItem in forumMenu.ChildItems)
             {

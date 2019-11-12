@@ -149,13 +149,20 @@ namespace testmaster2
 
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ddlLogin.SelectedItem.Value == "4")
+            {
+                //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
             if (ddlLogin.SelectedItem.Value == "1")
             {
                 //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+                Response.Redirect("~/DeleteAccount.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {

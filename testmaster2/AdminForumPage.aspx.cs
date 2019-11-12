@@ -71,6 +71,7 @@ namespace DICT_Website
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+                Response.Redirect("~/DeleteAccount.aspx");
 
             }
             if (ddlLogin.SelectedItem.Value == "3")
@@ -145,6 +146,10 @@ namespace DICT_Website
                 // Response.Redirect("~/EditForumPost.aspx" + "?PostID=" + getPostIDArg);
                 deletePost(getpostID);
             }           
+        }
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AdminProfilePage.aspx");
         }
 
         protected void deletePost(int postID)

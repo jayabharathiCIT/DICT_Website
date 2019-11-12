@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Roboto';
+    font-family: 'sans-serif' !important;
 }
 
 #Content1 {
@@ -130,4 +130,7 @@ input, select, textarea {
 .form-control {
     font-size: 1em !important;
     color: #000 !important;
+}
+.required{
+    color: red !important
 }

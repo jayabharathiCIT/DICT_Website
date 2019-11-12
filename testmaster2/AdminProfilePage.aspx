@@ -3,12 +3,12 @@
      <link href="Content/forumStyles.css" rel="stylesheet" />
     <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >
          
-            <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+            <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="black" BorderWidth="1px" runat="server">
                 <%-- Added login dropdown --%>
                  <div class="nav navbar-nav navbar-right">
               <table  style="width:200px;" >
                   <tr>
-                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#FACF5A" runat="server" Text="Label"></asp:Label></td>                                          
+                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#007bff" runat="server" Text="Label"></asp:Label></td>                                          
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
@@ -25,22 +25,19 @@
                   </tr>
               </table>                                                              
                 </div>
-                 <%-- Added login dropdown --%>
+                 <%-- Added login dropdown --%> 
             <div id="divHeader" class="divHeader"> 
-                <table>
+                <table align="Center">
                     <tr>
-                        <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png" Height="98px"/>
-                        </td>
-                        <td style="width:200px;height:auto; ">
-                           <asp:Label ID="lblPageTitle" runat="server" Text="Admin Forum Page"  CssClass="pageTitle" ></asp:Label>
+                        <td style="height:auto; text-align:center ">
+                           <asp:Label ID="lblPageTitle" runat="server" Text="Admin Profile Page"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
                 </div>
                 <div style="padding-top:30px ;">
-                <div style="height:500px;text-align: center;  align-content:center;  width:800px; border-color:white; border-width:thin; border-style:solid ">
-                    <asp:Table ID="tblAdminActions" Width="100%" Height="100%" runat="server" EnableTheming="true" GridLines="Both" BorderColor="Black"  ForeColor="White" Font-Bold="True" Font-Size="16px" BorderStyle="Ridge" >
+                <div style="height:500px;text-align: center;  align-content:center;  width:100%; border-color:black; border-width:thin; border-style:solid ">
+                    <asp:Table ID="tblAdminActions" Width="100%" Height="100%" runat="server" EnableTheming="true" GridLines="Both"  ForeColor="black" Font-Bold="True" Font-Size="16px" BorderStyle="None" >
                         <asp:TableHeaderRow CssClass="gridheader"  >
                             <asp:TableHeaderCell>
                                 NO
@@ -71,6 +68,15 @@
                             </asp:TableCell>
                             <asp:TableCell>
                                  <asp:Button ID="btnRemoveStudent" runat="server" Text="Remove A Student" CssClass="btnSubmitControls"  OnClick="btnRemoveStudent_Click" />
+                            </asp:TableCell>
+                        </asp:TableRow>
+                         <asp:TableRow>
+                            <asp:TableCell>3.</asp:TableCell>
+                            <asp:TableCell>
+                                <asp:Label ID="lblResetPassword" runat="server" Text="Reset Pasword of students."></asp:Label>
+                            </asp:TableCell>
+                            <asp:TableCell>
+                                 <asp:Button ID="btnResetPassword" runat="server" Text="Reset Password" CssClass="btnSubmitControls"  OnClick="btnResetPassword_Click" />
                             </asp:TableCell>
                         </asp:TableRow>
                          <asp:TableRow>

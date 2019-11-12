@@ -20,7 +20,11 @@ namespace DICT_Website
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindDropDownListData();
+            if (!IsPostBack)
+            {
+                BindDropDownListData();
+            }
+            
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -52,10 +56,17 @@ namespace DICT_Website
                         insert.ExecuteNonQuery();
                         conn.Close();
                     }
+
+                    txtTitle.Text = " ";
+                    txtDate.Text = " ";
+                    
+                    txtSource.Text = " ";
+                    txtContent.Text = " ";
                 }
             }
 
         }
+       
 
         public void BindDropDownListData()
         {
@@ -89,5 +100,9 @@ namespace DICT_Website
 
         }
 
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/HomePage.aspx");
+        }
     }
 }

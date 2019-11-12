@@ -45,6 +45,9 @@ namespace DICT_Website
 
                             string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+
+                            string StatusForgetPassword = "No";
+                            sqlCmd.Parameters.AddWithValue("P_Forgetpassword", StatusForgetPassword);
                             sqlCmd.ExecuteNonQuery();
                             ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Registered Successfully!');window.location='Login.aspx';", true);
                             //lblSuccessMessage.Text = "Submitted Successfully";
@@ -53,7 +56,8 @@ namespace DICT_Website
                 else
                 {
                     //error to user.
-                    lblErrorConfirmPassword.Text = "The password and confirmation password do not match.";
+                    ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('The password and confirmation password do not match!!')", true);
+                    //lblErrorConfirmPassword.Text = "The password and confirmation password do not match.";
                 }
             }
 
@@ -89,38 +93,44 @@ namespace DICT_Website
         {
             if (txtID.Text.Length == 0)
             {
-                lblErrorID.Text = "*** Your ID can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Your ID can not be blank!!')", true);
+               // lblErrorID.Text = "*** Your ID can not be blank ***";
                 return 0;
             }
             else if (txtFirstname.Text.Length == 0)
             {
-
-                lblErrorFirstname.Text = "*** First name can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('First name can not be blank!!')", true);
+               // lblErrorFirstname.Text = "*** First name can not be blank ***";
                 return 0;
             }
             else if (txtLastname.Text.Length == 0)
             {
-                lblErrorLastname.Text = "*** Last name can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Last name can not be blank!!')", true);
+                //lblErrorLastname.Text = "*** Last name can not be blank ***";
                 return 0;
             }
             if (txtPassword1.Text.Length == 0)
             {
-                lblErrorPassword.Text = "*** Password can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password can not be blank!!')", true);
+                //lblErrorPassword.Text = "*** Password can not be blank ***";
                 return 0;
             }
             else if (txtConfirmPassword.Text.Length == 0)
             {
-                lblErrorConfirmPassword.Text = "*** Confirm password can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Confirm password can not be blank!!')", true);
+                //lblErrorConfirmPassword.Text = "*** Confirm password can not be blank ***";
                 return 0;
             }
             else if (tbDate.Text.Length == 0)
             {
+               // ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('You must select your date of birth!!')", true);
                 lblErrorDOB.Text = "*** You must select your date of birth ***";
                 return 0;
             }
             if (txtEmail.Text.Length == 0)
             {
-                lblErrorEmail.Text = "*** Email can not be blank ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Email can not be blank!!')", true);
+                //lblErrorEmail.Text = "*** Email can not be blank ***";
                 return 0;
             }
             else

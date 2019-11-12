@@ -1,0 +1,27 @@
+﻿.top-box {
+    height: 110px;
+    width: 100%;
+    background: linear-gradient(187.19deg, #FF7F7F 0%, #DDCD13 101.17%);
+}
+.header {
+    padding-left: 35px;
+    transform: translateY(25px);
+    font-size: 5rem;
+    color: white;
+}
+.content-box {
+    background-image: url('../Images/background.png');
+    background-size: contain;
+    min-height: 900px;
+}
+.header2 {
+    text-align: center;
+    transform: translateY(50px);
+    font-size: 4rem;
+    color: white;
+}
+.form-container {
+    text-align: center;
+    transform: translateY(150px);
+    align-content:center;
+}
