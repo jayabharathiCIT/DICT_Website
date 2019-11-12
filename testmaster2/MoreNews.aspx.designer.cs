@@ -7,65 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website
-{
-
-
-    public partial class MoreNews
-    {
-
+namespace DICT_Website {
+    
+    
+    public partial class MoreNews {
+        
         /// <summary>
-        /// Table1 control.
+        /// ListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Table1;
-
+        protected global::System.Web.UI.WebControls.ListView ListView1;
+        
         /// <summary>
-        /// gv_Networking control.
+        /// lvDataPager1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_Networking;
-
-        /// <summary>
-        /// gv_CyberSec control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gv_CyberSec;
-
-        /// <summary>
-        /// gvSoft control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvSoft;
-
-        /// <summary>
-        /// gvSystem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvSystem;
-
-        /// <summary>
-        /// gvGames control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvGames;
+        protected global::System.Web.UI.WebControls.DataPager lvDataPager1;
     }
 }

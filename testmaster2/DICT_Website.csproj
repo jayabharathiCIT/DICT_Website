@@ -176,7 +176,6 @@
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
-    <Content Include="Content\Add_news.css" />
     <Content Include="Content\AnnStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

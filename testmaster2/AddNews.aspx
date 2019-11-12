@@ -77,17 +77,15 @@
             </div>
             <%-------------------------------------------------- Submit --%>
             
-               <div>
-                    <asp:Button Cssclass="news-submit"  ID="btnSubmit" runat="server"  Width="125px" Text="Submit" OnClick="btnSubmit_Click" />
-                   </div>    
-          
-                   <div class="divider"/>
-                      <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false" Width="125px" runat="server" Text="Cancel"  OnClick="btnCancel_Click" />
-                </div>
+               <div class="row">
+                   <div class="col-8"></div>
+                   <div class="col-2">
+                       <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false" Width="100px" runat="server" Text="Cancel"  OnClick="btnCancel_Click" />
+                   </div>
+                   <div class="col-2">
+                       <asp:Button Cssclass="news-submit"  ID="Button2" runat="server"  Width="100px" Text="Submit" OnClick="btnSubmit_Click" />                
+                   </div>
+               </div>
 
-                                  
-         
-        </div>
-   
 
 </asp:Content>
