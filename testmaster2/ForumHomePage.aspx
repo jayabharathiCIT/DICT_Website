@@ -2,11 +2,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <link href="Content/forumStyles.css" rel="stylesheet" />
     
-      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal" >         
-            <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal" BorderStyle="Solid"  BorderColor="black" BorderWidth="2px" runat="server">
+      <%--<asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineHorizontal"  > 
+        <%--  <div id="divOuter" class="divOuterHorizontal"  >--%>
+         
+           <%--  <asp:Panel ID="Panel2" CssClass="plnInlineHorizontal"  runat="server" >--%>
+             <%--    <div id ="divInner" class="divInnerHorizontal" >--%>
                 <%-- Added login dropdown --%>
+                <table id="testdiv" style="border:thin; border-color:black; border-style:solid; height:auto; width:100%; ;">
+                    <tr>
+                        <td>
                  <div class="nav navbar-nav navbar-right">
-              <table  style="width:200px;" >
+              <table  style="width:200px;  " >
                   <tr>
                       <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#007bff"  runat="server" Text="Label"></asp:Label></td>                                          
                   </tr>      
@@ -38,12 +44,13 @@
                     </tr>
                 </table>
                 </div>              
-                <div style=" float:left;height:500px; width:700px; border-color:white; border-width:thin; border-style:solid ">
-                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderColor="Black" BorderStyle="None"  GridLines="Both"
-                        BorderWidth="1px" Width="690px"  Height="490px" CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False"
-                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="2"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
+                <div style=" float:left;height:auto; width:80%; margin-top:20px; border-color:white; border-width:thin; border-style:solid ">
+                    <asp:GridView ID="gv_ForumDetails" runat="server" BackColor="Transparent" BorderStyle="None"  GridLines="Both"
+                        BorderWidth="1px" Width="100%"  CellPadding="3" ViewStateMode="Enabled" AutoGenerateColumns="False" ShowHeaderWhenEmpty="true"
+                        OnRowDataBound="OnRowDataBound" OnRowCommand="gv_ForumDetails_RowCommand" AllowPaging="true" PageSize="5"  OnPageIndexChanging="gv_ForumDetails_PageIndexChanging"  > 
                         <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
                         <PagerStyle  Font-Size="15px" Font-Bold="true"   />
+                        <EmptyDataTemplate>No Record Found</EmptyDataTemplate>
                         <Columns>
                             
                             <asp:TemplateField HeaderText="Topic"   >
@@ -58,15 +65,15 @@
                             </asp:TemplateField>
                             <asp:TemplateField HeaderText="Created By">                                
                                 <ItemTemplate>
-                                    <asp:Label ID="lblUser" runat="server" Text="User" ForeColor="Black"></asp:Label>
+                                    <asp:Label ID="lblUser" runat="server" Text="User :" ForeColor="Black"></asp:Label>
                                     <asp:Label ID="lblCreatedBy" runat="server" Text='<%# Bind("Register_ID") %>'></asp:Label>
                                     <br>
                                     </br>
-                                    <asp:Label ID="lblCategoryDis" runat="server" ForeColor="Black" Text="Category"></asp:Label>
+                                    <asp:Label ID="lblCategoryDis" runat="server" ForeColor="Black" Text="Category :"></asp:Label>
                                     <asp:Label ID="lblCategory" runat="server" Text='<%# Bind("Category_ID") %>'></asp:Label>
                                     <br>
                                     </br>
-                                    <asp:Label ID="lblPostedDate" runat="server" ForeColor="Black" Text="Posted On: "></asp:Label>
+                                    <asp:Label ID="lblPostedDate" runat="server" ForeColor="Black" Text="Posted On : "></asp:Label>
                                     <asp:Label ID="lblPostedOn" runat="server"  Text='<%# Bind("Date_Posted","{0:f}") %>'></asp:Label>
                                     
                                 </ItemTemplate>
@@ -99,7 +106,7 @@
                         <asp:Button ID="btnCreatePost" runat="server" Text="Create New Topic" CssClass="btnSubmitControls" OnClick="btnCreatePost_Click" />
                             </div>
                         <div id="divQuick" class="divQuickLinks" >
-                            <asp:Table ID="tblQuickLinks" runat="server" GridLines="Horizontal" BorderColor="Black" Width="130px" Font-Bold="True" Font-Size="16px" BorderStyle="Ridge" >
+                            <asp:Table ID="tblQuickLinks" runat="server" GridLines="Horizontal" BorderColor="Black" Width="100%" Height="100%" Font-Bold="True" Font-Size="16px" BorderStyle="Ridge" >
                                 <asp:TableHeaderRow VerticalAlign="Middle" HorizontalAlign="Center">
                                     <asp:TableHeaderCell>Quick Links</asp:TableHeaderCell>                                    
                                 </asp:TableHeaderRow>
@@ -125,7 +132,7 @@
                         </div>
 
                         <div id="divTopPost" class="divTopLinks" >
-                            <asp:Table ID="tblTopPost" runat="server" GridLines="Horizontal" BorderColor="Black" Width="130px" Font-Bold="True" Font-Size="12px" BorderStyle="Ridge">
+                            <asp:Table ID="tblTopPost" runat="server" GridLines="Horizontal" BorderColor="Black" Width="100%" Height="100%" Font-Bold="True" Font-Size="12px" BorderStyle="Ridge">
                                 <asp:TableHeaderRow VerticalAlign="Middle" HorizontalAlign="Center">
                                     <asp:TableHeaderCell Font-Size="16px" >Top Posts</asp:TableHeaderCell>
                                 </asp:TableHeaderRow>
@@ -146,9 +153,12 @@
                         </div>
                         
                     </div>
-                    </div>
-                </asp:Panel>
-
-          </asp:Panel>
+                            </td>
+                    </tr>
+                    </table>
+                   <%-- </div>--%>
+               <%-- </asp:Panel>
+          <%--</div>--%>
+          <%--</asp:Panel>--%>
 
 </asp:Content>

@@ -53,7 +53,7 @@
         <div class="navbar-light fixed-top topbox">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <%--<div class="topbox-logo-container" >--%>
-                <img src="Images/logo.svg"  class="header-logo" style="  float:left;  width:135px;height:75px;" alt="logo" >
+                <img src="Images/CIT_logo_stacked_white_RTO.png"  style="  float:left;  width:135px;height:75px;" alt="logo" >
            <%--</div>--%>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -140,14 +140,14 @@
            <footer>
                 <div class="footer-info">                  
                <a href="Contact.aspx" ><h3>Contact Us</h3></a> 
-                <ul>
+               <%-- <ul>
                   <li>
                     <li>General Enquiries<br>
                     GPO Box 826 Canberra<br>
                     ACT 2601<br>
                     +61 2 6207 3188</li>
                   </li>
-                </ul>   
+                </ul> --%>  
             </div>          
             <div class="footer-info">           
                 <ul>

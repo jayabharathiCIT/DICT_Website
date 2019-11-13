@@ -20,6 +20,7 @@ body{
     transform: translateY(5px);
     font-size: 5rem;
     color: #f8f9fa;
+    font-family: sans-serif;
 }
     /*--------------------------------------content container-------------------------------*/
    
@@ -83,12 +84,12 @@ label {
 }
 
 input[type=submit] {
-    padding: 12px 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     float: right;
     width: 125px;
+    height: 40px !important;
     background: #deac15;
 }
 
@@ -141,27 +142,17 @@ textarea {
 }
 /*===========================================News=========================================*/
 
-.news-title {
-    font-size: 12px;
-    width: 180px;
-}
-
-.news-date {
-    font-size: 12px;
-    padding: 0 !important;
-}
-
 .item-header {
-    font-family:sans-serif
+    font-family: sans-serif;
     font-size: 1rem;
-    color:white;
-    padding: 20px;
+    color: #000;
+    padding: 2px 12px 12px 12px;
     font-weight: 700;
-    
     margin-right: 10px;
-    margin-top: 10px;
-    
-   
+    margin-top: 40px;
+    height: 30px;
+    width: 100%;
+    background-color: #dcdcdc7d;
 }
 input, select, textarea {
     float: left;
@@ -189,14 +180,17 @@ input, select, textarea {
 }
 .news-title {
     color: white;
-    text-align:left;
-    font-size:11px;
+    text-align: left;
+    font-size: 13px;
+    padding-top: 10px;
 }
-.news-date
-{
- color: white;
- font-size:15px;
+.news-date {
+    color: #000;
+    font-size: 15px;
+    padding-top: 10px;
+    font-family: sans-serif !important;
 }
+
 
 .img-hover figure img {
     -webkit-transform: scale(1);
@@ -210,28 +204,29 @@ input, select, textarea {
     transform: scale(1.3);
 }
 
-.title-link{
-    color:#fff !important;
+.title-link {
+    color: #000 !important;
+    font-family: sans-serif !important;
 }
 
 /*===========================================News Result========================================*/
 .img {
-    height:300px;
-    width: 500px;
-    padding-left: 50px;
+    height:350px;
+    width: 90%;
+    padding-left: 5%;
     
  }
 .date{
     font-family:sans-serif;
-    font-size: 10px !important;
-    color: white !important;
+    font-size: 13px !important;
+    color: #000 !important;
 }
 
 .newsresult-title{
     font-size: 30px;
     font-weight:bold;
     padding: 50px 0 0 50px;
-    color:antiquewhite;
+    color:#000;
 }
 
 .newsresult-content {
@@ -239,10 +234,10 @@ input, select, textarea {
     padding: 50px;
     text-align: justify;
     line-height: 2;
-    color:antiquewhite;
+    color:#000;
 }
 .newsresult-source {
-    color: antiquewhite;
+    color: #000;
     transform: translateX(225px);
     font-size:10px;
 }
@@ -257,4 +252,28 @@ input, select, textarea {
     color: white !important;
     font-size: 15px;
     font-weight: bolder;
+}
+
+.PagerNormal {
+    font: 9pt Verdana;
+    color: #0066CF;
+    border: solid 1px #778899;
+    padding: 1px 4px;
+    text-decoration: none;
+}
+
+.PagerCurrent {
+    font: 9pt Verdana;
+    border: solid 1px #778899;
+    padding: 1px 4px;
+    background-color: #FFD700;
+}
+
+.news-title-more {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.newsmore {
+    font-size: 24px;
 }

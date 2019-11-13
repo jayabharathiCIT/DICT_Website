@@ -176,7 +176,6 @@
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
-    <Content Include="Content\Add_news.css" />
     <Content Include="Content\AnnStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -199,6 +198,7 @@
     <Content Include="Content\TeachingStyle.css" />
     <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
+    <Content Include="DeleteAccount.aspx" />
     <Content Include="EditNews.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="favicon.ico" />
@@ -223,6 +223,7 @@
     <Content Include="Images\books.png" />
     <Content Include="Images\CITRtoLogo.png" />
     <Content Include="Images\CITSAIcon.png" />
+    <Content Include="Images\CIT_logo_stacked_white_RTO.png" />
     <Content Include="Images\Comment.png" />
     <Content Include="Images\course1.jpg" />
     <Content Include="Images\CourseIcon.png" />
@@ -401,6 +402,13 @@
     </Compile>
     <Compile Include="CurrentStudentPage.aspx.designer.cs">
       <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditNews.aspx.cs">
       <DependentUpon>EditNews.aspx</DependentUpon>

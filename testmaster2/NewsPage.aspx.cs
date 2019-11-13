@@ -45,12 +45,12 @@ namespace DICT_Website
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dtnews);
 
-                lst_dtnews = dtnews.Tables[0].AsEnumerable().OrderBy(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-                nw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 1 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-                cs_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 2 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-              //  sw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 3 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-              //  sap_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 4 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
-              //  game_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 5 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(4).CopyToDataTable();
+                lst_dtnews = dtnews.Tables[0].AsEnumerable().OrderBy(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
+                nw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 1 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
+                cs_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 2 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
+               sw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 3 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
+               sap_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 4 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
+               game_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 5 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
                 
                 dlLatestNews.DataSource = lst_dtnews;
                 dlLatestNews.DataBind();
@@ -59,12 +59,12 @@ namespace DICT_Website
 
                 dlCyberNews.DataSource = cs_dtnews;
                dlCyberNews.DataBind();
-              // dlSoftwareNews.DataSource = sw_dtnews;
-              // dlSoftwareNews.DataBind();
-              // dlSystemsNews.DataSource = sap_dtnews;
-              //   dlSystemsNews.DataBind();
-              //   dlGamesNews.DataSource = game_dtnews;
-              //   dlGamesNews.DataBind();
+               dlSoftwareNews.DataSource = sw_dtnews;
+               dlSoftwareNews.DataBind();
+               dlSystemsNews.DataSource = sap_dtnews;
+               dlSystemsNews.DataBind();
+               dlGamesNews.DataSource = game_dtnews;
+                dlGamesNews.DataBind();
 
 
             }
@@ -87,7 +87,7 @@ namespace DICT_Website
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM dt_news ORDER BY News_Id DESC limit 4";
+                string sql = "SELECT * FROM dt_news ORDER BY News_Id DESC limit 3";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dtnews);
 
@@ -119,12 +119,12 @@ namespace DICT_Website
 
         protected void btnMoreNetwork_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/MoreNews.aspx");
+            Response.Redirect("~/MoreNews.aspx?type=1");
         }
 
         protected void btnCyberNews_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/MoreNews.aspx");
+            Response.Redirect("~/MoreNews.aspx?type=2");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -134,17 +134,17 @@ namespace DICT_Website
 
         protected void btnMoreSoftware_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/MoreNews.aspx");
+            Response.Redirect("~/MoreNews.aspx?type=3");
         }
 
         protected void btnSystemAnalysis_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/MoreNews.aspx");
+            Response.Redirect("~/MoreNews.aspx?type=4");
         }
 
         protected void btnMoreGame_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/MoreNews.aspx");
+            Response.Redirect("~/MoreNews.aspx?type=5");
         }
     }
 

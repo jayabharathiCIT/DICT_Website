@@ -34,7 +34,7 @@
     text-align:center;
 }
 .plnOutline {
-    padding: 20px;
+
     vertical-align: middle;
     text-align: center;
     width: 700px;
@@ -46,7 +46,7 @@
     /*background-image: url('../Images/background.png');*/
 }
 .plnInline {
-    padding: 20px;
+  
     vertical-align: middle;
     text-align: center;
     width: 600px;
@@ -60,7 +60,7 @@
 }
 
 .plnInlineViewPost {
-    padding: 20px;
+    
     vertical-align: middle;
     text-align: center;
     width: 600px;
@@ -87,10 +87,10 @@
 }
 
 .plnInlineHorizontal {
-    padding: 20px;
+    
     vertical-align: middle;
     text-align: center;
-    width: 950px;
+    width: 1080px;
     height: 650px;
     margin-left: auto;
     margin-right: auto;
@@ -100,20 +100,49 @@
 }
 
 .plnOutlineHorizontal {
-    padding: 20px;
     vertical-align: middle;
     text-align: center;
     width: 1080px;
-    height: 750px;
+    height: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: auto;
     z-index: 1;
     /*background-image: url('../Images/background.png');*/
 }
+.divOuterHorizontal {
+
+    vertical-align: middle;
+    text-align: center;
+    width: 1080px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: auto;
+    z-index: 1;
+    border-color:black;
+    border-width:2px;
+    border-style:solid;
+}
+.divInnerHorizontal {
+
+    vertical-align: middle;
+    text-align: center;
+    width: 1080px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    margin-bottom: auto;
+    z-index: 1;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
 
 .plnOuterLogin {
-    padding: 20px;
+
     vertical-align: middle;
     text-align: center;
     width: 600px;
@@ -144,7 +173,7 @@
     height: 15px;
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 21px;
     font-family: sans-serif;
     color:black; 
@@ -185,15 +214,15 @@
 
 .tableAddPost {
     vertical-align: middle;
-    text-align: left;
-    width: 500px;
+    text-align: center;
+    width: 600px;
     height: 500px;
     color: black;
 }
 
 .tablelogin {
     vertical-align: middle;
-    text-align: left;
+    text-align: center;
     width: 450px;
     height: 200px;
     color:black;
@@ -261,6 +290,7 @@
     font-family: sans-serif;
     font-size: 14px;
     background-color:whitesmoke;
+   border-radius:10px;
 }
 
 .txtControl {
@@ -272,6 +302,7 @@
     font-family: sans-serif;
     font-size: 14px;
     background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 .txtControlRegister {

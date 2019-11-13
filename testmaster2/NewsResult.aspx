@@ -16,7 +16,7 @@
                         <asp:Label ID="title" Text='<%# Eval("News_Title") %>' CssClass="newsresult-title" runat="server"></asp:Label>
                     </div>
                     <div class="row">
-                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' CssClass="date" runat="server"></asp:Label>
+                        <asp:Label ID="newsdate" Text='<%# "Posted On " + Eval("News_Date", "{0:dd MMM yyyy}") %>' CssClass="date" runat="server"></asp:Label>
                     </div>
                     <div class="row">
                         <asp:Image ID="newsimage" ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>' CssClass="img" runat="server"></asp:Image>
@@ -25,9 +25,9 @@
                     <div class="row">
                         <asp:Label ID="Content" Text='<%# Eval("News_Content") %>' CssClass="newsresult-content" runat="server"></asp:Label>
                     </div>
-                    <div class="row">
+                   <%-- <div class="row">
                         <asp:Label ID="Source" Text='<%# Eval("Source") %>' CssClass="newsresult-source" runat="server"></asp:Label>
-                    </div>
+                    </div>--%>
 
                     <asp:TableRow runat="server"  HorizontalAlign="Center">
                         <asp:TableCell>

@@ -10,9 +10,7 @@
     color: white;
 }
 .content-box {
-    background-image: url('../Images/background.png');
-    background-size: contain;
-    min-height: 900px;
+    height: auto;
 }
 .header2 {
     text-align: center;
