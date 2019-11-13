@@ -1,7 +1,5 @@
 ﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="testmaster2.About" %>
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <h2><%: Title %>.</h2>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">    
      <link rel="stylesheet" type="text/css" href="content/about.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
   
@@ -9,8 +7,7 @@
           <img src="Images/books.png" alt="Books">
         </div>
 
-        <div class="content-container">
-            <h1 class="header">About DICT</h1>
+        <div class="content-container">            
             <div class="text-container">
                 <p>
                     CIT has an impressive 90 year history providing technical and further education in the ACT and surrounding area.
