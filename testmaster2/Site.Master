@@ -53,7 +53,7 @@
         <div class="navbar-light fixed-top topbox">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <%--<div class="topbox-logo-container" >--%>
-                <img src="Images/logo.svg"  style="  float:left;  width:135px;height:75px;" alt="logo" >
+                <img src="Images/CIT_logo_stacked_white_RTO.png"  style="  float:left;  width:135px;height:75px;" alt="logo" >
            <%--</div>--%>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
