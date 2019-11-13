@@ -27,7 +27,8 @@
 .top-text-container {
     width: 100%;
     height: 300px;
-    background-color: rgb(0, 159, 165);
+    /*background-color: rgb(0, 159, 165);*/
+    background-color: ghostwhite;
 }
 
 .textbox1 {
@@ -37,9 +38,9 @@
     font-size: 1.7rem;
     transform: translateY(100px);
     line-height: 1.8;
-    color: white;
-    font-family: 'Roboto';
-    background-color: rgba(0, 108, 112, 0.637);
+    font-family: 'sans-serif';
+    /*background-color: rgba(0, 108, 112, 0.637);*/
+    background-color: lightsteelblue;
     padding: 20px;
     border-radius: 15px;
     font-style: italic;
@@ -48,8 +49,8 @@
 .top-header {
     position: absolute;
     left: 43%;
-    font-family: 'Roboto';
-    color: white;
+    font-family: 'sans-serif';
+    /*color: white;*/
     transform: translateY(20px);
     font-size: 3rem;
 }
@@ -60,15 +61,16 @@
 .courses-search-container {
     width: 100%;
     height: 350px;
-    background-color: rgb(36, 36, 36);
+    /*background-color: rgb(36, 36, 36);*/
+    background-color: linen;
 }
 
 .search-header {
     position: absolute;
     transform: translateY(30px);
     left: 45%;
-    font-family: 'roboto';
-    color: white;
+    font-family: 'sans-serif';
+   
 }
 
 .search-box-container {
@@ -147,7 +149,7 @@
     position: absolute;
     transform: translateY(200px);
     left: 45%;
-    font-family: 'roboto';
+    font-family: 'sans-serif';
     color: rgb(34, 34, 34);
     font-size: 1.5rem;
     text-decoration: underline;
@@ -162,7 +164,7 @@
     position: absolute;
     transform: translateY(300px);
     left: 44%;
-    font-family: 'roboto';
+    font-family: 'sans-serif';
     color: #CB3939;
 }
 
@@ -197,7 +199,7 @@
     .cyber-box1 i {
         font-size: 18rem;
         transform: translateY(45px);
-        color: white;
+        /*color: white;*/
     }
 
 .cyber-text {

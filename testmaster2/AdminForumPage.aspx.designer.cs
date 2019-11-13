@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website {
-    
-    
-    public partial class AdminForumPage {
-        
+namespace DICT_Website
+{
+
+
+    public partial class AdminForumPage
+    {
+
         /// <summary>
         /// Panel1 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel1;
-        
+
         /// <summary>
         /// Panel2 control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Panel2;
-        
+
         /// <summary>
         /// lbluserInfo control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbluserInfo;
-        
+
         /// <summary>
         /// ddlLogin control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLogin;
-        
+
         /// <summary>
         /// lblPageTitle control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPageTitle;
-        
+
         /// <summary>
         /// gv_ForumDetails control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView gv_ForumDetails;
-        
+
         /// <summary>
         /// lblSucessMessage control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblSucessMessage;
-        
+
         /// <summary>
         /// btnCancel control.
         /// </summary>
@@ -83,5 +85,14 @@ namespace DICT_Website {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancel;
+
+        /// <summary>
+        /// lblSuccessMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSuccessMessage;
     }
 }

@@ -86,7 +86,7 @@
                         <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
-                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
+                        <asp:MenuItem Text="Announcement" Value="Announcement" NavigateUrl="~/AnnHomepage.aspx" ></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
                         <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>

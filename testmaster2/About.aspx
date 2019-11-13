@@ -7,7 +7,8 @@
           <img src="Images/books.png" alt="Books">
         </div>
 
-        <div class="content-container">            
+        <div class="content-container">    
+             <h1 class="header">About DICT</h1>
             <div class="text-container">
                 <p>
                     CIT has an impressive 90 year history providing technical and further education in the ACT and surrounding area.
@@ -21,10 +22,10 @@
             <h1 class="header2">Head of Department Message</h1>
 
             <div class="text-container2">
-                <div class="sample-image">
+             <%--   <div class="sample-image">
                     <img src=Images/sample.png alt="Sample">
                 </div>
-                
+                --%>
                 <div class="text-container3">
                     <p>
                       As the region's premier and largest vocational education and training provider, CIT offers over 400 courses ranging from Statement of Attainments, traineeships and apprenticeships, through to diplomas and degrees.<br>

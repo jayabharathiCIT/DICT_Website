@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <link href="Content/News.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <%--<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--%>
     <div class="top-box">
         <%-------------------------------------------------- Main heading --%>
         <h1 class="header">News</h1>
@@ -87,5 +87,5 @@
                    </div>
                </div>
 
-
+            </div>
 </asp:Content>

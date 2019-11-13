@@ -154,31 +154,56 @@ namespace DICT_Website
 
         protected void deletePost(int postID)
         {
-            using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+            try
             {
-                sqlCon.Open();
-                string Query = "DELETE FROM `dict website`.dt_posts where Post_ID =" + postID + ";";
-                MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
-                MyCommandtoGetPostByID.ExecuteNonQuery();
-                int result = MyCommandtoGetPostByID.ExecuteNonQuery();
-                //result holds number of rows affected 
-                if (result > 0)
+                using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                 {
-                    string message = "Delete successful!";
-                    string url = "AdminForumPage.aspx";
-                    string script = "window.onload = function(){ alert('";
-                    script += message;
-                    script += "');";
-                    script += "window.location = '";
-                    script += url;
-                    script += "'; }";
-                    ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
-                }
-                else
-                {
-                    ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
+                    sqlCon.Open();
+                    //Pass the post ID to query Replies of the specific Post.
+                    DataTable dtReply = new DataTable();
+                    string QueryReply = "SELECT * FROM `dict website`.`dt_reply` where Post_ID =" + postID + ";";
+                    MySqlCommand MyCommandGetReply = new MySqlCommand(QueryReply, sqlCon);
+                    MySqlDataAdapter sqlDaReply = new MySqlDataAdapter();
+                    sqlDaReply.SelectCommand = MyCommandGetReply;
+                    sqlDaReply.Fill(dtReply);
+                    string QueryDeleteReply = "DELETE FROM `dict website`.dt_reply where Post_ID =" + postID + ";";
+                    if (dtReply.Rows.Count < 0)
+                    {
+                        
+                        MySqlCommand MyCommand = new MySqlCommand(QueryDeleteReply, sqlCon);
+                        MyCommand.ExecuteNonQuery();                     
+                    }
+
+                    string Query = "DELETE FROM `dict website`.dt_posts where Post_ID =" + postID + ";";
+                    MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
+                    int result = MyCommandtoGetPostByID.ExecuteNonQuery();
+                    gv_ForumDetails.DataSource = dt;
+                    gv_ForumDetails.DataBind();
+                    //result holds number of rows affected 
+                    if (result > 0)
+                    {
+                        string message = "Delete successful!";
+                        string url = "AdminForumPage.aspx";
+                        string script = "window.onload = function(){ alert('";
+                        script += message;
+                        script += "');";
+                        script += "window.location = '";
+                        script += url;
+                        script += "'; }";
+                        ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+                        Response.Redirect("~/AdminForumPage.aspx");
+                    }
+                    else
+                    {
+                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
+                    }
+
                 }
 
+            }
+            catch(Exception EX)
+            {
+                lblSuccessMessage.Text = EX.Message;
             }
         }
 
