@@ -67,7 +67,7 @@
             <h1 class="box-header" >Courses</h1>
             <i class="fas fa-graduation-cap"></i>
             <div class="button-container">
-                <a href="course-detail.aspx"><button type="button" class="btn btn-info">More Info</button></a>
+                <a href="courses.aspx"><button type="button" class="btn btn-info">More Info</button></a>
             </div>
         </div> 
           

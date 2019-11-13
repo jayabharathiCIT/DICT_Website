@@ -243,6 +243,7 @@
     <Content Include="Images\infoIcon.png" />
     <Content Include="Images\InternetAccesIcon.png" />
     <Content Include="Images\Library Icon.png" />
+    <Content Include="Images\logo.svg" />
     <Content Include="Images\map.png" />
     <Content Include="Images\SelfServiceIcon.jpg" />
     <Content Include="Images\SemesterDatesIcon.png" />
