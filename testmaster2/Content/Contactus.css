@@ -19,7 +19,8 @@
     font-size: 3rem;
 }
 .contactsBackground {
-    background-image: url('../Images/background.png') !important;
+    /*background-image: url('../Images/background.png') !important;*/
+    background-color:ghostwhite;
 }
 
 

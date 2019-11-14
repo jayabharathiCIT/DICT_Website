@@ -67,10 +67,11 @@
      <div  style="float:left; position:center; padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
           <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
               <StaticMenuStyle CssClass="Menu"  />
-              <StaticSelectedStyle Font-Bold="true" ForeColor="Black" Font-Underline="true"  />
+              <StaticHoverStyle Font-Bold="true"  Font-Underline="true" BackColor="#EBEDEF"  />
+              <StaticSelectedStyle Font-Bold="true"  Font-Underline="true" BackColor="#EBEDEF"  />
                 <LevelMenuItemStyles>
-                    <asp:MenuItemStyle HorizontalPadding="60px" VerticalPadding="20px"  BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="white"  BorderWidth="5px"  HorizontalPadding="35px" BackColor="#facf5a" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle HorizontalPadding="60px" VerticalPadding="20px"  BorderColor="DarkGray" BorderWidth="1px" BorderStyle="Solid" BackColor="White" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="DarkGray"  BorderWidth="1px" BackColor="White"  VerticalPadding="10px"  HorizontalPadding="35px" Font-Bold="true" Font-Size="Large" />
                 </LevelMenuItemStyles>
                 <Items>
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
@@ -85,7 +86,7 @@
                         <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
-                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
+                        <asp:MenuItem Text="Announcement" Value="Announcement" NavigateUrl="~/AnnHomepage.aspx" ></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
                         <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
@@ -163,19 +164,21 @@
                 </ul>
             </div>
                 <div class="footer-info">
-                    <ul>
+                <ul>
                     <li>
                <a href="About.aspx"> <h3>About us </h3></a>
-                <ul>
-                    </ul></div>
-            <div class="footer-info">
-                <h3>Social Media</h3>
-                <ul>                    
+                    </li></ul></div>                            
+                <div class="footer-info">
+                <ul>         
+                    <li><h3>Social Media:</h3></li>
                         <li><a href="http://www.facebook.com.au/CITCanberra" class="fa-social"><img style=" height:40px; width:40px;" src="Images/facebook.png" alt="Facebook"></a></li>
                         <li><a href="https://instagram.com/citcanberra/" class="fa-social"><img src="Images/instagram.png" style="height:40px; width:40px;" alt="Instagram"></a></li>
                         <li><a href="http://www.twitter.com/@Canberra_CIT" class="fa-social"><img src="Images/twitter.png" style="height:40px; width:40px;" alt="Twitter"></a></li>                 
                 </ul>                
-             </div>              
+             </div>  
+               <div class="footer-info"  style="border-right:1px solid;" >                  
+               <a href="https://cit.edu.au/about/site/copyright" ><h3>Copyright</h3></a>               
+            </div>  
             </footer>
 
     </form>
