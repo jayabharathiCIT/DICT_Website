@@ -2,7 +2,6 @@
 /* TOP SECTION */
 body {
     font-family: 'sans-serif' !important;
-    margin: 0;
 }
 
 .topbox {
@@ -42,26 +41,8 @@ body {
 }
 
 
-.dictselectedmenu {
-    border: 1px;
-    border-color: darkgrey;
-    color: #FFF;
-}
-
-/*#DICTMenuBar1 a.level1 {
-    /*border-radius: 5px;*/
-    /*margin-top: 5px;*/
-    
-    /*border-bottom:none;
-    border-top:none;
-    border-bottom-color:white;
-    border-top-color:white*/
-}*/
-
-
-.menuItemSelected {
-    color: #000000;
-    font-weight: bold;
+body {
+    margin: 0;
 }
 
 footer {

@@ -23,7 +23,6 @@ namespace DICT_Website
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
 		{
-            
 
 		}
         protected void btnCancel_Click(object sender, EventArgs e)
