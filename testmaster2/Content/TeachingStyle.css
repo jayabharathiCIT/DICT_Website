@@ -1,7 +1,9 @@
 ﻿body {
     font-family: 'sans-serif' !important;
 }
-
+.paragraphtag {
+    font-family: 'sans-serif';
+}
 
 
 #divContainer {
@@ -18,7 +20,7 @@
     background: -webkit-linear-gradient(to right, #141e30, #243b55); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #141e30, #243b55); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     padding-left: 15px;
-    padding-top: 80px;
+    padding-top: 10px;
     margin: 0px;
     font-size: 4rem;
 }

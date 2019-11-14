@@ -121,9 +121,9 @@ namespace DICT_Website
                string gotStudent = getStudentDetails(getRegIDArg);
                 string[] words = gotStudent.Split(',');
                      Name = words[0].ToString();
-                Email = words[1].ToString();
-                SendEmailToStudent(Name, Email, password.ToString());
+                Email = words[1].ToString();                
                 UpdatePasswordSql(getRegIDArg, password.ToString());
+                SendEmailToStudent(Name, Email, password.ToString());
                 ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Success.Your Passsword is sent in your email.Please check your email.!!')", true);
                 Response.Redirect("~/AdminProfilePage.aspx");
             }        
@@ -176,9 +176,10 @@ namespace DICT_Website
                 Port = 587,
                 EnableSsl = true,
                 DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = true,
+                UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
             };
+
 
             using (var message = new MailMessage(fromAddress.Address, toAddress.Address, subject, htmlBody)
             {

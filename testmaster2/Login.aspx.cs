@@ -64,7 +64,7 @@ namespace DICT_Website
                         }
                         else if (personRole == "Admin")// if the user is admin and redirect to admin forum page
                         {
-                            Response.Redirect("~/AdminForumPage.aspx");
+                            Response.Redirect("~/AdminProfilePage.aspx");
                         }                        
                     }
                     else

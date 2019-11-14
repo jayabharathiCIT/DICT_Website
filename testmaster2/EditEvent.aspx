@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddEvent.aspx.cs" Inherits="DICT_Website.AddEvent" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EditEvent.aspx.cs" Inherits="DICT_Website.EditEvent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:HiddenField ID="evtHiddenId" runat="server" />
     <link href="Content/News.css" rel="stylesheet" />
     <div class="top-box">
         <%-------------------------------------------------- Main heading --%>
@@ -70,6 +70,7 @@
                 <label for="fname">Add Image</label>
             </div>
             <div class="col-9">
+                <asp:Image ID="Image1" runat="server" />
                 <asp:FileUpload CssClass="form-control" ID="NewsFileUpload" runat="server" />
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Image is required" ControlToValidate="NewsFileUpload"></asp:RequiredFieldValidator>
             </div>
@@ -96,9 +97,4 @@
             </div>
         </div>
     </div>
-
-
-
-
-
 </asp:Content>

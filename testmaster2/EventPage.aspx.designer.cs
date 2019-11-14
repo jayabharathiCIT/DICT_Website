@@ -10,7 +10,7 @@
 namespace DICT_Website {
     
     
-    public partial class MoreNews {
+    public partial class EventPage {
         
         /// <summary>
         /// ListView1 control.

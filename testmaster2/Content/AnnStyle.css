@@ -5,17 +5,19 @@
     width: 100%;
 }
 
-
-
 /* top container 
     background: linear-gradient(to right, #16222a, #233142);
 */
 .top-box {
-    background: linear-gradient(to bottom, #233142, #49BEB7);
+    background-color: white;
     height: 100px;
     padding: 10px 0 10px 20px;
-    color: white;   
+    color: black;
+    border-bottom: solid;
+    border-width: 10px;
+    border-bottom-color: black;
 }
+   
 
 .top-head {
     transform: translateY(25px);
@@ -26,56 +28,81 @@ h1.top-box {
     font-size: 5rem;
     padding:10px;    
 }
-
+/*
+    transform: translateX(-350px);
+*/
 h2 {
     font-size: 3rem;
-    transform: translateX(-350px);
-    text-decoration: underline;
-    padding-top: 25px;
-    padding-bottom:15px;
+    text-align: left;
+    text-decoration: solid;
+    padding-top: 45px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    border-bottom: solid;
+    border-width: 4px;
+    border-bottom-color: black;
 }
 
 .content {
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: #49BEB7;   
+    background-color: white;
 }
 
 container2{
     height: 800px;
 }
 
+
+
 .col-25 {
     padding: 25px;
 }
 
-.col-75{
+.col-75 {
     padding: 25px;
-    width:100%;
+    width: 100%;
     height: 100%;
+    border-bottom-width: thick;
+    border-bottom: solid;
+    border-bottom-color: black;
 }
-
+/*
 label {
     transform: translateX(50px);
+    
 }
+*/
 
 .lbl {
-    width: 380px;
+    /* width: 100px;
     font-size: 2rem;
     position: absolute;
     height: 100px;
+   */
+    display: inline;
+    float: left;
+    text-align: right;
+    width: 100px;
+    font-size: 2rem;
+    height: 30px;
+    transform: translateX(210px);
 }
 
 .lbl2 {
-    width: 310px;
+    display: inline;
+    float: left;
+    text-align: right;
+    width: 150px;
     font-size: 2rem;
-    position: absolute;
-    height: 100px;
+    height: 30px;
+    transform: translateX(160px);
 }
 
 .txt {
     font-size: 1.5rem;
+    
 }
 
 
@@ -87,6 +114,7 @@ label {
     border-radius: 15px;
     padding-left: 10px;
     border-width:2px;
+    background-color:lightgrey;
 }
 
 
@@ -100,15 +128,15 @@ label {
     border-radius: 10px;
     padding: 5px 5px 5px 10px;
     border-width: 2px;
-
+    transform: translateX(-25px);
+    background-color: lightgrey;
+}
 }
 
 .tbox {
     width: 100%;  
+    border-top-width:thick;
 }
-
-
-
 
 
 button{
@@ -135,9 +163,6 @@ button{
     color:white;
 }
 
-
-
-
 .btnCancel {
     background-color: #FACF5A;
     border-radius: 25px;
@@ -163,3 +188,55 @@ button{
     padding: 50px;
     max-width: 450px;
 }
+
+
+/*
+    Style for Homepage below
+*/
+
+div.ContainerH1 {
+    margin: 0px;
+    padding: 10px 0 20px 0;
+    background-color: white;
+    border-bottom: solid;
+    border-width: 4px;
+    border-bottom-color: black;
+}
+
+.btnOptions {
+    background-color: #FACF5A;
+    border-radius: 25px;
+    border: none;
+    color: black;
+    padding: 5px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+    .btnOptions:hover {
+        background-color: #FF5959;
+        color: white;
+    }
+
+.mydatagrid {
+    width: 80%;
+    border: solid 2px black;
+    min-width: 80%;
+    padding:10px;
+    
+}
+
+HeaderText{
+   padding:20px;
+   text-align:left;
+}
+
+mydatagrid.td {
+    padding: 20px;
+}
+ 
+ 

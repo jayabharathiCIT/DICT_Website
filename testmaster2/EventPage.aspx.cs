@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -8,35 +7,34 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
 
 namespace DICT_Website
 {
-    public partial class MoreNews : System.Web.UI.Page
+    public partial class EventPage : System.Web.UI.Page
     {
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string newsType = Request.Params["type"];
-            Debug.WriteLine("newstype: " + newsType);
-            GetAllNews(newsType);
-
+            GetAllEvents();
         }
 
-        public void GetAllNews(String newsType)
+        public void GetAllEvents()
         {
             MySqlConnection conn = new MySqlConnection(connStr);
-            DataSet dtnews = new DataSet();
+            //DataSet dtevent = new DataSet();
+            DataSet lst_dtevents = new DataSet();
             try
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM dt_news WHERE News_Ctgry_No="+ newsType + " ORDER BY News_Date DESC";
+                string sql = "SELECT * FROM dt_event";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
-                adapter.Fill(dtnews);
+                adapter.Fill(lst_dtevents);
 
-                ListView1.DataSource = dtnews;
+                //lst_dtevents = dtevent.Tables[0].AsEnumerable().OrderBy(myRow => myRow.Field<int>("Evt_ID")).Take(4).CopyToDataTable();
+                ListView1.DataSource = lst_dtevents;
                 ListView1.DataBind();
-
             }
             catch (Exception ex)
             {
@@ -49,5 +47,7 @@ namespace DICT_Website
             }
 
         }
+
     }
+    
 }

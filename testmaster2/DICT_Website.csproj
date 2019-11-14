@@ -176,7 +176,6 @@
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
-    <Content Include="Content\Add_news.css" />
     <Content Include="Content\AnnStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -200,8 +199,11 @@
     <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
     <Content Include="DeleteAccount.aspx" />
+    <Content Include="EditEvent.aspx" />
     <Content Include="EditNews.aspx" />
     <Content Include="EditForumPost.aspx" />
+    <Content Include="EventPage.aspx" />
+    <Content Include="EventResult.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="ForgetPassword.aspx" />
@@ -245,6 +247,7 @@
     <Content Include="Images\infoIcon.png" />
     <Content Include="Images\InternetAccesIcon.png" />
     <Content Include="Images\Library Icon.png" />
+    <Content Include="Images\logo.svg" />
     <Content Include="Images\map.png" />
     <Content Include="Images\SelfServiceIcon.jpg" />
     <Content Include="Images\SemesterDatesIcon.png" />
@@ -410,6 +413,13 @@
     <Compile Include="DeleteAccount.aspx.designer.cs">
       <DependentUpon>DeleteAccount.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EditEvent.aspx.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditEvent.aspx.designer.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditNews.aspx.cs">
       <DependentUpon>EditNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -423,6 +433,20 @@
     </Compile>
     <Compile Include="EditForumPost.aspx.designer.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventPage.aspx.cs">
+      <DependentUpon>EventPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventPage.aspx.designer.cs">
+      <DependentUpon>EventPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventResult.aspx.cs">
+      <DependentUpon>EventResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventResult.aspx.designer.cs">
+      <DependentUpon>EventResult.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForgetPassword.aspx.cs">
       <DependentUpon>ForgetPassword.aspx</DependentUpon>
