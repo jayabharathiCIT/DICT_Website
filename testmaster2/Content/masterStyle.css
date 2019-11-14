@@ -48,7 +48,6 @@ body {
 footer {
     position: relative;
     width: 100%;
-    /*background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));*/
     background-color: rgb(2, 28, 83);
     margin: 0px;
     font-size: 14px;
@@ -66,16 +65,15 @@ footer {
 .footer-info {
     display: inline-block;
     width: 15%;
-    height: 58px;   
-    padding-top:5px;
+    height: 58px;
+    padding-top: 5px;
     padding-bottom: 5px;
     margin: 8px;
     border: none;
     vertical-align: top;
-    color: white;
+    color: #007BFF;
     border-left: 1px solid;
-    /*border-right: 1px solid;*/    
-    text-align:center;
+    text-align: center;
 }
 
 ul {
