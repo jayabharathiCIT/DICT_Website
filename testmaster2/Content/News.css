@@ -69,14 +69,15 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 .form-control {
-    font-size: 1em !important;
+    font-size: 2em !important;
     color: #000 !important;
+    font-family:sans-serif;
 }
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
     color: #212529;
-    font-family: Roboto;
+    font-family: sans-serif !important;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -172,11 +173,13 @@ input, select, textarea {
     width: 120px;
     background-color: #419098
 }
-.display {
+.container-display {
     background-color: transparent;
-    height:170px;
-    width: 220px;
-    padding-left: 50px;
+    height: 300px !important;
+    width: 360px !important;
+ 
+    margin-top: 30px;
+    
 }
 .news-title {
     color: white;
@@ -227,14 +230,15 @@ input, select, textarea {
     font-weight:bold;
     padding: 50px 0 0 50px;
     color:#000;
+    font-family:sans-serif;
 }
 
 .newsresult-content {
     font-size: 15px;
-    padding: 50px;
+    font-family: sans-serif;
     text-align: justify;
     line-height: 2;
-    color:#000;
+    color: #000;
 }
 .newsresult-source {
     color: #000;
@@ -242,16 +246,16 @@ input, select, textarea {
     font-size:10px;
 }
 .news-submit {
-       color:white !important;
-       font-size:15px;
-       font-weight:bolder;
-      
-
+    color: white !important;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: sans-serif;
 }
 .news-cancel {
     color: white !important;
     font-size: 15px;
     font-weight: bolder;
+    font-family: sans-serif;
 }
 
 .PagerNormal {
@@ -275,5 +279,6 @@ input, select, textarea {
 }
 
 .newsmore {
-    font-size: 24px;
+    font-size: 20px;
+    font-family: sans-serif
 }

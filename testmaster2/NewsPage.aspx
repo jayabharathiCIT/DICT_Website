@@ -18,14 +18,14 @@
                 <div class="col-12">
                     <asp:DataList ID="dlLatestNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
                         <ItemTemplate>
-                            <div class="container display">
+                            <div class="container-display">
                                 <div class="row">
                                     <div class="col-12 img-hover">
                                         <%-------------------------------- latest news image from data base------------------------- --%>
                                         <figure>
                                             <asp:Image ID="newsimage" runat="server"
                                                 ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="100px" Width="200px"></asp:Image>
+                                                Height="180px" Width="300px"></asp:Image>
                                         </figure>
 
 
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="left" />
 
                         <SeparatorTemplate>
                             <table style="width: 30px">
@@ -68,7 +68,7 @@
                 <div class="col-12">
                     <asp:DataList ID="dlNetworkNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
                         <ItemTemplate>
-                            <div class="container display">
+                            <div class="container-display">
 
                                 <div class="row">
                                     <div class="col-12 img-hover">
@@ -77,7 +77,7 @@
 
                                             <asp:Image ID="newsimage" runat="server"
                                                 ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="100px" Width="200px"></asp:Image>
+                                                Height="180px" Width="300px"></asp:Image>
                                         </figure>
                                     </div>
                                 </div>
@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                         </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Left" />
 
                         <SeparatorTemplate>
                             <table style="width: 30px">
@@ -121,13 +121,13 @@
                 <div class="col-12">
                     <asp:DataList ID="dlCyberNews" CellPadding="5" CellSpacing="5"  RepeatLayout="Table"  RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
                         <ItemTemplate>
-                            <div class="container display">
+                            <div class="container-display">
                                 <div class="row">
                                     <div class="col-12 img-hover">
                                         <figure>
                                             <asp:Image ID="newsimage" runat="server"
                                                 ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="100px" Width="200px"></asp:Image>
+                                                Height="200px" Width="300px"></asp:Image>
                                         </figure>
                                     </div>
                                 </div>
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                         </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Left" />
 
                         <SeparatorTemplate>
                             <table style="width: 30px">
@@ -168,13 +168,13 @@
                     <asp:DataList ID="dlSoftwareNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
                         
                         <ItemTemplate>
-                            <div class="container display">
+                            <div class="container-display">
                                 <div class="row">
                                     <div class="col-12 img-hover">
                                         <figure>
                                             <asp:Image ID="newsimage" runat="server"
                                                 ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="100px" Width="200px"></asp:Image>
+                                                Height="180px" Width="300px"></asp:Image>
                                         </figure>
                                     </div>
                                 </div>
@@ -193,7 +193,7 @@
                                 </div>
                             </div>
                         </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="left" />
 
                         <SeparatorTemplate>
                             <table style="width: 30px">
@@ -221,7 +221,7 @@
                                         <figure>
                                             <asp:Image ID="newsimage" runat="server"
                                                 ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="100px" Width="200px"></asp:Image>
+                                                Height="180px" Width="300px"></asp:Image>
                                         </figure>
                                     </div>
                                 </div>
@@ -240,7 +240,7 @@
                                 </div>
                             </div>
                         </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Left" />
 
                         <SeparatorTemplate>
                             <table style="width: 30px">
@@ -262,13 +262,13 @@
                 <div class="col-12">
                     <asp:DataList ID="dlGamesNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
                         <ItemTemplate>
-                            <div class="container display">
+                            <div class="container-display">
                                 <div class="row">
                                     <div class="col-12 img-hover">
                                         <figure>
                                             <asp:Image ID="newsimage" runat="server"
                                                 ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="100px" Width="200px"></asp:Image>
+                                                Height="180px" Width="200px"></asp:Image>
                                         </figure>
                                     </div>
                                 </div>
@@ -287,7 +287,7 @@
                                 </div>
                             </div>
                         </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Center" />
+                        <ItemStyle HorizontalAlign="Left" />
 
                         <SeparatorTemplate>
                             <table style="width: 30px">

@@ -9,7 +9,7 @@
 
     </div>
     <div class="content-box">
-        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound" >
+        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
             <ItemTemplate>
                 <div class="container-fluid">
                     <div class="row">
@@ -25,20 +25,18 @@
                     <div class="row">
                         <asp:Label ID="Content" Text='<%# Eval("News_Content") %>' CssClass="newsresult-content" runat="server"></asp:Label>
                     </div>
-                   <%-- <div class="row">
+                    <%-- <div class="row">
                         <asp:Label ID="Source" Text='<%# Eval("Source") %>' CssClass="newsresult-source" runat="server"></asp:Label>
                     </div>--%>
-
-                    <asp:TableRow runat="server"  HorizontalAlign="Center">
-                        <asp:TableCell>
-                            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btnSubmitControls" OnClick="btnEdit_Click" CommandArgument='<%# Eval("News_Id") %>' CommandName="EditNews" />
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:Button ID="btnDelete" runat="server" Text="Remove" CssClass="btnSubmitControls" CommandArgument='<%# Eval("News_Id") %>' CommandName="DeleteNews" />
-                        </asp:TableCell>
-                    </asp:TableRow>
-
-
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-2">
+                            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="news-submit" OnClick="btnEdit_Click" CommandArgument='<%# Eval("News_Id") %>' CommandName="EditNews" />
+                        </div>
+                        <div class="col-2">
+                            <asp:Button ID="btnDelete" runat="server" Text="Remove" CssClass="news-cancel" CommandArgument='<%# Eval("News_Id") %>' CommandName="DeleteNews" />
+                        </div>
+                    </div>
                 </div>
             </ItemTemplate>
 
