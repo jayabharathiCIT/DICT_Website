@@ -6,8 +6,9 @@ body {
 
 .topbox {
     /*background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));*/
-    background-color: rgb(2, 28, 83);
-    height: 10rem;
+    /*background-color: rgb(2, 28, 83);*/
+    background-color: #356AAE;
+    height: 12rem;
     width: auto;
     padding-left: 180px;
     text-align: center;
@@ -49,14 +50,15 @@ footer {
     position: relative;
     width: 100%;
     /*background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));*/
-    background-color: rgb(2, 28, 83);
+    /*background-color: rgb(2, 28, 83);*/
+    background-color: #356AAE;
     margin: 0px;
     font-size: 14px;
     line-height: 16px;
-    color: #F9FEFF;
+    color: #F9FEFF;   
     display: flex;
     padding: 0px;
-    padding-left: 290px;
+    padding-left: 170px;
 }
 
     footer a {
@@ -65,7 +67,7 @@ footer {
 
 .footer-info {
     display: inline-block;
-    width: 15%;
+    width: 17%;
     height: 58px;   
     padding-top:5px;
     padding-bottom: 5px;
@@ -93,7 +95,7 @@ h3 {
     font-weight: bold;
     font-size: 14px;
     line-height: 37px;
-    color: rgba(0, 229, 255, 0.97);
+    /*color: rgba(0, 229, 255, 0.97);*/
 }
 
 .help-button {
