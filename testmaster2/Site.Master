@@ -63,15 +63,16 @@
         <%-- Add DICT menu bar  --%>
            <%--<div class="collapse navbar-collapse d-flex justify-content-center">--%>
 
-        <div class="navbar-collapse collapse" style=" background-color:#356AAE "  >
+        <div class="navbar-collapse collapse" style=" background-color:#356AAE"  >
      <div  style="float:left; position:center; text-align:center;  padding-left:10px; padding-top:45px; " class="d-flex justify-content-center" >
           <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
-              <StaticMenuStyle CssClass="Menu"  />
-              <StaticHoverStyle Font-Bold="true"  Font-Underline="true" BackColor="#EBEDEF"  />
-              <StaticSelectedStyle Font-Bold="true"  Font-Underline="true" BackColor="#EBEDEF"  />
+              <StaticMenuStyle CssClass="Menu"  />              
+              <StaticHoverStyle Font-Bold="true"  Font-Underline="true" BackColor="#e8f4f8"  />
+              <StaticSelectedStyle Font-Bold="true"  Font-Underline="true" BackColor="#e8f8f8"  />              
                 <LevelMenuItemStyles>
-                    <asp:MenuItemStyle HorizontalPadding="10px" VerticalPadding="20px"  Width="230px" BorderColor="DarkGray" BorderWidth="1px" BorderStyle="Solid" BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="DarkGray"  BorderWidth="1px"  Width="230px" BackColor="White"  VerticalPadding="10px"  HorizontalPadding="35px" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle HorizontalPadding="10px" VerticalPadding="20px"  Width="230px" BorderColor="#356AAE" BorderWidth="1px" BorderStyle="Solid" BackColor="White" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="#356AAE"  BorderWidth="1px"  Width="230px" BackColor="White"  VerticalPadding="10px"  HorizontalPadding="35px" Font-Bold="true" Font-Size="Large" />
+                    
                 </LevelMenuItemStyles>
                 <Items>
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
