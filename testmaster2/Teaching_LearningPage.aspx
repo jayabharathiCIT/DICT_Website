@@ -7,8 +7,8 @@
     <div  id= "divContainer">
           <div   class="divHeader" >
               <h1 id= "divHeader" > ICT Teaching & learning</h1>
-                            <div>
-                                <table>
+                           <div>
+                              <%--  <table>
                                     <tr >
                                         <td style="width:700px;height:auto; ">
                                             <a href="Teaching_LearningPage#WIL"><p Class="divSubHeader" >Work Integrated Learning</p></a>
@@ -18,7 +18,7 @@
                                        
                                         </td>
                                     </tr>
-                                  </table>
+                                  </table>--%>
                                </div>
            </div>
     
@@ -30,17 +30,18 @@
                 <table>
                         <tr>
                                 <td>
-                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:white ; text-align:center;"  class="paragraphtag">Project Based Learning </h1></a>
+                               <a href="http://itdp.com.au/" target="_blank" ><h1 style="color:black ; text-align:center; background:#EBEDEF"  class="paragraphtag">Project Based Learning </h1></a>
                                 </td>
                                     </tr>  
                     
                     <tr>
                             <td>
-                              <p  class="paragraphtag" > Project Based Learning is a teaching method in which students gain knowledge and skills by working for an extended period 
-                                  of time to investigate and respond to an authentic, engaging, and complex question, problem, or challenge. <br />
-                                teachers make learning come alive for students.
-                                Students work on a project over an extended period of time – from a week up to a semester – that engages them in solving a real-world problem or answering a complex question. 
-                                  They demonstrate their knowledge and skills by creating a public product or presentation for a real audience. <br />
+                              <p  class="paragraphtag" > Project Based Learning is a teaching method in which students gain knowledge and skills by working  to
+                                                         investigate and respond to an authentic, engaging, and complex question, problem, or challenge. <br />
+
+                                                         Teachers make learning come alive for students while Students work on a project over an extended period of 
+                                                         time – from a week up to a semester – that engages them in solving a real-world problem or answering a complex 
+                                                         question. Also, they demonstrate their knowledge and skills by creating a public product or presentation for a real audience. <br />
 
                                 As a result, students develop deep content knowledge as well as critical thinking, collaboration, creativity, and communication skills.
                                   Project Based Learning unleashes a contagious, creative energy among students and teachers.</p>
@@ -64,14 +65,14 @@
                        <table>
                             <tr>
                                 <td>
-                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:white  ; text-align:center"> Work Integrated Learning </h1></a>
+                                <a href="https://cit.edu.au/current/my_study/student_information_guide/a_to_z/work_placement" target="_blank" ><h1 style="color:black ; text-align:center; background:#EBEDEF"> Work Integrated Learning </h1></a>
                                 </td>
                                     </tr>
                                 <tr>
-                                <td> <div id="CallWIL"></div><p  class="paragraphtag" > Work-based learning (WBL) is learning that occurs in real work environments through participation 
+                                <td> <div id="CallWIL"></div><p> Work-based learning (WBL) is learning that occurs in real work environments through participation 
                                                        in authentic work activities and interactions.It provides students with opportunities to develop practical 
                                                        and conceptual skills  related to their training and to apply them in workplace settings. 
-                                                       <br/><br/>The common model implemented for DICT allows that the learner will be an employee who is in the workplace 
+                                                       <br/>The common model implemented for DICT allows that the learner will be an employee who is in the workplace 
                                                        more than in the classroom. By th    is method is possible perform a Simulation what provides experiential learning experiences,
                                                        whereby students are engaged in analysis and decision-making in real work situations in an educational setting. 
                                                         </p>                      
@@ -99,7 +100,7 @@
                            <table>
                                 <tr>
                                 <td>
-                                 <a href="https://cit.edu.au/study/flexible_learning" target="_blank" ><h1 style="color:black ; text-align:center"> Flexible Learning </h1></a>
+                                 <a href="https://cit.edu.au/study/flexible_learning" target="_blank" ><h1 style="color:black ; text-align:center ;background:#EBEDEF"> Flexible Learning </h1></a>
                                 </td>
                                     </tr>
                                
