@@ -36,28 +36,68 @@
             return true;
         }
 </script>
-     
-    <link href="Content/RegisterStyles.css" rel="stylesheet" />
+  
+     <script type="text/javascript">
+         function CheckAvailability() {
+             var Register_ID = document.getElementById("txt_ID").value;
+             var request;
+             if (window.XMLHttpRequest) {
+                 //New browsers.
+                 request = new XMLHttpRequest();
+             }
+             else if (window.ActiveXObject) {
+                 //Old IE Browsers.
+                 request = new ActiveXObject("Microsoft.XMLHTTP");
+             }
+             if (request != null) {
+                 var url = "Register.aspx/CheckUserName";
+                 request.open("POST", url, false);
+                 var sendStr = "{Register_ID: '" + Register_ID + "'}";
+                 request.setRequestHeader("Content-Type", "application/json");
+                 request.onreadystatechange = function () {
+                     if (request.readyState == 4 && request.status == 200) {
+                         var messages = document.getElementById("message");
+                         if (JSON.parse(request.responseText).d) {
+                             //Username available.
+                             message.style.color = "green";
+                             message.innerHTML = "Username is available";
+                         }
+                         else {
+                             //Username not available.
+                             message.style.color = "red";
+                             message.innerHTML = "Username is NOT available";
+                         }
+                     }
+                 };
+                 request.send(sendStr);
+             }
+         }
+
+         function ClearMessage() {
+             document.getElementById("message").innerHTML = "";
+         };
+</script>
+
+<link href="Content/RegisterStyles.css" rel="stylesheet" />
    <%-- <div  style="vertical-align:middle; text-align:center; width:800px; height:900px; background-image:url(Images/background.png) " >--%>
          <%--<div  class="divPageContent"    >--%>
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineRegister">
-            <asp:Panel ID="Panel2" CssClass="plnInlineRegister" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+            <asp:Panel ID="Panel2" CssClass="plnInlineRegister" BorderStyle="Solid"  BorderColor="Black" BorderWidth="2px" runat="server">
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>
-                        <td style="width:150px; height:auto">
+                        <%--<td style="width:150px; height:auto">
                              <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
-                        </td>
+                        </td>--%>
                         <td style="width:350px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Register Account"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
                 </div>
-        
                
         
-          <asp:Table Height ="550" ID="tblAddPost" runat="server" CssClass="tableRegister" HorizontalAlign="center" >
+         <asp:Table Height ="550" ID="tblAddPost" runat="server" CssClass="tableRegister" HorizontalAlign="center" >
             
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblID" Text="Your ID*" CssClass="textLables"></asp:Label></asp:TableCell>
@@ -89,7 +129,7 @@
                     <asp:Label ID="lblInfo" runat="server" Text="**Password should be numeric between 6 to 10." CssClass="textLablesInfo"></asp:Label>
                 </asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password" min="6" max="10"></asp:TextBox><br/>
+                    <asp:TextBox ID="txtPassword1" CssClass="txtControlRegister" runat="server" TextMode="Password" min="5" max="10"></asp:TextBox><br/>
                      <asp:RangeValidator id="RangeValidator1" ControlToValidate="txtPassword1" Font-Size="Small" Font-Bold="true" ForeColor="Red"  MinimumValue="6" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Password must be number." runat="server"> </asp:RangeValidator><br/>
                     <asp:Label ID="lblErrorPassword" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
@@ -99,7 +139,7 @@
             <asp:TableRow Width="250" >
                 <asp:TableCell > <asp:Label runat="server" ID="lblConfirmPassword" Text="Confirm Password*" CssClass="textLables"></asp:Label></asp:TableCell>
                 <asp:TableCell>
-                    <asp:TextBox ID="txtConfirmPassword" CssClass="txtControlRegister" runat="server" TextMode="Password"  min="6" max="10" ></asp:TextBox><br/>
+                    <asp:TextBox ID="txtConfirmPassword" CssClass="txtControlRegister" runat="server" TextMode="Password"  min="5" max="10" ></asp:TextBox><br/>
                      <asp:RangeValidator id="RangeValidator2" ControlToValidate="txtConfirmPassword" Font-Size="Small" Font-Bold="true" ForeColor="Red"  MinimumValue="6" MaximumValue="10" Type="Integer" EnableClientScript="false" Text="Your Confirm Password must be number." runat="server"> </asp:RangeValidator><br/>
                     <asp:Label ID="lblErrorConfirmPassword" runat="server" Text="" CssClass="textLablesSmall"></asp:Label>
                 </asp:TableCell>
@@ -123,7 +163,7 @@
                 </asp:TableCell>
             </asp:TableRow>
 
-                    <asp:TableRow HorizontalAlign="Center">
+                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell>
                             <asp:Button ID="btnCreatePost" runat="server" Text="Register" CssClass="btnSubmitControls" OnClick="btnCreatePost_Click" OnClientClick="return ValidateRegForm();" /></asp:TableCell>
                         <asp:TableCell>

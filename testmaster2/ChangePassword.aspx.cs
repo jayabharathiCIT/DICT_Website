@@ -14,74 +14,94 @@ namespace DICT_Website
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // check user is authenticated .
+            // Start Check authorised user            
+            if (Session["RegID"] == null)
+                Response.Redirect("~/Login.aspx");
+            else
+            {
+                String userid = Convert.ToString((int)Session["RegID"]);
+
+                String username = Session["Username"].ToString();
+                //String userrole = Session["Role"].ToString();
+                lbluserInfo.Text = "Welcome , " + username + " ";
+            }
+            // End Check authorised user
 
         }
         protected void btnChangePassword_Click(object sender, EventArgs e)
         {
-            int validResult = CheckAllRegisterValidation();
-            if (validResult == 1)
+            if ((txtPassword1.Text.Length < 5) || (txtConfirmPassword.Text.Length < 5))
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password should be numeric between 6 to 10!!')", true);
+            else if ((txtPassword1.Text.Length > 10) || (txtConfirmPassword.Text.Length > 10))
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password should be numeric between 6 to 10!!')", true);
+            else
             {
-                try
+                int validResult = CheckAllRegisterValidation();
+                if (validResult == 1)
                 {
-                    lblErrorConfirmPassword.Text = "";
-                    using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
+                    try
                     {
-                        sqlCon.Open();
-
-                        MySqlDataAdapter sqlCmd = new MySqlDataAdapter("sp_CheckPassword", sqlCon);
-                        sqlCmd.SelectCommand.CommandType = CommandType.StoredProcedure;
-                        sqlCmd.SelectCommand.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-                        sqlCmd.SelectCommand.Parameters.AddWithValue("P_Password", txtPassword1.Text);
-                        //string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        //sqlCmd.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
-                        //sqlCmd.SelectCommand.ExecuteNonQuery();
-                        DataTable dtbl = new DataTable();
-                        sqlCmd.Fill(dtbl);
-
-                        string username = dtbl.Rows[0][0].ToString();
-                        string OLdpassword = dtbl.Rows[0][1].ToString();
-
-                        if (OLdpassword == txtPassword1.Text)
+                        lblErrorConfirmPassword.Text = "";
+                        using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                         {
-                            if (txtNewPassword.Text == txtConfirmPassword.Text)
+                            sqlCon.Open();
+
+                            MySqlDataAdapter sqlCmd = new MySqlDataAdapter("sp_CheckPassword", sqlCon);
+                            sqlCmd.SelectCommand.CommandType = CommandType.StoredProcedure;
+                            sqlCmd.SelectCommand.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                            sqlCmd.SelectCommand.Parameters.AddWithValue("P_Password", txtPassword1.Text);
+                            //string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            //sqlCmd.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+                            //sqlCmd.SelectCommand.ExecuteNonQuery();
+                            DataTable dtbl = new DataTable();
+                            sqlCmd.Fill(dtbl);
+
+                            string username = dtbl.Rows[0][0].ToString();
+                            string OLdpassword = dtbl.Rows[0][1].ToString();
+
+                            if (OLdpassword == txtPassword1.Text)
                             {
-                                DataTable dtblCon = new DataTable();
-                                MySqlDataAdapter sqlPass = new MySqlDataAdapter("sp_PasswordChange", sqlCon);
-                                sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
-                                sqlPass.SelectCommand.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-                                sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
-                                sqlPass.SelectCommand.Parameters.AddWithValue("P_Password", txtNewPassword.Text);
-                                sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
-                                string postCreatedDate1 = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                                sqlPass.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate1);
+                                if (txtNewPassword.Text == txtConfirmPassword.Text)
+                                {
+                                    DataTable dtblCon = new DataTable();
+                                    MySqlDataAdapter sqlPass = new MySqlDataAdapter("sp_PasswordChange", sqlCon);
+                                    sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
+                                    sqlPass.SelectCommand.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                                    sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
+                                    sqlPass.SelectCommand.Parameters.AddWithValue("P_Password", txtNewPassword.Text);
+                                    sqlPass.SelectCommand.CommandType = CommandType.StoredProcedure;
+                                    string postCreatedDate1 = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                                    sqlPass.SelectCommand.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate1);
 
-                                sqlPass.SelectCommand.ExecuteNonQuery();
+                                    sqlPass.SelectCommand.ExecuteNonQuery();
 
-                                Response.Write("<script>alert('successfully change the password!!'); ");
-                                Response.Write("window.location='ForumHomePage.aspx'</script>");
-                                //ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('successfully change the password!!');window.location='DICT_Website.ForumHomePage.aspx';", true);
-                                lblSuccessMessage.Text = "successfully change the password!";
+                                    Response.Write("<script>alert('successfully change the password!!'); ");
+                                    Response.Write("window.location='ForumHomePage.aspx'</script>");
+                                    //ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('successfully change the password!!');window.location='DICT_Website.ForumHomePage.aspx';", true);
+                                    //lblSuccessMessage.Text = "successfully change the password!";
+                                }
+                                else
+                                {
+                                    ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password miss match!!')", true);
+                                    //lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
+                                    //lblErrorConfirmPassword.Text = "Password miss match";
+                                }
                             }
                             else
                             {
-                                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password miss match!!')", true);
-                                lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
-                                lblErrorConfirmPassword.Text = "Password miss match";
+                                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Current password is incorrect!!')", true);
+                                //lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
+                                //lblErrorPassword.Text = "Current password is incorrect";
                             }
                         }
-                        else
-                        {
-                            ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Current password is incorrect!!')", true);
-                            lblErrorConfirmPassword.ForeColor = System.Drawing.Color.Red;
-                            lblErrorPassword.Text = "Current password is incorrect";
-                        }
+
                     }
 
-                }
-
-                catch (Exception ex)
-                {
-                    lblSuccessMessage.Text = ex.Message;
+                    catch (Exception ex)
+                    {
+                        lblSuccessMessage.Text = ex.Message;
+                    }
                 }
             }
 
@@ -100,7 +120,7 @@ namespace DICT_Website
             else if (txtPassword1.Text.Length == 0)
             {
                 ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password can not be blank !!')", true);
-               // lblErrorPassword.Text = "*** Password can not be blank ***";
+                // lblErrorPassword.Text = "*** Password can not be blank ***";
                 return 0;
             }
 
@@ -131,6 +151,35 @@ namespace DICT_Website
         protected void submit_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/ForumHomePage.aspx");
+        }
+
+        protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlLogin.SelectedItem.Value == "4")
+            {
+                //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
+            if (ddlLogin.SelectedItem.Value == "1")
+            {
+                //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
+            }
+            if (ddlLogin.SelectedItem.Value == "2")
+            {
+                //DeleteAccount
+                Response.Redirect("~/DeleteAccount.aspx");
+            }
+            if (ddlLogin.SelectedItem.Value == "3")
+            {
+                //Logout
+                //clear session variables
+                Session.Clear();
+                Session.Remove("RegID");
+                Session.Remove("Username");
+                //redirect to login page
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }
