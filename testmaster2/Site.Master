@@ -102,34 +102,7 @@
             </asp:Menu>
         
      </div>
-     <%-- <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:25px; "><a href="homepage.aspx"><img   style="width:110px; height:70px;" src="Images/DictLogoNew.png" /></a> </div>--%>
-      <%--<div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
-         <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true" Font-Names="sans-serif;"  RenderingMode="List" >
-             <StaticMenuStyle BackColor="black" />
-                 <LevelMenuItemStyles>
-                    <asp:MenuItemStyle HorizontalPadding="50px" VerticalPadding="20px"  BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 30px" BorderColor="white"   BorderStyle="NotSet"   BorderWidth="5px" HorizontalPadding="35px" BackColor="#facf5a"  Font-Bold="true" Font-Size="Large" />
-                </LevelMenuItemStyles>
-                <Items>                    
-                    <asp:MenuItem Text="Student" Value="Student">
-                        <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
-                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="DICT News" Value="DICT News">
-                        <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="Forum" Value="Forum">
-                        <asp:MenuItem Text="Register" NavigateUrl="~/Register.aspx" Value="Register"></asp:MenuItem>
-                        <asp:MenuItem Text="Login" NavigateUrl="~/Login.aspx" Value="Login"></asp:MenuItem>
-                        <asp:MenuItem Text="Add Post" NavigateUrl="~/AddForumPost.aspx" Value="AddPost"></asp:MenuItem>
-                        <asp:MenuItem  Text="View All Post" NavigateUrl="~/ForumHomePage.aspx" Value="ViewPost"></asp:MenuItem>
-                    </asp:MenuItem>
-                </Items>
-            </asp:Menu>            
-            </div>--%>
+   
   </div>
         <%-- Add DICT menu bar  --%>
         <div class="container body-content">
@@ -140,27 +113,11 @@
         </div>
            <footer>
                 <div class="footer-info">                  
-               <a href="Contact.aspx" ><h3>Contact Us</h3></a> 
-               <%-- <ul>
-                  <li>
-                    <li>General Enquiries<br>
-                    GPO Box 826 Canberra<br>
-                    ACT 2601<br>
-                    +61 2 6207 3188</li>
-                  </li>
-                </ul> --%>  
+               <a href="Contact.aspx" ><h3>Contact Us</h3></a>       
             </div>          
             <div class="footer-info">           
                 <ul>
                     <li><a href="https://cit.edu.au/study/need_help" > <h3> Need help? </h3></a></li>
-                  <%--<li>
-                    <li><a href="/about/">About</a></li><br />
-                    <li><a href="/courses/">Courses</a></li><br />
-                    <li><a href="/teaching_learning/">Teaching & Learning</a></li><br />
-                    <li><a href="/students/">Students</a></li><br />
-                    <li><a href="/DICT_news/">DICT News</a></li><br />
-                    <li><a href="ForumHomePage.aspx">Forum</a></li><br />
-                  </li>--%>
                 </ul>
             </div>
                 <div class="footer-info">
