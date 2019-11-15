@@ -116,7 +116,7 @@ namespace DICT_Website
 
         protected void btnEvent_Click(object sender, EventArgs e)
         {
-           // Response.Redirect("");
+           Response.Redirect("~/AddEvent.aspx");
         }
 
         protected void btnResetPassword_Click(object sender, EventArgs e)
