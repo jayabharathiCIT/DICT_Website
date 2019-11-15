@@ -23,11 +23,11 @@
            <div class="dropdown">
   <button class="dropbtn">Courses</button>
   <div class="dropdown-content">
-    <a href="cyber.aspx">Networking and Cyber Security</a>
-    <a href="course-detail.aspx">Information Technology</a>
-    <a href="soft.aspx">Software Development</a>
-      <a href="net.aspx">Information Technology Networking</a>
-      <a href="games.aspx">Games Development</a>
+    <a href="cyber.aspx" target="_blank">Networking and Cyber Security</a>
+    <a href="course-detail.aspx" target="_blank">Information Technology</a>
+    <a href="soft.aspx" target="_blank">Software Development</a>
+      <a href="net.aspx" target="_blank">Information Technology Networking</a>
+      <a href="games.aspx" target="_blank">Games Development</a>
   </div>
 </div>
         </div>
