@@ -53,7 +53,7 @@
         <div class="navbar-light fixed-top topbox">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <%--<div class="topbox-logo-container" >--%>
-                <img src="Images/CIT_logo_stacked_white_RTO.png"  style="float:left;  width:135px; height:95px;" alt="logo" >
+                <img src="Images/CIT_logo_stacked_white_RTO.png"  style="float:left;  width:140px; height:110px;" alt="logo" >
            <%--</div>--%>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +77,7 @@
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
                     <asp:MenuItem Text="About DICT" Value="THE DICT" NavigateUrl="~/About.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Our Courses" target="_blank" Value="Our Courses">
-                        <asp:MenuItem Text="Courses and Units" target="_blank" Value="Courses and Units" NavigateUrl="~/courses.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Courses and Units"  Value="Courses and Units" NavigateUrl="~/courses.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Apply" target="_blank" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning" NavigateUrl="~/Teaching_LearningPage.aspx" >
@@ -85,7 +85,7 @@
                      <asp:MenuItem Text="Student" Value="Student">
                         <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
+                        <asp:MenuItem Text="Student Support" Value="Student Support" target="_blank" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
                         <asp:MenuItem Text="Announcement" Value="Announcement" NavigateUrl="~/AnnHomepage.aspx" ></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
