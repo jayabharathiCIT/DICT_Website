@@ -16,7 +16,7 @@ namespace DICT_Website
     public partial class Edit_News : System.Web.UI.Page
     {
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
-        string newsID;
+        string NewsId;
         protected void Page_Load(object sender, EventArgs e)
         {
             

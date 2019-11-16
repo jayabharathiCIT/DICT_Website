@@ -29,21 +29,21 @@ namespace DICT_Website
         public void GetEvent(String evntid)
         {
             MySqlConnection conn = new MySqlConnection(strConnString);
-            DataTable dtnews = new DataTable();
+            DataTable dtevent = new DataTable();
             try
             {
                 conn.Open();
 
                 string sql = "SELECT * FROM dt_event WHERE Evt_ID = " + evntid;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
-                adapter.Fill(dtnews);
+                adapter.Fill(dtevent);
 
-                DataRow pRow = dtnews.Rows[0];
+                DataRow pRow = dtevent.Rows[0];
 
                 evtHiddenId.Value = pRow["Evt_ID"].ToString();
                 txtTitle.Text = pRow["Evt_Title"].ToString();
                 DateTime dt = Convert.ToDateTime(pRow["Evt_Date"].ToString());
-                // DateTime dt = DateTime.ParseExact(pRow["News_Date"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+               
                 txtDate.Text = dt.ToString("yyyy-MM-dd");
                 txtContent.Text = pRow["Evt_Content"].ToString();
                 byte[] binImage = (byte[])pRow["Evt_Image"];
@@ -56,7 +56,7 @@ namespace DICT_Website
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("----> Error : " + ex.StackTrace);
+                
             }
             finally
             {
@@ -65,11 +65,13 @@ namespace DICT_Website
             }
         }
 
-       /* protected void btnSubmit_Click(object sender, EventArgs e)
+        
+       
+        protected void btnSubmit_Click1(object sender, EventArgs e)
         {
-            string filename = Path.GetFileName(newsImageFile.PostedFile.FileName);
-            string contentType = EventImageFile.PostedFile.ContentType;
-            using (Stream fs = newsImageFile.PostedFile.InputStream)
+            string filename = Path.GetFileName(EventFileUpload.PostedFile.FileName);
+            string contentType = EventFileUpload.PostedFile.ContentType;
+            using (Stream fs = EventFileUpload.PostedFile.InputStream)
             {
                 using (BinaryReader br = new BinaryReader(fs))
                 {
@@ -82,20 +84,17 @@ namespace DICT_Website
                     {
 
                         using (MySqlCommand insert = new MySqlCommand("UPDATE dt_event SET Evt_Title = @Title, Evt_Date = @Date, " +
-                        "Evt_Location = @Location, Evt_Strt_tm = @Evtstartm,  " +
-                        "News_Content=@Content, News_Image=@Image WHERE News_Id=@newsId", conn))
+                        "Evt_Location = @Location,Evt_Strt_tm = @Evtstrttm,Evt_End_tm = @Evtendtm,   " +
+                        "Evt_Content=@Content, Evt_Image=@Image WHERE Evt_ID=@eventId", conn))
                         {
                             insert.Parameters.AddWithValue("@Title", txtTitle.Text);
                             insert.Parameters.AddWithValue("@Date", txtDate.Text);
-                            insert.Parameters.AddWithValue("@CtgryNo", txtLocation;
-                           insert.Parameters.AddWithValue()
-                            insert.Parameters.AddWithValue("@Source", newsSource.Text);
-                            insert.Parameters.AddWithValue("@Content", newsContent.Text);
-                            if (bytes.Length > 0)
-                            {
-                                insert.Parameters.AddWithValue("@Image", bytes);
-                            }
-                            insert.Parameters.AddWithValue("@newsId", evtHiddenId.Value);
+                            insert.Parameters.AddWithValue("@Evtstrttm", txtStartTime);
+                            insert.Parameters.AddWithValue("@Evtendtm", txtEndTime);
+                            insert.Parameters.AddWithValue("@Content", txtContent);
+                            insert.Parameters.AddWithValue("@Location",txtLocation);
+                            insert.Parameters.AddWithValue("@Image", bytes);
+                            insert.Parameters.AddWithValue("@eventId", evtHiddenId.Value);
 
                             conn.Open();
                             insert.ExecuteNonQuery();
@@ -105,17 +104,18 @@ namespace DICT_Website
                     }
                     else
                     {
-                        using (MySqlCommand insert = new MySqlCommand("UPDATE dt_news SET News_Title = @Title, News_Date = @Date, " +
-                               "News_Ctgry_No = @CtgryNo, Source=@Source, " +
-                               "News_Content=@Content WHERE News_Id=@newsId", conn))
+                        using (MySqlCommand insert = new MySqlCommand("UPDATE dt_event SET Evt_Title = @Title, Evt_Date = @Date, " +
+                              "Evt_Location = @Location, Evt_Strt_tm = @Evtstrttm, Evt_End_tm = @Evtendtm," +
+                        "Evt_Content=@Content WHERE Evt_ID=@eventId",conn))
                         {
                             insert.Parameters.AddWithValue("@Title", txtTitle.Text);
                             insert.Parameters.AddWithValue("@Date", txtDate.Text);
-                           
-                            insert.Parameters.AddWithValue("@Source", txtLocation.Text);
+                            insert.Parameters.AddWithValue("@Evtstrttm", txtStartTime.Text);
+                            insert.Parameters.AddWithValue("@Evtendtm", txtEndTime.Text);
+                            insert.Parameters.AddWithValue("@Location", txtLocation.Text);
                             insert.Parameters.AddWithValue("@Content", txtContent.Text);
-                            insert.Parameters.AddWithValue("@newsId", newsHiddenId.Value);
-
+                            insert.Parameters.AddWithValue("@eventId", evtHiddenId.Value);
+                            
                             conn.Open();
                             insert.ExecuteNonQuery();
                             conn.Close();
@@ -124,21 +124,16 @@ namespace DICT_Website
 
 
 
-                    Response.Redirect("~/NewsPage.aspx");
+                    Response.Redirect("~/EventPage.aspx");
                 }
             }
         }
 
-        protected void btnCancel_Click(object sender, EventArgs e)
+        protected void btnCancel_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("~/NewsPage.aspx");
+            Response.Redirect("~/EventPage.aspx");
         }
     }
 }
 
-        protected void btnCancel_Click(object sender, EventArgs e)
-        {
-
-        }*/
-    }
-}
+        
