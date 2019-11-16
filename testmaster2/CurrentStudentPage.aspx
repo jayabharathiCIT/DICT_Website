@@ -27,22 +27,22 @@
 
             <div id= "QuickAccess">
                  <br><br/> 
-                <h1 style="color:white ">Quick Access</h1><br />
+                <h1 style="color:black ">Quick Access</h1><br />
                                
                 <div >   
                 <table>
                         <tr>
                             <td class ="QuickAccessTable">
                               <a href="https://cit.edu.au/study/applying_and_enrolling/help_with_enrolling" target="_blank" ><img class="QuickAccessIcons" src="Images/EnrollingIcon.png" alt="Enrolling" title=" Applying / Enrolling"></a>
-                                <br /><p style="font-size: medium; color:ghostwhite">Help with Enrolling</p>
+                                <br /><p style="font-size: medium; color:black">Help with Enrolling</p>
                             </td>
                             <td class ="QuickAccessTable">
                               <a href=" http://elearn.cit.edu.au/" target="_blank"><img class="QuickAccessIcons" src="Images/Elearning.png" alt="Elearning" title="eLearn"></a>
-                                    <br /><p style="font-size: medium; color:ghostwhite">eLearn</p>
+                                    <br /><p style="font-size: medium; color:black">eLearn</p>
                             </td>
                             <td class ="QuickAccessTable">
                               <a href="https://cit.edu.au/library" target="_blank"><img class="QuickAccessIcons" src="Images/Library Icon.png" alt="Library" title="Library"></a>
-                                    <br /><p style="font-size: medium; color:ghostwhite">Library</p>
+                                    <br /><p style="font-size: medium; color:black">Library</p>
                             </td>
                         </tr>
                                     

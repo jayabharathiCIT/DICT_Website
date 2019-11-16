@@ -17,7 +17,12 @@ namespace DICT_Website
 
         protected void btnCreatePost_Click(object sender, EventArgs e)
         {
-            try
+            if ((txtPassword1.Text.Length < 5) || (txtConfirmPassword.Text.Length < 5))
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password should be numeric between 6 to 10!!')", true);
+            else if ((txtPassword1.Text.Length > 11) || (txtConfirmPassword.Text.Length > 11))
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Password should be numeric between 6 to 10!!')", true);
+            else
+                try
             {
                 int password = checkPassword();
 
@@ -28,43 +33,47 @@ namespace DICT_Website
 
                         using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                         {
-                            sqlCon.Open();
-                            MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
-                            sqlCmd.CommandType = CommandType.StoredProcedure;
+                                sqlCon.Open();
+                                MySqlCommand sqlCmd = new MySqlCommand("sp_Register", sqlCon);
+                                sqlCmd.CommandType = CommandType.StoredProcedure;
 
-                            sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
-                            sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
-                            sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
-                            sqlCmd.Parameters.AddWithValue("P_Password", txtPassword1.Text);
+                                sqlCmd.Parameters.AddWithValue("P_Register_ID", txtID.Text);
+                                sqlCmd.Parameters.AddWithValue("P_First_Name", txtFirstname.Text);
+                                sqlCmd.Parameters.AddWithValue("P_Last_Name", txtLastname.Text);
+                                sqlCmd.Parameters.AddWithValue("P_Password", txtPassword1.Text);
 
-                            //string txtDate = tbDate.Text;
-                            //DateTime DTdob = Convert.ToDateTime(txtDate);
-                            //string getDob = DTdob.ToString("dd-MM-yy");
-                            sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", tbDate.Text);
-                            sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
+                                //string txtDate = tbDate.Text;
+                                //DateTime DTdob = Convert.ToDateTime(txtDate);
+                                //string getDob = DTdob.ToString("dd-MM-yy");
+                                sqlCmd.Parameters.AddWithValue("P_Date_of_Birth", tbDate.Text);
+                                sqlCmd.Parameters.AddWithValue("P_Email", txtEmail.Text);
 
-                            string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                            sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
+                                string postCreatedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                                sqlCmd.Parameters.AddWithValue("P_Date_Change_Password", postCreatedDate);
 
-                            string StatusForgetPassword = "No";
-                            sqlCmd.Parameters.AddWithValue("P_Forgetpassword", StatusForgetPassword);
-                            sqlCmd.ExecuteNonQuery();
-                            ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Registered Successfully!');window.location='Login.aspx';", true);
-                            //lblSuccessMessage.Text = "Submitted Successfully";
-                        }
-                }
+                                string StatusForgetPassword = "No";
+                                sqlCmd.Parameters.AddWithValue("P_Forgetpassword", StatusForgetPassword);
+                                sqlCmd.ExecuteNonQuery();
+                                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Registered Successfully!');window.location='Login.aspx';", true);
+                                //lblSuccessMessage.Text = "Submitted Successfully";
+                            }
+                    }
                 else
                 {
-                    //error to user.
-                    ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('The password and confirmation password do not match!!')", true);
-                    //lblErrorConfirmPassword.Text = "The password and confirmation password do not match.";
+                        //error to user.
+                        ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('The password and confirmation password do not match!!')", true);
+                        //lblErrorConfirmPassword.Text = "The password and confirmation password do not match.";
+                    }
                 }
-            }
 
             catch (Exception ex)
             {
-                lblSuccessMessage.Text = ex.Message;
-            }
+                    if (ex.Message.Contains("Duplicate entry"))
+                    {
+                        ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('This ID is NOT available !!')", true);
+                    }
+                    // lblSuccessMessage.Text = ex.Message;
+                }
         }
 
         public int checkPassword()
@@ -94,13 +103,13 @@ namespace DICT_Website
             if (txtID.Text.Length == 0)
             {
                 ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('Your ID can not be blank!!')", true);
-               // lblErrorID.Text = "*** Your ID can not be blank ***";
+                // lblErrorID.Text = "*** Your ID can not be blank ***";
                 return 0;
             }
             else if (txtFirstname.Text.Length == 0)
             {
                 ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('First name can not be blank!!')", true);
-               // lblErrorFirstname.Text = "*** First name can not be blank ***";
+                // lblErrorFirstname.Text = "*** First name can not be blank ***";
                 return 0;
             }
             else if (txtLastname.Text.Length == 0)
@@ -123,8 +132,8 @@ namespace DICT_Website
             }
             else if (tbDate.Text.Length == 0)
             {
-               // ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('You must select your date of birth!!')", true);
-                lblErrorDOB.Text = "*** You must select your date of birth ***";
+                ClientScript.RegisterStartupScript(Page.GetType(), "Message", "alert('You must select your date of birth!!')", true);
+                //lblErrorDOB.Text = "*** You must select your date of birth ***";
                 return 0;
             }
             if (txtEmail.Text.Length == 0)
@@ -148,6 +157,24 @@ namespace DICT_Website
         protected void submit_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public static bool CheckUserName(string Register_ID)
+        {
+            bool status = false;
+            string constr = ConfigurationManager.ConnectionStrings["conString"].ConnectionString;
+            using (MySqlConnection conn = new MySqlConnection(constr))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("CheckUserAvailability", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Register_ID", Register_ID.Trim());
+                    conn.Open();
+                    status = Convert.ToBoolean(cmd.ExecuteScalar());
+                    conn.Close();
+                }
+            }
+            return status;
         }
     }
 }
