@@ -9,14 +9,14 @@
 
     </div>
     <div class="content-box">
-        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
+        <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
             <ItemTemplate>
                 <div class="container-fluid">
                     <div class="row">
                         <asp:Label ID="title" Text='<%# Eval("News_Title") %>' CssClass="newsresult-title" runat="server"></asp:Label>
                     </div>
                     <div class="row">
-                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' CssClass="date" runat="server"></asp:Label>
+                        <asp:Label ID="newsdate" Text='<%# "Posted On " + Eval("News_Date", "{0:dd MMM yyyy}") %>' CssClass="date" runat="server"></asp:Label>
                     </div>
                     <div class="row">
                         <asp:Image ID="newsimage" ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>' CssClass="img" runat="server"></asp:Image>
@@ -25,20 +25,18 @@
                     <div class="row">
                         <asp:Label ID="Content" Text='<%# Eval("News_Content") %>' CssClass="newsresult-content" runat="server"></asp:Label>
                     </div>
-                    <div class="row">
+                    <%-- <div class="row">
                         <asp:Label ID="Source" Text='<%# Eval("Source") %>' CssClass="newsresult-source" runat="server"></asp:Label>
+                    </div>--%>
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-2">
+                            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="news-submit" OnClick="btnEdit_Click" CommandArgument='<%# Eval("News_Id") %>' CommandName="EditNews" />
+                        </div>
+                        <div class="col-2">
+                            <asp:Button ID="btnDelete" runat="server" Text="Remove" CssClass="news-cancel" CommandArgument='<%# Eval("News_Id") %>' CommandName="DeleteNews" />
+                        </div>
                     </div>
-
-                    <asp:TableRow HorizontalAlign="Center">
-                        <asp:TableCell>
-                            <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btnSubmitControls" OnClick="btnEdit_Click" CommandArgument='<%# Eval("News_Id") %>' CommandName="EditNews" />
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:Button ID="btnDelete" runat="server" Text="Remove" CssClass="btnSubmitControls" CommandArgument='<%# Eval("News_Id") %>' CommandName="DeleteNews" />
-                        </asp:TableCell>
-                    </asp:TableRow>
-
-
                 </div>
             </ItemTemplate>
 

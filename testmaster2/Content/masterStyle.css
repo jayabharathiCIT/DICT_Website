@@ -1,8 +1,14 @@
 ﻿
 /* TOP SECTION */
+body {
+    font-family: 'sans-serif' !important;
+}
+
 .topbox {
-    background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));
-    height: 10rem;
+    /*background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));*/
+    /*background-color: rgb(2, 28, 83);*/
+    background-color: #356AAE;
+    height: 12rem;
     width: auto;
     padding-left: 180px;
     text-align: center;
@@ -15,8 +21,10 @@
     text-align: center;
     transform: translateY(50px);
     text-align: center;
-    line-height: 1.6rem;
+    line-height: 1.0rem;
     font-family: sans-serif !important;
+    font-weight:bold;
+    margin:0;
 }
 
 .topbox-logo-container {
@@ -41,14 +49,16 @@ body {
 footer {
     position: relative;
     width: 100%;
-    background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));
+    /*background-image: linear-gradient(to top, rgb(2, 28, 83), rgb(1, 110, 199));*/
+    /*background-color: rgb(2, 28, 83);*/
+    background-color: #356AAE;
     margin: 0px;
     font-size: 14px;
     line-height: 16px;
-    color: #F9FEFF;
+    color: #F9FEFF;   
     display: flex;
     padding: 0px;
-    padding-left: 190px;
+    padding-left: 170px;
 }
 
     footer a {
@@ -57,11 +67,17 @@ footer {
 
 .footer-info {
     display: inline-block;
-    width: 25%;
-    margin: 20px;
+    width: 17%;
+    height: 58px;   
+    padding-top:5px;
+    padding-bottom: 5px;
+    margin: 8px;
     border: none;
     vertical-align: top;
     color: white;
+    border-left: 1px solid;
+    /*border-right: 1px solid;*/    
+    text-align:center;
 }
 
 ul {
@@ -79,7 +95,7 @@ h3 {
     font-weight: bold;
     font-size: 14px;
     line-height: 37px;
-    color: rgba(0, 229, 255, 0.97);
+    /*color: rgba(0, 229, 255, 0.97);*/
 }
 
 .help-button {
@@ -103,10 +119,16 @@ h3 {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    padding-left: 0em;
 }
 
 li {
     display: inline-block;
+}
+.horizontal {
+    display: inline;
+    border-left: 2px solid;
+    padding-left: 0.3em;
 }
 
 .fa facebook {

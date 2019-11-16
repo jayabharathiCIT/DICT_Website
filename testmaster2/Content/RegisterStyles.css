@@ -8,28 +8,33 @@
     margin-top: 60px;
     background-image: url('../Images/background.png');
 }
+
 .divHeader {
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
-    height:80px;
-    width:530px;
+    height: 70px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #e5e5e5, #e2e2e2, #dfdedf, #dddadb, #dad7d7);
 }
+
 .imageLogo {
 }
+
 .pageTitle {
     padding-top: 10px;
     width: 196px;
     height: 24px;
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 24px;
+    line-height: 68px;
     font-family: sans-serif;
-    color: white;
-    text-align:center;
+    color: black;
+    text-align: center;
 }
+
 .plnOutlineRegister {
     padding: 20px;
     vertical-align: middle;
@@ -40,10 +45,11 @@
     margin-right: auto;
     margin-bottom: auto;
     z-index: 1;
-    background-image: url('../Images/background.png');
+    /*background-image: url('../Images/background.png');*/
 }
+
 .plnInlineRegister {
-    padding: 20px;
+    /*padding: 20px;*/
     vertical-align: middle;
     text-align: center;
     width: 700px;
@@ -53,6 +59,7 @@
     margin-top: 25px;
     margin-bottom: auto;
     z-index: 1;
+    color: black;
 }
 
 
@@ -64,7 +71,7 @@
     font-size: 18px;
     line-height: 21px;
     font-family: sans-serif;
-    color: white
+    color: black;
 }
 
 .textLables1 {
@@ -75,7 +82,7 @@
     font-size: 9px;
     line-height: 15px;
     font-family: sans-serif;
-    color: white
+    color: black;
 }
 
 .textLablesSmall {
@@ -87,16 +94,17 @@
     line-height: 15px;
     font-family: sans-serif;
     color: Red
-} 
+}
+
 .textLablesInfo {
     width: 10px;
     height: 15px;
     font-style: normal;
     font-weight: bold;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 15px;
     font-family: sans-serif;
-    color: white
+    color: red;
 }
 
 
@@ -108,31 +116,48 @@
 }
 
 .btnCancelControls {
-    width: 140px;
+    width: 100px;
     height: 40px;
     background-image: linear-gradient(to left bottom, #facf5a, #fad570, #fbdb85, #fbe099, #fbe6ad);
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 30px;
-    font-size: 22px;
-    color: black;
-    font-family:sans-serif;
-    font-weight:bold;
-}
-
-
-.btnSubmitControls {
-    width: 165px;
-    height: 40px;
-    background-image: linear-gradient(to left bottom, #facf5a, #fad570, #fbdb85, #fbe099, #fbe6ad);
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 30px;
-    font-size: 22px;
+    font-size: 14px;
     color: black;
     font-family: sans-serif;
     font-weight: bold;
 }
+    .btnCancelControls:hover {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+    }
+
+    .btnCancelControls:active {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+.btnSubmitControls {
+    width: 155px;
+    height: 36px;
+    background-image: linear-gradient(to left bottom, #facf5a, #fad570, #fbdb85, #fbe099, #fbe6ad);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 30px;
+    font-size: 14px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+    .btnSubmitControls:hover {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+    }
+
+    .btnSubmitControls:active {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
 
 .txtControl {
     width: 220px;
@@ -141,17 +166,19 @@
     border: 1px solid #FFFFFF;
     box-sizing: border-box;
     font-family: sans-serif;
-    font-size:14px;
+    font-size: 14px;
 }
 
 .txtControlRegister {
     width: 250px;
-    height: 30px;
+    height: 40px;
     background: #E5E5E5;
-    border: 1px solid #FFFFFF;
+    border: 1px solid;
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 14px;
+    background-color: whitesmoke;
+    border-radius: 10px;
 }
 
 .divQuickLinks {
@@ -162,9 +189,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     display: inline-table;
-    padding:25px;
-    margin-top:15px;
-    margin-bottom:15px;
+    padding: 25px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .divTopLinks {
@@ -177,7 +204,7 @@
     padding: 25px;
     margin-top: 15px;
     margin-bottom: 15px;
-    text-align:left;
+    text-align: left;
 }
 
 .gridheader {
@@ -200,6 +227,7 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+
 .topLoginCorner {
     position: absolute;
     top: 0;

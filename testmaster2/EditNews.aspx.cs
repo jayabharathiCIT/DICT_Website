@@ -16,7 +16,7 @@ namespace DICT_Website
     public partial class Edit_News : System.Web.UI.Page
     {
         string strConnString = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
-        string newsID;
+        string NewsId;
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -45,9 +45,13 @@ namespace DICT_Website
 
                 newsHiddenId.Value = pRow["News_Id"].ToString();
                 newsTitle.Text = pRow["News_Title"].ToString();
-                //DateTime dt = DateTime.ParseExact(pRow["News_Date"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
-                //newsDate.Text = dt.ToString("MM/dd/yyyy");
+                DateTime dt  = Convert.ToDateTime(pRow["News_Date"].ToString());
+               // DateTime dt = DateTime.ParseExact(pRow["News_Date"].ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+                newsDate.Text = dt.ToString("yyyy-MM-dd");
                 newsContent.Text = pRow["News_Content"].ToString();
+                byte[] binImage = (byte[])pRow["News_Image"];                
+                string base64String = Convert.ToBase64String(binImage, 0, binImage.Length);
+                Image1.ImageUrl = "data:image/jpeg;base64," + base64String;
                 newsSource.Text = pRow["Source"].ToString();
                 ddlnewsCategory.SelectedValue = pRow["News_Ctgry_No"].ToString();
 
@@ -108,23 +112,50 @@ namespace DICT_Website
                     //---------------Database connection------------
 
                     MySqlConnection conn = new MySqlConnection(strConnString);
+                    if (bytes.Length > 0)
+                    {
 
-                    using (MySqlCommand insert = new MySqlCommand("UPDATE dt_news SET News_Title = @Title, News_Date = @Date, " +
+                        using (MySqlCommand insert = new MySqlCommand("UPDATE dt_news SET News_Title = @Title, News_Date = @Date, " +
                         "News_Ctgry_No = @CtgryNo, Source=@Source, " +
                         "News_Content=@Content, News_Image=@Image WHERE News_Id=@newsId", conn))
-                    {
-                        insert.Parameters.AddWithValue("@Title", newsTitle.Text);
-                        insert.Parameters.AddWithValue("@Date", newsDate.Text);
-                        insert.Parameters.AddWithValue("@CtgryNo", ddlnewsCategory.SelectedValue);
-                        insert.Parameters.AddWithValue("@Source", newsSource.Text);
-                        insert.Parameters.AddWithValue("@Content", newsContent.Text);
-                        insert.Parameters.AddWithValue("@Image", bytes);
-                        insert.Parameters.AddWithValue("@newsId", newsHiddenId.Value);
+                        {
+                            insert.Parameters.AddWithValue("@Title", newsTitle.Text);
+                            insert.Parameters.AddWithValue("@Date", newsDate.Text);
+                            insert.Parameters.AddWithValue("@CtgryNo", ddlnewsCategory.SelectedValue);
+                            insert.Parameters.AddWithValue("@Source", newsSource.Text);
+                            insert.Parameters.AddWithValue("@Content", newsContent.Text);
+                            if (bytes.Length > 0)
+                            {
+                                insert.Parameters.AddWithValue("@Image", bytes);
+                            }
+                            insert.Parameters.AddWithValue("@newsId", newsHiddenId.Value);
 
-                        conn.Open();
-                        insert.ExecuteNonQuery();
-                        conn.Close();
+                            conn.Open();
+                            insert.ExecuteNonQuery();
+                            conn.Close();
+
+                        }
                     }
+                    else
+                    {
+                        using (MySqlCommand insert = new MySqlCommand("UPDATE dt_news SET News_Title = @Title, News_Date = @Date, " +
+                               "News_Ctgry_No = @CtgryNo, Source=@Source, " +
+                               "News_Content=@Content WHERE News_Id=@newsId", conn))
+                        {
+                            insert.Parameters.AddWithValue("@Title", newsTitle.Text);
+                            insert.Parameters.AddWithValue("@Date", newsDate.Text);
+                            insert.Parameters.AddWithValue("@CtgryNo", ddlnewsCategory.SelectedValue);
+                            insert.Parameters.AddWithValue("@Source", newsSource.Text);
+                            insert.Parameters.AddWithValue("@Content", newsContent.Text);
+                            insert.Parameters.AddWithValue("@newsId", newsHiddenId.Value);
+
+                            conn.Open();
+                            insert.ExecuteNonQuery();
+                            conn.Close();
+                        }
+                    }
+
+                    
 
                     Response.Redirect("~/NewsPage.aspx");
                 }

@@ -1,11 +1,18 @@
 ﻿
 /* All pages */
+body {
+    font-family: 'sans-serif' !important;
+}
 h1 {
     font-size: 1rem;
 }
 
 p {
     padding-left: 10px;
+}
+
+.header-logo{
+
 }
 
 /* CYBER */
@@ -112,4 +119,9 @@ p {
 
     .course-table td {
         padding: 15px;
+    }
+
+    footer {
+        width: 1800px;
+        transform: translateX(-350px);
     }

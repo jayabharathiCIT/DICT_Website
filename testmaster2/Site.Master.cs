@@ -25,7 +25,7 @@ namespace testmaster2
             MenuItem ViewPostItem = new MenuItem();
             MenuItem registerItem = new MenuItem();
             MenuItem loginItem = new MenuItem();
-            MenuItem forumMenu = DICTMenuBar2.Items[2];
+            MenuItem forumMenu = DICTMenuBar1.Items[6];
             //find menus and show and hide based on the user login .
             foreach (MenuItem menuItem in forumMenu.ChildItems)
             {
@@ -60,6 +60,55 @@ namespace testmaster2
                 forumMenu.ChildItems.Remove(registerItem);
                 forumMenu.ChildItems.Remove(loginItem);
             }
+
+
+            string currentPage = System.IO.Path.GetFileName(Request.Url.AbsolutePath);
+            if(currentPage== "homepage")
+            {
+                DICTMenuBar1.Items[0].Selected = true;
+            }
+            if(currentPage == "About")
+            {
+                DICTMenuBar1.Items[1].Selected = true;
+            }
+            if(currentPage == "courses")
+            {
+                DICTMenuBar1.Items[2].Selected = true;
+            }
+            if (currentPage == "Teaching_LearningPage")
+            {
+                DICTMenuBar1.Items[3].Selected = true;
+            }
+            if (currentPage == "CurrentStudentPage")
+            {
+                DICTMenuBar1.Items[4].Selected = true;
+            }
+            if (currentPage == "FutureStudentsPage")
+            {
+                DICTMenuBar1.Items[4].Selected = true;
+            }
+            if (currentPage == "NewsPage")
+            {
+                DICTMenuBar1.Items[5].Selected = true;
+            }
+            if (currentPage == "Register")
+            {
+                DICTMenuBar1.Items[6].Selected = true;
+            }
+            if (currentPage == "Login")
+            {
+                DICTMenuBar1.Items[6].Selected = true;
+            }
+           
+            if (currentPage == "AddForumPost")
+            {
+                DICTMenuBar1.Items[6].Selected = true;
+            }
+            if (currentPage == "ForumHomePage")
+            {
+                DICTMenuBar1.Items[6].Selected = true;
+            }
+            
         }
     }
 }

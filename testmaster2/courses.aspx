@@ -20,18 +20,20 @@
 
      <div class="courses-search-container">
             <h1 class="search-header">Find A Course</h1>
-            <div class="search-box-container">
-                    <div class="search-box">
-                            <input class="search-txt" type="text" name="" placeholder="Type to Search">
-                            <a  class="search-btn" href="#">
-                                    <i class="fas fa-search"></i>
-                            </a>
-                        </div>
-            </div>
+           <div class="dropdown">
+  <button class="dropbtn">Courses</button>
+  <div class="dropdown-content">
+    <a href="cyber.aspx" target="_blank">Networking and Cyber Security</a>
+    <a href="course-detail.aspx" target="_blank">Information Technology</a>
+    <a href="soft.aspx" target="_blank">Software Development</a>
+      <a href="net.aspx" target="_blank">Information Technology Networking</a>
+      <a href="games.aspx" target="_blank">Games Development</a>
+  </div>
+</div>
         </div>
 
     <div class="courses-main-container">
-                <a href="#" class="units-find">Browse All Units</a>
+               
             <h1 class="courses-header">Our Courses</h1>
             <h1 class="cyber-header">Cyber Security</h1>
             <h1 class="network-header">Networking</h1>

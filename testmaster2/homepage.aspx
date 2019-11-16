@@ -64,10 +64,10 @@
 
      <div class="bottom-container"> 
         <div id="st-box"> 
-            <h1 class="box-header">Courses</h1>
+            <h1 class="box-header" >Courses</h1>
             <i class="fas fa-graduation-cap"></i>
             <div class="button-container">
-                <a href="#"><button type="button" class="btn btn-info">More Info</button></a>
+                <a href="courses.aspx"><button type="button" class="btn btn-info">More Info</button></a>
             </div>
         </div> 
           
@@ -75,7 +75,7 @@
             <h1 class="box-header">News</h1>
             <i class="fas fa-newspaper"></i>
             <div class="button-container">
-              <a href="#"><button type="button" class="btn btn-info">More Info</button></a>
+              <a href="NewsPage.aspx"><button type="button" class="btn btn-info">More Info</button></a>
             </div>
         </div> 
           
@@ -83,7 +83,7 @@
                 <h1 class="box-header">About</h1>
             <i class="fas fa-question"></i>
                 <div class="button-container">
-                    <a href="#"><button type="button" class="btn btn-info">More Info</button></a>
+                    <a href="About.aspx"><button type="button" class="btn btn-info">More Info</button></a>
                 </div>
         </div> 
     </div>

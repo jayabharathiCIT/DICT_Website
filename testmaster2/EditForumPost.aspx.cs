@@ -168,9 +168,22 @@ namespace DICT_Website
             using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
             {
                 sqlCon.Open();
+                DataTable dtReply = new DataTable();
+                string QueryReply = "SELECT * FROM `dict website`.`dt_reply` where Post_ID =" + postID + ";";
+                MySqlCommand MyCommandGetReply = new MySqlCommand(QueryReply, sqlCon);
+                MySqlDataAdapter sqlDaReply = new MySqlDataAdapter();
+                sqlDaReply.SelectCommand = MyCommandGetReply;
+                sqlDaReply.Fill(dtReply);
+                string QueryDeleteReply = "DELETE FROM `dict website`.dt_reply where Post_ID =" + postID + ";";
+                if (dtReply.Rows.Count < 0)
+                {
+
+                    MySqlCommand MyCommand = new MySqlCommand(QueryDeleteReply, sqlCon);
+                    MyCommand.ExecuteNonQuery();
+                }
+
                 string Query = "DELETE FROM `dict website`.dt_posts where Post_ID =" + postID + ";";
                 MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
-                MyCommandtoGetPostByID.ExecuteNonQuery();
                 int result = MyCommandtoGetPostByID.ExecuteNonQuery();
                 //result holds number of rows affected 
                 if (result > 0)
@@ -184,13 +197,16 @@ namespace DICT_Website
                     script += url;
                     script += "'; }";
                     ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
+                    Response.Redirect("~/ForumHomePage.aspx");
                 }
+
                 else
                 {
                     ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
                 }
-
             }
+       
+          
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
@@ -234,13 +250,20 @@ namespace DICT_Website
         }
         protected void ddlLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ddlLogin.SelectedItem.Value == "4")
+            {
+                //ChangePassword
+                Response.Redirect("~/AdminProfilePage.aspx");
+            }
             if (ddlLogin.SelectedItem.Value == "1")
             {
                 //ChangePassword
+                Response.Redirect("~/ChangePassword.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "2")
             {
                 //DeleteAccount
+                Response.Redirect("~/DeleteAccount.aspx");
             }
             if (ddlLogin.SelectedItem.Value == "3")
             {

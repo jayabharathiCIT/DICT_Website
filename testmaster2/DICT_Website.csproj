@@ -176,19 +176,21 @@
     <Content Include="ChangePassword.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\About.css" />
-    <Content Include="Content\Add_news.css" />
     <Content Include="Content\AnnStyle.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ChangePasswordStyles.css" />
     <Content Include="Content\Contactus.css" />
     <Content Include="Content\Events.css" />
     <Content Include="Content\course-detail.css" />
+    <Content Include="Content\ForgetPasswordStyles.css" />
     <Content Include="Content\forumStyles.css" />
     <Content Include="Content\homepage.css" />
     <Content Include="Content\masterStyle.css" />
     <Content Include="Content\News.css" />
+    <Content Include="Content\RegisterStyles.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StudentStyle.css" />
     <Content Include="Content\apply.css" />
@@ -196,10 +198,15 @@
     <Content Include="Content\TeachingStyle.css" />
     <Content Include="course-detail.aspx" />
     <Content Include="CurrentStudentPage.aspx" />
+    <Content Include="DeleteAccount.aspx" />
+    <Content Include="EditEvent.aspx" />
     <Content Include="EditNews.aspx" />
     <Content Include="EditForumPost.aspx" />
+    <Content Include="EventPage.aspx" />
+    <Content Include="EventResult.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgetPassword.aspx" />
     <Content Include="ForumHomePage.aspx" />
     <Content Include="FutureStudentsPage.aspx" />
     <Content Include="Global.asax" />
@@ -219,6 +226,7 @@
     <Content Include="Images\books.png" />
     <Content Include="Images\CITRtoLogo.png" />
     <Content Include="Images\CITSAIcon.png" />
+    <Content Include="Images\CIT_logo_stacked_white_RTO.png" />
     <Content Include="Images\Comment.png" />
     <Content Include="Images\course1.jpg" />
     <Content Include="Images\CourseIcon.png" />
@@ -239,6 +247,7 @@
     <Content Include="Images\infoIcon.png" />
     <Content Include="Images\InternetAccesIcon.png" />
     <Content Include="Images\Library Icon.png" />
+    <Content Include="Images\logo.svg" />
     <Content Include="Images\map.png" />
     <Content Include="Images\SelfServiceIcon.jpg" />
     <Content Include="Images\SemesterDatesIcon.png" />
@@ -246,6 +255,7 @@
     <Content Include="Images\StudentFormsIcon.png" />
     <Content Include="Images\test1.jpg" />
     <Content Include="Images\test3.JPG" />
+    <Content Include="Images\transLogo.png" />
     <Content Include="Images\ZoomIn.png" />
     <Content Include="Images\User.png" />
     <Content Include="Images\instagram.png" />
@@ -257,6 +267,7 @@
     <Content Include="courses.aspx" />
     <Content Include="cyber.aspx" />
     <Content Include="games.aspx" />
+    <Content Include="MoreNews.aspx" />
     <Content Include="net.aspx" />
     <Content Include="RemoveStudent.aspx" />
     <Content Include="ResetPwdAdmin.aspx" />
@@ -395,6 +406,20 @@
     <Compile Include="CurrentStudentPage.aspx.designer.cs">
       <DependentUpon>CurrentStudentPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DeleteAccount.aspx.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.aspx.designer.cs">
+      <DependentUpon>DeleteAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditEvent.aspx.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditEvent.aspx.designer.cs">
+      <DependentUpon>EditEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditNews.aspx.cs">
       <DependentUpon>EditNews.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -408,6 +433,27 @@
     </Compile>
     <Compile Include="EditForumPost.aspx.designer.cs">
       <DependentUpon>EditForumPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventPage.aspx.cs">
+      <DependentUpon>EventPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventPage.aspx.designer.cs">
+      <DependentUpon>EventPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventResult.aspx.cs">
+      <DependentUpon>EventResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventResult.aspx.designer.cs">
+      <DependentUpon>EventResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.aspx.designer.cs">
+      <DependentUpon>ForgetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForumHomePage.aspx.cs">
       <DependentUpon>ForumHomePage.aspx</DependentUpon>
@@ -439,6 +485,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoreNews.aspx.cs">
+      <DependentUpon>MoreNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoreNews.aspx.designer.cs">
+      <DependentUpon>MoreNews.aspx</DependentUpon>
     </Compile>
     <Compile Include="NewsPage.aspx.cs">
       <DependentUpon>NewsPage.aspx</DependentUpon>

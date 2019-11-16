@@ -2,14 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
      <link href="Content/forumStyles.css" rel="stylesheet" />
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOuterLogin">
-            <asp:Panel ID="Panel2" CssClass="plnInnerLogin" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+            <asp:Panel ID="Panel2" CssClass="plnInnerLogin" BorderStyle="Solid"  BorderColor="black" BorderWidth="2px" runat="server">
             <div id="divHeader" class="divHeader"> 
-                <table>
+                <table align="Center">
                     <tr>
-                        <td style="width:120px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
-                        </td>
-                        <td style="width:300px;height:auto; ">
+                      <%--  <td style="width:120px; height:auto">
+                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/transLogo.png"/>
+                        </td>--%>
+                        <td style="height:auto; text-align:center; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Login"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
@@ -42,11 +42,10 @@
                         <asp:TableCell   ColumnSpan="2">
                         <asp:Button id="btnLogin" runat="server" CssClass="btnReply" Text="Login" OnClick="btnLogin_Click" /> 
                               <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnReply" CausesValidation="false" OnClick="btnCancel_Click" />
-                            </asp:TableCell>
-                              </asp:TableRow><asp:TableRow HorizontalAlign="Center"   >
+                            </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center"   >
                         <asp:TableCell ColumnSpan="2"  >
-                            <asp:LinkButton ID="lnkForgotPassword" ForeColor="Black"  Font-Underline="true"  Font-Size="14px" runat="server">Forgot Password</asp:LinkButton>
-                        </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center" >
+                            <a style="font-size:12px" href ="ForgetPassword.aspx">Forgot Password</a>
+                        </asp:TableCell></asp:TableRow><asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell ColumnSpan="2" >
                             <asp:Label ID="lblSuccessMessage" runat="server" Font-Size="14px" ForeColor="Red" Text=""></asp:Label></asp:TableCell></asp:TableRow></asp:Table></asp:Panel></asp:Panel><asp:Panel runat="server">
         <div style="height:178px;" >

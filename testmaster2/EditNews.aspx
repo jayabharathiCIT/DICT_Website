@@ -38,6 +38,7 @@
                     <label for="fname">Add Image</label>
                 </div>
                 <div class="col-9">
+                    <asp:Image ID="Image1" runat="server" />
                     <asp:FileUpload ID="newsImageFile" runat="server" />
                 </div>
             </div>
@@ -66,8 +67,16 @@
                     <asp:TextBox ID="newsContent" CssClass="form-control" TextMode="multiline" runat="server"></asp:TextBox>
                 </div>
             </div>
-            <asp:Button ID="btnSubmit" CssClass="news-submit" Text="Update" runat="server" OnClick="btnSubmit_Click" />
-            <asp:Button ID="btnCancel" CssClass="news-cancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-2">
+                    <asp:Button ID="btnSubmit" CssClass="news-submit" Text="Update" runat="server" OnClick="btnSubmit_Click" />
+                </div>
+                <div class="col-2">
+                    <asp:Button ID="btnCancel" CssClass="news-cancel" Text="Cancel" runat="server" OnClick="btnCancel_Click" />
+                </div>
+            </div>
+
         </div>
     </div>
 

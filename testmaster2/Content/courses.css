@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'Roboto';
+    font-family: 'sans-serif' !important;
 }
 
 
@@ -27,7 +27,8 @@
 .top-text-container {
     width: 100%;
     height: 300px;
-    background-color: rgb(0, 159, 165);
+    /*background-color: rgb(0, 159, 165);*/
+    background-color: ghostwhite;
 }
 
 .textbox1 {
@@ -37,9 +38,9 @@
     font-size: 1.7rem;
     transform: translateY(100px);
     line-height: 1.8;
-    color: white;
-    font-family: 'Roboto';
-    background-color: rgba(0, 108, 112, 0.637);
+    font-family: 'sans-serif';
+    /*background-color: rgba(0, 108, 112, 0.637);*/
+    background-color: lightsteelblue;
     padding: 20px;
     border-radius: 15px;
     font-style: italic;
@@ -48,78 +49,81 @@
 .top-header {
     position: absolute;
     left: 43%;
-    font-family: 'Roboto';
-    color: white;
+    font-family: 'sans-serif';
+    /*color: white;*/
     transform: translateY(20px);
     font-size: 3rem;
 }
 
 /*Search*/
-/*Kind of fucked, FIX WITH TRANSITION OR ANIMATION OPACITY ON SEARCH-BOX*/
+
 
 .courses-search-container {
     width: 100%;
-    height: 300px;
-    background-color: rgb(36, 36, 36);
+    height: 350px;
+    /*background-color: rgb(36, 36, 36);*/
+    background-color: linen;
 }
 
 .search-header {
     position: absolute;
     transform: translateY(30px);
     left: 45%;
-    font-family: 'roboto';
-    color: white;
+    font-family: 'sans-serif';
+   
 }
 
 .search-box-container {
     transform: translateY(200px);
 }
 
-.search-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgb(0, 156, 247);
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
-}
 
-    .search-box:hover > .search-txt {
-        width: 260px;
-        padding: 0 6px;
-    }
 
-    .search-box:hover > .search-btn {
-        background: white;
-    }
 
-.search-btn {
-    color: rgb(36, 36, 36);
-    float: right;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgb(0, 156, 247);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-    transform: translateY(-15px);
-}
-
-.search-txt {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
+.dropbtn {
+    background: linear-gradient(131.69deg, #1E77A9 7.96%, #82C3FF 100%);
     color: white;
+    padding: 15px 50px;
+    font-size: 22px;
+    border-radius: 10px;
+    border-style: none;
+   
+}
+
+.dropdown {
+    margin: auto;
+    width: 30%;
+    text-align: center;
+    transform: translateY(100px);
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
     font-size: 16px;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: rgba(3, 154, 241, 0.418);
+    }
+
+
+        .dropdown-content a:hover {
+            background: linear-gradient(131.69deg, #1E77A9 7.96%, #82C3FF 100%);
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(3, 154, 241, 0.418);
 }
 
 
@@ -133,9 +137,9 @@
 
 .courses-header {
     position: absolute;
-    font-size: 3rem;
-    transform: translateY(30px);
-    left: 44%;
+    font-size: 5rem;
+    transform: translateY(80px);
+    left: 41%;
     font-family: 'roboto';
     color: rgb(34, 34, 34);
 }
@@ -143,9 +147,9 @@
 /* Position this differently */
 .units-find {
     position: absolute;
-    transform: translateY(200px);
+    transform: translateY(180px);
     left: 45%;
-    font-family: 'roboto';
+    font-family: 'sans-serif';
     color: rgb(34, 34, 34);
     font-size: 1.5rem;
     text-decoration: underline;
@@ -158,9 +162,9 @@
 
 .cyber-header {
     position: absolute;
-    transform: translateY(300px);
+    transform: translateY(250px);
     left: 44%;
-    font-family: 'roboto';
+    font-family: 'sans-serif';
     color: #CB3939;
 }
 
@@ -170,14 +174,14 @@
     border-width: 1px 0 0 0;
     border-radius: 20px;
     border-color: #CB3939;
-    transform: translateY(400px);
+    transform: translateY(350px);
     width: 90%;
 }
 
 .cyber-container {
     width: 100%;
     height: 500px;
-    transform: translateY(350px);
+    transform: translateY(300px);
     display: grid;
     grid-template-columns: 33% 33% 33%;
     justify-items: center;

@@ -2,15 +2,16 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/forumStyles.css" rel="stylesheet" />
      <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineViewPost">
-            <asp:Panel ID="Panel2" CssClass="plnInlineViewPost" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server" Font-Bold="True">
+            <asp:Panel ID="Panel2" CssClass="plnInlineViewPost" BorderStyle="Solid"  BorderColor="Black" BorderWidth="2px" runat="server" Font-Bold="True">
                 <%-- Added login dropdown --%>
                  <div class="nav navbar-nav navbar-right">
               <table  style="width:200px;" >
                   <tr>
-                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#FACF5A" runat="server" Text="Label"></asp:Label></td>                                          
+                      <td> <asp:Label ID="lbluserInfo" Font-Bold="true" Font-Size="Medium" ForeColor="#007bff" runat="server" Text="Label"></asp:Label></td>                                          
                   </tr>      
                   <tr>
                       <td><asp:DropDownList ID="ddlLogin" CssClass="ddllogin1" runat="server" Width="150px"  AutoPostBack="true" OnSelectedIndexChanged="ddlLogin_SelectedIndexChanged" BackColor="White" Font-Size="14px" ForeColor="Black"   >
+                          <asp:ListItem Value ="0" >Select One</asp:ListItem>
                            <asp:ListItem Value="1">Change Password</asp:ListItem>
 
                   <asp:ListItem Value="2">Delete Account</asp:ListItem>
@@ -23,13 +24,11 @@
                 </div>
                  <%-- Added login dropdown --%>
             <div id="divHeader" class="divHeader"> 
-                <table>
+                <table align="Center" >
                     <tr>
-                        <td style="width:130px; height:auto">
-                             <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DICTlogoNew.png"/>
-                        </td>
-                        <td style="width:200px;height:auto; ">
-                           <asp:Label ID="lblPageTitle" runat="server" Text="Post View and Reply"  CssClass="pageTitle" ></asp:Label>
+                       
+                        <td style="height:auto; ">
+                           <asp:Label ID="lblPageTitle" runat="server" Text="View Post and Reply"  CssClass="pageTitle" ></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -41,14 +40,14 @@
                             <asp:TableCell Width ="150px" >
                    <asp:Label ID="lblPostTitle" runat="server" Text="Title of the Post : " Font-Bold="True" Font-Size="16px" ForeColor="Black"></asp:Label>                                                               
                             </asp:TableCell>
-                            <asp:TableCell>  <asp:Label ID="lblPostTitleValue" runat="server" Text="" Font-Size="16px" ForeColor="White"></asp:Label></asp:TableCell>
+                            <asp:TableCell>  <asp:Label ID="lblPostTitleValue" runat="server" Text="" Font-Size="16px" ForeColor="#007bff"></asp:Label></asp:TableCell>
                         </asp:TableRow>
                         <asp:TableRow>
                             <asp:TableCell Width="65px" >
                                 <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/User.png" />                                
                             </asp:TableCell>
                             <asp:TableCell  ColumnSpan="2" >
-                                <asp:Label ID="lblCreatedByValue" runat="server" Text="" Font-Size="16px" ForeColor="White"></asp:Label>
+                                <asp:Label ID="lblCreatedByValue" runat="server" Text="" Font-Size="16px" ForeColor="#007bff"></asp:Label>
                             </asp:TableCell>                                                        
                         </asp:TableRow>
                         <asp:TableRow>
@@ -60,7 +59,7 @@
                                 <asp:Label ID="lblDescription" runat="server" Text="Description : " Font-Bold="True" Font-Size="16px" ForeColor="Black" ></asp:Label>
                             </asp:TableCell>
                             <asp:TableCell >
-                                <asp:Label ID="lblDescValue"    runat="server"  Font-Size="16px" ForeColor="White" ></asp:Label>
+                                <asp:Label ID="lblDescValue"    runat="server"  Font-Size="16px" ForeColor="#007bff" ></asp:Label>
                                 
                             </asp:TableCell>
                         </asp:TableRow>
@@ -74,7 +73,7 @@
                         <asp:TableRow>
                             <asp:TableCell Width="65px" > <asp:Image runat="server" ImageUrl="~/Images/replyall.png" /></asp:TableCell>      
                             <asp:TableCell ColumnSpan="2" >
-                                <asp:Label runat="server" ID="lblReplies" Font-Size="16px" ForeColor="White" ></asp:Label>                         
+                                <asp:Label runat="server" ID="lblReplies"  Font-Size="16px" ForeColor="#007bff" ></asp:Label>                         
                             </asp:TableCell>
                         </asp:TableRow>
                          </asp:Table>
@@ -104,21 +103,8 @@
                         <asp:TableCell>
                             <asp:RequiredFieldValidator ID="rfvuser" runat="server"  Display="Dynamic" ErrorMessage="Please enter Reply" EnableClientScript="true"
                             ForeColor="Red" ControlToValidate="txtComment" />
-                        </asp:TableCell></asp:TableRow>
-                       <asp:TableRow>
-                           <asp:TableCell >
-                               <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass="btnCancelControls"  OnClick="btnReply_Click" />                               
-                           </asp:TableCell>
-                           <asp:TableCell>
-                               <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" CausesValidation="false" OnClick="btnCancel_Click" />
-                           </asp:TableCell>
-                       </asp:TableRow>
-                    </asp:Table>
-                    
-                    <asp:Label ID="lblSuccessMessage"  runat="server" ForeColor="Black" Font-Size="14px"  ></asp:Label>         
-                    </div>
-
-                </asp:Panel>
-         </asp:Panel>
-
-</asp:Content>
+                        </asp:TableCell></asp:TableRow><asp:TableRow>
+                           <asp:TableCell ColumnSpan="2" >
+                               <asp:Button ID="btnReply" runat="server" Text="Reply" CssClass="btnReply"  OnClick="btnReply_Click" />   
+                               <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnReply" CausesValidation="false" OnClick="btnCancel_Click" />
+                           </asp:TableCell></asp:TableRow></asp:Table><asp:Label ID="lblSuccessMessage"  runat="server" ForeColor="Black" Font-Size="14px"  ></asp:Label></div></asp:Panel></asp:Panel></asp:Content>

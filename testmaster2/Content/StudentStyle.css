@@ -1,27 +1,27 @@
 ﻿body {
-    font-family: 'Roboto';
+    font-family: 'sans-serif' !important;
 }
 
 
 #divContainer {
-    background: linear-gradient(0deg, rgba(8, 173, 243, 0.43), rgba(8, 173, 243, 0.43));
+    background: white;
     font-family: sans-serif;
 }
 
 #divHeader {
-    color: white;
+    color: black;
     font-family: sans-serif;
     font-size: 35px;
     height: 100px;
     font-weight: bold;
-    background: #233142;
+    background: white;
     padding-left: 10px;
     padding-top: 10px;
     margin: 0px;
 }
 
 .divSubHeader {
-    background: linear-gradient(90deg, #FACF5C 92.89%, #E0E0E0 98.96%);
+    background: lightgray;
     color: black;
     font-size: 20px;
     height: 40px;
@@ -36,7 +36,7 @@
 }
 
 #QuickAccess {
-    background: rgba(8, 95, 99, 0.88);
+    background: #EBEDEF;
     font-family: sans-serif;
     padding-left: 10px;
     margin: 0px;
@@ -50,7 +50,7 @@
 
 #Service {
     color: black;
-    background: rgba(73, 190, 183, 0.88);
+    background: white;
     font-family: sans-serif;
     margin: 0px;
 }
@@ -60,6 +60,7 @@
     font-family: sans-serif;
     padding-left: 10px;
     margin: 0px;
+    background: #EBEDEF;
 }
 
 #Important_Information {
@@ -67,7 +68,7 @@
     font-family: sans-serif;
     padding-left: 10px;
     margin: 0px;
-    
+    background: #EBEDEF;
 }
 
 #Important_InformationFS {
@@ -75,13 +76,13 @@
     font-family: sans-serif;
     padding-left: 10px;
     margin: 0px;
-    background: rgba(8, 95, 99, 0.88);
+    background: #EBEDEF;
 }
 
 
 
 .InformationBox {
-    background: #fadd5c;
+    background: #D3D3D3;
     width: 500px;
     text-align: center;
     font-family: sans-serif;

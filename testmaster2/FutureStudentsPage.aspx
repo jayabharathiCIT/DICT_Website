@@ -24,9 +24,9 @@
 
            
                 
-                    <div style="Background:rgba(8, 95, 99, 0.88)">
-                         <br /><h1 style="color: whitesmoke ; text-align:center"> Why study at CIT?</h1>
-                        <br /><p style="color:white ;font-size: medium; text-align:center">Contemporary skills in a modern learning environment.
+                    <div style="Background:#EBEDEF">
+                         <br /><h1 style="color: black ; text-align:center"> Why study at CIT?</h1>
+                        <br /><p style="color:black ;font-size: medium; text-align:center">Contemporary skills in a modern learning environment.
                             From our trade qualifications to diplomas, <br /> degrees and postgraduate qualifications, our focus is on developing your
                             practical skills and real world experience <br /> for a future limited only by your imagination.</p><br />
                     </div>
@@ -56,7 +56,6 @@
                                     <br /><p style="font-size: small; color:dimgrey">Register a job vacancy or view current <br /> job opportunities.</p>
                             </td>
                             </tr>
-                            <tr style="height:20px"></tr>
                             <tr>
                             <td class ="QuickAccessTable">
                               <a href="https://cit.edu.au/study/course_fees_and_assistance" target="_blank" ><img class="Icons" src="Images/infoIcon.png" alt="Fee" title="Info"></a>
