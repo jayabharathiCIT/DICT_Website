@@ -71,7 +71,7 @@
 
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell>
-                            <asp:Button ID="btnCreatePost" runat="server" Text="Delete" CssClass="btnSubmitControls" OnClick="btnsubmit_Click" OnClientClick="return ValidateRegForm();" /></asp:TableCell>
+                            <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btnSubmitControls" OnClick="btnsubmit_Click" OnClientClick="return ValidateRegForm();" /></asp:TableCell>
                         <asp:TableCell>
                             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" OnClick="btnCancel_Click" /></asp:TableCell>
                     </asp:TableRow>

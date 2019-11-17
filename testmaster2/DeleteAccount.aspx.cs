@@ -22,7 +22,6 @@ namespace DICT_Website
             else
             {
                 String userid = Convert.ToString((int)Session["RegID"]);
-
                 String username = Session["Username"].ToString();
                 //String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username + " ";
@@ -37,8 +36,8 @@ namespace DICT_Website
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-
-            deleteAccount(1);
+           int getRegID = Convert.ToInt32((int)Session["RegID"]);
+           deleteAccount(getRegID);
             Response.Redirect("~/Login.aspx");
         }
 
@@ -80,7 +79,7 @@ namespace DICT_Website
                     sqlCon.Open();
                     //Pass the post ID to query Replies of the specific Post.
                     DataTable dtReply = new DataTable();
-                    string QueryReply = "SELECT * FROM `dict website`.`dt_dict_persons` where Register_ID =" + RegID + ";";
+                    string QueryReply = "SELECT * FROM `dict website`.dt_dict_persons where Register_ID =" + RegID + ";";
                     MySqlCommand MyCommandGetReply = new MySqlCommand(QueryReply, sqlCon);
                     MySqlDataAdapter sqlDaReply = new MySqlDataAdapter();
                     sqlDaReply.SelectCommand = MyCommandGetReply;
@@ -102,7 +101,7 @@ namespace DICT_Website
                     if (result > 0)
                     {
                         string message = "Delete successful!";
-                        string url = "AdminForumPage.aspx";
+                        string url = "DeleteAccount.aspx";
                         string script = "window.onload = function(){ alert('";
                         script += message;
                         script += "');";
@@ -118,6 +117,7 @@ namespace DICT_Website
                     }
 
                 }
+
 
             }
             catch (Exception EX)
