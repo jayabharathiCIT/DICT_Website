@@ -14,18 +14,55 @@ namespace DICT_Website
     public partial class EventResult : System.Web.UI.Page
     {
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
+        string id;
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
             {
-                string id = Request.Params["EventID"];
+                id = Request.Params["EventID"];
                 GetEvent(id);
             }
 
-
+            lblCount.Enabled = false;
+            if (Session["RegID"] != null)
+            {
+                String userid = Convert.ToString((int)Session["RegID"]);
+                bool isAdminUser = verifyAdminUser(userid);
+                if (isAdminUser)
+                {
+                    lblCount.Enabled = true;
+                }
+            }
+           
+            GetEventRegisterCount(id);
 
         }
+
+        private void GetEventRegisterCount(string eventId)
+        {
+            MySqlConnection conn = new MySqlConnection(connStr);
+            try
+            {
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM dt_book_event WHERE Evt_ID = " + eventId;
+                using (var cmd = new MySqlCommand(sql, conn))
+                {
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    lblCount.Text = "No. of Participants: " + count;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("----> Error : " + ex.StackTrace);
+            }
+            finally
+            {
+                // close the Sql Connection
+                conn.Close();
+            }
+        }
+
         public void GetEvent(String evtid)
         {
             MySqlConnection conn = new MySqlConnection(connStr);
@@ -88,18 +125,48 @@ namespace DICT_Website
                     com.ExecuteNonQuery();
                 }
 
-                Response.Redirect("~/NewsPage.aspx");
+                Response.Redirect("~/Page.aspx");
             }
             if (e.CommandName.Equals("EditEvent"))
             {
                 Response.Redirect("~/EditEvent?EvtID=" + eventid);
             }
+            if(e.CommandName.Equals("RegisterEvent"))
+            {
+                Response.Redirect("~/EventRegister?EvtID=" + eventid);
+            }
 
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        public string GetTime(string timeVal)
         {
+            string formatVal = DateTime.Parse(timeVal).ToString("hh:mm tt");
+            return formatVal;
+        }
 
+        protected Boolean verifyAdminUser(string AdminRegID)
+        {
+            bool isAdmin = false;
+            DataTable dtAdmin = new DataTable();
+            using (MySqlConnection sqlCon = new MySqlConnection(connStr))
+            {
+                sqlCon.Open();
+                int adminRegID = Convert.ToInt32(AdminRegID);
+                string Query = "SELECT* FROM `dict_website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
+                MySqlCommand MyCommand = new MySqlCommand(Query, sqlCon);
+                MySqlDataAdapter sqlDa = new MySqlDataAdapter();
+                sqlDa.SelectCommand = MyCommand;
+                sqlDa.Fill(dtAdmin);
+                if (dtAdmin.Rows.Count > 0)
+                {
+                    isAdmin = true;
+                }
+                else
+                {
+                    isAdmin = false;
+                }
+            }
+            return isAdmin;
         }
     }
 }

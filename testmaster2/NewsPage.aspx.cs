@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.ModelBinding;
 using System.Web.UI;
@@ -21,51 +23,28 @@ namespace DICT_Website
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //GetLatestNews();
+            GetLatestNews();
             GetAllNews();
+            //GetAllNews_Old();
         }
 
 
-        
         public void GetAllNews()
         {
             MySqlConnection conn = new MySqlConnection(connStr);
             DataSet dtnews = new DataSet();
-            DataTable lst_dtnews;
-            DataTable nw_dtnews;
-            DataTable cs_dtnews;
-            DataTable sw_dtnews;
-            DataTable sap_dtnews;
-            DataTable game_dtnews;
+             
             try
             {
                 conn.Open();
 
-                string sql = "SELECT * FROM dt_news";
+                string sql = "SELECT News_Ctgry_No, MAX(`dt_news`.`News_Id`) News_Id, News_Title, News_Content, " +
+                    "News_Ctgry_No, News_Date, News_Image FROM dt_news GROUP BY  News_Ctgry_No;";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dtnews);
 
-                lst_dtnews = dtnews.Tables[0].AsEnumerable().OrderBy(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
-                nw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 1 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
-                cs_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 2 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
-               sw_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 3 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
-               sap_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 4 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
-               game_dtnews = dtnews.Tables[0].AsEnumerable().Where(myRow => myRow.Field<int>("News_Ctgry_No") == 5 && myRow != null).OrderByDescending(myRow => myRow.Field<int>("News_Id")).Take(3).CopyToDataTable();
-                
-                dlLatestNews.DataSource = lst_dtnews;
-                dlLatestNews.DataBind();
-                dlNetworkNews.DataSource = nw_dtnews;
-                dlNetworkNews.DataBind();
-
-                dlCyberNews.DataSource = cs_dtnews;
-               dlCyberNews.DataBind();
-               dlSoftwareNews.DataSource = sw_dtnews;
-               dlSoftwareNews.DataBind();
-               dlSystemsNews.DataSource = sap_dtnews;
-               dlSystemsNews.DataBind();
-               dlGamesNews.DataSource = game_dtnews;
-                dlGamesNews.DataBind();
-
+                dlCategoryNews.DataSource = dtnews;
+                dlCategoryNews.DataBind();
 
             }
             catch (Exception ex)
@@ -79,30 +58,40 @@ namespace DICT_Website
             }
 
         }
+       
         public void GetLatestNews()
         {
             MySqlConnection conn = new MySqlConnection(connStr);
-            DataTable dtnews = new DataTable();
+            DataSet dtnews = new DataSet();
             try
             {
                 conn.Open();
 
                 string sql = "SELECT * FROM dt_news ORDER BY News_Id DESC limit 3";
+
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dtnews);
 
+                DataRow pRow = dtnews.Tables[0].Rows[0];
+                newsimage0.ImageUrl = "data:image/jpeg;base64," + Convert.ToBase64String((byte[])pRow["News_Image"]);
+                newslink0.Text = pRow["News_Title"].ToString();
+                newslink0.NavigateUrl = "NewsResult.aspx?NewsId=" + pRow["News_Id"];
+                newsTextLabel0.Text = pRow["News_Content"].ToString().Substring(0, 250) + "...";
+                //newsDateLabel0.Text = ((DateTime)pRow["News_Date"]).ToString("MMM dd");
 
-                dlLatestNews.DataSource = dtnews;
-                dlLatestNews.DataBind();
-                //Debug.WriteLine("Row length : " + dtnews.Rows.Count);
+                DataRow pRow1 = dtnews.Tables[0].Rows[1];
+                newsimage1.ImageUrl = "data:image/jpeg;base64," + Convert.ToBase64String((byte[])pRow1["News_Image"]);
+                newsLink1.Text = pRow1["News_Content"].ToString().Length > 200 ? pRow1["News_Content"].ToString().Substring(0, 200) + "..." : pRow1["News_Content"].ToString();
+                newsLink1.NavigateUrl = "NewsResult.aspx?NewsId=" + pRow1["News_Id"];
+                //newsDateLabel1.Text = ((DateTime)pRow1["News_Date"]).ToString("MMM dd");
 
-                /*DataRow pRow = dtnews.Rows[0];
-                 DateTime dt = pRow.Field<DateTime>("News_Date");
-                 lblDate.Text = dt.ToString("dd MMM yy");
-                 lblLatestTitle.Text = pRow["News_Title"].ToString();
-                 imgLatest.ImageUrl = "data:image/jpeg;base64," + Convert.ToBase64String((byte[])pRow["News_Image"]);*/
 
-                //lstLatest.DataSource = dtnews;
+                DataRow pRow2 = dtnews.Tables[0].Rows[2];
+                newsimage2.ImageUrl = "data:image/jpeg;base64," + Convert.ToBase64String((byte[])pRow2["News_Image"]);
+                newsLink2.Text = pRow2["News_Title"].ToString();
+                newsLink2.NavigateUrl = "NewsResult.aspx?NewsId=" + pRow2["News_Id"];
+                //newsDateLabel2.Text = ((DateTime)pRow2["News_Date"]).ToString("MMM dd");
+
             }
             catch (Exception ex)
             {
@@ -145,6 +134,38 @@ namespace DICT_Website
         protected void btnMoreGame_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/MoreNews.aspx?type=5");
+        }
+
+        public string GetCatDescription(string CategoryNo)
+        {
+            CategoryEnum catValue = (CategoryEnum)Enum.Parse(typeof(CategoryEnum), CategoryNo);
+            
+            
+            Type genericEnumType = catValue.GetType();
+            MemberInfo[] memberInfo = genericEnumType.GetMember(catValue.ToString());
+            if ((memberInfo != null && memberInfo.Length > 0))
+            {
+                var _Attribs = memberInfo[0].GetCustomAttributes(typeof(System.ComponentModel.DescriptionAttribute), false);
+                if ((_Attribs != null && _Attribs.Count() > 0))
+                {
+                    return ((System.ComponentModel.DescriptionAttribute)_Attribs.ElementAt(0)).Description;
+                }
+            }
+            return "All";
+        }
+
+        public enum CategoryEnum
+        {
+            [Description("Networking")]
+            Networking = 1,
+            [Description("Cyber Security")]
+            CyberSec = 2,
+            [Description("Software Development")]
+            SoftDev = 3,
+            [Description("System Analysis and Programming")]
+            SystemAP = 4,
+            [Description("Games and Virtual World")]
+            GamesAndVW = 5
         }
     }
 

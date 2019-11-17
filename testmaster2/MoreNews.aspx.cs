@@ -13,13 +13,17 @@ namespace DICT_Website
 {
     public partial class MoreNews : System.Web.UI.Page
     {
+        string newsType;
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string newsType = Request.Params["type"];
-            Debug.WriteLine("newstype: " + newsType);
-            GetAllNews(newsType);
-
+            if(!IsPostBack)
+            {
+                newsType = Request.Params["type"];
+                Debug.WriteLine("newstype: " + newsType);
+                GetAllNews(newsType);
+            }
+            
         }
 
         public void GetAllNews(String newsType)
@@ -49,5 +53,12 @@ namespace DICT_Website
             }
 
         }
+
+        public string GetShortTitle(string title, int size)
+        {
+            string formatVal = title.Length > size ? title.Substring(0, size) + "..." : title;
+            return formatVal;
+        }
+
     }
 }
