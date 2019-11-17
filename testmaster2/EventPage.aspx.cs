@@ -27,8 +27,8 @@ namespace DICT_Website
             try
             {
                 conn.Open();
-
-                string sql = "SELECT * FROM dt_event";
+                string today = DateTime.Today.ToString("yyyy-MM-dd");
+                string sql = "SELECT * FROM dt_event WHERE Evt_Date >= '" + today + "'";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(lst_dtevents);
 
@@ -46,6 +46,18 @@ namespace DICT_Website
                 conn.Close();
             }
 
+        }
+
+        public string GetTime(string timeVal)
+        {
+            string formatVal = DateTime.Parse(timeVal).ToString("hh:mm tt");
+            return formatVal;
+        }
+
+        public string GetShortTitle(string title, int size)
+        {
+            string formatVal = title.Length > size ? title.Substring(0, size) + "..." : title;
+            return formatVal;
         }
 
     }

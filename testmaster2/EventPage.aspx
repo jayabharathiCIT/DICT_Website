@@ -3,20 +3,29 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/News.css" rel="stylesheet" />
     <link href="Content/Events.css" rel="stylesheet" />
-    <div class="top-box">
-        <!------------------------------------------- Main heading ---------------------------->
+    <!--<div class="top-box">
         <h1 class="header">Event</h1>
-
+    </div>-->
+    <div>
+        <h2 class="subheader">Events</h2>
     </div>
     <div class="content-box">
     <asp:ListView ID="ListView1" runat="server">
         <ItemTemplate>
             <div class="container">
                 <div class="row">
-                    <div class="col-1 event-date">
+                    <div class="col-2 col-lg-1 event-date">
                         <%-- -------------------------------------Latest news date from data base ----------------------%>
-                        <asp:Label ID="Label1" Text='<%# Eval("Evt_Date", "{0:dd MMM}") %>' runat="server">
+                       <div>
+                           <asp:Label ID="Label1" Text='<%# Eval("Evt_Date", "{0:dd MMM}") %>' runat="server">
                         </asp:Label>
+                        
+                       </div>
+                        <div class="featured-date"></div>
+                        <div class="event-time">
+                                <asp:Label ID="Label4" Text='<%# GetTime(Eval("Evt_Strt_tm").ToString())  %>' runat="server">
+                                </asp:Label>
+                            </div>
                     </div>
                     <div class="col-4 img-hover">
                         <%-------------------------------- latest news image from data base------------------------- --%>
@@ -29,31 +38,24 @@
                     <%-- -------------------------------------Latest news label from data base ----------------------%>
                     <div class="col-4">
                         <div class="event-title">
-                            <asp:HyperLink ID="lbEvent" CssClass="title-link" NavigateUrl='<%# "EventResult.aspx?EventID=" + Eval("Evt_ID")%>' runat="server"
-                                Text='<%# Eval("Evt_Title").ToString().Substring(0,Math.Min(30,Eval("Evt_Title").ToString().Length))+ "..." %>'>
+                            <asp:HyperLink ID="lbEvent" NavigateUrl='<%# "EventResult.aspx?EventID=" + Eval("Evt_ID")%>' runat="server"
+                                Text='<%# GetShortTitle(Eval("Evt_Title").ToString(), 30) %>' ToolTip='<%# Eval("Evt_Title") %>'>
                             </asp:HyperLink>
                         </div>
                         <div class="event-content">
-                            <asp:Label ID="Label2" Text='<%# Eval("Evt_Content").ToString().Substring(0,Math.Min(150,Eval("Evt_Content").ToString().Length))+ "..." %>' runat="server">
+                            <asp:Label ID="Label2" Text='<%# GetShortTitle(Eval("Evt_Content").ToString(),200) %>' runat="server">
                             </asp:Label>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-2">
                         <div class="event-content">
-                            <div style="text-align: center"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                            <div style="text-align: center">
+                            <div><i class="fa fa-map-marker fa-2x" aria-hidden="true"></i></div>
+                            <div>
                                 <asp:Label ID="Label3" Text='<%# Eval("Evt_Location") %>' runat="server">
                                 </asp:Label>
                             </div>
                         </div>
-                        <div class="event-content">
-                            <div style="text-align: center"><i class="fa fa-clock" aria-hidden="true"></i></div>
-                            <div style="text-align: center">
-                                <asp:Label ID="Label4" Text='<%# Eval("Evt_Strt_tm") + "-" + Eval("Evt_End_tm") %>' runat="server">
-                                </asp:Label>
-                            </div>
-
-                        </div>
+                        
                     </div>
                 </div>
             </div>
