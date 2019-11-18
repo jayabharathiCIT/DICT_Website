@@ -121,11 +121,11 @@ namespace DICT_Website
                 {
                     conn.Open();
 
-                    MySqlCommand com = new MySqlCommand("DELETE FROM dict_website.dt_event WHERE Evt_ID =" + eventid, conn);
+                    MySqlCommand com = new MySqlCommand("DELETE FROM dt_event WHERE Evt_ID =" + eventid, conn);
                     com.ExecuteNonQuery();
                 }
 
-                Response.Redirect("~/Page.aspx");
+                Response.Redirect("~/EventResult.aspx");
             }
             if (e.CommandName.Equals("EditEvent"))
             {

@@ -65,6 +65,8 @@ namespace DICT_Website
                 }
             }
 
+            Response.Redirect("~/NewsPage.aspx");
+
         }
        
 

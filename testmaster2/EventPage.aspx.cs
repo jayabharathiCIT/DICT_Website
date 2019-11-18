@@ -27,8 +27,9 @@ namespace DICT_Website
             try
             {
                 conn.Open();
-                string today = DateTime.Today.ToString("yyyy-MM-dd");
-                string sql = "SELECT * FROM dt_event WHERE Evt_Date >= '" + today + "'";
+                //string today = DateTime.Today.ToString("yyyy-MM-dd");
+                //string sql = "SELECT * FROM dt_event WHERE Evt_Date >= '" + today + "'";
+                string sql = "SELECT * FROM dt_event";
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(lst_dtevents);
 

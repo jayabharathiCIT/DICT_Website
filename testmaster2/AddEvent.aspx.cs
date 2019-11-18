@@ -61,6 +61,7 @@ namespace DICT_Website
                     txtContent.Text = " ";
                 }
             }
+            Response.Redirect("~/EventResult.aspx");
 
         }
     }
