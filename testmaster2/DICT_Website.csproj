@@ -203,6 +203,7 @@
     <Content Include="EditNews.aspx" />
     <Content Include="EditForumPost.aspx" />
     <Content Include="EventPage.aspx" />
+    <Content Include="EventRegister.aspx" />
     <Content Include="EventResult.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -440,6 +441,13 @@
     </Compile>
     <Compile Include="EventPage.aspx.designer.cs">
       <DependentUpon>EventPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EventRegister.aspx.cs">
+      <DependentUpon>EventRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EventRegister.aspx.designer.cs">
+      <DependentUpon>EventRegister.aspx</DependentUpon>
     </Compile>
     <Compile Include="EventResult.aspx.cs">
       <DependentUpon>EventResult.aspx</DependentUpon>

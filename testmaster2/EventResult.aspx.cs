@@ -152,7 +152,7 @@ namespace DICT_Website
             {
                 sqlCon.Open();
                 int adminRegID = Convert.ToInt32(AdminRegID);
-                string Query = "SELECT* FROM `dict_website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
+                string Query = "SELECT* FROM `dict website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
                 MySqlCommand MyCommand = new MySqlCommand(Query, sqlCon);
                 MySqlDataAdapter sqlDa = new MySqlDataAdapter();
                 sqlDa.SelectCommand = MyCommand;
