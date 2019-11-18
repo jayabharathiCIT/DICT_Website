@@ -183,6 +183,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\ChangePasswordStyles.css" />
     <Content Include="Content\Contactus.css" />
+    <Content Include="Content\DeleteStyle.css" />
     <Content Include="Content\Events.css" />
     <Content Include="Content\course-detail.css" />
     <Content Include="Content\ForgetPasswordStyles.css" />
