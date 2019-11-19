@@ -21,7 +21,7 @@ namespace DICT_Website
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/HomePage.aspx");
+
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -62,18 +62,6 @@ namespace DICT_Website
                 }
             }
 
-            DisplayAlert("Successfully added the event", "EventPage.aspx");
-
-        }
-
-        protected virtual void DisplayAlert(string message, string redirectFile)
-        {
-            ClientScript.RegisterStartupScript(
-              this.GetType(),
-              Guid.NewGuid().ToString(),
-              string.Format("alert('{0}');window.location.href = '" + redirectFile + "'",
-                message.Replace("'", @"\'").Replace("\n", "\\n").Replace("\r", "\\r")),
-                true);
         }
     }
 }

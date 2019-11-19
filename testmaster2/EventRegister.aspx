@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EventRegister.aspx.cs" Inherits="DICT_Website.EventRegister" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/News.css" rel="stylesheet" />
-    <div class="form-container" style="padding:150px 0 150px 0">
+    <div class="form-container">
         <div class="row">
             <div class="col-3">
                 <label for="fname">CIT ID:</label>

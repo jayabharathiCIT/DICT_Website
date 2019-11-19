@@ -24,14 +24,14 @@ namespace DICT_Website
                 GetEvent(id);
             }
 
-            lblCount.Visible = false;
+            lblCount.Enabled = false;
             if (Session["RegID"] != null)
             {
                 String userid = Convert.ToString((int)Session["RegID"]);
                 bool isAdminUser = verifyAdminUser(userid);
                 if (isAdminUser)
                 {
-                    lblCount.Visible = true;
+                    lblCount.Enabled = true;
                 }
             }
            
@@ -112,11 +112,6 @@ namespace DICT_Website
             }
 
         }
-
-        protected void btnBack_Click()
-        {
-            Response.Redirect("~/EventPage.aspx");
-        }
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             var eventid = int.Parse(e.CommandArgument.ToString());
@@ -129,8 +124,8 @@ namespace DICT_Website
                     MySqlCommand com = new MySqlCommand("DELETE FROM dict_website.dt_event WHERE Evt_ID =" + eventid, conn);
                     com.ExecuteNonQuery();
                 }
-                DisplayAlert("Successfully deleted the event", "EventPage.aspx");
-                //Response.Redirect("~/EventPage.aspx");
+
+                Response.Redirect("~/Page.aspx");
             }
             if (e.CommandName.Equals("EditEvent"))
             {
@@ -149,16 +144,6 @@ namespace DICT_Website
             return formatVal;
         }
 
-        protected virtual void DisplayAlert(string message, string redirectFile)
-        {
-            ClientScript.RegisterStartupScript(
-              this.GetType(),
-              Guid.NewGuid().ToString(),
-              string.Format("alert('{0}');window.location.href = '" + redirectFile + "'",
-                message.Replace("'", @"\'").Replace("\n", "\\n").Replace("\r", "\\r")),
-                true);
-        }
-
         protected Boolean verifyAdminUser(string AdminRegID)
         {
             bool isAdmin = false;
@@ -167,7 +152,7 @@ namespace DICT_Website
             {
                 sqlCon.Open();
                 int adminRegID = Convert.ToInt32(AdminRegID);
-                string Query = "SELECT * FROM `dict_website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
+                string Query = "SELECT* FROM `dict website`.dt_dict_admin where Register_ID =" + adminRegID + ";";
                 MySqlCommand MyCommand = new MySqlCommand(Query, sqlCon);
                 MySqlDataAdapter sqlDa = new MySqlDataAdapter();
                 sqlDa.SelectCommand = MyCommand;
@@ -182,12 +167,6 @@ namespace DICT_Website
                 }
             }
             return isAdmin;
-        }
-
-      
-        protected void buttonBack_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/EventPage.aspx");
         }
     }
 }

@@ -1,12 +1,10 @@
-﻿
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EventResult.aspx.cs" Inherits="DICT_Website.EventResult" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EventResult.aspx.cs" Inherits="DICT_Website.EventResult" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/News.css" rel="stylesheet" />
     <link href="Content/Events.css" rel="stylesheet" />
     <div>
         <h2 class="subheader">Events</h2>
-    
     </div>
     <div class="content-box">
         <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
@@ -56,10 +54,6 @@
                         <div class="col-2">
                             <asp:Button ID="btnDelete" runat="server" Text="Remove" CssClass="news-cancel" CommandArgument='<%# Eval("Evt_ID") %>' CommandName="DeleteEvent" />
                         </div>
-                    </div>
-
-                    <div class="row">
-                            <asp:Button ID="buttonBack" CssClass="btn btn-dark" runat="server" Text="Back" OnClick="buttonBack_Click"/>   
                     </div>
                 </div>
             </ItemTemplate>

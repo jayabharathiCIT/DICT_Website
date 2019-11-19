@@ -122,9 +122,9 @@ namespace DICT_Website
                         }
                     }
 
-                    DisplayAlert("Successfully updated the event", "EventPage.aspx");
-                   
-                    //Response.Redirect("~/EventPage.aspx");
+
+
+                    Response.Redirect("~/EventPage.aspx");
                 }
             }
         }
@@ -132,16 +132,6 @@ namespace DICT_Website
         protected void btnCancel_Click1(object sender, EventArgs e)
         {
             Response.Redirect("~/EventPage.aspx");
-        }
-
-        protected virtual void DisplayAlert(string message, string redirectFile)
-        {
-            ClientScript.RegisterStartupScript(
-              this.GetType(),
-              Guid.NewGuid().ToString(),
-              string.Format("alert('{0}');window.location.href = '" + redirectFile + "'",
-                message.Replace("'", @"\'").Replace("\n", "\\n").Replace("\r", "\\r")),
-                true);
         }
     }
 }

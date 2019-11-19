@@ -91,17 +91,3 @@ input[type=text] {
 .heading3{
     font-size: 16px;
 }
-
-.heading4 {
-    font-size: 16px;
-}
-
-h2.subheader {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-bottom: 1px solid #333;
-}

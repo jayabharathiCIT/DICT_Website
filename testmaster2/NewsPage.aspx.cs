@@ -162,7 +162,7 @@ namespace DICT_Website
             CyberSec = 2,
             [Description("Software Development")]
             SoftDev = 3,
-            [Description("System Analysis")]
+            [Description("System Analysis and Programming")]
             SystemAP = 4,
             [Description("Games and Virtual World")]
             GamesAndVW = 5
