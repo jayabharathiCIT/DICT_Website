@@ -65,6 +65,8 @@ namespace DICT_Website
                 }
             }
 
+            DisplayAlert("Successfully added the news", "NewsPage.aspx");
+
         }
        
 
@@ -104,5 +106,22 @@ namespace DICT_Website
         {
             Response.Redirect("~/HomePage.aspx");
         }
+
+        protected virtual void DisplayAlert(string message, string redirectFile)
+        {
+            ClientScript.RegisterStartupScript(
+              this.GetType(),
+              Guid.NewGuid().ToString(),
+              string.Format("alert('{0}');window.location.href = '" + redirectFile + "'",
+                message.Replace("'", @"\'").Replace("\n", "\\n").Replace("\r", "\\r")),
+                true);
+        }
+
+        protected void btnCancel_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("~/HomePage.aspx");
+        }
     }
+
+    
 }

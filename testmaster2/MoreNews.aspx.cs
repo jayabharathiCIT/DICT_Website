@@ -60,5 +60,11 @@ namespace DICT_Website
             return formatVal;
         }
 
+        protected void buttonBack_Click(object sender, EventArgs e)
+        {
+            
+         Response.Redirect("~/NewsPage.aspx");
+           
+        }
     }
 }

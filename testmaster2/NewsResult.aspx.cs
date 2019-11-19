@@ -14,6 +14,8 @@ namespace DICT_Website
 {
     public partial class NewsResult : System.Web.UI.Page
     {
+        static string newsType;
+
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {            
@@ -39,7 +41,7 @@ namespace DICT_Website
                 string sql = "SELECT * FROM dt_news WHERE News_Id = " + newsid;
                 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dtnews);
-
+                newsType = dtnews.Rows[0]["News_Ctgry_No"].ToString();
                 Repeater1.DataSource = dtnews;
                 Repeater1.DataBind();
                 /*
@@ -111,13 +113,22 @@ namespace DICT_Website
                     com.ExecuteNonQuery();
                 }
 
-                Response.Redirect("~/NewsPage.aspx");
+                DisplayAlert("Successfully deleted the News", "MoreNews.aspx?type=" +newsType);
             }
             if (e.CommandName.Equals("EditNews"))
             {
                 Response.Redirect("~/EditNews?NewsId=" + newsid);
             }
 
+        }
+        protected virtual void DisplayAlert(string message, string redirectFile)
+        {
+            ClientScript.RegisterStartupScript(
+              this.GetType(),
+              Guid.NewGuid().ToString(),
+              string.Format("alert('{0}');window.location.href = '" + redirectFile + "'",
+                message.Replace("'", @"\'").Replace("\n", "\\n").Replace("\r", "\\r")),
+                true);
         }
     }
 }

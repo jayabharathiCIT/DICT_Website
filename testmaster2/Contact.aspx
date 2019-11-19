@@ -5,8 +5,8 @@
     <div class="contactsBackground" >
     <%----------------- Heading --------------------------------%>
 
-    <div class="contactus-header">
-        <h2 class="contactus-label"><%: Title %>.</h2>
+    <div>
+        <h2 class="subheader">Contact Us</h2>
     </div>
     <%------------------ Infoline --------------------%>
 
@@ -18,28 +18,28 @@
                     <h2 class="c-form" style="padding-right: 1.5em">Infoline</h2>
                 </div>
                 <div class="heading3">
-                    <h4>62073188</h4>
+                    <h3>62073188</h3>
                 </div>
                 <div class="heading4">
-                    <h6>(during normail working hours)</h6>
+                    <p>(during normail working hours)</p>
                 </div>
 
                 <hr />
 
                 <div class="heading4" >
-                    <h6>From Outside Australia</h6>
+                    <p>From Outside Australia</p>
                 </div>
                 <div class="heading3">
-                    <h4>+61 2 6207 3188</h4>
+                    <h3>+61 2 6207 3188</h3>
                 </div>
 
                 <hr />
 
                 <div class="heading4">
-                    <h6>Within Australia</h6>
+                    <p>Within Australia</p>
                 </div>
                 <div class="heading3">
-                    <h4>02 6207 3188</h4>
+                    <h3>02 6207 3188</h3>
                 </div>
 
             </div>
@@ -50,7 +50,7 @@
                     <h2 class="c-form">CIT Student Service</h2>
                 </div>
                 <div class="heading3">
-                    <h4 style="padding-left: 2em">infoline@cit.edu.au</h4>
+                    <h3 style="padding-left: 2em">infoline@cit.edu.au</h3>
                 </div>
             </div>
         </div>

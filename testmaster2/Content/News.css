@@ -30,7 +30,7 @@ body {
 /*=====================================Add news===================================*/
 .header2 {
     text-align: center;
-    transform: translateY(50px);
+    
     font-size: 4rem;
     color: black;
 }
