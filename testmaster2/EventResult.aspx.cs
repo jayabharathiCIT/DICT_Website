@@ -125,7 +125,7 @@ namespace DICT_Website
                     com.ExecuteNonQuery();
                 }
 
-                Response.Redirect("~/EventResult.aspx");
+                Response.Redirect("~/EventPage.aspx");
             }
             if (e.CommandName.Equals("EditEvent"))
             {
