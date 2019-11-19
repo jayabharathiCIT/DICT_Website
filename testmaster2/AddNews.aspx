@@ -4,9 +4,9 @@
 
     <link href="Content/News.css" rel="stylesheet" />
     <%--<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">--%>
-    <div class="top-box">
+    <div>
         <%-------------------------------------------------- Main heading --%>
-        <h1 class="header">News</h1>
+       <h2 class="subheader">News</h2>
     </div>
     <%-------------------------------------------------- Sub heading --%>
     <div class="content-box">
@@ -80,7 +80,7 @@
                <div class="row">
                    <div class="col-8"></div>
                    <div class="col-2">
-                       <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false" Width="100px" runat="server" Text="Cancel"  OnClick="btnCancel_Click" />
+                       <asp:Button Cssclass="news-cancel" ID="btnCancel" CausesValidation="false" Width="100px" runat="server" Text="Cancel"  OnClick="btnCancel_Click1" />
                    </div>
                    <div class="col-2">
                        <asp:Button Cssclass="news-submit"  ID="Button2" runat="server"  Width="100px" Text="Submit" OnClick="btnSubmit_Click" />                

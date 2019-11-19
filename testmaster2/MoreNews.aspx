@@ -5,6 +5,7 @@
     <div>
         <h2 class="subheader">News</h2>
     </div>
+
     <asp:ListView ID="ListView1" runat="server">
           <ItemTemplate>
             <div class="container">
@@ -51,5 +52,8 @@
                 PreviousPageText="<<" />
         </Fields>
     </asp:DataPager>
-    
+    <div class="row">
+      <asp:Button ID="buttonBack" CssClass="btn btn-dark" runat="server" Text="Back" OnClick="buttonBack_Click"/>   
+       </div>
+
 </asp:Content>

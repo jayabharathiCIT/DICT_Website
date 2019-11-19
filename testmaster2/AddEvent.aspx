@@ -3,9 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/News.css" rel="stylesheet" />
     <link href="Content/Events.css" rel="stylesheet" />
-    <div class="top-box">
+    <div>
         <%-------------------------------------------------- Main heading --%>
-        <h1 class="header">Events</h1>
+       <h2 class="subheader">Event</h2>
     </div>
     <%-------------------------------------------------- Sub heading --%>
     <div class="content-box">

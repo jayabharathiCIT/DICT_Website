@@ -69,7 +69,7 @@ namespace DICT_Website
                     }
                     else
                     {
-                        lblSuccessMessage.Text = "Sorry,Not authorised users.Check your username and password.";
+                        lblSuccessMessage.Text = "Sorry, Not authorised users.Check your username and password.";
                     }
                 }
             }
