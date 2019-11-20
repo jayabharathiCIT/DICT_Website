@@ -16,7 +16,9 @@ namespace DICT_Website
     
     public partial class AnnHomepage : System.Web.UI.Page
     {
-        DataTable dt;
+        
+        DataTable dt = new DataTable();
+        
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         
         protected void Page_Load(object sender, EventArgs e)
@@ -32,23 +34,26 @@ namespace DICT_Website
                         {
                             cmd.Connection = con;
                             da.SelectCommand = cmd;
-                            using (DataTable dt = new DataTable())
-                            {
+                         //   using (DataTable dt = new DataTable())
+                          //  {
                                 da.Fill(dt);
                                 GridView1.DataSource = dt;
                                 GridView1.DataBind();
-                            }
+                            //}
                         }
                     }
                 }
             }
+
+            
         }
 
 
 
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
-            
+            //get from Announcement gridview .
+            //Need to load Person Name instead of ID
         }
 
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -58,7 +63,7 @@ namespace DICT_Website
             GridView1.DataSource = dt;
             GridView1.DataBind();
         }
-
+     
 
 
         protected void btnNew_Click(object sender, EventArgs e)

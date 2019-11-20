@@ -16,19 +16,23 @@
              <div class="ContainerH1">
               
              <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="mydatagrid"  OnPageIndexChanging="GridView1_PageIndexChanging"
-                            AllowPaging="true" PageSize="4"  Font-size="15px" HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Size="20px" OnRowDataBound="OnRowDataBound" OnRowCommand="GridView1_RowCommand" >
+                            AllowPaging="false"   Font-size="15px" HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Size="20px" OnRowDataBound="OnRowDataBound" OnRowCommand="GridView1_RowCommand" >
                
-                                            
-   
-                <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
-                <PagerStyle  Font-Size="15px" Font-Bold="true" ForeColor="Black" HorizontalAlign="Left"  />  
-                 <EmptyDataTemplate>No Record Found</EmptyDataTemplate>
+                     <%--  
+                         
+                    <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
+                        <PagerStyle  Font-Size="15px" Font-Bold="true"   />
+                        <EmptyDataTemplate>No Announcement To Display</EmptyDataTemplate>
+
+                         --%>
+               
+                
                  
                  <AlternatingRowStyle HorizontalAlign="Center" Wrap="True" />
                  
                  <Columns>
                             
-                            <asp:TemplateField HeaderText="Announcements"   >
+                            <asp:TemplateField HeaderText="Announcements" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="AnnText" >
                                 <ItemTemplate>
 
                                     <br>
@@ -49,16 +53,18 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Posted By">   
+                            <asp:TemplateField HeaderText="Posted By" ItemStyle-Width="200px ">   
                                 
                                 <ItemTemplate>
                                     <asp:Label ID="lblUser" runat="server" Text="User" ForeColor="Black"></asp:Label>
                                     <asp:Label ID="lblCreatedBy" runat="server" Text='<%# Bind("Register_ID") %>'></asp:Label>
                                     <br>
-                                    </br> 
+                                    </br>
+                                    <%-- 
                                     <asp:Button ID="btnEdit"  runat="server" Text="Edit"  CssClass="btnOptions" CommandName="Edit"   OnClick="btnEdit_Click"    />                                  
                                     <asp:Button ID="btnDelete"  runat="server" Text="Delete"  CssClass="btnOptions" CommandName="Delete"   OnClick="btnDelete_Click"  />                                    
-                                </ItemTemplate>
+                                --%> 
+                                        </ItemTemplate>
 
                             </asp:TemplateField>
 
@@ -74,7 +80,7 @@
                              --%>  
                      
               </Columns>
-                 <RowStyle CssClass="rowsH1" />
+                
              </asp:GridView>
              </div>
          
