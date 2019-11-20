@@ -116,6 +116,7 @@
     <Content Include="AdminForumPage.aspx" />
     <Content Include="AdminProfilePage.aspx" />
     <Content Include="AnnCreate.aspx" />
+    <Content Include="AnnEdit.aspx" />
     <Content Include="AnnHomepage.aspx" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
@@ -358,6 +359,13 @@
     </Compile>
     <Compile Include="AnnCreate.aspx.designer.cs">
       <DependentUpon>AnnCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnEdit.aspx.cs">
+      <DependentUpon>AnnEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnEdit.aspx.designer.cs">
+      <DependentUpon>AnnEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="AnnHomepage.aspx.cs">
       <DependentUpon>AnnHomepage.aspx</DependentUpon>

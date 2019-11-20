@@ -13,8 +13,10 @@ using System.IO;
 
 namespace DICT_Website
 {
+    
     public partial class AnnHomepage : System.Web.UI.Page
     {
+        DataTable dt;
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
         
         protected void Page_Load(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace DICT_Website
                 string constr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
                 using (MySqlConnection con = new MySqlConnection(constr))
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM dt_announcement_id"))
+                    using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM dt_announcement"))
                     {
                         using (MySqlDataAdapter da = new MySqlDataAdapter())
                         {
@@ -46,35 +48,43 @@ namespace DICT_Website
 
         protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
         {
-            //get from post gridview .
-            //get Register ID of the person                
+            
+        }
 
-            Label lblgrvCreatedBy = (Label)GridView1.FindControl("lblCreatedBy");
-            int personRegisterID = Convert.ToInt32(lblgrvCreatedBy.Text);
-            string constr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
-            using (MySqlConnection con = new MySqlConnection(constr))
-            {
-                using (MySqlCommand cmd = new MySqlCommand ("SELECT First_Name FROM dt_dict_persons where Register_ID=Register_ID"))
-                using (MySqlDataAdapter sqlPerson = new MySqlDataAdapter())
-                {
-                    cmd.Connection = con;
-                    sqlPerson.SelectCommand = cmd;
-                    using (DataTable dt = new DataTable())
-                    {
-                        sqlPerson.SelectCommand.Parameters.AddWithValue("Register_ID", personRegisterID);
-                        sqlPerson.Fill(dt);
-                        lblgrvCreatedBy.Text = dt.Rows[0][0].ToString();
-                            
-                    }
-                }
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex;
+            //fill grid view
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+        }
 
-            }
-                  
+
+
+        protected void btnNew_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/AnnCreate.aspx");
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            
+              Button btn = (Button)sender;
+            if (btn.CommandName == "Edit")
+            {
+                string getAnnIDArg = btn.CommandArgument.ToString();
+                Response.Redirect("~/AnnEdit.aspx" + "?Announcement_ID=" + getAnnIDArg);
+            }
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Edit")
+            {
+                int rowIndex = Convert.ToInt32(e.CommandArgument);
+                //Determine the RowIndex of the Row whose Button was clicked.
+                // string rowIndex = e.CommandArgument.ToString();
+                Response.Redirect("~/AnnEdit.aspx" + "?Announcement_ID=" + rowIndex.ToString());
+            }
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -82,24 +92,7 @@ namespace DICT_Website
 
         }
 
-        protected Boolean HasEditPermission(int RegisterID)
-        {
-            bool showEDIT = false;
-            if (Session["RegID"] == null)
-            {
-                showEDIT = false;
-            }
-            else
-            {
-                int loginUserID = (int)Session["RegID"];
-                if (RegisterID == loginUserID)
-                {
-                    showEDIT = true;
-                }
-            }
-            return showEDIT;
-        }
-
+     
 
     }
 

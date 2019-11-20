@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: 'sans-serif' !important;
+    font-family: Roboto,"Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     height: 100%;
     width: 100%;
@@ -26,21 +26,29 @@
 
 h1.top-box {
     font-size: 5rem;
-    padding:10px;    
+    padding: 10px;
+    font-family: Roboto,"Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
 }
-/*
-    transform: translateX(-350px);
-*/
-h2 {
+
+h1 {
+    font-family: Roboto,"Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+h2 {    
     font-size: 3rem;
     text-align: left;
     text-decoration: solid;
     padding-top: 45px;
-    padding-bottom: 15px;
+    padding-bottom: 1px;
     padding-left: 20px;
     border-bottom: solid;
     border-width: 4px;
     border-bottom-color: black;
+    font-family: Roboto,"Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
+   
 }
 
 .content {
@@ -48,6 +56,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: white;
+    font-family: Roboto,"Helvetica Neue", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 container2{
@@ -68,19 +77,10 @@ container2{
     border-bottom: solid;
     border-bottom-color: black;
 }
-/*
-label {
-    transform: translateX(50px);
-    
-}
-*/
+
 
 .lbl {
-    /* width: 100px;
-    font-size: 2rem;
-    position: absolute;
-    height: 100px;
-   */
+    
     display: inline;
     float: left;
     text-align: right;
@@ -110,11 +110,11 @@ label {
 .txtTitle {
     max-width: 500px;
     width: 500px;
-    font-size: 1.5rem;
+    font-size: 15px;
     border-radius: 15px;
     padding-left: 10px;
-    border-width:2px;
-    background-color:lightgrey;
+    border-width: 2px;
+    background-color: #F7F9F9;
 }
 
 
@@ -124,14 +124,14 @@ label {
     width: 500px;
     height: 200px;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 15px;
     border-radius: 10px;
     padding: 5px 5px 5px 10px;
     border-width: 2px;
     transform: translateX(-25px);
-    background-color: lightgrey;
+    background-color: #F7F9F9;
 }
-}
+
 
 .tbox {
     width: 100%;  
@@ -196,11 +196,12 @@ button{
 
 div.ContainerH1 {
     margin: 0px;
-    padding: 10px 0 20px 0;
+    padding: 30px 0 20px 0;
     background-color: white;
     border-bottom: solid;
     border-width: 4px;
     border-bottom-color: black;
+    position:center;
 }
 
 .btnOptions {
@@ -216,15 +217,31 @@ div.ContainerH1 {
     transition-duration: 0.4s;
     cursor: pointer;
 }
+.btnOptions1 {
+    margin-bottom:20px;
+    background-color: #FACF5A;
+    border-radius: 25px;
+    border: none;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 21px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    transform: translate(400px);
+}
 
-    .btnOptions:hover {
-        background-color: #FF5959;
-        color: white;
-    }
+.btnOptions:hover {
+    background-color: #FF5959;
+    color: white;
+}
 
 .mydatagrid {
     width: 80%;
     border: solid 2px black;
+    border-bottom-width:0px;
     min-width: 80%;
     padding:10px;
     
