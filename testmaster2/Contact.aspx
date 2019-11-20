@@ -13,43 +13,43 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div style="padding-left: 3em"><i class="fa fa-phone fa-3x" aria-hidden="true"></i></div>
+                <div style="padding-left: 1em"><i class="fa fa-phone fa-5x" aria-hidden="true"></i></div>
                 <div>
-                    <h2 class="c-form" style="padding-right: 5em">Infoline</h2>
+                    <h2 class="c-form" style="padding-right: 1.5em">Infoline</h2>
                 </div>
-                <div>
+                <div class="heading3">
                     <h4>62073188</h4>
                 </div>
-                <div>
+                <div class="heading4">
                     <h6>(during normail working hours)</h6>
                 </div>
 
                 <hr />
 
-                <div>
+                <div class="heading4" >
                     <h6>From Outside Australia</h6>
                 </div>
-                <div>
+                <div class="heading3">
                     <h4>+61 2 6207 3188</h4>
                 </div>
 
                 <hr />
 
-                <div>
+                <div class="heading4">
                     <h6>Within Australia</h6>
                 </div>
-                <div>
+                <div class="heading3">
                     <h4>02 6207 3188</h4>
                 </div>
 
             </div>
 
             <div class="col-lg-4">
-                <div style="padding-left: 6em"><i class="fa fa-envelope fa-3x" aria-hidden="true"></i></div>
+                <div style="padding-left: 8em"><i class="fa fa-envelope fa-5x" aria-hidden="true"></i></div>
                 <div style="padding-left: 1em">
                     <h2 class="c-form">CIT Student Service</h2>
                 </div>
-                <div>
+                <div class="heading3">
                     <h4 style="padding-left: 2em">infoline@cit.edu.au</h4>
                 </div>
             </div>

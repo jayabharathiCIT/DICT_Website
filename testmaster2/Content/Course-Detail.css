@@ -120,3 +120,8 @@ p {
     .course-table td {
         padding: 15px;
     }
+
+    footer {
+        width: 1800px;
+        transform: translateX(-350px);
+    }

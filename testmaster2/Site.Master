@@ -19,8 +19,8 @@
         {
             width: 100%;
             position:center;
-            /*text-align:center !important;*/
-            padding-left:100px;
+            text-align:center !important;
+            padding-left:10px;
             font-family:sans-serif;
         }
     </style>
@@ -53,7 +53,7 @@
         <div class="navbar-light fixed-top topbox">
             <h1 class="topbox-title">Department of Information and Communication Technology</h1>
             <%--<div class="topbox-logo-container" >--%>
-                <img src="Images/logo.svg"  style="  float:left;  width:135px;height:75px;" alt="logo" >
+                <img src="Images/CIT_logo_stacked_white_RTO.png"  style="float:left;  width:140px; height:110px;" alt="logo" >
            <%--</div>--%>
          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,36 +61,37 @@
         </button>   
      <%-- DICT Header  --%>
         <%-- Add DICT menu bar  --%>
-           <div class="collapse navbar-collapse d-flex justify-content-center">
+           <%--<div class="collapse navbar-collapse d-flex justify-content-center">--%>
 
-       <%-- <div class="navbar-fixed-top mx-auto"  >--%>
-     <div  style="float:left; position:center; padding-left:100px; padding-top:20px;" class="d-flex justify-content-center" >
+        <div class="navbar-collapse collapse" style=" background-color:#356AAE"  >
+     <div  style="float:left; position:center; text-align:center;  padding-left:10px; padding-top:45px; " class="d-flex justify-content-center" >
           <asp:Menu ID="DICTMenuBar1" runat="server" Orientation="Horizontal"   StaticHoverStyle-Font-Bold ="true"  RenderingMode="List" Font-Names="sans-serif"   >
-              <StaticMenuStyle CssClass="Menu"  />
-              <StaticHoverStyle Font-Bold="true"  Font-Underline="true" BackColor="#EBEDEF"  />
-              <StaticSelectedStyle Font-Bold="true"  Font-Underline="true" BackColor="#EBEDEF"  />
+              <StaticMenuStyle CssClass="Menu"  />              
+              <StaticHoverStyle Font-Bold="true"  Font-Underline="true" BackColor="#e8f4f8"  />
+              <StaticSelectedStyle Font-Bold="true"  Font-Underline="true" BackColor="#e8f8f8"  />              
                 <LevelMenuItemStyles>
-                    <asp:MenuItemStyle HorizontalPadding="60px" VerticalPadding="20px"  BorderColor="DarkGray" BorderWidth="1px" BorderStyle="Solid" BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="DarkGray"  BorderWidth="1px" BackColor="White"  VerticalPadding="10px"  HorizontalPadding="35px" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle HorizontalPadding="10px" VerticalPadding="20px"  Width="230px" BorderColor="#356AAE" BorderWidth="1px" BorderStyle="Solid" BackColor="White" Font-Bold="true" Font-Size="Large" />
+                    <asp:MenuItemStyle ItemSpacing=" 8" BorderColor="#356AAE"  BorderWidth="1px"  Width="230px" BackColor="White"  VerticalPadding="10px"  HorizontalPadding="35px" Font-Bold="true" Font-Size="Large" />
+                    
                 </LevelMenuItemStyles>
                 <Items>
                     <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/homepage.aspx" ></asp:MenuItem>
                     <asp:MenuItem Text="About DICT" Value="THE DICT" NavigateUrl="~/About.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Our Courses" Value="Our Courses">
-                        <asp:MenuItem Text="Courses and Units" Value="Courses and Units" NavigateUrl="~/courses.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Apply" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
+                        <asp:MenuItem Text="Our Courses" target="_blank" Value="Our Courses">
+                        <asp:MenuItem Text="Courses and Units"  Value="Courses and Units" NavigateUrl="~/courses.aspx" ></asp:MenuItem>
+                        <asp:MenuItem Text="Apply" target="_blank" Value="Apply" NavigateUrl="https://cit.edu.au/study/applying_and_enrolling"></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Teaching &amp; Learning" Value="Teaching &amp; Learning" NavigateUrl="~/Teaching_LearningPage.aspx" >
                     </asp:MenuItem>      
                      <asp:MenuItem Text="Student" Value="Student">
                         <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
                         <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
-                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
+                        <asp:MenuItem Text="Student Support" Value="Student Support" target="_blank" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
+                        <asp:MenuItem Text="Announcement" Value="Announcement" NavigateUrl="~/AnnHomepage.aspx" ></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="DICT News" Value="DICT News">
                         <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
+                        <asp:MenuItem Text="Events" Value="Events" NavigateUrl="~/EventPage.aspx" ></asp:MenuItem>
                     </asp:MenuItem>
                     <asp:MenuItem Text="Forum" Value="Forum">
                         <asp:MenuItem Text="Register" NavigateUrl="~/Register.aspx" Value="Register"></asp:MenuItem>
@@ -102,34 +103,7 @@
             </asp:Menu>
         
      </div>
-     <%-- <div style="float:left; width:120px; height:30px; padding-left:5px;padding-top:25px; "><a href="homepage.aspx"><img   style="width:110px; height:70px;" src="Images/DictLogoNew.png" /></a> </div>--%>
-      <%--<div style="float:left;  padding-top:20px;" class="d-flex justify-content-center" >          
-         <asp:Menu ID="DICTMenuBar2" runat="server" Orientation="Horizontal"  StaticHoverStyle-Font-Bold ="true" Font-Names="sans-serif;"  RenderingMode="List" >
-             <StaticMenuStyle BackColor="black" />
-                 <LevelMenuItemStyles>
-                    <asp:MenuItemStyle HorizontalPadding="50px" VerticalPadding="20px"  BackColor="White" Font-Bold="true" Font-Size="Large" />
-                    <asp:MenuItemStyle ItemSpacing=" 30px" BorderColor="white"   BorderStyle="NotSet"   BorderWidth="5px" HorizontalPadding="35px" BackColor="#facf5a"  Font-Bold="true" Font-Size="Large" />
-                </LevelMenuItemStyles>
-                <Items>                    
-                    <asp:MenuItem Text="Student" Value="Student">
-                        <asp:MenuItem Text="Current Student" Value="Current Student" NavigateUrl="~/CurrentStudentPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Future Student" Value="Future Student" NavigateUrl="~/FutureStudentsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Student Support" Value="Student Support" NavigateUrl="https://cit.edu.au/current/services/student_support"  ></asp:MenuItem>
-                        <asp:MenuItem Text="Announcement" Value="Announcement"></asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="DICT News" Value="DICT News">
-                        <asp:MenuItem Text="News" Value="News" NavigateUrl="~/NewsPage.aspx" ></asp:MenuItem>
-                        <asp:MenuItem Text="Events" Value="Events"></asp:MenuItem>
-                    </asp:MenuItem>
-                    <asp:MenuItem Text="Forum" Value="Forum">
-                        <asp:MenuItem Text="Register" NavigateUrl="~/Register.aspx" Value="Register"></asp:MenuItem>
-                        <asp:MenuItem Text="Login" NavigateUrl="~/Login.aspx" Value="Login"></asp:MenuItem>
-                        <asp:MenuItem Text="Add Post" NavigateUrl="~/AddForumPost.aspx" Value="AddPost"></asp:MenuItem>
-                        <asp:MenuItem  Text="View All Post" NavigateUrl="~/ForumHomePage.aspx" Value="ViewPost"></asp:MenuItem>
-                    </asp:MenuItem>
-                </Items>
-            </asp:Menu>            
-            </div>--%>
+   
   </div>
         <%-- Add DICT menu bar  --%>
         <div class="container body-content">
@@ -140,27 +114,11 @@
         </div>
            <footer>
                 <div class="footer-info">                  
-               <a href="Contact.aspx" ><h3>Contact Us</h3></a> 
-               <%-- <ul>
-                  <li>
-                    <li>General Enquiries<br>
-                    GPO Box 826 Canberra<br>
-                    ACT 2601<br>
-                    +61 2 6207 3188</li>
-                  </li>
-                </ul> --%>  
+               <a href="Contact.aspx" ><h3>Contact Us</h3></a>       
             </div>          
             <div class="footer-info">           
                 <ul>
                     <li><a href="https://cit.edu.au/study/need_help" > <h3> Need help? </h3></a></li>
-                  <%--<li>
-                    <li><a href="/about/">About</a></li><br />
-                    <li><a href="/courses/">Courses</a></li><br />
-                    <li><a href="/teaching_learning/">Teaching & Learning</a></li><br />
-                    <li><a href="/students/">Students</a></li><br />
-                    <li><a href="/DICT_news/">DICT News</a></li><br />
-                    <li><a href="ForumHomePage.aspx">Forum</a></li><br />
-                  </li>--%>
                 </ul>
             </div>
                 <div class="footer-info">

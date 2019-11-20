@@ -170,6 +170,23 @@ namespace DICT_Website
                     AllRecordDeleted = true;
                 }
 
+                string sql = "DELETE FROM dt_book_event WHERE Register_ID = " + RegID;
+                using (var cmd = new MySqlCommand(sql, sqlCon))
+                {
+                    int count = cmd.ExecuteNonQuery();
+                    
+                    if(count > 0 )
+                    {
+                        AllRecordDeleted = true;
+                    }
+                }
+                //delete account is recorded in dt_deleted_account table
+                MySqlCommand insert = new MySqlCommand("INSERT INTO dt_deleted_account (Register_ID, Date_Delete) VALUES(@Registerid, @DeletedDate)", sqlCon);
+
+                insert.Parameters.AddWithValue("@Registerid", RegID);
+                insert.Parameters.AddWithValue("@DeletedDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                insert.ExecuteNonQuery();
+
                 //Delete From Person Table
                 string Query = "DELETE FROM `dict website`.dt_dict_persons where Register_ID =" + RegID + ";";
                 MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
@@ -180,7 +197,9 @@ namespace DICT_Website
                 {
                     AllRecordDeleted = true;                   
                 }
-                if(AllRecordDeleted)
+
+           
+                if (AllRecordDeleted)
                 {
                     string message = "Delete Student Account successful!";
                     string url = "AdminForumPage.aspx";

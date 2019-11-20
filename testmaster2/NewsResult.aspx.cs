@@ -107,7 +107,7 @@ namespace DICT_Website
                 {
                     conn.Open();
 
-                    MySqlCommand com = new MySqlCommand("DELETE FROM dict_website.dt_news WHERE News_Id =" + newsid, conn);
+                    MySqlCommand com = new MySqlCommand("DELETE FROM dt_news WHERE News_Id =" + newsid, conn);
                     com.ExecuteNonQuery();
                 }
 

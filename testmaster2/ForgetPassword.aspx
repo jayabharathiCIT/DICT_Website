@@ -27,13 +27,13 @@
    <%-- <div  style="vertical-align:middle; text-align:center; width:800px; height:900px; background-image:url(Images/background.png) " >--%>
          <%--<div  class="divPageContent"    >--%>
         <asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineForgetPassword">
-            <asp:Panel ID="Panel2" CssClass="plnInlineForgetPassword" BorderStyle="Solid"  BorderColor="White" BorderWidth="2px" runat="server">
+            <asp:Panel ID="Panel2" CssClass="plnInlineForgetPassword" BorderStyle="Solid"  BorderColor="black" BorderWidth="2px" runat="server">
             <div id="divHeader" class="divHeader"> 
                 <table>
                     <tr>
-                        <td style="width:100px; height:auto">
+                       <%-- <td style="width:100px; height:auto">
                              <asp:Image  runat="server" CssClass="imageLogo"  ImageUrl="~/Images/DictFullLogo.png"/>
-                        </td>
+                        </td>--%>
                          <td style="width:380px;height:auto; ">
                            <asp:Label ID="lblPageTitle" runat="server" Text="Forget your password??"  CssClass="pageTitle" ></asp:Label>
                         </td>
@@ -45,7 +45,7 @@
                 <table>
                     <tr>
                      <td style="width:550px;height:auto; ">
-                           <asp:Label ID="lblPageDetail" runat="server" Text="Please enter the email address registered on your account."  CssClass="pageDetail" ></asp:Label>
+                           <asp:Label ID="lblPageDetail" runat="server" Text="***Please enter the email address registered on your account.***"  CssClass="pageDetail" ></asp:Label>
                         </td>
                         </tr>
                 </table>
@@ -76,7 +76,7 @@
                         <asp:TableCell>
                             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" OnClick="btnCancel_Click" /></asp:TableCell>
                     </asp:TableRow>
-                    
+
         </asp:Table>
                 <asp:Label ID="lblSuccessMessage" runat="server" Text=""></asp:Label>     
     </asp:Panel>

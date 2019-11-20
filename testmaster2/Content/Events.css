@@ -1,25 +1,86 @@
-﻿.top-box {
-    height: 110px;
-    width: 100%;
-    background: linear-gradient(187.19deg, #FF7F7F 0%, #DDCD13 101.17%);
+﻿.event-date, .eventresult-date {
+    font-size: 24px;
+    font-family: sans-serif;
+    min-width: 140px;
+    padding-top: 50px;
 }
-.header {
-    padding-left: 35px;
-    transform: translateY(25px);
-    font-size: 5rem;
-    color: white;
+
+    .eventresult-date > div {
+        text-align: center;
+        color: #fff;
+    }
+
+.event-time {
+    padding-top: 10px;
+    font-size: 24px;
+    font-family: sans-serif;
 }
-.content-box {
-    height: auto;
+
+.featured-date {
+    position: relative;
+    border-bottom: 2px solid #777777;
 }
-.header2 {
-    text-align: center;
-    transform: translateY(50px);
-    font-size: 4rem;
-    color: white;
+
+.eventresult-img {
+    height: 350px;
+    width: 90%;
 }
-.form-container {
-    text-align: center;
-    transform: translateY(150px);
-    align-content:center;
+
+.event-title > a {
+    transition-duration: 500ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    font-weight: 500;
+    font-size: 24px;
+    color: #1d1d1d;
+}
+
+    .event-title > a:hover, a:focus {
+        color: #ee002d;
+        transition-duration: 500ms;
+    }
+
+.event-content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: 500;
+    outline: 0 solid transparent;
+    color: #828282;
+    padding-top: 10px;
+}
+    
+.evt-reg-button {
+    padding-top: 70px;
+    height: 100px;
+    margin-right: 30%;
+    padding-bottom: 20px;
+}
+
+.subcontrol{
+    padding-top: 20px;
+}
+
+.participants {
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+.eventresult-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1d1d1d;
+    font-family: sans-serif;
+}
+
+.eventresult-content {
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: justify;
+    line-height: 2;
+    color: #1d1d1d;
+}
+
+.register-block {
+    background: linear-gradient(to bottom, #049898 0%, #828282 100%);
 }

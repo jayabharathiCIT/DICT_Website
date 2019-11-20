@@ -255,6 +255,15 @@
     font-family:sans-serif;
     font-weight:bold;
 }
+    .btnCancelControls:hover {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+    }
+
+    .btnCancelControls:active {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
 
 .btnReply{
     width: 100px;
@@ -268,6 +277,15 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+    .btnReply:hover {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+    }
+
+    .btnReply:active {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
 
 .btnSubmitControls {
     width: 145px;
@@ -281,6 +299,16 @@
     font-family: sans-serif;
     font-weight: bold;
 }
+    .btnSubmitControls:hover {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+    }
+
+    .btnSubmitControls:active {
+        background-image: linear-gradient(to right top, #facf5a, #e8be55, #d7ad51, #c59d4c, #b38d47);
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
 .txtMultitxtControl {
     width: 250px;
     height: 80px;
