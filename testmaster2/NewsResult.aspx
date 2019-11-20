@@ -3,23 +3,21 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/News.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <div class="top-box">
-        <!------------------------------------------- Main heading ---------------------------->
-        <h1 class="header">News</h1>
-
+    <div>
+        <h2 class="subheader">News</h2>
     </div>
     <div class="content-box">
         <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
             <ItemTemplate>
-                <div class="container-fluid">
+                <div class="container-fluid newsresult-container">
                     <div class="row">
                         <asp:Label ID="title" Text='<%# Eval("News_Title") %>' CssClass="newsresult-title" runat="server"></asp:Label>
                     </div>
                     <div class="row">
-                        <asp:Label ID="newsdate" Text='<%# "Posted On " + Eval("News_Date", "{0:dd MMM yyyy}") %>' CssClass="date" runat="server"></asp:Label>
+                        <asp:Label ID="newsdate" Text='<%# "Posted On " + Eval("News_Date", "{0:dd MMM yyyy}") %>' CssClass="posted-date" runat="server"></asp:Label>
                     </div>
                     <div class="row">
-                        <asp:Image ID="newsimage" ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>' CssClass="img" runat="server"></asp:Image>
+                        <asp:Image ID="newsimage" ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>' CssClass="newsresult-img" runat="server"></asp:Image>
                     </div>
 
                     <div class="row">

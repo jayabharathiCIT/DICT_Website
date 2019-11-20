@@ -80,7 +80,7 @@ namespace DICT_Website
         }
 
             public void showSelectedPost()
-        {
+             {
 
             postID = Request.QueryString["PostID"];
             DataTable dt = new DataTable();
@@ -107,9 +107,9 @@ namespace DICT_Website
                     ddlCategory.Items.FindByValue(dt.Rows[0]["Category_ID"].ToString()).Selected = true;
                     //ddlCategory.SelectedValue = dt.Rows[0]["Category_ID"].ToString();
                 }            
-        }
+            }
 
-    }
+            }
 
         protected void btnUpdatePost_Click(object sender, EventArgs e)
         {

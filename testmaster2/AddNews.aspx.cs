@@ -65,6 +65,8 @@ namespace DICT_Website
                 }
             }
 
+            Response.Redirect("~/NewsPage.aspx");
+
         }
        
 
@@ -102,7 +104,7 @@ namespace DICT_Website
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/HomePage.aspx");
+            Response.Redirect("~/NewsPage.aspx");
         }
     }
 }

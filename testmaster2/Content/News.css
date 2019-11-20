@@ -1,7 +1,6 @@
 ﻿/*All*/
-body{
+body {
     font-family: sans-serif;
- 
 }
 
 
@@ -12,7 +11,7 @@ body{
 .top-box {
     height: 75px;
     width: 100%;
-    background:black;
+    background: black;
 }
 
 .header {
@@ -22,13 +21,11 @@ body{
     color: #f8f9fa;
     font-family: sans-serif;
 }
-    /*--------------------------------------content container-------------------------------*/
-   
+/*--------------------------------------content container-------------------------------*/
+
 
 .content-box {
-  height:auto; 
-   
-    
+    height: auto;
 }
 /*=====================================Add news===================================*/
 .header2 {
@@ -43,7 +40,7 @@ body{
 }
 
 .btnSubmitControls {
-    background-color:transparent;    
+    background-color: transparent;
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 30px;
@@ -54,7 +51,6 @@ body{
 }
 
 .divider {
-    
     height: auto;
     display: inline-block;
 }
@@ -68,11 +64,13 @@ input[type=text], select, textarea {
     border-radius: 4px;
     resize: vertical;
 }
+
 .form-control {
     font-size: 2em !important;
     color: #000 !important;
-    font-family:sans-serif;
+    font-family: sans-serif;
 }
+
 label {
     padding: 12px 12px 12px 0;
     display: inline-block;
@@ -96,7 +94,7 @@ input[type=submit] {
 
 
 
-    
+
 
 .container {
     border-radius: 5px;
@@ -112,7 +110,7 @@ input[type=submit] {
     clear: both;
 }
 
-input{
+input {
     max-width: 600px;
 }
 
@@ -122,20 +120,20 @@ textarea {
 
 .button1 {
     transform: translateX(900px);
-   
     width: 50px;
     height: 40px;
     border-radius: 10px;
 }
+
 .btn {
     transform: translateX(800px);
-   
     margin: 25px;
     width: 100px;
     height: 40px;
     border-radius: 10px;
     font-size: 1.5rem;
 }
+
 .date {
     transform: translateX(123px);
     font-size: 2rem;
@@ -155,6 +153,7 @@ textarea {
     width: 100%;
     background-color: #dcdcdc7d;
 }
+
 input, select, textarea {
     float: left;
     height: 50px !important;
@@ -173,20 +172,21 @@ input, select, textarea {
     width: 120px;
     background-color: #419098
 }
+
 .container-display {
     background-color: transparent;
     height: 300px !important;
     width: 360px !important;
- 
     margin-top: 30px;
-    
 }
+
 .news-title {
     color: white;
     text-align: left;
     font-size: 13px;
     padding-top: 10px;
 }
+
 .news-date {
     color: #000;
     font-size: 15px;
@@ -195,62 +195,77 @@ input, select, textarea {
 }
 
 
-.img-hover figure img {
+.img-hover img {
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
 
-.img-hover figure:hover img {
-    -webkit-transform: scale(1.3);
-    transform: scale(1.3);
-}
+    .img-hover img:hover {
+        -webkit-transform: scale(0.95);
+        transform: scale(0.95);
+    }
 
 .title-link {
     color: #000 !important;
     font-family: sans-serif !important;
 }
 
-/*===========================================News Result========================================*/
-.img {
-    height:350px;
-    width: 90%;
-    padding-left: 5%;
-    
- }
-.date{
-    font-family:sans-serif;
-    font-size: 13px !important;
-    color: #000 !important;
+h2.subheader {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight:bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
 }
 
-.newsresult-title{
-    font-size: 30px;
-    font-weight:bold;
-    padding: 50px 0 0 50px;
-    color:#000;
-    font-family:sans-serif;
+/*===========================================News Result========================================*/
+.newsresult-img {
+    height: 350px;
+    width: 70%;    
+}
+
+.posted-date {
+    font-family: sans-serif;
+    font-size: 16px !important;
+    color: #000 !important;
+    float:right;
+}
+.newsresult-container > div{
+    padding-left: 20px;
+}
+.newsresult-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #000;
+    font-family: sans-serif;
 }
 
 .newsresult-content {
-    font-size: 15px;
+    padding-top: 10px;
+    font-size: 18px;
     font-family: sans-serif;
     text-align: justify;
-    line-height: 2;
-    color: #000;
+    line-height: 1.6;
+    color: #828282;
 }
+
 .newsresult-source {
     color: #000;
     transform: translateX(225px);
-    font-size:10px;
+    font-size: 10px;
 }
+
 .news-submit {
     color: white !important;
     font-size: 15px;
     font-weight: bolder;
     font-family: sans-serif;
 }
+
 .news-cancel {
     color: white !important;
     font-size: 15px;
@@ -273,12 +288,124 @@ input, select, textarea {
     background-color: #FFD700;
 }
 
-.news-title-more {
-    font-size: 18px;
-    font-family: sans-serif;
+.newsmore {
+    font: 28px bold sans-serif;
+    padding-top: 80px;
 }
 
-.newsmore {
-    font-size: 20px;
-    font-family: sans-serif
+.news-title {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+    .news-title > a {
+        text-decoration: none;
+        color: #152535;
+    }
+        .news-title > a:hover, a:focus {
+            color: #ee002d;
+            transition-duration: 500ms;
+        }
+.news-title-1 {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 500;
+    outline: 0 solid transparent;
+    color: #828282;
+    padding-top: 15px;
+}
+
+    .news-title-1 > a {
+        color: #828282;
+        transition-duration: 500ms;
+        text-decoration: none;
+    }
+
+        .news-title-1 > a:hover, a:focus {
+            color: #ee002d;
+            transition-duration: 500ms;
+        }
+
+.news-data-1 {
+    font-weight: 500;
+    display: block;
+    line-height: 1.8;
+}
+
+    .news-data-1 > span {
+        color: #828282;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+.news-title-2 > a {
+    transition-duration: 500ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    font-weight: 500;
+    font-size: 18px;
+    color: #828282;
+}
+
+    .news-title-2 > a:hover, a:focus {
+        color: #ee002d;
+        transition-duration: 500ms;
+    }
+
+.news-data {
+    font-weight: 500;
+    display: block;
+    line-height: 1.8;
+    padding-left: 10px;
+}
+
+    .news-data > span {
+        color: #828282;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+.news-catagory {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+}
+
+    .news-catagory > a {
+        text-decoration: none;
+        color: #ee002d;
+    }
+
+.featured-news {
+    position: relative;
+    border-bottom: 1px solid #d0d5d8;
+    padding: 20px 0;
+}
+
+
+.morenews-title > a {
+    transition-duration: 500ms;
+    text-decoration: none;
+    outline: 0 solid transparent;
+    font-weight: 500;
+    font-size: 24px;
+    color: #1d1d1d;
+}
+
+    .morenews-title > a:hover, a:focus {
+        color: #ee002d;
+        transition-duration: 500ms;
+    }
+
+.morenews-content {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: 500;
+    outline: 0 solid transparent;
+    color: #828282;
+    padding-top: 10px;
 }

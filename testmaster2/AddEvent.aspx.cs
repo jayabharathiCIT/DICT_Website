@@ -21,7 +21,7 @@ namespace DICT_Website
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/EventPage.aspx");
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -61,6 +61,7 @@ namespace DICT_Website
                     txtContent.Text = " ";
                 }
             }
+            Response.Redirect("~/EventPage.aspx");
 
         }
     }

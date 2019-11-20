@@ -3,303 +3,106 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link href="Content/News.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <div class="top-box">
-        <!------------------------------------------- Main heading ---------------------------->
+    <!--<div class="top-box">
         <h1 class="header">News</h1>
+    </div>-->
+    <div>
+        <h2 class="subheader">News</h2>
     </div>
-    <div class="content-box">
-        <div class="container-fluid">
-            <%--================================================= Latest new================================--%>
+    <!-- ##### Featured News Start ##### -->
+    <div>
+        <div class="container">
             <div class="row">
-                <div class="item-header">
-                    <h2>Latest News</h2>                    
-                </div>
-                <hr />
-                <div class="col-12">
-                    <asp:DataList ID="dlLatestNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
-                        <ItemTemplate>
-                            <div class="container-display">
-                                <div class="row">
-                                    <div class="col-12 img-hover">
-                                        <%-------------------------------- latest news image from data base------------------------- --%>
-                                        <figure>
-                                            <asp:Image ID="newsimage" runat="server"
-                                                ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="180px" Width="300px"></asp:Image>
-                                        </figure>
+                <div class="col-12 col-md-8 col-lg-8">
+                    <div class="row">
+                        <!-- Single Featured Post -->
+                        <div class="col-12 col-md-6 col-lg-7">
 
-
-                                    </div>
+                            <div>
+                                <div class="news-thumb img-hover">
+                                    <asp:Image ID="newsimage0" runat="server"
+                                        Height="330px" Width="400px"></asp:Image>                                   
                                 </div>
-                                <div class="row">
-                                    <div class="col-3 news-date">
-                                        <%-- -------------------------------------Latest news date from data base ----------------------%>
-                                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' runat="server">
-                                        </asp:Label>
-                                    </div>
-                                    <%-- -------------------------------------Latest news label from data base ----------------------%>
-                                    <div class="col-9 news-title">
-                                        <asp:HyperLink ID="lbLatestNews" CssClass="title-link" NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server" 
-                                            Text='<%# Eval("News_Title").ToString().Substring(0,Math.Min(30,Eval("News_Title").ToString().Length))+ "..." %>'>
+                                <div class="news-data">
+                                    <div class="news-title">
+                                        <asp:HyperLink ID="newslink0" runat="server">
                                         </asp:HyperLink>
                                     </div>
-
+                                    <asp:Label ID="newsTextLabel0" runat="server">
+                                    </asp:Label>
                                 </div>
                             </div>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="left" />
+                        </div>
 
-                        <SeparatorTemplate>
-                            <table style="width: 30px">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                        </SeparatorTemplate>
-                    </asp:DataList>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="item-header">
-                    <%---================================================= Networking=============================== --%>
-                    <h2>Networking</h2>
-                </div>
-                <div class="col-12">
-                    <asp:DataList ID="dlNetworkNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
-                        <ItemTemplate>
-                            <div class="container-display">
-
-                                <div class="row">
-                                    <div class="col-12 img-hover">
-                                        <%-------------------------------- networking news image from data base------------------------- --%>
-                                        <figure>
-
-                                            <asp:Image ID="newsimage" runat="server"
-                                                ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="180px" Width="300px"></asp:Image>
-                                        </figure>
-                                    </div>
+                        <div class="col-12 col-md-6 col-lg-5">
+                            <!-- Single Featured Post -->
+                            <div>
+                                <div class="news-thumb img-hover">
+                                        <asp:Image ID="newsimage1" runat="server"
+                                            Height="200px" Width="240px"></asp:Image>
                                 </div>
-                                <div class="row">
-                                    <div class="col-3 news-date">
-
-                                        <%-- -------------------------------------networking news label from data base ----------------------%>
-
-                                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' runat="server">
-                                        </asp:Label>
-                                    </div>
-
-                                    <div class="col-9 news-title">
-                                        <asp:HyperLink ID="newslabel" CssClass="title-link" NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server" 
-                                            Text='<%# Eval("News_Title").ToString().Substring(0,Math.Min(30,Eval("News_Title").ToString().Length)) + "..." %>'>
+                                <div class="news-data-1">
+                                    <div class="news-title-1">
+                                        <asp:HyperLink ID="newsLink1" runat="server">
                                         </asp:HyperLink>
-
-                                                                            </div>
-
+                                    </div>
                                 </div>
+
                             </div>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Left" />
 
-                        <SeparatorTemplate>
-                            <table style="width: 30px">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                        </SeparatorTemplate>
-                    </asp:DataList>
-                     <asp:Button ID="btnMoreNetwork" runat="server" Text="More Network News..." CssClass="btnSubmitControls" OnClick="btnMoreNetwork_Click" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="item-header">
-                    <%---================================== Cyber security============================================== --%>
-                    <h2>Cyber Security</h2>
-                </div>
-                <div class="col-12">
-                    <asp:DataList ID="dlCyberNews" CellPadding="5" CellSpacing="5"  RepeatLayout="Table"  RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
-                        <ItemTemplate>
-                            <div class="container-display">
-                                <div class="row">
-                                    <div class="col-12 img-hover">
-                                        <figure>
-                                            <asp:Image ID="newsimage" runat="server"
-                                                ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="200px" Width="300px"></asp:Image>
-                                        </figure>
-                                    </div>
+                            <!-- Single Featured Post -->
+                            <div>
+                                <div class="news-thumb img-hover">
+                                        <asp:Image ID="newsimage2" runat="server"
+                                            Height="200px" Width="240px"></asp:Image>
                                 </div>
-                                <div class="row">
-                                    <div class="col-3 news-date">
-                                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' runat="server">
-                                        </asp:Label>
-                                    </div>
-                                    <div class="col-9 news-title">
-                                        <asp:HyperLink ID="newslabel" CssClass="title-link" NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server" 
-                                            Text='<%# Eval("News_Title").ToString().Substring(0,Math.Min(30,Eval("News_Title").ToString().Length))+ "..." %>'>
+                                <div class="news-data-1">
+                                    <div class="news-title-1">
+                                        <asp:HyperLink ID="newsLink2" runat="server">
                                         </asp:HyperLink>
-                                                                            </div>
-
+                                    </div>
                                 </div>
+
                             </div>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Left" />
+                        </div>
+                    </div>
+                </div>
 
-                        <SeparatorTemplate>
-                            <table style="width: 30px">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                        </SeparatorTemplate>
-                    </asp:DataList>
-                     <asp:Button ID="btnCyberNews" runat="server" Text="More Cyber Security News..." CssClass="btnSubmitControls" OnClick="btnCyberNews_Click" />
-                </div>
-                 
-            </div>
-            <div class="row">
-                <div class="item-header">
-                    <%---================================== Software development============================================== --%>
-                    <h2>Software development</h2>
-                </div>
-                <div class="col-12">
-                    <asp:DataList ID="dlSoftwareNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
-                        
-                        <ItemTemplate>
-                            <div class="container-display">
-                                <div class="row">
-                                    <div class="col-12 img-hover">
-                                        <figure>
-                                            <asp:Image ID="newsimage" runat="server"
-                                                ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="180px" Width="300px"></asp:Image>
-                                        </figure>
+                <div class="col-12 col-md-4 col-lg-4">
+                    <!-- Single Featured Post -->
+                    <div class="d-flex">
+                        <asp:DataList ID="dlCategoryNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Vertical" HeaderStyle-VerticalAlign="Top" runat="server">
+                            <ItemTemplate>
+
+                                <div class="featured-news d-flex">
+                                    <div class="news-thumb">
+                                        <asp:Image ID="newsimage" runat="server"
+                                            ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
+                                            Height="120px" Width="120px"></asp:Image>
+                                    </div>
+                                    <div class="news-data">
+                                        <div class="news-catagory">
+                                            <asp:HyperLink runat="server" NavigateUrl='<%# "MoreNews.aspx?type=" + Eval("News_Ctgry_No").ToString() %>' Text='<%# GetCatDescription(Eval("News_Ctgry_No").ToString()) %>'></asp:HyperLink>
+                                        </div>
+
+                                        <div class="news-title-2">
+                                            <asp:HyperLink NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server"
+                                                Text='<%# Eval("News_Title") %>'>
+                                            </asp:HyperLink>
+                                            <div class="news-date">
+                                                <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:MMM dd}") %>' runat="server">
+                                                </asp:Label>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-3 news-date">
-                                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' runat="server">
-                                        </asp:Label>
-                                    </div>
-                                    <div class="col-9 news-title">
-                                        <asp:HyperLink ID="newslabel" CssClass="title-link" NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server" 
-                                            Text='<%# Eval("News_Title").ToString().Substring(0,Math.Min(30,Eval("News_Title").ToString().Length))+ "..." %>'>
-                                        </asp:HyperLink>
-                                        
-                                    </div>
 
-                                </div>
-                            </div>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="left" />
+                            </ItemTemplate>
 
-                        <SeparatorTemplate>
-                            <table style="width: 30px">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                        </SeparatorTemplate>
-                    </asp:DataList>
-                     <asp:Button ID="btnMoreSoftware" runat="server" Text="More Software News..." CssClass="btnSubmitControls" OnClick="btnMoreSoftware_Click" />
+                        </asp:DataList>
+                    </div>
+
                 </div>
-               
-            </div>
-            <div class="row">
-                <div class="item-header">
-                    <%---================================== System analysis and programming============================================== --%>
-                    <h2>System Analysis and Programming</h2>
-                </div>
-                <div class="col-12">
-                    <asp:DataList ID="dlSystemsNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
-                        <ItemTemplate>
-                            <div class="container display">
-                                <div class="row">
-                                    <div class="col-12 img-hover">
-                                        <figure>
-                                            <asp:Image ID="newsimage" runat="server"
-                                                ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="180px" Width="300px"></asp:Image>
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3 news-date">
-                                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' runat="server">
-                                        </asp:Label>
-                                    </div>
-                                    <div class="col-9 news-title">
-                                        <asp:HyperLink ID="newslabel" CssClass="title-link" NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server" 
-                                            Text='<%# Eval("News_Title").ToString().Substring(0,Math.Min(30,Eval("News_Title").ToString().Length))+ "..." %>'>
-                                        </asp:HyperLink>
-                                        <
-                                    </div>
-
-                                </div>
-                            </div>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Left" />
-
-                        <SeparatorTemplate>
-                            <table style="width: 30px">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                        </SeparatorTemplate>
-                    </asp:DataList>
-                     <asp:Button ID="btnSystemAnalysis" runat="server" Text="More Software Analysis News..." CssClass="btnSubmitControls" OnClick="btnSystemAnalysis_Click" />
-                </div>
-               
-            </div>
-            <div class="row">
-                <div class="item-header">
-                    <%---================================== Games and virtual world============================================== --%>
-                    <h2>Games and virtual world</h2>
-                </div>
-                <div class="col-12">
-                    <asp:DataList ID="dlGamesNews" CellPadding="5" CellSpacing="5" RepeatLayout="Table" RepeatDirection="Horizontal" HeaderStyle-VerticalAlign="Top" runat="server">
-                        <ItemTemplate>
-                            <div class="container-display">
-                                <div class="row">
-                                    <div class="col-12 img-hover">
-                                        <figure>
-                                            <asp:Image ID="newsimage" runat="server"
-                                                ImageUrl='<%# "data:image/png;base64," + Convert.ToBase64String((byte[])Eval("News_Image"))%>'
-                                                Height="180px" Width="200px"></asp:Image>
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-3 news-date">
-                                        <asp:Label ID="newsdate" Text='<%# Eval("News_Date", "{0:dd MMM}") %>' runat="server">
-                                        </asp:Label>
-                                    </div>
-                                    <div class="col-9 news-title">
-                                        <asp:HyperLink ID="newslabel" CssClass="title-link" NavigateUrl='<%# "NewsResult.aspx?NewsId=" + Eval("News_Id")%>' runat="server" 
-                                            Text='<%# Eval("News_Title").ToString().Substring(0,Math.Min(30,Eval("News_Title").ToString().Length))+ "..." %>'>
-                                        </asp:HyperLink>
-                                        
-                                    </div>
-
-                                </div>
-                            </div>
-                        </ItemTemplate>
-                        <ItemStyle HorizontalAlign="Left" />
-
-                        <SeparatorTemplate>
-                            <table style="width: 30px">
-                                <tr>
-                                    <td>&nbsp;</td>
-                                </tr>
-                            </table>
-                        </SeparatorTemplate>
-                    </asp:DataList>
-                     <asp:Button ID="btnMoreGame" runat="server" Text="More Games News.." CssClass="btnSubmitControls" OnClick="btnMoreGame_Click" />
-                </div>
-               
             </div>
         </div>
     </div>

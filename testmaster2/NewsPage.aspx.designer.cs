@@ -7,110 +7,81 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DICT_Website
-{
-
-
-    public partial class NewsPage
-    {
-
+namespace DICT_Website {
+    
+    
+    public partial class NewsPage {
+        
         /// <summary>
-        /// dlLatestNews control.
+        /// newsimage0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlLatestNews;
-
+        protected global::System.Web.UI.WebControls.Image newsimage0;
+        
         /// <summary>
-        /// dlNetworkNews control.
+        /// newslink0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlNetworkNews;
-
+        protected global::System.Web.UI.WebControls.HyperLink newslink0;
+        
         /// <summary>
-        /// btnMoreNetwork control.
+        /// newsTextLabel0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMoreNetwork;
-
+        protected global::System.Web.UI.WebControls.Label newsTextLabel0;
+        
         /// <summary>
-        /// dlCyberNews control.
+        /// newsimage1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlCyberNews;
-
+        protected global::System.Web.UI.WebControls.Image newsimage1;
+        
         /// <summary>
-        /// btnCyberNews control.
+        /// newsLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCyberNews;
-
+        protected global::System.Web.UI.WebControls.HyperLink newsLink1;
+        
         /// <summary>
-        /// dlSoftwareNews control.
+        /// newsimage2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlSoftwareNews;
-
+        protected global::System.Web.UI.WebControls.Image newsimage2;
+        
         /// <summary>
-        /// btnMoreSoftware control.
+        /// newsLink2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMoreSoftware;
-
+        protected global::System.Web.UI.WebControls.HyperLink newsLink2;
+        
         /// <summary>
-        /// dlSystemsNews control.
+        /// dlCategoryNews control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlSystemsNews;
-
-        /// <summary>
-        /// btnSystemAnalysis control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSystemAnalysis;
-
-        /// <summary>
-        /// dlGamesNews control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dlGamesNews;
-
-        /// <summary>
-        /// btnMoreGame control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMoreGame;
+        protected global::System.Web.UI.WebControls.DataList dlCategoryNews;
     }
 }

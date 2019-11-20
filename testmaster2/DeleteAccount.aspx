@@ -22,12 +22,12 @@
     }
 </script>
 
-    <link href="Content/ChangePasswordStyles.css" rel="stylesheet" />
+    <link href="Content/DeleteStyle.css" rel="stylesheet" />
    <%-- <div  style="vertical-align:middle; text-align:center; width:800px; height:900px; background-image:url(Images/background.png) " >--%>
          <%--<div  class="divPageContent"    >--%>
         <%--<asp:Panel ID="Panel1" runat="server" CssClass="plnOutlineDelete">
             <asp:Panel ID="Panel2" CssClass="plnInlineDelete" BorderStyle="Solid"  BorderColor="Black" BorderWidth="2px" runat="server">--%>
-            <table id="testdiv" style="border:thin; border-color:black; border-style:solid; height:auto; width:100%; ;">
+            <table id="testdiv" style="border:thin; border-color:black; border-style:solid; height:100%; width:100%; ;">
                     <tr>
                         <td>
              <%-- Added login dropdown --%>
@@ -64,14 +64,14 @@
                 </div>
 
 
-              <asp:Table Height ="150px" ID="tblAddPost" runat="server" CssClass="tableDelete" HorizontalAlign="center" Width="684px" >
+              <asp:Table Height ="250px" ID="tblAddPost" runat="server" CssClass="tableDelete" HorizontalAlign="center" Width="684px" >
                 <asp:TableRow Width="450" >
                 <asp:TableCell >  <asp:Label ID="Label1" runat="server" Text="Are you sure you want to delete your account?? "  CssClass="pageTitleDelete" ></asp:Label></asp:TableCell>
             </asp:TableRow>
 
                     <asp:TableRow HorizontalAlign="Center">
                         <asp:TableCell>
-                            <asp:Button ID="btnCreatePost" runat="server" Text="Delete" CssClass="btnSubmitControls" OnClick="btnsubmit_Click" OnClientClick="return ValidateRegForm();" /></asp:TableCell>
+                            <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btnSubmitControls" OnClick="btnsubmit_Click" OnClientClick="return ValidateRegForm();" /></asp:TableCell>
                         <asp:TableCell>
                             <asp:Button ID="btnCancel" runat="server" Text="Cancel" CssClass="btnCancelControls" OnClick="btnCancel_Click" /></asp:TableCell>
                     </asp:TableRow>

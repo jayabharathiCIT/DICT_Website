@@ -22,7 +22,6 @@ namespace DICT_Website
             else
             {
                 String userid = Convert.ToString((int)Session["RegID"]);
-
                 String username = Session["Username"].ToString();
                 //String userrole = Session["Role"].ToString();
                 lbluserInfo.Text = "Welcome , " + username + " ";
@@ -37,8 +36,8 @@ namespace DICT_Website
 
         protected void btnsubmit_Click(object sender, EventArgs e)
         {
-
-            deleteAccount(1);
+           int getRegID = Convert.ToInt32((int)Session["RegID"]);
+           deleteAccount(getRegID);
             Response.Redirect("~/Login.aspx");
         }
 
@@ -78,30 +77,61 @@ namespace DICT_Website
                 using (MySqlConnection sqlCon = new MySqlConnection(strConnString))
                 {
                     sqlCon.Open();
-                    //Pass the post ID to query Replies of the specific Post.
-                    DataTable dtReply = new DataTable();
-                    string QueryReply = "SELECT * FROM `dict website`.`dt_dict_persons` where Register_ID =" + RegID + ";";
-                    MySqlCommand MyCommandGetReply = new MySqlCommand(QueryReply, sqlCon);
-                    MySqlDataAdapter sqlDaReply = new MySqlDataAdapter();
-                    sqlDaReply.SelectCommand = MyCommandGetReply;
-                    sqlDaReply.Fill(dtReply);
-                    string QueryDeleteReply = "DELETE FROM `dict website`.dt_dict_persons where Register_ID =" + RegID + ";";
-                    if (dtReply.Rows.Count < 0)
-                    {
 
-                        MySqlCommand MyCommand = new MySqlCommand(QueryDeleteReply, sqlCon);
-                        MyCommand.ExecuteNonQuery();
+                    bool AllRecordDeleted = false;
+                    //Delete All the posts created by user.
+                    string QueryPost = "DELETE FROM `dict website`.dt_posts where Register_ID =" + RegID + ";";
+                    MySqlCommand MyCommandPost = new MySqlCommand(QueryPost, sqlCon);
+
+                    int deletePost = MyCommandPost.ExecuteNonQuery();
+                    if (deletePost > 0)
+                    {
+                        AllRecordDeleted = true;
                     }
 
+                    //Delete the replies created by the user.
+
+                    string QueryReply = "DELETE FROM `dict website`.dt_reply where Register_ID =" + RegID + ";";
+                    MySqlCommand MyCommandReply = new MySqlCommand(QueryReply, sqlCon);
+
+                    int deleteDeply = MyCommandReply.ExecuteNonQuery();
+                    if (deleteDeply > 0)
+                    {
+                        AllRecordDeleted = true;
+                    }
+
+                    string sql = "DELETE FROM dt_book_event WHERE Register_ID = " + RegID;
+                    using (var cmd = new MySqlCommand(sql, sqlCon))
+                    {
+                        int count = cmd.ExecuteNonQuery();
+
+                        if (count > 0)
+                        {
+                            AllRecordDeleted = true;
+                        }
+                    }
+                    //delete account is recorded in dt_deleted_account table
+                    MySqlCommand insert = new MySqlCommand("INSERT INTO dt_deleted_account (Register_ID, Date_Delete) VALUES(@Registerid, @DeletedDate)", sqlCon);
+
+                    insert.Parameters.AddWithValue("@Registerid", RegID);
+                    insert.Parameters.AddWithValue("@DeletedDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    insert.ExecuteNonQuery();
+
+                    //Delete From Person Table
                     string Query = "DELETE FROM `dict website`.dt_dict_persons where Register_ID =" + RegID + ";";
                     MySqlCommand MyCommandtoGetPostByID = new MySqlCommand(Query, sqlCon);
+                    //  MyCommandtoGetPostByID.ExecuteNonQuery();
                     int result = MyCommandtoGetPostByID.ExecuteNonQuery();
-                    //gv_ForumDetails.DataSource = dt;
-                    //gv_ForumDetails.DataBind();
                     //result holds number of rows affected 
                     if (result > 0)
                     {
-                        string message = "Delete successful!";
+                        AllRecordDeleted = true;
+                    }
+
+
+                    if (AllRecordDeleted)
+                    {
+                        string message = "Delete Student Account successful!";
                         string url = "AdminForumPage.aspx";
                         string script = "window.onload = function(){ alert('";
                         script += message;
@@ -110,11 +140,10 @@ namespace DICT_Website
                         script += url;
                         script += "'; }";
                         ClientScript.RegisterStartupScript(this.GetType(), "Redirect", script, true);
-                        Response.Redirect("~/Login.aspx");
                     }
                     else
                     {
-                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that Register ID!')", true);
+                        ClientScript.RegisterClientScriptBlock(this.GetType(), "alert", "alert('No record in that post ID!')", true);
                     }
 
                 }

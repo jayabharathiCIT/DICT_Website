@@ -11,14 +11,55 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.IO;
 
+
 namespace DICT_Website
 {
-
-    public partial class AnnCreate : System.Web.UI.Page
+    public partial class AnnEdit : System.Web.UI.Page
     {
         string connStr = ConfigurationManager.ConnectionStrings["DICTMySqlConnectionString"].ConnectionString;
+        string AnnID;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            
+
+            //get Post ID from page querystring
+            AnnID = Request.QueryString["AnnouncementID"];
+
+            if (!Page.IsPostBack)
+            {
+                // Show selected value of category dropdwon.
+                showSelectedPost();
+            }
+        }
+
+        public void showSelectedPost()
+        {
+
+            AnnID = Request.QueryString["PostID"];
+            DataTable dt = new DataTable();
+            
+            if (AnnID != null)
+            {
+                using (MySqlConnection sqlCon = new MySqlConnection(connStr))
+                {
+                    sqlCon.Open();
+
+                    string Query = "SELECT * FROM `dict_website`.dt_announcement where AnnouncementID =" + AnnID + ";";
+                    MySqlCommand MyCommandtoGetAnnByID = new MySqlCommand(Query, sqlCon);
+                    //  MyConn2.Open();  
+                    //For offline connection we weill use  MySqlDataAdapter class.  
+                    MySqlDataAdapter sqlDa = new MySqlDataAdapter();
+                    sqlDa.SelectCommand = MyCommandtoGetAnnByID;
+                    sqlDa.Fill(dt);
+                    //Show  Ann Topic title
+                    txtTitle.Text = dt.Rows[1]["Ann_Title"].ToString();
+                    //Show Ann Description 
+                    txtDesc.Text = dt.Rows[1]["Ann_Body"].ToString();
+                    
+                    
+                }
+            }
 
         }
 
@@ -50,14 +91,11 @@ namespace DICT_Website
                 conn.Close();
 
             }
-
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/AnnHomepage.aspx");
         }
-
     }
-
 }

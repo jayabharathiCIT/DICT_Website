@@ -10,44 +10,61 @@
 
     <div class="content">
 
-           <h2>Announcement HomePage</h2>
+           <h2>Announcement HomePage  <asp:Button ID="btnNew" runat="server" Text="New Announcement" CssClass="btnOptions1" CommandName="New" OnClick="btnNew_Click" />
+           </h2>
 
              <div class="ContainerH1">
               
-             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="mydatagrid"
-                            AllowPaging="true" PageSize="4" HorizontalAlign="Center" Font-size="15px"  >
+             <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" CssClass="mydatagrid"  OnPageIndexChanging="GridView1_PageIndexChanging"
+                            AllowPaging="false"   Font-size="15px" HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-Font-Size="20px" OnRowDataBound="OnRowDataBound" OnRowCommand="GridView1_RowCommand" >
+               
+                     <%--  
+                         
+                    <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
+                        <PagerStyle  Font-Size="15px" Font-Bold="true"   />
+                        <EmptyDataTemplate>No Announcement To Display</EmptyDataTemplate>
+
+                         --%>
+               
                 
-                <PagerSettings  NextPageText="Next>>" PreviousPageText="Previous>>" Mode="NextPrevious"   Position="Bottom"  PageButtonCount="4"  />
-                <PagerStyle  Font-Size="15px" Font-Bold="true" ForeColor="Black" BorderStyle="none"/>  
+                 
+                 <AlternatingRowStyle HorizontalAlign="Center" Wrap="True" />
                  
                  <Columns>
                             
-                            <asp:TemplateField HeaderText="Annoncements"  >
+                            <asp:TemplateField HeaderText="Announcements" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="AnnText" >
                                 <ItemTemplate>
-                                    
-                                    <asp:HyperLink ID="hyLnk_Topic" runat="server" ForeColor="Black" Font-size="13px" Font-Bold="true" Text='<%# Bind("Ann_Title") %>'  Font-Underline="true" ></asp:HyperLink>
+
+                                    <br>
+                                    </br>                                    
+                                    <asp:HyperLink ID="hyLnk_Topic" runat="server"  ForeColor="Black" Font-size="17px" Font-Bold="true"   Text='<%# Bind("Ann_Title") %>'  Font-Underline="true" ></asp:HyperLink>
                                     <%--<asp:Label ID="Label2" runat="server" Text='<%# Bind("Topic_Title") %>'></asp:Label>--%>
                                     <br>
                                     </br>
-                                    <asp:Label ID="lblDescription" runat="server" Text='<%# Bind("Ann_Body") %>'></asp:Label>
+                                    <asp:Label ID="lblDescription" runat="server" ForeColor="Black" Font-size="15px" Text='<%# Bind("Ann_Body") %>' ></asp:Label>
                                     <br>
                                     </br>
                                     
-                                    <asp:Label ID="lblPostedDate" runat="server" Font-size="11px" ForeColor="Black" Text="Posted On: "></asp:Label>
-                                    <asp:Label ID="lblPostedOn" runat="server" Text='<%# Bind("Posted_On","{0:f}") %>'></asp:Label>
+                                    <asp:Label ID="lblPostedDate" runat="server" Font-size="12px" ForeColor="Black" Font-Bold="true" Text="Posted On: " ></asp:Label>
+                                    <asp:Label ID="lblPostedOn" runat="server" Font-size="12px" ForeColor="Black" Text='<%# Bind("Posted_On","{0:f}") %>'></asp:Label>
+                                    <br>
+                                    </br>
+
                                 </ItemTemplate>
                             </asp:TemplateField>
 
-                            <asp:TemplateField HeaderText="Posted By">   
+                            <asp:TemplateField HeaderText="Posted By" ItemStyle-Width="200px ">   
                                 
                                 <ItemTemplate>
                                     <asp:Label ID="lblUser" runat="server" Text="User" ForeColor="Black"></asp:Label>
                                     <asp:Label ID="lblCreatedBy" runat="server" Text='<%# Bind("Register_ID") %>'></asp:Label>
                                     <br>
-                                    </br> 
+                                    </br>
+                                    <%-- 
                                     <asp:Button ID="btnEdit"  runat="server" Text="Edit"  CssClass="btnOptions" CommandName="Edit"   OnClick="btnEdit_Click"    />                                  
                                     <asp:Button ID="btnDelete"  runat="server" Text="Delete"  CssClass="btnOptions" CommandName="Delete"   OnClick="btnDelete_Click"  />                                    
-                                </ItemTemplate>
+                                --%> 
+                                        </ItemTemplate>
 
                             </asp:TemplateField>
 
@@ -63,6 +80,7 @@
                              --%>  
                      
               </Columns>
+                
              </asp:GridView>
              </div>
          
